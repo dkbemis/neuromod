@@ -93,7 +93,7 @@ end
 
 
 % Subject specific
-subject_data = addSubjectParameters(NM_GetCurrentDataDirectory(), subject_data); %#ok<NASGU>
+subject_data = addSubjectParameters(subject_data); %#ok<NASGU>
 
 
 % And save
@@ -104,11 +104,11 @@ save(save_file,'subject_data');
 disp(['Initialized ' GLA_subject ' for analysis.']);
 
 
-function subject_data = addSubjectParameters(curr_analysis_dir, subject_data)
+function subject_data = addSubjectParameters(subject_data)
 
 % Load the subject notes file and parse
 global GLA_rec_type;
-fid = fopen([curr_analysis_dir '/' GLA_rec_type '_subject_notes.txt']);
+fid = fopen([GLA_rec_type '_subject_notes.txt']);
 
 % Go through and look for the subject
 global GLA_subject;

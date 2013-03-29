@@ -9,10 +9,10 @@ global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
 global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % The current analysis parameters
-global GLA_subject; GLA_subject = 'ap100009';
+global GLA_subject; GLA_subject = 'sa130042';
 global GLA_rec_type; GLA_rec_type = 'meeg';
 global GLA_meeg_type; GLA_meeg_type = 'meg'; 
-global GLA_meeg_trial_type; GLA_meeg_trial_type = 'blinks'; 
+global GLA_meeg_trial_type; GLA_meeg_trial_type = 'word_4'; 
 global GLA_fmri_type; GLA_fmri_type = 'localizer';
 
 
