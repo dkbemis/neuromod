@@ -1,0 +1,121 @@
+Practice: Full (30 trials => 8x30 = 4min)
+Run: 96*8 = 12.8min (512 (~ 520) TRs)
+Localizer: 28.6*16 = 7.6min (306 (~310) TRs)
+FOV: 192
+TE: 32
+TR: 1500
+
+--------------------
+* Before
+
+* Login: inserm; inserm
+
+* Turn on monitor
+	- Check the settings of the monitor (1024x768; 60Hz)
+	- Click Epson Net-Panel
+	- Click 'Local Search'
+	- Select projector (VIEDEOEMP83003T)
+	- 'Power on'
+
+* Test eyetracker
+	- Plug in eyetracker
+	- Activate local network 3 on stim computer
+	- Turn on eyelink computer
+	- Settings
+		- Long Range
+		- Left eye
+	- Run calibration (check display, etc.)
+
+* Test advance
+	- Run structural
+	- Hit TTL to continue
+
+* Test experiment
+	- Generate stim lists
+		- Check encoding
+	- Run with no debugging
+	- Test responses
+		- Hit TTL during response
+		- Both response keys
+		- Time out
+		- Both response keys in lab	
+	- Transfer ET file
+		- Convert to asc
+		- Check for trigger
+
+* Prepare 
+	- All is_debugging = 0;
+	- run_num = 1
+	- Subject settings
+		- Resp type
+		- Localizer run
+	- TTL 
+		- Switch on bottom should be down
+		- Switch on top should be to the left
+		
+
+--------------------
+During
+
+* Run practice
+	- Set subject id
+	- Evaluate top cell
+	- Create practice lists
+	- Run practice
+
+* Instructions
+	- Cannot see feedback during task
+	- Will be longer pauses at times
+	- Four blocks
+	- Localizer instructions
+
+* Open 'Track' program on stim computer
+
+* Setup Eyetracker 
+	- Position eyetracker in scanner
+	- Make sure eyelink mirror used in scanner
+	- Focus on eye
+	- Outside, adjust thresholds until good
+
+* Setup monitor
+	- Ask if need to adjust height (Using Epson Net-Panel)
+
+* Test response keys
+	- Ask to press both, check matlab prompt
+
+* Calibrate eyetracker
+
+* Run structural
+
+* Create stimuli lists
+
+* Perform each run (Remember to increment run_num!)
+
+* Run localizer
+
+* Run baseline
+
+
+--------------------
+After
+
+* Get the eyetracker files
+	- Test conversion
+
+* Copy Subject files to USB (eyetracker, log, data, stim)
+
+* Close eyetracker
+	- Run final cell
+	- Deactivate local network 3
+	- Power off eyelink
+
+* Turn off monitor
+	- 'Epson Net-Panel'
+	- 'Local Search'
+	- Select projector (VIEDEOEMP83003T)
+	- 'Power off'
+
+* Log out of computer
+* Turn off lights
+
+

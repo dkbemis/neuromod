@@ -1,0 +1,64 @@
+* general
+L'expérience va commencer.
+Vous allez voir une liste de mots ou pseudomots,
+suivis par une pause, puis par un mot test.
+Si ce dernier mot apparaissait dans la liste,
+getCorrectResponseStr().
+sinon, getIncorrectResponseStr().
+getContinueStr().
+* practice_end
+L'entrainement est terminé.
+getContinueStr().
+* speed_feedback
+Merci de répondre plus vite.
+* wrong_response
+FAUX
+* eyetracker_calibration
+Nous allons calibrer l'appareil,
+qui détecte les mouvement des yeux.
+Vous devrez regarder chacun des points,
+qui vont apparaitre successivement à  l'écran.
+* eyetracker_calibration_end
+Eyetracker calibré.
+* scan_start
+Merci de rester immobile.
+Le scan va commencer.
+* scan_end
+Le scan est terminé.
+Merci de rester immobile pendant,
+que nous sauvegardons les données.
+* eye_move
+Suivez la croix des yeux.
+* blinks
+Clignez des yeux quand la croix disparaitra.
+* breaths
+Inspirez et expirez profondément chaque fois que,
+a croix disparaît.
+* mouth_move
+Ouvrez et fermez la bouche chaque fois que la croix disparaît.
+* noise
+Nous allons maintenant enregistrer 1 min de repos.
+S'il vous plait, fermez les yeux et relaxez vous.
+* localizer_start
+Vous allez voir,
+des phrases composées de mots ou de pseudomots.
+Regardez les attentivement: Parfois les mots,
+'cliquez' ou 'appuyez'
+seront affichés et vous devrez alors,
+appuyez sur le bouton de réponse droit.
+* phrase_trials
+Les prochains essais seront des phrases.
+Appuyez sur une touche quelconque pour continuer.
+* list_trials
+Les prochains essais seront des listes.
+Appuyez sur une touche quelconque pour continuer.
+* keyboard_continue
+Appuyez sur une touche 'n' pour continuer
+* machine_continue
+Appuyez sur une touche quelconque pour continuer
+* keyboard_press
+appuyez sur la touche
+* right_response
+répondez avec la main droite
+* left_response
+répondez avec la main gauche

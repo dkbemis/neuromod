@@ -1,0 +1,11 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+jongler	7	2	0.83	-0.080922	5	VER	15534	4.1913
+nager	5	2	18.71	1.2721	4	VER	65880	4.8188
+patiner	7	3	1.26	0.10037	6	VER	5286	3.7231
+plonger	7	2	9.36	0.97128	5	VER	157422	5.1971
+chasser	7	2	19.86	1.298	4	VER	310295	5.4918
+rouler	6	2	14.41	1.1587	4	VER	143053	5.1555
+parader	7	3	0.72	-0.14267	6	VER	10316	4.0135
+danser	6	2	70.06	1.8455	4	VER	238517	5.3775
+voyager	7	3	19.45	1.2889	7	VER	182043	5.2602
+galoper	7	3	0.95	-0.022276	6	VER	12316	4.0905

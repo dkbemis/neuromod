@@ -1,0 +1,64 @@
+1	28.6	pseudo	no_catch	0
+zo	pourpes	iz	faq	co	og	danus	ucé	i	cleule	ren	taildes	
+qe	jonêler	oot	celgartiépoir	zow	séleques	ow	siftilde	hen	ausconlai	ub	kué	
+ow	juslere	béme	iz	sbié	fe	aq	ovver	acoucution	os	tenver	rub	
+2	28.6	sentence	cliquez	1
+Le	chorégraphe	réunit	les	danseurs	qui	veulent	faire	partie	du	prochain	ballet	
+Le	garçon	choisit	un	costume	de	chasseur	de	grands	crocodiles	du	Nil	
+Il	pâlit	en	écoutant	les	détails	de	la	mort	de	son	épouse	
+3	28.6	pseudo	no_catch	0
+fe	i	teute	zà	agenmir	oq	za	nerftéfin	he	alr	qe	décone	
+za	bart	zà	aflé	za	beôle	sbû	skuis	ux	grompetsir	mês	heusila	
+alte	hochaudtres	os	sqoce	kia	cinone	dri	prengard	ow	isatre	ps	forgne	
+4	28.6	sentence	no_catch	0
+Le	rat	sort	de	son	trou	creusé	dans	le	mur	du	salon	
+Il	a	brisé	le	bouchon	de	la	bouteille	de	jus	de	raisin	
+Le	magicien	fait	disparaître	les	bonbons	étalés	sur	le	sol	du	théâtre	
+5	28.6	pseudo	no_catch	0
+sow	ipé	culployer	kai	indain	um	briponmisi	mégusais	zà	rentofla	guèque	mébant	
+stis	pustre	bam	rêsa	hoeu	gnue	iz	frub	bair	um	shuère	alcha	
+qe	imtare	os	croinerme	ox	avate	zû	cluff	strui	apcote	re	mugue	
+6	28.6	sentence	no_catch	0
+Tu	peux	jeter	les	revues	qui	traînent	sur	la	table	du	salon	
+Nous	envisageons	de	bâtir	une	maison	qui	dominera	la	vallée	du	fleuve	
+Elle	a	oublié	de	prévenir	la	deuxième	vendeuse	du	magasin	de	chaussures	
+7	28.6	pseudo	appuyez	2
+na	transle	qe	calanes	jui	enmavons	na	ar	limcialu	schot	oq	stra	
+ia	tibe	qub	ué	konc	saz	lesi	zà	didi	ui	na	letprit	
+ps	inx	atme	iz	sif	pota	foulpe	shuc	da	pid	ps	iveux	
+8	28.6	sentence	no_catch	0
+Elle	a	égaré	le	cartable	qui	contenait	les	copies	du	dernier	contrôle	
+Il	sursaute	en	entendant	le	grincement	de	la	lourde	porte	en	bois	
+Le	vacancier	écoute	le	bruit	des	vagues	qui	déferlent	sur	le	rivage	
+9	28.6	pseudo	no_catch	0
+ige	sournété	phriète	ox	rédapse	iol	prenverque	cli	guiplennua	ia	acor	queldé	
+ol	uo	afie	ol	chanfois	ror	artité	zy	pserse	idresper	og	jinq	
+gû	gnarc	gû	voyapadi	ar	zû	décarmi	i	ko	trissenvait	stas	sphegs	
+10	28.6	sentence	no_catch	0
+Je	vais	élaborer	un	plan	qui	permettra	de	redresser	nos	récentes	pertes	
+Mon	ami	aimerait	comprendre	les	annotations	de	son	professeur	de	grec	ancien	
+Elle	a	accepté	que	son	fils	achète	une	télévision	à	écran	plat	
+11	28.6	pseudo	no_catch	0
+aq	rasmandre	papaient	i	depecmum	gû	drac	shorgue	sipt	zo	adsé	apcer	
+qo	frècouble	i	noeu	he	bonviment	fipété	i	hes	renméte	jo	schyourte	
+pous	dunaislait	ila	enpa	ocse	lartie	gi	moncine	héver	branne	jo	cramfernir	
+12	28.6	sentence	no_catch	0
+Il	a	peur	que	les	talons	rayent	le	parquet	de	bois	tendre	
+Elle	montre	son	bras	pris	dans	un	gros	bloc	de	plâtre	blanc	
+Ils	ont	découvert	la	bactérie	qui	a	causé	des	épidémies	de	grippe	
+13	28.6	pseudo	no_catch	0
+er	graï	gymce	glû	coubre	pui	glonfrée	gni	ux	brûne	da	setré	
+co	comelcart	simvant	trà	jo	manversez	seche	danlicès	olk	pabric	ud	lèton	
+da	mysble	he	usi	za	avopique	fituavoir	minc	us	grif	og	djui	
+14	28.6	sentence	no_catch	0
+Le	jardinier	redoute	les	brusques	changements	de	la	température	de	la	serre	
+Le	notaire	consulte	les	lourds	volumes	empilés	sur	les	étagères	de	métal	
+Le	balayeur	respire	un	air	chargé	de	fines	particules	de	poussière	grise	
+15	28.6	pseudo	no_catch	0
+chlec	ludre	océe	scû	groil	i	co	arpécoup	lété	lonme	na	têser	
+zy	cutonséce	didis	gi	na	ité	sqyan	zac	na	pnube	na	vça	
+uc	emdre	jo	dousiser	nel	instrés	ar	fe	kève	qo	ato	aulèce	
+16	-1	sentence	no_catch	0
+Il	écoute	le	concierge	raconter	les	aventures	du	locataire	du	premier	étage	
+Il	entre	sur	la	scène	inondée	par	la	lumière	des	projecteurs	puissants	
+La	petite	regarde	comment	son	père	grille	les	épis	de	maïs	mur	

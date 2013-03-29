@@ -1,0 +1,3104 @@
+
+----------------------------------------------------------------------------
+Started at: 24-Jan-2013 23:07:58
+
+START	106274.3572		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	4.5621	5.5996	Paragraph	Press 'n' to continue.
+
+----------------------------------------------------------------------------
+Started at: 28-Jan-2013 12:00:00
+
+START	1359370801.2499		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	3.8485	4.958	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	5.7468	10.8263	Paragraph	Press any key to continue.
+KEY	1	4.3429	21.2649	Text	DANSER	0	1	verb	phrase	4	1	nomatch	qlmdcgt	jade	peut	trop	patiner	danser
+
+----------------------------------------------------------------------------
+Started at: 28-Jan-2013 12:00:48
+
+START	1359370848.5895		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.5046	2.5448	Paragraph	Press 'n' to continue.
+KEY	p	1.0814	4.1399	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 28-Jan-2013 12:01:39
+
+START	1359370899.4269		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.55444	1.5638	Paragraph	Press 'n' to continue.
+KEY	p	0.77913	2.8559	Paragraph	Press any key to continue.
+KEY	y	2.1242	11.0797	Text	DANSER	0	1	verb	phrase	4	1	nomatch	qlmdcgt	jade	peut	trop	patiner	danser
+KEY	p	0.47843	17.6227	Text	VIEUX	0	2	noun	phrase	4	1	nomatch	bkx	dans	mon	grand	rocher	vieux
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 00:17:12
+
+START	128718.1255		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 00:19:41
+
+START	128866.6197		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.1577	2.1773	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	2.4002	4.6892	Paragraph	(1)
+KEY	s	13.179	18.3932	Paragraph	Please lie still as we start the recording.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 00:21:50
+
+START	128996.0518		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	3.9915	5.0076	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.75454	5.8796	Paragraph	(1)
+KEY	s	2.4998	8.8964	Paragraph	Please lie still as we start the recording.
+KEY	p	1.031	15.4634	Text	TROP	1	1	noun	list	5	1	match	hqwdp	lcrj	fkh	kmvnghw	trop	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	2	noun	phrase	3	1	nomatch_2	cxbjhzq	zsgc	son	petit	grenier	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	GRENIER	1	3	noun	list	1	1	match	cvhk	wnd	ptzq	kfzthpjd	grenier	grenier
+KEY	y	0.35134	38.798	Text	VERT	1	4	noun	phrase	1	2	match	jdfh	ghln	ptzq	kmvnghw	vert	vert
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:14:29
+
+START	132154.9837		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.2825	2.301	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	7.0973	9.5379	Paragraph	Respond with your right hand.
+KEY	s	1.2246	11.2816	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:19:03
+
+START	132428.6231		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.301	2.3194	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.47966	2.9031	Paragraph	Respond with your right hand.
+KEY	s	1.1337	4.5595	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	1	sentence
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	experiment	2	pseudo
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:27:18
+
+START	132924.0438		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.66086	1.6752	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.0912	2.8905	Paragraph	Respond with your right hand.
+KEY	s	0.86244	4.2673	Paragraph	Le scan va commencer.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:27:55
+
+START	132960.9858		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.53574	1.5413	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.40754	2.0607	Paragraph	Respond with your right hand.
+KEY	s	0.32438	2.9004	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:30:51
+
+START	133136.7327		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.88557	1.9023	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.32842	2.3341	Paragraph	Respond with your right hand.
+KEY	s	0.63011	3.4706	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:37:25
+
+START	133531.2468		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.93878	1.9573	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.58287	2.6537	Paragraph	Respond with your right hand.
+KEY	s	1.4856	4.661	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ahijours
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	vry
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	conla
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	hul
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	grilsases
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	lo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	g�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	monvate
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	flipble
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ps
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ryan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	he
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	er
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	aftasant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	er
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	t�s
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	isi�ler
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	isi�ler
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coudai
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	diq
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:39:57
+
+START	133683.0081		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.71175	1.7289	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.98472	2.8246	Paragraph	Respond with your right hand.
+KEY	s	0.62762	3.9688	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:40:26
+
+START	133711.9873		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.69869	1.7159	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.44054	2.2761	Paragraph	(1)
+KEY	s	0.95721	3.7638	Paragraph	Please lie still as we start the recording.
+KEY	p	0.39842	9.7025	Text	TROP	1	1	noun	list	5	1	match	hqwdp	lcrj	fkh	kmvnghw	trop	trop
+KEY	y	0.48286	17.7516	Text	GALOPER	1	2	noun	phrase	3	1	nomatch_2	cxbjhzq	zsgc	son	petit	grenier	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	GRENIER	1	3	noun	list	1	1	match	cvhk	wnd	ptzq	kfzthpjd	grenier	grenier
+KEY	p	0.3987	33.6058	Text	VERT	1	4	noun	phrase	1	2	match	jdfh	ghln	ptzq	kmvnghw	vert	vert
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:43:16
+
+START	133881.7207		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.6807	2.6967	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.8516	4.6713	Paragraph	Respond with your right hand.
+KEY	s	2.1533	7.3281	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:43:52
+
+START	133918.4471		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.99354	2.0122	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.26307	2.388	Paragraph	Respond with your right hand.
+KEY	s	0.87291	3.7648	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 01:49:32
+
+START	134257.7123		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.96999	1.9869	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.42754	2.5303	Paragraph	Respond with your right hand.
+KEY	s	0.38747	3.4423	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+KEY	p	1.2638	9.463	Text	cliquez	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:37:14
+
+START	1359448634.3384		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.84022	1.8888	Paragraph	Press 'n' to continue.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:45:09
+
+START	1359449109.1764		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	3.5649	4.5766	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	0	1	noun	phrase	4	1	match	bqdzhjt	sans	mon	beau	voilier	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	PANIER	0	2	noun	phrase	3	1	match	hrjdtsn	sckwnbf	son	nouveau	panier	panier
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	0	3	verb	phrase	4	1	match	prghn	adam	doit	moins	patiner	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	0	4	noun	list	4	1	match	bhk	yves	leur	mieux	casier	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	0	5	noun	phrase	1	1	nomatch	tlwxb	vxjqpld	ltm	chxlg	bo�tier	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	0	6	verb	list	4	2	nomatch	vnpqrfh	marc	son	jongler	vert	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	0	7	noun	phrase	4	2	match	glmdzr	vers	mon	rocher	blanc	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	8	verb	phrase	2	1	match	dxtzsmf	csjgqbn	bsw	beaucoup	galoper	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	0	9	verb	list	4	2	nomatch	mfx	jade	leur	parader	rouge	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	10	noun	phrase	5	1	nomatch	lvptkx	wcxkbnv	ncp	dksfn	petit	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	0	11	noun	list	4	2	match	nqmjfks	avec	peut	sablier	ainsi	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	12	verb	list	2	1	nomatch	dtpgcjq	nxhcdqb	rwd	vieux	chasser	va
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	13	verb	list	3	2	nomatch	mrhlvzg	zlhrnvf	son	danser	noir	va
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	0	14	noun	list	2	1	match	swzbq	gdrkmnp	hdv	trop	cendrier	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	15	verb	phrase	3	1	match	zpn	jbwvkch	va	plus	rouler	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	0	16	verb	list	4	1	match	dms	sous	doit	grand	plonger	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	MARC	0	17	noun	list	1	2	nomatch	gzjkfp	zpmcxbn	ths	hzlkq	vite	marc
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	18	noun	phrase	4	1	nomatch	slzgkm	sur	mon	nouveau	grenier	va
+TIMEOUT	TIMEOUT	-1	-1	Text	POUR	0	19	verb	list	4	1	match	zhtfql	pour	peut	beau	voyager	pour
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	0	20	noun	phrase	5	2	match	npx	nhtlrzp	gjf	xtsgp	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	21	verb	phrase	4	2	nomatch	qcnpkl	paul	va	nager	tard	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	22	noun	list	4	2	nomatch	mrwhcj	dans	va	clavier	t�t	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	0	23	verb	phrase	4	1	match	dtvxz	jean	doit	trop	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	0	24	noun	phrase	1	2	match	mxv	sctwldj	ftw	flsqm	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	25	noun	phrase	3	2	match	qmdfl	sjqwvgp	leur	clavier	bleu	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	0	26	noun	list	3	1	match	jlwszvd	vckplwf	leur	mieux	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	27	noun	list	4	1	match	crkbxl	luc	son	moins	casier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	0	28	noun	phrase	2	1	match	ngvmlfb	kxcfnmp	cql	grand	voilier	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	29	noun	list	3	2	nomatch	vrn	lzvqwkg	peut	cendrier	loin	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	0	30	noun	phrase	2	2	match	twrhfgm	frmbpsg	hrc	sablier	vert	vert
+KEY	n	5.8788	52.9431	Paragraph	Appuyez sur une touche 'n' pour continuer.	0	30	noun	phrase	2	2	match	twrhfgm	frmbpsg	hrc	sablier	vert	vert
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:46:11
+
+START	1359449171.8945		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	1.7809	2.7902	Paragraph	Merci de rester immobile.
+KEY	s	4.7638	8.0582	Text	+
+KEY	n	0.51581	8.6863	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:48:39
+
+START	1359449319.2078		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3152	2.3247	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.1423	3.5698	Paragraph	qui vont apparaitre successivement  � l'�cran.
+KEY	n	2.375	5.9534	Blank	
+KEY	n	0.66773	7.132	Blank	
+KEY	n	0.55052	7.6987	Paragraph	Eyetracker calibr�.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:49:01
+
+START	1359449341.8585		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.48357	1.4935	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.56411	2.1744	Paragraph	(1)
+KEY	s	2.3381	5.016	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	1	1	noun	phrase	5	1	match	bltpwgs	htdq	msp	tcvdqxs	grand	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	2	noun	phrase	2	2	match	htrswgv	zsfc	tfp	casier	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	3	noun	phrase	1	1	match	gwhbr	fjgz	msp	tgxnw	voilier	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	4	noun	list	4	2	nomatch_1	fmvzncl	pour	va	voilier	vite	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	JONGLER	1	5	noun	list	3	1	nomatch_2	gqbks	kzlb	mon	plus	grenier	jongler
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	6	noun	list	3	1	match	bqg	xvht	mon	moins	voilier	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	7	noun	list	2	1	nomatch_1	vgdhsjt	fkjs	msp	beaucoup	panier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	1	8	noun	phrase	1	1	nomatch_2	rmlx	bfh	tfp	mqdts	bo�tier	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	9	noun	phrase	4	1	match	pjqlkd	avec	son	vieux	bo�tier	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	10	noun	list	1	2	nomatch_2	kpb	dpzs	sl	kgdsntc	vite	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	11	noun	phrase	4	2	nomatch_1	tlqpnwm	sur	mon	voilier	vert	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	12	noun	phrase	4	2	match	xfrwvjl	avec	son	bo�tier	rouge	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	1	13	noun	phrase	2	1	match	dplvbgj	dpzs	nzqc	beau	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	14	noun	list	1	2	nomatch_2	vpdktqx	fjgz	ljvp	ghtxlqd	tard	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	15	noun	phrase	2	2	nomatch_2	zcng	kxsj	tfp	sablier	noir	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	16	noun	phrase	5	1	match	kmdncs	bfh	msp	rntdsfm	beau	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	17	noun	phrase	1	2	match	xphlr	zsfc	tfp	ghtxlqd	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	1	18	noun	phrase	5	1	match	cjxf	kxsj	msp	kgdsntc	petit	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	1	19	noun	list	4	1	nomatch_1	dtfkvh	marc	son	moins	clavier	jade
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	20	noun	phrase	2	1	match	wjvz	htdq	tfp	vieux	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	21	noun	list	2	1	match	jxfsmv	dtsg	msp	mieux	bo�tier	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	22	noun	phrase	4	1	nomatch_2	njxbcv	vers	leur	beau	tablier	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	23	noun	list	5	2	nomatch_2	hcxm	dpzs	hvgr	qfrx	panier	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	24	noun	phrase	1	1	match	csnmr	fjgz	msp	hnkd	casier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	25	noun	list	1	2	nomatch_1	ntxg	htdq	ljvp	frbztd	loin	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	26	noun	list	5	2	match	gzqpk	bfh	ljvp	ktz	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	27	noun	list	1	1	match	bjvdw	fkjs	tfp	fkdh	bo�tier	bo�tier
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	28	noun	list	2	1	nomatch_2	zcxk	fkjs	msp	moins	casier	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	29	verb	list	1	1	nomatch_2	tvz	htdq	ljvp	tgxnw	rouler	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	30	noun	phrase	5	1	match	kfgjz	bfh	tfp	ghtxlqd	nouveau	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	31	verb	phrase	4	1	match	lztqgnm	adam	va	trop	voyager	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	32	verb	phrase	2	2	nomatch_2	dbg	fkjs	ljvp	parader	tard	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	33	noun	list	5	2	match	ctzldn	zsfc	ljvp	ktz	voilier	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	34	noun	list	5	1	match	tnj	dtsg	msp	tcvdqxs	mieux	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	ROULER	1	35	verb	phrase	4	1	match	kcfdx	yves	peut	plus	rouler	rouler
+TIMEOUT	TIMEOUT	-1	-1	Text	LOIN	1	36	verb	phrase	1	2	match	rkxlw	zhqr	hvgr	tjbhkds	loin	loin
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	37	verb	list	5	1	nomatch_1	rwvjz	dpzs	ljvp	wzgsfvd	grand	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	38	verb	phrase	1	1	nomatch_2	khmc	xvht	hvgr	fkdh	parader	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	1	39	noun	phrase	3	2	match	pnrvm	htdq	son	panier	rouge	son
+TIMEOUT	TIMEOUT	-1	-1	Text	ROULER	1	40	verb	list	5	2	nomatch_1	qhs	zhqr	nzqc	vqhsd	jongler	rouler
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	41	noun	list	3	2	nomatch_1	pbgmtx	kxsj	doit	panier	ainsi	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	1	42	verb	phrase	5	2	match	czm	dtsg	sl	qfrx	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	43	verb	phrase	5	1	nomatch_2	vxtqnk	kdq	ljvp	wsnxmlb	beaucoup	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	SUR	1	44	verb	list	1	2	nomatch_2	mpqg	dtsg	msp	qnlxfhk	rouge	sur
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	1	45	verb	phrase	1	2	match	xdv	dtsg	sl	gcnzsqw	t�t	t�t
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	1	46	verb	phrase	2	2	nomatch_1	xdjmlgf	zhqr	sl	voyager	vite	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	47	noun	list	3	2	nomatch_1	jnq	tzfb	peut	bo�tier	vite	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	48	verb	list	5	2	nomatch_2	wqb	xvht	nzqc	bklf	chasser	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	ADAM	1	49	noun	list	4	1	match	sklqm	adam	mon	trop	casier	adam
+TIMEOUT	TIMEOUT	-1	-1	Text	JEAN	1	50	verb	phrase	4	1	match	rphjb	jean	va	mieux	plonger	jean
+TIMEOUT	TIMEOUT	-1	-1	Text	CHASSER	1	51	verb	list	3	2	nomatch_1	phfz	wrhb	mon	jongler	noir	chasser
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	52	verb	phrase	1	1	nomatch_2	wvxkbdc	fkjs	ljvp	fkdh	patiner	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	PAUL	1	53	verb	list	3	1	nomatch_2	vngltdq	htdq	va	nouveau	jongler	paul
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	54	noun	list	4	2	nomatch_1	wncb	avec	doit	grenier	t�t	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	CHASSER	1	55	verb	list	1	1	match	cbjmgt	dpzs	sl	tgxnw	chasser	chasser
+TIMEOUT	TIMEOUT	-1	-1	Text	GRENIER	1	56	noun	phrase	3	2	match	xbk	dpzs	mon	grenier	blanc	grenier
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	1	57	verb	list	5	2	nomatch_2	mgxrzp	kzlb	msp	bklf	plonger	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	58	noun	phrase	3	2	match	wpl	tzfb	mon	voilier	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	59	verb	list	1	1	nomatch_2	lfjqhb	fjgz	ljvp	hnkd	plonger	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	60	noun	list	2	2	nomatch_1	bzd	fjgz	ljvp	sablier	loin	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	61	verb	phrase	4	2	nomatch_1	rlfvnj	adam	peut	rouler	ainsi	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	62	noun	phrase	3	1	nomatch_2	rgdlj	kxsj	leur	vieux	voilier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	63	verb	list	3	2	match	whdtf	kzlb	son	patiner	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	JONGLER	1	64	verb	phrase	2	1	match	lwprn	wrhb	sl	mieux	jongler	jongler
+TIMEOUT	TIMEOUT	-1	-1	Text	VIEUX	1	65	verb	list	2	1	match	mfbcqwx	fjgz	sl	vieux	jongler	vieux
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	66	verb	list	2	1	match	hjn	kxsj	hvgr	nouveau	rouler	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	ROULER	1	67	verb	list	3	2	match	gpmbx	wrhb	leur	rouler	noir	rouler
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	68	verb	list	4	1	nomatch_1	hdtcjvg	pour	doit	nouveau	chasser	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	MARC	1	69	verb	list	4	2	match	ghbdv	marc	mon	plonger	blanc	marc
+TIMEOUT	TIMEOUT	-1	-1	Text	SOUS	1	70	verb	list	4	1	match	qltnpf	sous	doit	grand	patiner	sous
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	71	verb	phrase	3	1	nomatch_2	gqxhv	xvht	peut	plus	chasser	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	1	72	verb	phrase	2	1	match	fdwk	xvht	sl	moins	chasser	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	73	verb	phrase	3	1	nomatch_2	ljgts	wrhb	peut	beaucoup	jongler	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	ROULER	1	74	verb	phrase	3	2	nomatch_1	zsf	zhqr	peut	parader	ainsi	rouler
+TIMEOUT	TIMEOUT	-1	-1	Text	MARC	1	75	verb	list	4	1	nomatch_2	rmbhf	sous	va	vieux	voyager	marc
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	76	verb	phrase	5	2	nomatch_1	xktpgrv	fkjs	ljvp	clpn	plonger	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	1	77	verb	phrase	3	1	match	mjnhkf	zhqr	doit	beaucoup	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	78	verb	list	2	1	match	ghv	fjgz	ljvp	nouveau	galoper	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	JONGLER	1	79	verb	phrase	5	2	match	wdbh	xvht	sl	ktz	jongler	jongler
+TIMEOUT	TIMEOUT	-1	-1	Text	JEAN	1	80	verb	list	2	2	nomatch_2	nwtf	dtsg	msp	plonger	noir	jean
+KEY	n	60.7861	177.7531	Text	+	1	80	verb	list	2	2	nomatch_2	nwtf	dtsg	msp	plonger	noir	jean
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:52:10
+
+START	1359449530.7075		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:52:22
+
+START	1359449542.7818		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.2219	2.2315	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	2.2936	4.6376	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	1.6684	6.8145	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:52:52
+
+START	1359449572.1544		0	localizer	1	sentence	�
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.1049	2.1145	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!	localizer	1	sentence	�
+KEY	n	3.8248	6.052	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit	localizer	1	sentence	�
+KEY	s	1.3336	7.8974	Paragraph	Le scan va commencer.	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:53:25
+
+START	1359449605.7804		0	localizer	1	sentence	�
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.5187	2.5283	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!	localizer	1	sentence	�
+KEY	n	4.714	7.3583	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit	localizer	1	sentence	�
+KEY	s	0.34232	8.2075	Paragraph	Le scan va commencer.	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:54:11
+
+START	1359449651.7162		0	localizer	1	sentence	�
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	m	1.1903	2.1998	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!	localizer	1	sentence	�
+KEY	n	0.50603	2.8166	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit	localizer	1	sentence	�
+KEY	s	0.76608	4.0941	Paragraph	Le scan va commencer.	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 09:55:50
+
+START	1359449750.7415		0	localizer	1	sentence	�
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	5.0657	6.0774	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!	localizer	1	sentence	�
+KEY	n	0.87529	7.0577	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit	localizer	1	sentence	�
+KEY	s	1.4758	9.0483	Paragraph	Le scan va commencer.	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	d
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ahijours
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	vry
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	conla
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	hul
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	grilsases
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	lo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	g�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:22:54
+
+START	1359454974.52		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.3959	2.4211	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	4.5256	13.0402	Text	YVES	0	1	verb	list	4	1	nomatch	jgkm	vers	va	petit	plonger	yves
+KEY	y	0.74676	19.4917	Text	BLANC	0	2	verb	list	2	2	match	mnq	cnsjkzw	zsg	chasser	blanc	blanc
+KEY	p	1.9749	27.1583	Text	SANS	0	3	noun	phrase	5	1	nomatch	mtvj	thcpmxw	jlg	fqhlc	vieux	sans
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:29:26
+
+START	1359455366.2421		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.58182	1.5891	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	y	1.316	8.9956	Text	YVES	0	1	verb	list	4	1	nomatch	jgkm	vers	va	petit	plonger	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	0	2	verb	list	2	2	match	mnq	cnsjkzw	zsg	chasser	blanc	blanc
+KEY	p	0.36708	25.7671	Text	SANS	0	3	noun	phrase	5	1	nomatch	mtvj	thcpmxw	jlg	fqhlc	vieux	sans
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:31:27
+
+START	1359455487.8182		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.93979	1.9489	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	0	1	verb	list	4	1	nomatch	jgkm	vers	va	petit	plonger	yves
+KEY	y	0.68613	19.4318	Text	BLANC	0	2	verb	list	2	2	match	mnq	cnsjkzw	zsg	chasser	blanc	blanc
+KEY	y	0.53589	28.6721	Text	SANS	0	3	noun	phrase	5	1	nomatch	mtvj	thcpmxw	jlg	fqhlc	vieux	sans
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:32:42
+
+START	1359455562.3942		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.91674	1.9245	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	0	1	verb	list	4	1	nomatch	jgkm	vers	va	petit	plonger	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	0	2	verb	list	2	2	match	mnq	cnsjkzw	zsg	chasser	blanc	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	0	3	noun	phrase	5	1	nomatch	mtvj	thcpmxw	jlg	fqhlc	vieux	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	0	4	verb	phrase	4	2	match	cqrsh	jean	peut	nager	vite	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	5	noun	phrase	1	1	nomatch	jzpsw	gdvxkrc	qhz	nhbdr	grenier	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	0	6	noun	list	4	1	nomatch	bvcrtq	luc	mon	moins	clavier	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	7	noun	list	3	1	nomatch	mcbws	lzvxjhr	son	plus	casier	va
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:33:02
+
+START	1359455582.4751		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.029	2.0385	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:36:45
+
+START	1359455805.1978		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.99148	2.0012	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	y	0.68963	8.7885	Text	YVES	0	1	verb	list	4	1	nomatch	jgkm	vers	va	petit	plonger	yves
+KEY	p	0.75863	15.2524	Text	BLANC	0	2	verb	list	2	2	match	mnq	cnsjkzw	zsg	chasser	blanc	blanc
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:38:56
+
+START	1359455936.5835		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	1.9903	2.9997	Paragraph	Le scan va commencer.
+KEY	n	4.1005	7.6119	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:40:20
+
+START	1359456020.1486		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	0.8216	1.8308	Paragraph	Le scan va commencer.
+KEY	n	0.86571	3.2094	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:41:13
+
+START	1359456073.5919		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.77938	1.787	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.80628	2.6978	Paragraph	qui vont apparaitre successivement  � l'�cran.
+KEY	n	2.4123	5.1212	Blank	
+KEY	n	0.13354	5.7616	Blank	
+KEY	n	0.21685	5.9951	Paragraph	Eyetracker calibr�.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:43:16
+
+START	1359456196.6357		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.58288	1.5922	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.53378	2.2438	Paragraph	(1)
+KEY	s	1.5476	4.3083	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	1	noun	phrase	1	1	match	rktzvx	cxlr	rqcj	bhsdt	tablier	tablier
+KEY	p	0.57096	18.4328	Text	PANIER	1	2	noun	list	5	2	match	vtml	mnwl	nk	qlpf	panier	panier
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:43:54
+
+START	1359456234.1146		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.65032	1.6598	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.6086	2.3855	Paragraph	(1)
+KEY	s	1.2997	4.1942	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	1	noun	phrase	1	1	match	rktzvx	cxlr	rqcj	bhsdt	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	PANIER	1	2	noun	list	5	2	match	vtml	mnwl	nk	qlpf	panier	panier
+TIMEOUT	TIMEOUT	-1	-1	Text	PANIER	1	3	noun	phrase	3	2	nomatch_1	lndgk	cbmh	son	cendrier	vert	panier
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:45:21
+
+START	1359456321.5165		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.0241	2.0332	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.0219	3.1652	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	0.90492	4.5827	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:45:50
+
+START	1359456350.1224		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.9741	1.9833	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.56337	2.6567	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	0.32995	3.4908	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:47:06
+
+START	1359456426.2313		0	localizer	1	sentence	�
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.97659	1.9857	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!	localizer	1	sentence	�
+KEY	n	0.4057	2.499	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit	localizer	1	sentence	�
+KEY	s	0.32768	3.3384	Paragraph	Le scan va commencer.	localizer	1	sentence	�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	d
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:49:13
+
+START	1359456553.6641		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.34002	1.3487	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.38754	1.8467	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	0.26137	2.6212	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	d
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ahijours
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	vry
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	conla
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:52:13
+
+START	1359456733.1669		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.40576	1.4852	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.30016	1.8965	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	0.53408	2.9477	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	d
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ahijours
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	vry
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	conla
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	hul
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	grilsases
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	lo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	g�
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	coumi
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:52:33
+
+START	1359456753.8029		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.75469	1.7643	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.2886	2.1657	Paragraph	seront affich�s et vous devrez alors appuyez sur le bouton de r�ponse droit
+KEY	s	0.5271	3.2047	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	�laborer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	plan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	permettra
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	redresser
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	nos
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	r�centes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	pertes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	envisageons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	b�tir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	maison
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	dominera
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vall�e
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fleuve
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	explique
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	inspiration
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ses
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	voyages
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	d
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	mer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	fiste
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	alnuer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	muo
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:54:13
+
+START	1359456853.7976		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.0292	2.0385	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:55:03
+
+START	1359456903.1336		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.83138	1.8429	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.53	3.4756	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 11:55:26
+
+START	1359456926.0531		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.0945	2.1049	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.89658	3.1079	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+KEY	n	2.7356	6.081	Paragraph	Suivez la croix des yeux.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	                         +
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:22:23
+
+START	1359462143.3429		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.1614	2.1708	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	y	1.1169	9.3819	Text	ROUGE	0	1	verb	list	4	2	match	nqzkc	luc	mon	parader	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	0	2	verb	list	5	1	match	psbj	lshfjcr	rpg	plvfx	petit	petit
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:23:25
+
+START	1359462205.8754		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.91333	1.9054	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	0	1	verb	list	4	2	match	nqzkc	luc	mon	parader	rouge	rouge
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:24:11
+
+START	1359462251.8297		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:18:39
+
+START	1230104.7203		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:18:59
+
+START	1230125.508		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	3.1984	4.2108	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	1	noun	phrase	4	1	nomatch	zgdsxf	dans	leur	vieux	panier	va
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	2	noun	list	4	1	nomatch	czgqs	paul	son	beaucoup	tablier	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	CHASSER	0	3	verb	list	4	2	match	dtsmw	marc	mon	chasser	noir	chasser
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	4	noun	phrase	5	2	match	thznv	qpwnzml	qbj	fskrp	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	0	5	noun	phrase	1	1	nomatch	shlgfjm	dkcgmrz	vhd	nrqlc	cendrier	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	0	6	verb	phrase	4	1	match	klgh	jade	doit	plus	parader	jade
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	0	7	noun	list	3	2	match	mvwqpk	zwdnshk	va	casier	vite	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	0	8	verb	phrase	3	1	match	wsbx	rpvqmjw	peut	moins	patiner	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	0	9	noun	phrase	1	2	nomatch	nsxhbfr	kwsgmtz	qfx	tgjpq	vert	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	0	10	verb	list	4	2	match	pldhsm	yves	leur	voyager	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	0	11	verb	phrase	4	2	nomatch	zlth	luc	va	danser	tard	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	0	12	noun	phrase	3	2	nomatch	dxk	zkwgmqn	son	rocher	rouge	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	13	noun	phrase	3	1	match	mpdhnl	cjsgkfh	mon	beau	grenier	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	14	noun	list	4	2	nomatch	lgvh	avec	peut	voilier	tôt	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	0	15	verb	list	2	1	match	mglkf	swqnjpm	bpv	grand	jongler	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	0	16	noun	phrase	2	2	nomatch	vrznl	zbfrjgl	vmd	boîtier	blanc	tÃ´t
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	0	17	noun	list	1	2	nomatch	ngd	wgdlmfq	htm	hvfgl	ainsi	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	18	noun	list	2	1	nomatch	wbhrp	bndwpcg	zwd	mieux	clavier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	0	19	noun	phrase	4	1	nomatch	whkx	vers	son	nouveau	cendrier	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	0	20	noun	list	5	2	match	tlcvp	hpmqxnj	vmb	qwlbf	voilier	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	21	noun	list	4	1	match	prhmkwx	jean	mon	trop	grenier	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	0	22	noun	phrase	5	1	nomatch	nmd	vscxlgp	gsl	rvlsz	petit	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	0	23	verb	list	4	1	nomatch	btzmgx	sous	doit	nouveau	rouler	luc
+KEY	c	0.061142	38.1572	Text	BLANC	0	24	noun	list	3	1	nomatch	pbl	mflbpkx	leur	beaucoup	clavier	blanc
+KEY	c	0.034725	39.5301	Text	VA	0	25	verb	phrase	4	1	match	rdk	adam	va	moins	galoper	va
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	0	26	noun	list	4	2	nomatch	fkp	pour	doit	sablier	loin	jade
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:20:21
+
+START	1230207.2869		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.9444	2.9584	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	1	noun	list	2	1	match	xlhpv	vcxndsj	gtj	beaucoup	cendrier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	0	2	noun	phrase	2	2	nomatch	lbxv	gjrqmnx	zqx	boîtier	bleu	luc
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	3	verb	list	4	1	match	hgklb	sous	doit	grand	nager	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	0	4	noun	phrase	3	1	nomatch	jdxhqnr	kpsxbfh	son	nouveau	grenier	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	0	5	noun	phrase	1	2	match	wxdkgnm	jmkhgws	mfp	zrvwp	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	0	6	noun	list	4	2	match	rmbwc	sans	va	tablier	ainsi	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	POUR	0	7	noun	list	1	1	nomatch	rzlh	xdtglqr	pcz	vgkwm	rocher	pour
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	0	8	noun	list	4	2	nomatch	bnv	sur	peut	clavier	tôt	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	9	verb	list	1	1	nomatch	fczrwdt	ncwpbvq	xbd	jrxkp	jongler	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	0	10	noun	list	1	2	nomatch	ldmz	rtmfnzg	fdl	pzwnd	vite	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	11	verb	phrase	4	1	nomatch	chkz	paul	va	moins	chasser	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	0	12	verb	list	5	2	match	zmp	znxvkcp	ptr	cqjvr	galoper	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	13	noun	list	4	1	match	cstzxw	luc	mon	plus	voilier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	0	14	noun	phrase	2	1	nomatch	tnqjrdv	tzcbfdh	zqf	beau	panier	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	VIEUX	0	15	verb	list	5	1	match	ftlrpdm	vnxwhkc	pjz	rtpvg	vieux	vieux
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	16	noun	phrase	4	2	nomatch	vcjp	dans	leur	casier	noir	va
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	17	verb	phrase	3	1	match	gpw	fkbwphl	peut	trop	patiner	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	0	18	verb	list	4	1	match	rkvqf	pour	doit	petit	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	19	noun	list	4	1	match	ftbhx	jade	son	mieux	sablier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	20	verb	list	4	2	nomatch	cmkvb	adam	mon	plonger	vert	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	0	21	noun	phrase	4	1	match	nkbdh	vers	leur	nouveau	panier	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	0	22	noun	phrase	3	2	nomatch	jphnvsm	nfrpscz	son	grenier	blanc	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	DANS	0	23	noun	phrase	1	1	nomatch	rzft	wctsbvg	gdr	dclth	boîtier	dans
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	24	noun	list	3	1	match	hgwrlms	rpqwbsx	mon	trop	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	0	25	verb	phrase	4	2	nomatch	cjr	yves	peut	voyager	tard	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	26	noun	phrase	5	2	match	rlbntsf	dwqhfkt	hbf	ltjqm	clavier	clavier
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:21:16
+
+START	1230262.2792		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.459	2.473	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	1	noun	list	2	1	match	xlhpv	vcxndsj	gtj	beaucoup	cendrier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	0	2	noun	phrase	2	2	nomatch	lbxv	gjrqmnx	zqx	boîtier	bleu	luc
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	3	verb	list	4	1	match	hgklb	sous	doit	grand	nager	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	0	4	noun	phrase	3	1	nomatch	jdxhqnr	kpsxbfh	son	nouveau	grenier	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	0	5	noun	phrase	1	2	match	wxdkgnm	jmkhgws	mfp	zrvwp	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	0	6	noun	list	4	2	match	rmbwc	sans	va	tablier	ainsi	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	POUR	0	7	noun	list	1	1	nomatch	rzlh	xdtglqr	pcz	vgkwm	rocher	pour
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	0	8	noun	list	4	2	nomatch	bnv	sur	peut	clavier	tôt	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	9	verb	list	1	1	nomatch	fczrwdt	ncwpbvq	xbd	jrxkp	jongler	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	0	10	noun	list	1	2	nomatch	ldmz	rtmfnzg	fdl	pzwnd	vite	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	0	11	verb	phrase	4	1	nomatch	chkz	paul	va	moins	chasser	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	0	12	verb	list	5	2	match	zmp	znxvkcp	ptr	cqjvr	galoper	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	13	noun	list	4	1	match	cstzxw	luc	mon	plus	voilier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	0	14	noun	phrase	2	1	nomatch	tnqjrdv	tzcbfdh	zqf	beau	panier	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	VIEUX	0	15	verb	list	5	1	match	ftlrpdm	vnxwhkc	pjz	rtpvg	vieux	vieux
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	16	noun	phrase	4	2	nomatch	vcjp	dans	leur	casier	noir	va
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	17	verb	phrase	3	1	match	gpw	fkbwphl	peut	trop	patiner	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	0	18	verb	list	4	1	match	rkvqf	pour	doit	petit	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	19	noun	list	4	1	match	ftbhx	jade	son	mieux	sablier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	20	verb	list	4	2	nomatch	cmkvb	adam	mon	plonger	vert	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	0	21	noun	phrase	4	1	match	nkbdh	vers	leur	nouveau	panier	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	0	22	noun	phrase	3	2	nomatch	jphnvsm	nfrpscz	son	grenier	blanc	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	DANS	0	23	noun	phrase	1	1	nomatch	rzft	wctsbvg	gdr	dclth	boîtier	dans
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	24	noun	list	3	1	match	hgwrlms	rpqwbsx	mon	trop	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	0	25	verb	phrase	4	2	nomatch	cjr	yves	peut	voyager	tard	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	26	noun	phrase	5	2	match	rlbntsf	dwqhfkt	hbf	ltjqm	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	27	noun	phrase	4	2	nomatch	wrgnxsd	avec	leur	casier	rouge	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	0	28	verb	phrase	4	2	nomatch	sjb	marc	va	danser	loin	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	29	verb	list	4	2	match	tsqd	jean	son	rouler	blanc	son
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	0	30	noun	phrase	5	1	nomatch	wzhsgf	cnvmtlf	mrq	ngzld	grand	rouge
+KEY	n	2.3321	47.2933	Paragraph	Appuyez sur une touche 'n' pour continuer.	0	30	noun	phrase	5	1	nomatch	wzhsgf	cnvmtlf	mrq	ngzld	grand	rouge
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:22:37
+
+START	1230342.8602		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.60982	1.6238	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	1.5398	3.2701	Paragraph	(1)
+KEY	s	2.8267	6.6062	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	ADAM	1	1	noun	phrase	3	2	nomatch_2	tszqm	nltx	son	cendrier	blanc	adam
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	2	noun	phrase	4	2	nomatch_1	tnkd	pour	leur	sablier	bleu	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	3	noun	phrase	5	2	nomatch_2	xjztnw	fkl	ndz	fvwx	tablier	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	4	noun	list	2	2	match	vwt	rdcq	sb	voilier	loin	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	1	5	noun	phrase	4	1	match	vkprgw	sous	son	petit	sablier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	6	noun	list	3	2	match	ngbp	nmfw	doit	rocher	tard	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	7	noun	phrase	4	2	match	cvqz	sans	leur	voilier	rouge	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	8	noun	phrase	1	1	nomatch_1	khv	fkl	rmp	skvxl	sablier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	LOIN	1	9	noun	list	3	2	match	mdxtnsf	nltx	doit	boîtier	loin	loin
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	10	noun	phrase	2	2	match	hftqvz	nmfw	ndz	voilier	rouge	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	1	11	noun	phrase	5	2	match	jmrfbqx	tfrj	rmp	sldm	cendrier	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	12	noun	list	2	1	match	vtjgd	qhzg	rmp	plus	clavier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	13	noun	phrase	2	2	match	dcvr	fkrn	rmp	rocher	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	1	14	noun	phrase	4	2	match	tlxzd	dans	mon	clavier	blanc	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	15	noun	list	2	2	nomatch_1	ntdvpzh	nmfw	pwvm	sablier	tard	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	16	noun	list	3	2	match	mspcv	nltx	peut	grenier	vite	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	1	17	noun	phrase	3	1	nomatch_2	gmcv	fkrn	son	grand	sablier	va
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	18	noun	list	3	1	match	djfvcxl	qhzg	mon	plus	rocher	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	GRENIER	1	19	noun	phrase	1	1	nomatch_1	kclw	nltx	rmp	xwpmn	tablier	grenier
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	20	noun	list	4	2	nomatch_2	vwr	avec	doit	sablier	tard	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	21	noun	list	1	1	nomatch_1	tsxn	qhzg	ndz	tbqk	sablier	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	22	noun	phrase	1	2	match	rftjk	dzkx	lfwx	jbhgpnw	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	GRENIER	1	23	noun	list	2	1	match	fxbl	qbxk	ndz	mieux	grenier	grenier
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	24	noun	phrase	5	2	match	pvqhn	fkrn	ndz	mqsk	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	1	25	verb	phrase	4	2	nomatch_1	qtn	adam	doit	chasser	vite	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	1	26	noun	phrase	2	2	nomatch_1	zjlxwmq	dzkx	lfwx	boîtier	vert	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	27	noun	phrase	3	2	match	nvxg	fkrn	son	voilier	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	1	28	verb	list	3	2	nomatch_2	jrpqfng	qhzg	leur	danser	noir	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	29	noun	list	4	1	match	svbk	adam	son	trop	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	30	verb	list	2	1	match	bhptkx	fkrn	pwvm	beau	rouler	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	31	verb	phrase	4	2	nomatch_2	jdpcmrg	adam	doit	jongler	ainsi	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	32	noun	phrase	2	2	match	rbwxzq	nltx	lfwx	sablier	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	33	noun	list	1	2	nomatch_2	xsf	fkl	sb	jbhgpnw	tôt	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	34	verb	list	2	2	nomatch_1	vkbn	nbpr	rmp	galoper	vert	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	35	noun	phrase	3	1	match	rkbxz	nmfw	mon	petit	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	36	noun	list	5	2	nomatch_2	mgdqn	tfrj	sb	rhqv	rocher	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	VERS	1	37	verb	phrase	3	1	nomatch_2	dxln	qhzg	peut	beaucoup	galoper	vers
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:50:15
+
+START	1232000.8929		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.8538	2.8678	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	2.7514	5.7312	Paragraph	(1)
+KEY	s	0.83361	7.0786	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	1	noun	phrase	4	2	match	sljr	pour	mon	rocher	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	2	noun	phrase	3	2	match	gkdl	lzfw	mon	grenier	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	3	noun	list	1	1	match	sfm	qzsm	tvsk	tcnj	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	4	noun	phrase	5	1	match	ldst	lzfw	nvs	gjmhlwf	nouveau	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	ROUGE	1	5	noun	phrase	2	2	nomatch_1	kzdl	xltr	nvs	boîtier	blanc	rouge
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	6	noun	list	4	2	nomatch_1	xgb	sous	va	voilier	tard	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	7	noun	list	5	1	nomatch_1	pcrlgm	xfnl	nvs	rhzmkt	mieux	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	POUR	1	8	noun	phrase	4	1	nomatch_1	xqdnwj	dans	son	vieux	voilier	pour
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	9	noun	list	2	2	nomatch_1	cpglkm	ktrn	lfhn	boîtier	vite	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	10	noun	phrase	3	1	nomatch_1	sdcx	xltr	mon	vieux	grenier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	VIEUX	1	11	noun	phrase	2	1	match	rsbzvtx	ktrn	nvs	vieux	grenier	vieux
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	12	noun	phrase	1	2	match	rmhz	fcsb	nvs	bgxtdp	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	13	noun	list	5	1	match	chqlxnr	fwbn	nwz	bgxtdp	beaucoup	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	1	14	noun	phrase	5	2	nomatch_2	bdjc	xltr	nvs	jwvs	tablier	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	15	noun	list	3	2	match	lwmthb	vwxc	doit	tablier	ainsi	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	16	noun	phrase	2	1	match	jqcfhd	lzfw	tvsk	beau	clavier	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	17	noun	phrase	2	1	nomatch_1	bkfqd	qhzx	tvsk	nouveau	voilier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	18	noun	list	5	2	match	mcwvjn	fcsb	lfhn	tpqx	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	1	19	noun	list	2	1	nomatch_2	gqmwcz	bgtp	tvsk	plus	casier	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	1	20	noun	phrase	4	2	match	cgdfbzt	sans	mon	voilier	bleu	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	SUR	1	21	noun	list	2	2	nomatch_2	ndqp	ktrn	fqhk	voilier	tôt	sur
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	22	noun	phrase	3	2	nomatch_2	rwpt	fcsb	leur	voilier	vert	beaucoup
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:55:03
+
+START	1232289.35		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:55:53
+
+START	1232339.4112		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.3087	3.3212	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	1	noun	list	2	1	match	xlhpv	vcxndsj	gtj	beaucoup	cendrier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	0	2	noun	phrase	2	2	nomatch	lbxv	gjrqmnx	zqx	boîtier	bleu	luc
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:58:01
+
+START	1232467.3531		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.6442	2.6582	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	1	noun	list	2	1	match	xlhpv	vcxndsj	gtj	beaucoup	cendrier	beaucoup
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:58:43
+
+START	1232509.7025		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	2.8953	3.9075	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	1	noun	list	2	1	match	xlhpv	vcxndsj	gtj	beaucoup	cendrier	beaucoup
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:59:23
+
+START	1232549.45		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.2102	2.2241	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:00:00
+
+START	1232586.4504		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	2.2148	3.2286	Paragraph	Le scan va commencer.
+KEY	n	1.3815	5.1273	Text	+
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:00:15
+
+START	1232600.9272		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	6.5001	7.514	Paragraph	qui vont apparaitre successivement � l'�cran.
+KEY	n	9.2088	16.7365	Blank	
+KEY	n	0.10481	17.3449	Blank	
+KEY	n	1.3408	18.6978	Paragraph	Eyetracker calibr�.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:02:05
+
+START	1232710.7619		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.7438	3.7577	Paragraph	(1)
+KEY	s	2.4627	6.7251	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	1	noun	list	4	1	match	mrz	yves	leur	plus	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	2	noun	phrase	4	1	match	qcjf	dans	leur	nouveau	casier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	3	noun	list	4	2	match	jqn	pour	peut	grenier	tard	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	4	noun	list	2	2	match	dfst	vrxb	lv	sablier	ainsi	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	5	noun	list	5	2	nomatch_1	frnhzm	mxnz	lv	xwcfp	rocher	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	1	6	noun	phrase	5	1	match	qbncwdm	bvdm	ftj	sdfqgt	grand	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	7	noun	list	5	1	match	bnhr	dlrh	dzwg	qxjkpts	mieux	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	1	8	noun	list	4	1	nomatch_1	qzt	paul	mon	beaucoup	tablier	luc
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	9	noun	list	4	1	nomatch_1	jrq	paul	leur	plus	panier	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	10	noun	list	1	2	nomatch_1	hzrqpj	vrxb	lv	wgndptf	tôt	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	11	noun	phrase	4	2	match	xlmrndj	sans	son	boîtier	vert	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	12	noun	phrase	4	1	nomatch_2	pwc	sur	leur	petit	tablier	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	1	13	noun	phrase	5	2	nomatch_2	lwzgcr	tgbd	ftj	gpbs	rocher	jade
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	14	noun	phrase	3	2	nomatch_2	fgzvpq	rlg	mon	boîtier	noir	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	15	noun	phrase	1	2	match	pdxlc	swvq	ftj	qxjkpts	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	1	16	verb	list	4	1	nomatch_2	ctnjr	vers	doit	petit	jongler	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	1	17	noun	phrase	3	1	nomatch_1	zdc	mxnz	son	nouveau	casier	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	18	noun	phrase	2	2	nomatch_2	jmtz	rlg	wfn	sablier	blanc	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	1	19	noun	list	2	1	nomatch_1	klr	mdsr	dzwg	plus	voilier	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	20	noun	phrase	1	1	match	lqhgdkc	vrxb	dzwg	dkrbl	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	21	noun	phrase	3	1	nomatch_1	bkfh	tgbd	leur	beau	panier	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	1	22	noun	phrase	4	2	nomatch_2	msn	sur	mon	sablier	blanc	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	MARC	1	23	noun	list	3	2	nomatch_2	cvsmfx	pjth	peut	boîtier	loin	marc
+TIMEOUT	TIMEOUT	-1	-1	Text	DANS	1	24	noun	list	2	2	nomatch_2	rzlhfn	tgbd	ndpq	voilier	ainsi	dans
+TIMEOUT	TIMEOUT	-1	-1	Text	DANSER	1	25	verb	phrase	4	1	match	rxl	marc	va	mieux	danser	danser
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:03:13
+
+START	1232779.3981		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.72226	1.7362	Paragraph	(1)
+KEY	s	1.2336	3.4803	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	1	noun	list	4	1	match	mrz	yves	leur	plus	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	2	noun	phrase	4	1	match	qcjf	dans	leur	nouveau	casier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	3	noun	list	4	2	match	jqn	pour	peut	grenier	tard	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	4	noun	list	2	2	match	dfst	vrxb	lv	sablier	ainsi	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	5	noun	list	5	2	nomatch_1	frnhzm	mxnz	lv	xwcfp	rocher	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	1	6	noun	phrase	5	1	match	qbncwdm	bvdm	ftj	sdfqgt	grand	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	7	noun	list	5	1	match	bnhr	dlrh	dzwg	qxjkpts	mieux	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	LUC	1	8	noun	list	4	1	nomatch_1	qzt	paul	mon	beaucoup	tablier	luc
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	9	noun	list	4	1	nomatch_1	jrq	paul	leur	plus	panier	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	10	noun	list	1	2	nomatch_1	hzrqpj	vrxb	lv	wgndptf	tôt	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	11	noun	phrase	4	2	match	xlmrndj	sans	son	boîtier	vert	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	12	noun	phrase	4	1	nomatch_2	pwc	sur	leur	petit	tablier	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	1	13	noun	phrase	5	2	nomatch_2	lwzgcr	tgbd	ftj	gpbs	rocher	jade
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	14	noun	phrase	3	2	nomatch_2	fgzvpq	rlg	mon	boîtier	noir	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	15	noun	phrase	1	2	match	pdxlc	swvq	ftj	qxjkpts	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	1	16	verb	list	4	1	nomatch_2	ctnjr	vers	doit	petit	jongler	moins
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:08:44
+
+START	1233109.8618		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	73.0473	74.0679	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	1.2047	81.357	Text	MIEUX	0	1	noun	list	3	1	match	mjfr	xkvpgzm	son	mieux	rocher	mieux
+KEY	y	1.0476	88.3967	Text	ROUGE	0	2	verb	phrase	4	2	nomatch	stlvw	jean	va	danser	tard	rouge
+KEY	y	1.0419	95.4046	Text	PATINER	0	3	noun	list	4	2	nomatch	hrqv	sous	peut	grenier	loin	patiner
+KEY	y	0.85517	102.3647	Text	PARADER	0	4	noun	phrase	1	2	nomatch	fqzrg	zpbtwrn	kvt	rpxqz	vert	parader
+KEY	p	1.0391	109.2124	Text	PLUS	0	5	verb	phrase	3	1	match	ksxcpg	bnlzdxm	doit	plus	galoper	plus
+KEY	p	0.86974	116.1236	Text	SABLIER	0	6	noun	phrase	3	2	match	mqxkzrg	wxqjvck	mon	sablier	blanc	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	0	7	noun	phrase	1	1	nomatch	jcbfhg	wktdjmv	wjv	pfjkb	boîtier	va
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 19:55:55
+
+START	5539.4541		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 19:56:57
+
+START	5601.425		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.9924	4.0345	Paragraph	Press 'n' to continue.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 19:57:21
+
+START	5625.4044		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 19:57:39
+
+START	5643.2472		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 19:58:05
+
+START	5669.0662		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 20:08:27
+
+START	6291.9897		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	5.1306	6.1359	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 20:09:53
+
+START	6377.7584		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:32:35
+
+START	25740.3448		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:33:10
+
+START	25775.6426		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3214	2.3214	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:33:41
+
+START	25806.4411		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.1139	2.115	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:34:20
+
+START	25845.0082		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.1395	2.1398	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:34:44
+
+START	25869.66		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.1505	3.1522	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:35:50
+
+START	25934.734		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.75712	1.758	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	1.7168	9.5659	Text	AINSI	0	1	verb	list	4	2	nomatch	vxpkw	adam	leur	galoper	blanc	ainsi
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:38:44
+
+START	26109.1436		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.42833	1.4285	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:34:39
+
+START	1359538479.3499		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:35:13
+
+START	1359538513.1705		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	4.9505	5.9606	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:38:45
+
+START	1359538725.6529		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:39:10
+
+START	1359538750.9364		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.2596	3.2884	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:39:41
+
+START	1359538781.8598		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.8838	2.8964	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:41:31
+
+START	1359538891.8305		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.78401	1.8107	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.3448	3.2722	Paragraph	qui vont apparaitre successivement à  l'écran.
+KEY	n	1.2197	4.5148	Blank	
+KEY	n	0.16964	5.1994	Blank	
+KEY	n	0.32256	5.5358	Paragraph	Eyetracker calibré.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:42:51
+
+START	1359538971.1763		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.98937	1.999	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.79774	2.9083	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.7307	4.7419	Paragraph	S'il vous plait, fermez les yeux et relaxez vous.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:44:47
+
+START	1359539088.0979		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.97121	2.0166	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.30593	2.4357	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.6123	4.1591	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:47:13
+
+START	1359539233.015		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.99587	2.0035	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.34029	2.449	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.2638	3.8228	Paragraph	Le scan va commencer.
+KEY	p	1.2394	5.5665	Paragraph	(1)
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:48:45
+
+START	1359539325.5346		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.55366	1.5641	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.31995	1.9976	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.62025	2.7316	Paragraph	Le scan va commencer.
+KEY	p	0.57428	3.8199	Paragraph	(1)
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 10:49:29
+
+START	1359539370.0029		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 11:02:27
+
+START	1359540147.422		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.57672	1.5874	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.3858	2.0804	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.87871	3.0737	Paragraph	Le scan va commencer.
+KEY	p	0.76641	4.3457	Paragraph	(1)
+KEY	p	0.75241	11.1874	Text	PEUT	1	1	noun	list	3	2	nomatch_1	xwhgf	dlbk	va	casier	tard	peut
+KEY	y	0.64353	18.0903	Text	VA	1	2	noun	phrase	5	2	nomatch_2	bsqc	bzsl	vsz	wpfx	voilier	va
+KEY	p	0.39889	24.5669	Text	BLEU	1	3	noun	phrase	1	2	match	gpr	nrvl	mtfs	fxdgmk	bleu	bleu
+KEY	p	0.54224	31.2821	Text	NOUVEAU	1	4	noun	phrase	5	1	match	vzkh	xrl	mtfs	kdzqghlv	nouveau	nouveau
+KEY	p	0.43256	37.7273	Text	TARD	1	5	noun	list	4	2	match	jpswzhv	vers	peut	tablier	tard	tard
+KEY	y	0.67558	44.5756	Text	SON	1	6	noun	phrase	3	2	match	vnr	xrl	son	tablier	bleu	son
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 11:59:23
+
+START	1359543563.1232		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.93794	1.9476	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.3612	2.4217	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.70179	3.2293	Paragraph	Le scan va commencer.
+KEY	n	0.59313	4.3382	Paragraph	(1)
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:26:57
+
+START	530180.6897		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.5438	3.5572	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:28:11
+
+START	530254.4831		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.0684	3.6004	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:28:45
+
+START	530289.2631		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.50355	2.8521	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	7.8562	10.8216	Paragraph	qui vont apparaitre successivement � l'�cran.
+KEY	n	0.93063	11.7657	Blank	
+KEY	n	0.344	12.6297	Blank	
+KEY	n	0.88987	13.5257	Paragraph	Eyetracker calibr�.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:29:08
+
+START	530311.5048		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.65355	1.6682	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:29:43
+
+START	530346.935		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.46727	1.4819	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:35:42
+
+START	530706.2382		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.49616	2.878	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.53961	3.5216	Paragraph	Le scan va commencer.
+KEY	x	3.6492	7.6816	Paragraph	(1)
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:36:06
+
+START	530729.597		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:36:15
+
+START	530738.4171		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.36591	2.7147	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.3184	3.1504	Paragraph	Le scan va commencer.
+KEY	n	0.86064	4.5263	Paragraph	(1)
+TIMEOUT	TIMEOUT	-1	-1	Text	MOINS	1	1	noun	list	5	1	match	hjlskzd	tjzb	txz	tsmbfpv	moins	moins
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	2	noun	list	4	2	match	wxr	sur	peut	casier	tôt	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	1	3	noun	list	3	1	match	lgj	nbct	mon	moins	cendrier	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	4	noun	phrase	3	1	match	qvwjd	gfhx	leur	nouveau	casier	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	LOIN	1	5	noun	list	3	2	nomatch_1	zgnf	vdhx	va	rocher	tôt	loin
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	1	6	noun	list	2	2	nomatch_1	wsdqjrc	qmf	kqmv	grenier	tard	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	7	noun	list	4	2	match	vjf	avec	peut	panier	tard	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	SANS	1	8	noun	phrase	2	1	nomatch_2	fxwmlrq	vdhx	txz	grand	grenier	sans
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	9	noun	phrase	3	2	match	vsj	qmf	son	tablier	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	10	noun	phrase	2	1	match	dzx	cthf	txz	beau	voilier	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	11	noun	phrase	5	2	match	mjbgr	qpdf	vjmz	cbpg	boîtier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	12	noun	list	3	2	nomatch_1	wsvgx	cthf	doit	clavier	tard	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	VITE	1	13	noun	phrase	1	1	nomatch_2	mbxl	qpdf	vjmz	sbwcphr	casier	vite
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	14	noun	list	5	1	match	psmqxlt	gdjw	txz	nvqpskr	plus	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	NAGER	1	15	noun	list	3	2	nomatch_2	bnkft	qmf	peut	tablier	ainsi	nager
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	1	16	verb	list	3	1	match	hvl	hdsw	peut	petit	parader	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	17	noun	phrase	2	2	match	rnkg	rwtq	vlf	tablier	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	18	noun	list	1	2	nomatch_2	xvtlkqm	cthf	kqmv	nvqpskr	ainsi	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	VERS	1	19	noun	phrase	3	2	nomatch_2	xrdp	qpdf	mon	grenier	rouge	vers
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	20	noun	list	1	1	match	vjct	nbct	txz	msxphczn	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	VOILIER	1	21	noun	phrase	2	2	match	srmbjn	cthf	vjmz	voilier	noir	voilier
+TIMEOUT	TIMEOUT	-1	-1	Text	CHASSER	1	22	noun	list	2	1	nomatch_2	flm	wzvg	vlf	plus	rocher	chasser
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	1	23	noun	phrase	3	1	match	bxzwvj	hdsw	son	grand	tablier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	24	verb	phrase	3	2	match	crd	tjzb	peut	danser	tard	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	25	noun	phrase	5	1	match	xqm	cthf	txz	mgbqpw	nouveau	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	PLONGER	1	26	verb	phrase	3	1	match	bhfjd	wbts	peut	mieux	plonger	plonger
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	27	noun	phrase	1	2	match	hswzm	cthf	vjmz	nsjphkb	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	PAUL	1	28	noun	list	4	1	match	ljqdrkt	paul	mon	beaucoup	clavier	paul
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	1	29	noun	phrase	4	1	match	gpjs	sans	mon	petit	boîtier	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	30	noun	list	4	1	nomatch_1	wsvnt	luc	leur	moins	cendrier	trop
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:39:11
+
+START	530914.6007		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.4059	2.4206	Paragraph	Appuyez sur une touche 'n' pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	JEAN	0	1	noun	list	4	1	match	dwp	jean	mon	moins	tablier	jean
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	2	noun	phrase	5	1	match	nqkhv	spwtrbn	tlg	tjpfz	beau	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	3	noun	phrase	4	1	nomatch	qxpchgb	sous	son	grand	panier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	0	4	verb	list	2	1	match	mzpxfqn	mbxfzkj	bgq	nouveau	galoper	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	5	verb	phrase	3	1	match	vwldnrh	pxdvgwz	va	plus	chasser	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	0	6	noun	phrase	4	2	match	nzwglf	sans	leur	rocher	noir	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	0	7	noun	list	4	2	nomatch	cjt	vers	peut	grenier	loin	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	0	8	verb	list	4	1	match	kzlst	pour	doit	petit	danser	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	9	verb	phrase	4	2	nomatch	wrvc	luc	peut	rouler	tard	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	0	10	noun	list	5	1	nomatch	clt	fzkhvwj	jhs	rfpzh	mieux	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	11	noun	list	3	2	nomatch	wqp	qrvmstc	va	boîtier	ainsi	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	12	noun	phrase	2	1	nomatch	pmjnh	xfzmgqc	fdr	vieux	casier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	ROULER	0	13	noun	phrase	2	2	nomatch	wbrmgt	cdvlrnt	vhf	voilier	blanc	rouler
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	0	14	noun	list	2	1	match	cht	qwhlrpf	jvf	beaucoup	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	0	15	verb	list	4	2	nomatch	dhxctvk	jade	son	patiner	bleu	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	16	noun	list	3	1	nomatch	shjznm	pvdbmlr	mon	trop	clavier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	0	17	noun	phrase	4	1	nomatch	jlmcr	dans	leur	petit	cendrier	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	NAGER	0	18	verb	phrase	4	1	nomatch	qwmb	yves	doit	beaucoup	parader	nager
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	0	19	verb	list	4	1	nomatch	mrgdzj	sur	peut	grand	plonger	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	0	20	verb	phrase	3	2	nomatch	pqnk	gvwqdcz	doit	nager	vite	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	0	21	noun	list	4	2	nomatch	scp	avec	va	panier	tôt	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	PARADER	0	22	noun	list	1	1	nomatch	vtxgc	mnqvjts	mth	hdjft	casier	parader
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	23	noun	phrase	3	2	nomatch	vwtklh	pbfkqjv	mon	grenier	vert	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	0	24	noun	phrase	1	1	match	tslbcfk	tgjfkms	xmc	klxfh	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	0	25	noun	phrase	1	2	nomatch	wcmtg	fktjnhs	rgw	dtqfx	rouge	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	0	26	verb	list	4	2	match	knvgz	marc	leur	jongler	bleu	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	0	27	noun	phrase	5	2	match	wzk	kxcsfwq	qjd	xfdtq	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	0	28	noun	phrase	3	1	match	jvzhnts	xjkznfw	son	nouveau	cendrier	son
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	0	29	verb	phrase	4	2	match	hxlbtv	paul	peut	voyager	tard	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	0	30	verb	phrase	4	1	match	gjchqmk	adam	doit	trop	danser	trop
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:40:23
+
+START	530987.245		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.4087	3.4233	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	3.3256	12.8435	Text	JEAN	0	1	noun	list	4	1	match	dwp	jean	mon	moins	tablier	jean
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:40:55
+
+START	531018.4235		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.1972	2.2119	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	1.0632	9.3639	Text	JEAN	0	1	noun	list	4	1	match	dwp	jean	mon	moins	tablier	jean
+KEY	y	2.6805	18.1174	Text	BEAU	0	2	noun	phrase	5	1	match	nqkhv	spwtrbn	tlg	tjpfz	beau	beau
+KEY	p	1.698	25.9716	Text	BEAUCOUP	0	3	noun	phrase	4	1	nomatch	qxpchgb	sous	son	grand	panier	beaucoup
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:42:21
+
+START	531105.1747		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:44:44
+
+START	531247.3441		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.618	2.6324	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:45:10
+
+START	531273.8875		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.73845	1.7528	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	5.0826	12.933	Text	MARC	0	1	noun	phrase	5	2	nomatch	tpmwjsg	qbrwdth	zvh	mvfdh	tablier	marc
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:45:49
+
+START	531312.8188		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.65428	1.6689	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	5.5496	13.3167	Text	MARC	0	1	noun	phrase	5	2	nomatch	tpmwjsg	qbrwdth	zvh	mvfdh	tablier	marc
+KEY	y	0.9852	20.3568	Text	DANSER	0	2	noun	list	5	1	nomatch	vzs	fnmrzpk	dns	nwldc	trop	danser
+KEY	p	0.90442	27.4287	Text	ROCHER	0	3	noun	phrase	2	2	match	psq	qwlnzcf	plc	rocher	bleu	rocher
+KEY	y	0.90453	34.5149	Text	BEAU	0	4	noun	list	4	1	nomatch	wmnjzr	paul	mon	beaucoup	boîtier	beau
+KEY	y	0.84308	41.5227	Text	PARADER	0	5	verb	phrase	3	1	nomatch	sblpkj	vzxjptw	peut	mieux	voyager	parader
+KEY	p	0.99134	48.7404	Text	SON	0	6	verb	list	3	2	match	srzxl	rqcltgd	son	plonger	rouge	son
+KEY	y	0.87852	55.7803	Text	NAGER	0	7	verb	phrase	4	2	match	dzw	marc	va	nager	ainsi	nager
+KEY	p	0.6884	62.6762	Text	VERT	0	8	verb	list	4	2	match	jpkl	yves	leur	parader	vert	vert
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:55:46
+
+START	531910.0123		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:55:59
+
+START	531922.4171		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.55916	2.9076	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.0321	4.0475	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:56:26
+
+START	531949.8107		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3906	3.7392	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.6358	5.4849	Paragraph	Le scan va commencer.
+KEY	1	24.3261	30.3261	Paragraph	(1)
+KEY	1	0.7068	37.1183	Text	GALOPER	1	1	noun	list	2	1	nomatch_2	gmlh	pkcl	djtv	moins	rocher	galoper
+KEY	6	0.77386	44.0213	Text	VITE	1	2	noun	list	1	2	nomatch_1	wjfb	vznq	cvqj	plckztj	tôt	vite
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 16:42:45
+
+START	538328.0179		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	55.901	58.2496	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.91774	59.2876	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 16:47:15
+
+START	538598.4873		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3808	3.7294	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	2.1539	6.0031	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 08:56:58
+
+START	596781.6372		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 08:57:09
+
+START	596792.2146		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	5	100.7793	101.7905	Paragraph	Appuyez sur une touche quelconque pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 09:05:08
+
+START	597271.343		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.73859	3.1372	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.94729	4.1962	Paragraph	Clignez des yeux quand la croix disparaitra.
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+TIMEOUT	TIMEOUT	-1	-1	Text	 
+TIMEOUT	TIMEOUT	-1	-1	Text	+
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 09:10:36
+
+START	597598.6343		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	5	13.0366	14.0513	Paragraph	Appuyez sur une touche quelconque pour continuer.
+KEY	1	0.67265	20.8114	Text	BEAUCOUP	0	1	verb	list	5	2	nomatch	gpf	zbsnjdq	rkc	qlxmc	galoper	beaucoup
+KEY	6	0.60263	27.5106	Text	LEUR	0	2	verb	list	2	1	nomatch	plwqng	bfcmgzv	hrc	petit	voyager	leur
+KEY	6	8.2935	41.8707	Text	DOIT	0	3	verb	phrase	4	1	match	vbjhd	paul	doit	mieux	plonger	doit
+KEY	1	1.069	48.8849	Text	SUR	0	4	noun	phrase	4	1	match	wrqfj	sur	mon	beau	panier	sur
+KEY	6	1.0318	56.1338	Text	SON	0	5	noun	list	4	1	match	hksjp	jean	son	plus	rocher	son
+KEY	6	0.79118	63.0626	Text	AVEC	0	6	noun	phrase	1	2	nomatch	wdkx	vpglsbm	cxh	gqhfv	blanc	avec
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 09:15:01
+
+START	597864.3522		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	9.2431	11.5917	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.56323	12.2653	Paragraph	Le scan va commencer.
+KEY	p	1.3842	14.1534	Paragraph	(1)
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 09:15:32
+
+START	597895.2806		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.48863	2.8372	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.40037	3.3492	Paragraph	Le scan va commencer.
+KEY	p	1.4052	5.2711	Paragraph	(1)
+KEY	p	2.3038	13.6725	Text	PLUS	1	1	noun	list	5	1	match	tdqvc	rpxm	fzx	ctxjfps	plus	plus
+KEY	p	1.8886	21.5605	Text	PATINER	1	2	noun	phrase	3	2	nomatch_2	shjfb	dgxq	mon	grenier	rouge	patiner
+KEY	p	0.37807	28.1363	Text	CLAVIER	1	3	noun	phrase	1	1	nomatch_1	xngrt	tlq	fzx	cjqgrpv	casier	clavier
+KEY	p	0.88016	35.2243	Text	PANIER	1	4	noun	list	5	2	nomatch_1	wdxpts	pcxr	lngk	zcpd	grenier	panier
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 09:16:23
+
+START	597945.5998		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.50663	2.8552	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.54379	3.5093	Paragraph	Le scan va commencer.
+KEY	n	0.72896	4.7449	Paragraph	(1)
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	1	noun	list	5	1	match	tdqvc	rpxm	fzx	ctxjfps	plus	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	1	2	noun	phrase	3	2	nomatch_2	shjfb	dgxq	mon	grenier	rouge	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	3	noun	phrase	1	1	nomatch_1	xngrt	tlq	fzx	cjqgrpv	casier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	PANIER	1	4	noun	list	5	2	nomatch_1	wdxpts	pcxr	lngk	zcpd	grenier	panier
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	5	noun	phrase	5	2	match	spzb	bdwk	fzx	bwxg	clavier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	BO�TIER	1	6	noun	phrase	3	1	match	zjb	ztxb	son	petit	boîtier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	7	noun	phrase	3	2	match	dpmfr	vdqh	leur	tablier	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	8	noun	phrase	4	1	nomatch_2	bmq	sous	mon	beau	panier	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	9	noun	list	2	1	nomatch_2	vhmgp	hjc	brwp	trop	rocher	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	10	noun	phrase	1	1	nomatch_2	vtsrz	ztxb	brwp	wtrlj	sablier	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	11	noun	phrase	3	2	nomatch_1	gsm	vdqh	son	boîtier	blanc	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	PANIER	1	12	noun	list	2	1	match	pwmdzr	xwnb	phz	moins	panier	panier
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	1	13	noun	list	2	2	nomatch_2	nhzpjsw	vdqh	lngk	sablier	tard	va
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	14	noun	list	4	1	match	sflq	paul	son	trop	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	1	15	noun	phrase	4	1	match	sjr	avec	leur	petit	rocher	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	16	noun	list	1	2	nomatch_1	zfdjq	vdqh	nl	nwskxmt	loin	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	17	noun	phrase	1	2	match	dmbngw	rwcx	phz	jwglsnk	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	18	noun	phrase	5	1	nomatch_2	rfczxj	vdqh	phz	dsklvbq	nouveau	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	T�T	1	19	noun	list	4	2	nomatch_1	cgrbhjd	sous	doit	casier	loin	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	20	noun	list	2	2	match	wcvjtnp	ztxb	lngk	clavier	ainsi	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	DANS	1	21	verb	phrase	3	2	nomatch_2	tqsd	hjc	doit	plonger	tard	dans
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	22	noun	list	4	1	nomatch_2	fzh	adam	mon	plus	grenier	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	JADE	1	23	noun	list	3	2	nomatch_2	pvjmcsn	bdwk	va	boîtier	tôt	jade
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	1	24	noun	list	4	1	match	mwgq	marc	leur	beaucoup	cendrier	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	25	noun	phrase	1	2	match	xmkhf	bdwk	brwp	zdkhsm	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	26	verb	list	4	2	nomatch_2	plrx	yves	son	voyager	noir	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	27	noun	list	5	1	nomatch_1	qdfrml	rpxm	brwp	rfjshpdv	mieux	trop
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 10:05:08
+
+START	600870.6124		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	2	37.1196	38.1357	Paragraph	Appuyez sur une touche quelconque pour continuer.
+KEY	6	254.8977	299.1303	Text	BEAUCOUP	0	1	verb	list	5	2	nomatch	gpf	zbsnjdq	rkc	qlxmc	galoper	beaucoup
+KEY	1	0.92814	306.16	Text	LEUR	0	2	verb	list	2	1	nomatch	plwqng	bfcmgzv	hrc	petit	voyager	leur
+KEY	1	0.85015	313.0847	Text	DOIT	0	3	verb	phrase	4	1	match	vbjhd	paul	doit	mieux	plonger	doit
+KEY	6	1.1249	320.1621	Text	SUR	0	4	noun	phrase	4	1	match	wrqfj	sur	mon	beau	panier	sur
+KEY	6	1.2218	327.6117	Text	SON	0	5	noun	list	4	1	match	hksjp	jean	son	plus	rocher	son
+KEY	1	0.90833	334.6511	Text	AVEC	0	6	noun	phrase	1	2	nomatch	wdkx	vpglsbm	cxh	gqhfv	blanc	avec
+KEY	1	1.0024	341.6478	Text	ROULER	0	7	noun	phrase	4	2	nomatch	bnqscvt	sans	leur	voilier	vert	rouler
+KEY	6	1.7137	349.3117	Text	GRAND	0	8	noun	phrase	3	1	match	bdg	gswtjmh	son	grand	grenier	grand
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 18:57:56
+
+START	106109.9404		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.3435	2.3667	Paragraph	Appuyez sur une touche 'n' pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 18:59:46
+
+START	106219.0033		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.1272	2.1604	Paragraph	Appuyez sur une touche 'n' pour continuer.
+KEY	p	0.66828	8.9194	Text	BEAUCOUP	0	1	verb	list	5	2	nomatch	gpf	zbsnjdq	rkc	qlxmc	galoper	beaucoup
+KEY	y	0.47171	15.5037	Text	LEUR	0	2	verb	list	2	1	nomatch	plwqng	bfcmgzv	hrc	petit	voyager	leur
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 19:01:54
+
+START	106347.7966		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	3.0795	3.0943	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 31-Jan-2013 19:02:23
+
+START	106376.0611		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.4107	1.4241	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	1.2564	3.7897	Paragraph	Appuyez sur une touche quelconque pour continuer.
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:34:12
+
+START	106623.76		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	3.7282	4.8341	Paragraph	Appuyez sur une touche quelconque pour continuer.
+KEY	y	0.92331	11.8437	Text	AVEC	0	1	noun	list	4	2	nomatch	gcjsb	sous	peut	clavier	vite	avec
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:34:41
+
+START	106652.6719		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	3.9622	4.995	Paragraph	Le scan va commencer.
+KEY	n	1.6144	7.1067	Text	+
+KEY	n	0.34203	7.5548	Paragraph	que nous sauvegardons les données.
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:35:18
+
+START	106689.5332		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3167	2.3174	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.5372	3.9577	Paragraph	qui vont apparaitre successivement à  l'écran.
+KEY	n	3.295	8.2374	Blank	
+KEY	n	0.34773	8.5974	Paragraph	Eyetracker calibré.
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:35:44
+
+START	106715.1884		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3899	2.3905	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.8703	4.3742	Paragraph	(1)
+KEY	s	1.2267	6.1022	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	1	1	noun	list	1	1	nomatch_2	hpfszl	qvml	jkf	qsfdv	clavier	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	JEAN	1	2	verb	phrase	4	2	nomatch_1	dwbpxmt	adam	peut	danser	vite	jean
+TIMEOUT	TIMEOUT	-1	-1	Text	DOIT	1	3	verb	list	2	1	nomatch_2	dkh	wpnk	ck	vieux	voyager	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	TÔT	1	4	noun	list	4	2	match	kxqm	sous	peut	tablier	tôt	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	1	5	noun	list	3	1	match	lcks	jmhb	mon	beaucoup	casier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	1	6	noun	phrase	5	2	match	sxh	wpnk	drzk	kqtg	sablier	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	JONGLER	1	7	verb	list	3	2	nomatch_1	qps	rkch	son	danser	noir	jongler
+TIMEOUT	TIMEOUT	-1	-1	Text	TROP	1	8	verb	phrase	1	2	nomatch_2	jvfzhmc	mvbd	ck	fbpghds	tôt	trop
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	9	noun	phrase	1	2	match	gmdncw	wpnk	drzk	jctzlpd	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	10	noun	list	4	1	nomatch_1	zxgjlmh	luc	leur	mieux	cendrier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	LOIN	1	11	noun	list	1	2	nomatch_1	xbw	nwzd	fjds	gntbrvl	ainsi	loin
+TIMEOUT	TIMEOUT	-1	-1	Text	YVES	1	12	verb	phrase	3	1	nomatch_2	rpc	zks	va	plus	galoper	yves
+TIMEOUT	TIMEOUT	-1	-1	Text	PETIT	1	13	noun	phrase	1	1	nomatch_2	zpn	wpnk	drzk	zqbt	clavier	petit
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	14	noun	phrase	4	1	nomatch_1	lfjwbd	avec	leur	nouveau	cendrier	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	15	noun	list	3	2	match	vpgfx	hvn	peut	rocher	loin	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	DANSER	1	16	verb	phrase	2	1	match	gdrh	grsb	fjds	plus	danser	danser
+TIMEOUT	TIMEOUT	-1	-1	Text	VERS	1	17	noun	list	3	1	nomatch_2	rmgq	zks	leur	beaucoup	sablier	vers
+TIMEOUT	TIMEOUT	-1	-1	Text	GRAND	1	18	noun	phrase	5	1	match	xzcrpv	htxm	drzk	jctzlpd	grand	grand
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	19	noun	list	4	2	match	hmbzpnk	avec	peut	cendrier	tard	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	20	verb	phrase	2	2	match	mnfqtp	mvbd	dwpq	galoper	tôt	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	21	noun	list	2	2	match	ntgzwdf	vgrp	ck	panier	ainsi	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	22	noun	list	1	2	match	qtmvjl	hvn	fjds	jctzlpd	tard	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	23	noun	phrase	2	1	nomatch_1	glrdms	vgrp	khw	beau	tablier	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	TÔT	1	24	noun	list	1	2	match	jzdw	wpnk	ck	qrdnlpgh	tôt	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	25	verb	list	5	2	match	jgzktb	zks	khw	tvjg	voyager	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	26	verb	list	3	2	nomatch_2	hfgm	jmhb	mon	galoper	blanc	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	POUR	1	27	noun	phrase	3	2	nomatch_2	tpmcbxv	wpnk	son	casier	rouge	pour
+TIMEOUT	TIMEOUT	-1	-1	Text	CENDRIER	1	28	noun	list	2	2	match	xbrpqjw	dswx	dwpq	cendrier	tôt	cendrier
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	29	noun	phrase	3	1	nomatch_1	tbvpnc	htxm	son	vieux	panier	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	1	30	noun	list	3	2	nomatch_2	lxhdgjv	nwzd	va	tablier	ainsi	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	DANSER	1	31	verb	list	3	1	match	qtbw	cndj	peut	grand	danser	danser
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	32	verb	list	1	1	match	ktxz	wpnk	dwpq	jsnbd	voyager	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	BOÎTIER	1	33	noun	phrase	5	2	match	spmx	cndj	drzk	hjbr	boîtier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	VERT	1	34	verb	list	1	2	match	vpt	pwbj	khw	ndgbfw	vert	vert
+TIMEOUT	TIMEOUT	-1	-1	Text	NOUVEAU	1	35	noun	list	2	2	nomatch_2	sxmptnd	hvn	ck	rocher	tard	nouveau
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	36	noun	list	5	1	nomatch_1	fgb	pwbj	jkf	jctzlpd	beaucoup	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	1	37	verb	list	4	2	nomatch_1	bpztvmk	marc	son	nager	noir	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	38	verb	list	1	1	nomatch_1	ncpr	cndj	fjds	bkrwd	patiner	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	BLANC	1	39	verb	list	1	2	match	kbv	rkch	khw	zdrltfb	blanc	blanc
+TIMEOUT	TIMEOUT	-1	-1	Text	BLEU	1	40	noun	list	5	2	nomatch_2	spgb	wpnk	ck	rwkmb	sablier	bleu
+TIMEOUT	TIMEOUT	-1	-1	Text	SUR	1	41	noun	phrase	4	2	match	stfp	sur	son	tablier	noir	sur
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	1	42	noun	list	4	2	nomatch_1	csrm	sans	doit	clavier	tard	va
+TIMEOUT	TIMEOUT	-1	-1	Text	AINSI	1	43	verb	list	4	1	nomatch_2	ndk	avec	peut	grand	voyager	ainsi
+TIMEOUT	TIMEOUT	-1	-1	Text	CHASSER	1	44	noun	phrase	5	2	nomatch_2	frmqt	hvn	jkf	tvjg	tablier	chasser
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	1	45	verb	phrase	1	1	nomatch_1	ztqxg	qvml	fjds	kdpjslhg	voyager	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	SON	1	46	verb	phrase	5	1	nomatch_2	lhp	mvbd	dwpq	qrbpwxt	trop	son
+TIMEOUT	TIMEOUT	-1	-1	Text	BOÎTIER	1	47	noun	phrase	2	1	match	mgqlh	dswx	khw	vieux	boîtier	boîtier
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	48	noun	phrase	4	2	nomatch_2	znbd	dans	leur	sablier	blanc	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	49	noun	phrase	2	1	nomatch_2	kmnfd	vgrp	khw	grand	rocher	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	PAUL	1	50	verb	list	4	2	nomatch_1	xqhv	jade	son	jongler	rouge	paul
+TIMEOUT	TIMEOUT	-1	-1	Text	NOIR	1	51	noun	phrase	3	2	match	fxmt	nwzd	leur	clavier	noir	noir
+TIMEOUT	TIMEOUT	-1	-1	Text	MIEUX	1	52	noun	list	5	1	nomatch_1	qxdcg	qvml	khw	rblfxg	beaucoup	mieux
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	53	verb	phrase	2	1	match	nsz	grsb	dwpq	trop	galoper	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	TARD	1	54	verb	phrase	3	2	match	wbc	mvbd	peut	patiner	tard	tard
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	55	noun	phrase	3	1	match	lwmrh	htxm	leur	beau	rocher	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	GALOPER	1	56	verb	list	4	2	nomatch_1	kqpxc	yves	mon	danser	blanc	galoper
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	57	verb	list	2	1	nomatch_1	sdrm	cndj	dwpq	nouveau	plonger	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	1	58	verb	phrase	4	1	match	tpbcs	jade	va	plus	chasser	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	59	verb	list	5	2	nomatch_1	kbltrj	mvbd	khw	tvjg	plonger	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	TABLIER	1	60	noun	phrase	1	1	match	pjdksbv	vgrp	drzk	dmxnc	tablier	tablier
+TIMEOUT	TIMEOUT	-1	-1	Text	AVEC	1	61	verb	phrase	4	1	nomatch_2	slgtzw	luc	doit	mieux	jongler	avec
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	62	verb	phrase	1	1	nomatch_1	nkdh	pwbj	ck	knjrx	galoper	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	VA	1	63	verb	list	3	1	match	hvtl	htxm	va	nouveau	plonger	va
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	64	verb	list	2	1	match	qsfb	cndj	fjds	beau	chasser	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	SABLIER	1	65	verb	phrase	4	2	nomatch_2	clwpjdf	adam	peut	jongler	loin	sablier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAU	1	66	noun	phrase	4	1	nomatch_1	zds	sans	mon	nouveau	panier	beau
+TIMEOUT	TIMEOUT	-1	-1	Text	VOYAGER	1	67	verb	phrase	3	2	match	wtg	grsb	peut	voyager	tôt	voyager
+TIMEOUT	TIMEOUT	-1	-1	Text	CLAVIER	1	68	verb	phrase	2	2	nomatch_2	lzvq	qvml	fjds	chasser	vite	clavier
+TIMEOUT	TIMEOUT	-1	-1	Text	TÔT	1	69	verb	list	5	2	nomatch_2	dwfnb	rkch	drzk	hjbr	danser	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	PEUT	1	70	verb	phrase	3	1	match	mhlvr	pwbj	peut	mieux	jongler	peut
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	71	verb	phrase	5	1	match	dxk	mvbd	fjds	fbpghds	beaucoup	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	1	72	verb	list	5	2	match	frmbvxq	grsb	jkf	nrfwg	patiner	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	73	verb	phrase	5	1	match	mlsxckt	rkch	ck	rtwdfzn	beaucoup	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	74	noun	list	5	2	match	mlsfvkn	hvn	fjds	ktc	rocher	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	PLONGER	1	75	verb	phrase	1	1	nomatch_1	gpwlxd	mvbd	ck	jhmw	danser	plonger
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	76	noun	phrase	2	2	match	ncvgks	cndj	jkf	rocher	noir	rocher
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	1	77	verb	phrase	5	1	nomatch_1	qhdb	qvml	ck	zdrltfb	moins	beaucoup
+TIMEOUT	TIMEOUT	-1	-1	Text	LEUR	1	78	noun	list	2	1	nomatch_2	xgbkzt	mvbd	jkf	mieux	cendrier	leur
+TIMEOUT	TIMEOUT	-1	-1	Text	PATINER	1	79	verb	list	2	1	match	sjdfcr	dswx	ck	beau	patiner	patiner
+TIMEOUT	TIMEOUT	-1	-1	Text	ROCHER	1	80	noun	phrase	1	1	nomatch_1	pwdcvz	wpnk	jkf	bkrwd	panier	rocher
+KEY	n	3.0894	121.1422	Text	+	1	80	noun	phrase	1	1	nomatch_1	pwdcvz	wpnk	jkf	bkrwd	panier	rocher
+KEY	n	0.9866	122.2462	Paragraph	que nous sauvegardons les données.	1	80	noun	phrase	1	1	nomatch_1	pwdcvz	wpnk	jkf	bkrwd	panier	rocher
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:37:52
+
+START	106843.2651		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.96992	1.9696	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.68407	2.7696	Paragraph	(1)
+KEY	s	1.4345	4.7057	Paragraph	Le scan va commencer.
+KEY	p	1.5004	11.7536	Text	LEUR	1	1	noun	list	1	1	nomatch_2	hpfszl	qvml	jkf	qsfdv	clavier	leur
+KEY	y	0.68662	18.89	Text	JEAN	1	2	verb	phrase	4	2	nomatch_1	dwbpxmt	adam	peut	danser	vite	jean
+KEY	p	8.2157	34.3695	Text	DOIT	1	3	verb	list	2	1	nomatch_2	dkh	wpnk	ck	vieux	voyager	doit
+TIMEOUT	TIMEOUT	-1	-1	Text	TÔT	1	4	noun	list	4	2	match	kxqm	sous	peut	tablier	tôt	tôt
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:39:12
+
+START	106922.8526		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:40:20
+
+START	106991.3342		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.1506	2.15	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	1.3685	4.0048	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:40:33
+
+START	107003.861		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.85407	1.8537	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	0.95089	3.3032	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+KEY	p	1.1096	9.1578	Text	cliquez	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vacancier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	écoute
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:40:47
+
+START	107018.4919		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	y	0.65512	1.6552	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	0.91858	3.0711	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+KEY	y	0.69614	8.5109	Text	cliquez	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vacancier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	écoute
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:41:01
+
+START	107032.6053		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.89474	1.8953	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	0.65053	3.0374	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Text	cliquez	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vacancier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	écoute
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	bruit
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:41:20
+
+START	107051.6471		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.46001	1.4596	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	0.86001	2.8117	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vacancier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	écoute
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	bruit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vagues
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	déferlent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	sur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	rivage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	rivage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	a
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	brûlé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	toutes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	lettres
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ancien
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fiancé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	trop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	infidèle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	infidèle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	paunais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	boq
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	los
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	scrym
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	tis
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	reles
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	gi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ze
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	afval
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	crop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	acges
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	acges
+KEY	p	1.0609	37.2196	Text	cliquez	localizer	2	pseudo	acges
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ipé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	culployer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	kai
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	indain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	um
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	briponmisi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	mégusais
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:42:07
+
+START	107097.8802		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.555	1.5544	Paragraph	appuyez sur le bouton de réponse droit.
+KEY	s	1.1428	3.1945	Paragraph	Le scan va commencer.
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	joindre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	curé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	paroisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	parrain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vacancier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	écoute
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	bruit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	vagues
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	déferlent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	sur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	rivage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	rivage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	a
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	brûlé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	toutes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	lettres
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	ancien
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	fiancé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	trop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	infidèle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	1	sentence	infidèle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	paunais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	boq
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	los
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	scrym
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	tis
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	reles
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	gi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ze
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	afval
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	crop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	acges
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	acges
+TIMEOUT	TIMEOUT	-1	-1	Text	cliquez	localizer	2	pseudo	acges
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ipé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	culployer
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	kai
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	indain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	um
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	briponmisi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	mégusais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	zà
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	rentofla
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	guèque
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	mébant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	mébant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	gnarc
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	gû
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	voyapadi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ar
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	zû
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	décarmi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	ko
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	trissenvait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	stas
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	sphegs
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	2	pseudo	sphegs
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	passant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	examine
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	luxueux
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	canapé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	abandonné
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	sur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	bord
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	trottoir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	trottoir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	petite
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	regarde
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	comment
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	père
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	grille
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	épis
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	maïs
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	mur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	mur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	promeneur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	lâche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	laisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	chien
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	aboie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	sans
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	arrêt
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	3	sentence	arrêt
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	jerihui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	susent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	naï
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	latch
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	osi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	cruide
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	qo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	huidu
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ux
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ornit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ornit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	gisse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	gi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ass
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	zau
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	aguë
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ol
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	ui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	skal
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	zé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	vrût
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	smais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	smais
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	disrait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	sva
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	res
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	dong
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	repota
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	sme
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	heucierdre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	sorai
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	drar
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	4	pseudo	drar
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	garçon
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	répond
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	sa
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	soeur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	cherche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	tube
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	colle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	blanche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	blanche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	chorégraphe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	réunit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	danseurs
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	veulent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	faire
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	partie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	prochain
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	ballet
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	ballet
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	a
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	oublié
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	prévenir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	deuxième
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	vendeuse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	magasin
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	chaussures
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	5	sentence	chaussures
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	trautre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	chrompre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	er
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	sercrime
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	gny
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	brymphe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	mousonblité
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	lo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	sadre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	us
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	mârir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	mârir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	comelcart
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	simvant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	trà
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	jo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	manversez
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	seche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	danlicès
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	olk
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	pabric
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	ud
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	lèton
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	lèton
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	bourêle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	ocpresde
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	vry
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	glueux
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	heubise
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	aletdée
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	spû
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	hiz
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	tefivice
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	al
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	exane
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	6	pseudo	exane
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	reçoit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	sac
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	céréales
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	cultivées
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	dans
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	nord
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	pays
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	pays
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	vérifie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	installations
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	assurent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	sécurité
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	passagers
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	vol
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	vol
+TIMEOUT	TIMEOUT	-1	-1	Text	appuyez	localizer	7	sentence	vol
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	a
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	accepté
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	fils
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	achète
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	télévision
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	à
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	écran
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	plat
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	7	sentence	plat
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	mavoies
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	aka
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	farites
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	prender
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	zam
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	asieur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	qud
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	cetquasa
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	rèle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	ow
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	phetch
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	phetch
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	cepolui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	co
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	tyverde
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	spe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	rédinait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	phapicun
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	ec
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	réq
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	cosbe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	rétat
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	atnêres
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	atnêres
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	garmiscoru
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	pnot
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	prirare
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	jax
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	baiterlée
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	nif
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	patcucige
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	ins
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	aluri
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	spha
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	pèmanferlons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	8	pseudo	pèmanferlons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	écoute
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	concierge
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	raconter
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	aventures
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	locataire
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	premier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	étage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	étage
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	chanteuse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	jette
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	dé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	roule
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	sur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	table
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	jeu
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	jeu
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	compte
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	mots
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	couvrent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	page
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	imprimée
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	en
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	petits
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	caractères
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	9	sentence	caractères
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	dunaislait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ila
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	enpa
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ocse
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	lartie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	gi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	moncine
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	héver
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	branne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	jo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	cramfernir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	cramfernir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	vonne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	um
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	gâvanprès
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	co
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	sotes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	row
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	fe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	tène
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ogir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	sqâle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	raplui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	raplui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	notys
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	sat
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	afecler
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	cramièté
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	he
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	disgenquent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ros
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	ansins
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	souvons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	10	pseudo	souvons
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	chanvre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	est
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	fibre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	donne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	toile
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	trop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	rêche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	rêche
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	coupe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	fil
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	pend
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	sa
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	robe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	en
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	soie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	noire
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	noire
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	prêtre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	salue
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	menuisier
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	répare
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	plafond
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	chapelle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	11	sentence	chapelle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	cutonséce
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	didis
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	gi
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	na
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	ité
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	sqyan
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	zac
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	na
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	pnube
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	na
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	vça
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	vça
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	juslere
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	béme
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	iz
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	sbié
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	fe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	aq
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	ovver
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	acoucution
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	os
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	tenver
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	rub
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	rub
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	prérume
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	chosins
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	zy
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	têfile
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	ko
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	the
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	adenbes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	ko
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	menna
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	zû
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	mênuvois
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	12	pseudo	mênuvois
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	rat
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	sort
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	trou
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	creusé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	dans
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	le
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	mur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	salon
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	salon
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	notaire
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	consulte
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	lourds
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	volumes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	empilés
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	sur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	étagères
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	métal
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	métal
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	cuisinière
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	fait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	griller
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	noisettes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	qui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	répandent
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	une
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	odeur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	très
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	appétissante
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	13	sentence	appétissante
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	scinge
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	ps
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	sedaient
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	ir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	anertres
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	enlenait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	uo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	fomanre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	ia
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	prétairait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	prétairait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	gait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	scel
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	zop
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	zaï
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	protue
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	sharc
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	cévu
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	us
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	busrete
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	sbogne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	sbogne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	graï
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	gymce
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	glû
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	coubre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	pui
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	glonfrée
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	gni
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	ux
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	brûne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	da
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	setré
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	14	pseudo	setré
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	mère
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	sourit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	en
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	comprenant
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	que
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	fils
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	veut
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	surprendre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	son
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	père
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	père
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	pluie
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	frappe
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	les
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	ardoises
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	toits
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	des
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	immeubles
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	la
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	ville
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	ville
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	garçon
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	choisit
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	un
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	costume
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	chasseur
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	de
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	grands
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	crocodiles
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	du
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	nil
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	15	sentence	nil
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	magé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	algasé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	ia
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	préasetait
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	ile
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	igé
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	kêne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	rhes
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	manpelcits
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	nog
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	zown
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	zown
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	faneque
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	sles
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	alcerle
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	gec
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	dovanir
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	cetcelcre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	vesgue
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	ux
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	vuc
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	qo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	flog
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	flog
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	gâliverte
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	i
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	jeuma
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	os
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	enges
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	us
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	zo
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	salgne
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	ar
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	basaci
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	thâpre
+TIMEOUT	TIMEOUT	-1	-1	Blank	Localizer_ISI	localizer	16	pseudo	thâpre
+KEY	n	4.3098	129.0425	Text	+	localizer	16	pseudo	thâpre
+KEY	n	0.61992	129.7787	Paragraph	que nous sauvegardons les données.	localizer	16	pseudo	thâpre
+
+----------------------------------------------------------------------------
+Started at: 10-Feb-2013 13:44:28
+
+START	107238.8828		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.52746	1.5279	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.86086	2.4961	Paragraph	Clignez des yeux quand la croix disparaitra.	blinks	1	1
+TIMEOUT	TIMEOUT	-1	-1	Text	+	blinks	1	2
+TIMEOUT	TIMEOUT	-1	-1	Text	 	blinks	1	2
+KEY	n	0.80795	3.5121	Paragraph	Suivez la croix des yeux.	eye_movements	1	1
+TIMEOUT	TIMEOUT	-1	-1	Text	+	eye_movements	1	3
+TIMEOUT	TIMEOUT	-1	-1	Text	+                         	eye_movements	1	1
+TIMEOUT	TIMEOUT	-1	-1	Text	+	eye_movements	1	2
+TIMEOUT	TIMEOUT	-1	-1	Text	                         +	eye_movements	1	2
+KEY	n	0.52824	4.1678	Paragraph	que nous sauvegardons les données.	eye_movements	1	2
+
+----------------------------------------------------------------------------
+Started at: 01-Mar-2013 12:24:03
+
+START	96043.2321		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3894	1.3945	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.41363	2.8841	Paragraph	Appuyez sur une touche quelconque pour continuer.
+TIMEOUT	TIMEOUT	-1	-1	Text	MON	0	1	noun	phrase	4	1	match	vpjnm	sans	mon	petit	cendrier	mon
+TIMEOUT	TIMEOUT	-1	-1	Text	PLONGER	0	2	noun	phrase	3	2	nomatch	bvghtm	fbptmlr	leur	sablier	bleu	plonger
+TIMEOUT	TIMEOUT	-1	-1	Text	TÔT	0	3	noun	list	1	1	nomatch	hwcqgvd	pnrjmlf	rqp	kcqsn	voilier	tôt
+TIMEOUT	TIMEOUT	-1	-1	Text	PLUS	0	4	noun	phrase	5	2	nomatch	zmjd	mvfljdh	vjn	kgwxl	clavier	plus
+TIMEOUT	TIMEOUT	-1	-1	Text	CASIER	0	5	noun	phrase	1	1	match	tpmdbh	wphdzlt	dqr	dlgqm	casier	casier
+TIMEOUT	TIMEOUT	-1	-1	Text	BEAUCOUP	0	6	verb	phrase	2	1	nomatch	qjrflb	plmhrvd	lkh	trop	chasser	beaucoup
+
+----------------------------------------------------------------------------
+Started at: 01-Mar-2013 12:25:34
+
+START	96134.7802		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.6096	2.6109	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	x	1.9275	4.6508	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 01-Mar-2013 12:25:58
+
+START	96158.5194		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.99979	2.0009	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	4.0644	6.169	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.58091	6.8649	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.81543	7.7849	Paragraph	Le scan va commencer.
+KEY	n	0.46344	8.7369	Paragraph	(5)

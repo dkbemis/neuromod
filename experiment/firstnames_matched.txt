@@ -1,0 +1,8 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+adam	4	2	-1	0+1.3644i	-1	NAME	1177404	6.0709
+paul	4	1	-1	0+1.3644i	-1	NAME	10025854	7.0011
+yves	4	1	-1	0+1.3644i	-1	NAME	1766421	6.2471
+marc	4	1	-1	0+1.3644i	-1	NAME	2625040	6.4191
+jean	4	1	-1	0+1.3644i	-1	NAME	26700163	7.4265
+luc	3	1	-1	0+1.3644i	-1	NAME	1289229	6.1103
+jade	4	1	-1	0+1.3644i	-1	NAME	54338	4.7351

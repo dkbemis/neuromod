@@ -1,0 +1,11 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+boîtier	7	2	0.72	-0.14267	6	NOM	39277	4.5941
+casier	6	2	15.82	1.1992	5	NOM	72274	4.859
+cendrier	8	3	3.86	0.58659	7	NOM	22786	4.3577
+clavier	7	2	1.62	0.20952	6	NOM	158761	5.2007
+grenier	7	2	9.05	0.95665	6	NOM	257377	5.4106
+panier	6	2	13.82	1.1405	5	NOM	223333	5.349
+sablier	7	3	1.03	0.012837	7	NOM	27203	4.4346
+rocher	6	2	10.37	1.0158	4	NOM	364670	5.5619
+tablier	7	3	4.13	0.61595	7	NOM	101237	5.0053
+voilier	7	2	1.67	0.22272	7	NOM	42288	4.6262

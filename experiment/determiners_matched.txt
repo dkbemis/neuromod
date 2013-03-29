@@ -1,0 +1,4 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+leur	4	1	277.53	2.4433	3	ADJ:pos	74732233	7.8735
+son	3	1	1740.43	3.2407	2	ADJ:pos	108476340	8.0353
+mon	3	1	3848.99	3.5853	2	ADJ:pos	15341497	7.1859

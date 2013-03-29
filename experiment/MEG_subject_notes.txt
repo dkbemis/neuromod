@@ -1,0 +1,62 @@
+
+# ------------------------------
+subject 	sa130042
+
+# 1/31/13 - 9-11
+# MEG first
+# Long delay before first run fixing response keys
+# No sync trigger between EGI and MEG
+# No practice feedback
+# Response keys are coded wrong
+# No eyetracking (was broken before start)
+# EEG data appeared to have ~50Hz noise during recording
+# Bad channels: 1613; 1813; (1721-23 - a little noisy, as always?)
+# ‘Right” responses
+
+
+
+# ------------------------------
+subject 	ap100009
+
+# 2/7/13 - 13-15
+# MEG first
+# Very practiced subject
+# Used “metallic” ET cord
+# Bad channels: 1613; (1722/23); 1233 - slightly noisy
+# Used "left" responses
+# Stopped initial run to relocate diode
+# Did not update the baseline to write labels to the log. Added by hand
+
+# Mappings to file names of saved meg files
+meg_run_files	cell	ap100009_run1 ap100009_run2 100009_run3 ap100009_Run4 ap100009_Run5
+meg_basline_file	string	ap100009_baseline
+
+
+# ------------------------------
+subject 	mr080072
+
+# 2/8/13 - 10-12
+# MEG first
+# Very practiced subject
+# Used “metallic” ET cord
+# Bad channels: 1613; (1722/23); 1233 - noisy
+# Used an initial run to set diode, and then remade stim lists
+# Blinked during delays
+
+resp_type		string	right
+meg_run_files	cell	mr080072_run_1 mr_080072_run_2 mr_080072_run_3 mr_080072_run_4 mr_080072_run_5  
+meg_basline_file	string	mr_080072_baseline
+
+
+
+# PILOT
+
+# ------------------------------
+subject 	hn120493
+
+# 1/18/13 - 10-12
+# MEG second
+# Runs in blocks
+# Four runs
+# No EGI - Broken amp.
+

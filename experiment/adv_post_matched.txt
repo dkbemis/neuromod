@@ -1,0 +1,6 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+vite	4	1	491.64	2.6916	3	ADV	3428380	6.5351
+tôt	3	1	129.98	2.1139	2	ADV	2109191	6.3241
+tard	4	1	350.38	2.5445	3	ADV	6516404	6.814
+ainsi	5	2	207.68	2.3174	3	ADV	40780400	7.6105
+loin	4	1	491.64	2.6916	3	ADV	8668093	6.9379

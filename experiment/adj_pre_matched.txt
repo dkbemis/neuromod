@@ -1,0 +1,6 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+vieux	5	1	180.08	2.2555	3	ADJ	3272633	6.5149
+beau	4	1	281.23	2.4491	2	ADJ	3239092	6.5104
+nouveau	7	2	170.28	2.2312	4	ADJ	12575983	7.0995
+grand	5	1	338.27	2.5293	3	ADJ	18113077	7.258
+petit	5	2	573.72	2.7587	4	ADJ	8242477	6.9161

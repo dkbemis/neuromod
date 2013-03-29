@@ -1,0 +1,348 @@
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:26:33
+
+START	1359458793.4708		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:16
+
+START	1359459376.3737		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:32
+
+START	1359459392.07		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:56
+
+START	1359459416.0044		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:37:42
+
+START	1359459462.491		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:39:21
+
+START	1359459561.7181		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.98838	2.5982	Text	This
+KEY	p	0.62056	3.6314	Text	is
+KEY	p	1.0106	5.0555	Text	humongous
+KEY	p	1.003	6.4656	Text	and
+KEY	p	0.32161	7.2022	Text	this
+KEY	p	0.3638	7.9793	Text	is
+KEY	p	0.28529	8.6836	Text	tiny
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:40:32
+
+START	1359459632.6213		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:41:02
+
+START	1359459662.8628		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:42:11
+
+START	1359459731.4665		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:49:46
+
+START	1359460186.8033		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:50:01
+
+START	1359460201.3476		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:50:21
+
+START	1359460221.0964		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	29.5734	31.1668	Text	This
+KEY	k	30.3939	61.9771	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:51:55
+
+START	1359460315.87		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:52:08
+
+START	1359460328.4464		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:52:24
+
+START	1359460344.7475		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	23.648	25.2364	Text	This
+KEY	k	9.1267	34.7672	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:54:44
+
+START	1359460484.235		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.13797	1.7143	Text	This
+KEY	n	1.4302	3.557	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:55:06
+
+START	1359460506.869		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	0.41626	1.9929	Text	This
+KEY	k	0.47097	2.8816	Text	is
+KEY	n	18.0805	21.3752	Text	humongous
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:55:52
+
+START	1359460552.1384		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	1.5372	3.1298	Text	This
+KEY	h	0.84423	4.3884	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:56:10
+
+START	1359460570.2015		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	3.6087	5.1857	Text	This
+KEY	n	0.93184	6.5286	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:56:40
+
+START	1359460600.3426		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	0.20419	1.797	Text	This
+KEY	k	0.37672	2.5867	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:05
+
+START	1359460625.7121		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:18
+
+START	1359460638.4888		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:30
+
+START	1359460650.6653		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:58:16
+
+START	1359460696.0339		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:58:29
+
+START	1359460709.4438		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.4378	3.0314	Text	This
+KEY	n	0.44789	3.8929	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:01
+
+START	1359460741.5358		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3503	2.9435	Text	This
+KEY	n	1.1164	4.4777	Text	is
+KEY	n	2.7927	7.6886	Text	humongou
+KEY	n	0.5448	8.6431	Text	and
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:19
+
+START	1359460759.9882		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:36
+
+START	1359460776.4961		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:51
+
+START	1359460791.0069		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	j	12.5763	14.1537	Text	This
+KEY	n	6.1905	20.7615	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:00:44
+
+START	1359460844.6996		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	h	0.72019	2.2968	Text	This
+KEY	h	1.0012	3.7121	Text	is
+KEY	x	8.612	12.7406	Text	humongou
+KEY	c	0.38474	13.537	Text	and
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:01:37
+
+START	1359460897.1752		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	8.227	9.8188	Text	This
+KEY	n	3.0603	13.2922	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:02:24
+
+START	1359460944.094		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:02:44
+
+START	1359460964.7097		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	10.8753	12.452	Text	This
+KEY	k	0.38299	13.2517	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:03:26
+
+START	1359461006.643		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	0.55558	2.1483	Text	This
+KEY	k	0.33939	2.8995	Text	is
+KEY	k	0.30361	3.6144	Text	humongou
+KEY	x	8.458	12.4859	Text	and
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:04:23
+
+START	1359461063.5029		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	j	10.465	12.0423	Text	This
+KEY	j	0.71818	13.1706	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:04:54
+
+START	1359461094.7115		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	8.6144	10.1907	Text	This
+KEY	n	0.4148	11.0149	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:24:12
+
+START	1230438.5705		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	r	63.2718	64.8826	Text	This
+KEY	r	2.387	67.6864	Text	is
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:43:54
+
+START	1231620.6278		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:51:03
+
+START	1232048.8881		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	20.1694	21.7831	Text	This
+KEY	n	0.13016	22.3181	Text	is
+KEY	x	20.8978	43.6189	Text	humongou
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:53:38
+
+START	1232204.4526		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:05:42
+
+START	1232928.4655		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	29.2538	30.8675	Text	THIS
+KEY	k	0.10281	31.3867	Text	IS
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:16:59
+
+START	24804.3516		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	10.492	12.0763	Text	THIS
+KEY	k	0.24999	12.7244	Text	IS
+KEY	x	2.0627	15.1883	Text	HUMONGOU
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:17:22
+
+START	24826.9831		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	7.5408	9.1257	Text	This
+KEY	n	0.5342	10.0529	Text	is
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:36:39
+
+START	25984.0231		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	2.0831	3.6689	Text	This
+KEY	n	0.42711	4.485	Text	is
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:37:46
+
+START	26051.0526		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	1.2313	2.8154	Text	This
+KEY	k	0.37122	3.5753	Text	is
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:23:13
+
+START	529957.1481		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	k	1.5115	3.2319	Text	This
+KEY	k	0.63175	4.2696	Text	is
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:25:06
+
+START	530070.3133		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	j	24.3032	25.918	Text	This
+KEY	j	0.37606	26.7003	Text	is

@@ -1,0 +1,73 @@
+
+# ------------------------------
+subject 	cg120234
+
+# 2/11/13 - 9-11
+# fMRI first
+# Used Run03 for the localizer
+# Left response 
+# eye tracker was not good on first run
+#	- Better on second
+#	- Not on third
+#	- Became sleepy towards end of last block
+#		- And through localizer…
+
+rec_date	string	20130211
+
+
+# ------------------------------
+subject 	sa130042
+
+# 2/4/13 - 9-11
+# fMRI second
+# No eyetracking
+#	- Subject's eyes were not far enough outside the coil
+# Scan 4 restart (Technician started early)
+# Localizer restarted at least once
+#	 run without catch trials
+#		- Bug in response keys
+#	- Subject correctly reported that no responses were made though...
+
+rec_date	string	20130204
+anat_scan	string	2
+run_scans	cell	3 4 5 6
+loc_scan	string	8
+
+
+# ------------------------------
+subject 	rg110386
+
+# 1/29/13 - 14:15-16:15
+# fMRI first
+
+# Used Run1 for the localizer
+#	- Right response in fMRI
+# Eye tracker would not pick up eye
+# Run 1: There was movement
+#	- Subject complained of not being able to see
+
+# NOTE: Run 2 crashed the first time because the eyetracker stopped recording
+
+# Run 2: Reported eyes tearing up
+
+# Nurse reported lots of movement
+
+
+# Pilot
+
+# ------------------------------
+subject 	hn120493
+
+# 1/14/13 - 2:30-4:30
+# fMRI first
+# Practice was good
+#	- Several errors however
+#	- Run under 'Test' subject, so copied over after the fact
+#	- Ran 18/30 trials
+# First run broke because TTL returns 'x' and so program was exited
+#	- Switched exit key to 'q' thereafter
+# Localizer crashed because no hm_ stim file was made
+#	- Renamed Test_stim file and ran 
+# Log/data files saved as 'hm' for fMRI
+# Eyetracker would not calibrate
+

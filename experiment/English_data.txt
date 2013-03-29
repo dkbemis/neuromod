@@ -1,0 +1,863 @@
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 19:32:50
+
+START	269091.228		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.2642	2.3268	Paragraph	Press any key to continue.
+KEY	o	0.75479	9.1832	Text	RARELY	noun	list	5	1	nomatch_1	rarely
+KEY	p	0.5391	15.9826	Text	BED	noun	phrase	1	1	match	bed
+KEY	o	0.53342	22.9586	Text	CLOSET	verb	phrase	2	1	nomatch_2	closet
+KEY	o	0.61867	29.8945	Text	RARELY	verb	phrase	3	1	nomatch_1	rarely
+KEY	p	0.85303	36.9743	Text	NEAR	verb	list	4	1	match	near
+KEY	o	0.95313	44.1729	Text	JUMP	verb	list	3	1	nomatch_1	jump
+KEY	o	0.52221	50.774	Text	CAN	noun	list	1	1	nomatch_2	can
+KEY	p	0.41598	57.3655	Text	THROW	verb	phrase	1	1	match	throw
+KEY	p	0.76744	64.2143	Text	HER	noun	phrase	4	1	match	her
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 19:38:18
+
+START	269418.9788		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	2@	0.90295	1.9324	Paragraph	Press any key to continue.
+KEY	p	1.884	9.9021	Text	WINDOW	noun	phrase	1	1	match	window
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:06:51
+
+START	278332.5182		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	7.1926	8.2238	Paragraph	Otherwise, press the p.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:07:28
+
+START	278370.1885		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:17:50
+
+START	278991.3829		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	3.025	4.047	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.18548	5.3347	Paragraph	Please lie still as we start the recording.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:18:10
+
+START	279012.0768		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.53927	1.5952	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:42:20
+
+START	280462.2815		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:42:47
+
+START	280489.206		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.2229	2.2552	Paragraph	Please lie still as we start the recording.
+KEY	p	1.02	3.2972	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:43:19
+
+START	280521.1594		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:44:31
+
+START	280592.9413		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	2.1691	3.2266	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.56068	3.8964	Paragraph	Please lie still as we start the recording.
+KEY	a	0.40024	4.3192	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.75012	5.1852	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:46:16
+
+START	280698.1759		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.65207	1.7015	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.8774	3.6771	Paragraph	KEY	a	0.62483	4.3191	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	3.9785	8.4218	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:52:44
+
+START	281086.2534		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.777	2.8405	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.3905	3.3373	Paragraph	Please lie still as we start the recording.
+KEY	a	0.46211	3.8086	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.42298	4.3201	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:54:34
+
+START	281195.7598		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.54309	1.6024	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.51126	2.237	Paragraph	Please lie still as we start the recording.
+KEY	a	0.34674	2.6069	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.34134	3.0692	Paragraph	Press any key to continue.
+KEY	p	0.70326	9.8784	Text	BED	noun	list	3	1	match	bed
+KEY	o	0.90534	17.0788	Text	JUMP	verb	list	1	1	nomatch_1	jump
+KEY	o	0.58683	23.8959	Text	BLUE	noun	phrase	2	1	nomatch_1	blue
+KEY	p	0.66533	30.8061	Text	SLIDE	verb	phrase	1	1	match	slide
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 22:59:31
+
+START	281493.1054		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.90652	1.9415	Paragraph	Please lie still as we start the recording.
+KEY	a	0.4599	2.4121	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 23:00:08
+
+START	281529.3634		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	2.2084	3.2606	Paragraph	Please lie still as we start the recording.
+KEY	a	0.39986	3.6768	Paragraph	Press any key to continue.
+KEY	0	0.6918	10.4534	Text	SLIDE	verb	list	1	1	match	slide
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 23:03:03
+
+START	281704.5181		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.75516	1.8164	Paragraph	Please lie still as we start the recording.
+KEY	a	0.32261	2.1537	Paragraph	Press any key to continue.
+KEY	p	0.62239	8.8658	Text	SLIDE	verb	list	1	1	match	slide
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 23:11:23
+
+START	282204.7741		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.0022	2.0502	Paragraph	Please lie still as we start the recording.
+KEY	a	0.44851	2.513	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 20-Dec-2012 23:12:57
+
+START	282298.7195		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.94599	1.9852	Paragraph	Please lie still as we start the recording.
+KEY	p	0.35926	2.3688	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 20:53:10
+
+START	399131.8646		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.0285	2.1125	Paragraph	Please lie still as we start the recording.
+KEY	p	1.4013	3.5357	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 20:53:39
+
+START	399160.4908		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.91236	1.9502	Paragraph	Please lie still as we start the recording.
+KEY	p	0.66305	2.638	Paragraph	Press any key to continue.
+KEY	p	1.2996	10.0374	Text	BLUE	1	1	noun	phrase	2	2	match	blue
+KEY	p	1.2236	17.4608	Text	BLUE	1	2	verb	list	5	1	match	blue
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 20:55:44
+
+START	399285.6228		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.0046	2.0465	Paragraph	Please lie still as we start the recording.
+KEY	p	0.57907	2.6414	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 20:57:45
+
+START	399406.3416		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.52037	1.5711	Paragraph	Please lie still as we start the recording.
+KEY	p	0.49721	2.0983	Paragraph	Press any key to continue.
+KEY	p	0.88366	9.0822	Text	BLUE	experiment	mglvnr	cl	zsw	closet	blue	1	1	noun	phrase	2	2	match	blue
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 20:59:27
+
+START	399508.7545		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.74479	1.7815	Paragraph	Please lie still as we start the recording.
+KEY	p	0.45368	2.2401	Paragraph	Press any key to continue.
+KEY	p	1.4144	9.7401	Text	BLUE	experiment	1	1	noun	phrase	2	2	match	mglvnr	cl	zsw	closet	blue	blue
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 22:01:30
+
+START	403231.8399		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.8961	1.9294	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.1042	3.1209	Paragraph	Please lie still and close your eyes.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 22:36:47
+
+START	405348.4475		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.88593	1.9062	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	2.2607	4.2831	Paragraph	Please lie still and close your eyes.
+KEY	a	0.83617	15.135	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 22:49:11
+
+START	406092.7726		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.1585	2.1861	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.6775	3.9544	Paragraph	Please lie still and close your eyes.
+KEY	a	0.96637	5.9383	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:05:05
+
+START	407046.3767		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.51971	1.5259	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.0357	2.6701	Paragraph	Please lie still and close your eyes.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:28:08
+
+START	408429.6847		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.9238	2.9406	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:29:03
+
+START	408484.9717		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.43003	1.4477	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	2.819	5.8889	Blank	
+KEY	a	1.8177	7.7292	Paragraph	Eyetracker calibrated.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:29:22
+
+START	408503.3805		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.1828	2.2074	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.42128	2.7393	Paragraph	Please lie still and close your eyes.
+KEY	a	0.76883	4.521	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:29:43
+
+START	408524.233		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.018	2.027	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.61924	2.764	Paragraph	Please lie still and close your eyes.
+KEY	a	0.76668	4.5316	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:30:01
+
+START	408542.8709		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.80748	1.8117	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.4791	3.8609	Blank	
+KEY	a	0.54692	4.4125	Paragraph	Eyetracker calibrated.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:36:37
+
+START	408938.9889		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:49:01
+
+START	409682.273		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	l	1.2248	2.2252	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:50:21
+
+START	409762.8905		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	l	1.3023	2.3168	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:50:48
+
+START	409789.6022		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	f	0.99645	2.0221	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:51:44
+
+START	409845.9255		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.68004	1.685	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.9917	3.7631	Paragraph	Please lie still as we start the recording.
+
+----------------------------------------------------------------------------
+Started at: 22-Dec-2012 23:52:50
+
+START	409911.227		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.47852	1.4888	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	1.1286	2.7221	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.027	3.8487	Paragraph	Please lie still as we start the recording.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:26:04
+
+START	411905.5677		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:26:12
+
+START	411914.093		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.8523	2.895	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	2.2216	6.6893	Blank	
+KEY	a	1.1402	7.8482	Paragraph	Eyetracker calibrated.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:26:53
+
+START	411954.4785		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	2.3927	3.4196	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.88739	4.3975	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.2843	5.7891	Paragraph	Please lie still as we start the recording.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:27:33
+
+START	411994.5486		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.90756	1.9507	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.45149	2.5108	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.6832	3.3023	Paragraph	Please lie still as we start the recording.
+KEY	o	4.0269	7.8463	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:28:11
+
+START	412032.9463		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.72665	1.7395	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.43497	2.2996	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.52311	2.9388	Paragraph	Please lie still as we start the recording.
+KEY	p	0.32529	3.7789	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:28:49
+
+START	412070.5649		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.38104	1.4198	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.30779	1.8131	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.0914	2.9967	Paragraph	Please lie still as we start the recording.
+KEY	p	0.35983	3.8764	Paragraph	Press any key to continue.
+KEY	o	0.86939	10.8466	Text	CLOSET	experiment	1	1	noun	list	2	2	match	kwrfng	xmjr	kxg	closet	always	closet
+KEY	p	2.112	19.1577	Text	THROW	experiment	1	2	verb	phrase	2	2	match	hjnds	qstnv	bjfq	throw	always	throw
+KEY	p	0.8637	26.2245	Text	STEVEN	experiment	1	3	noun	phrase	4	1	nomatch_2	hncvwz	near	her	brown	closet	steven
+KEY	o	0.88821	33.2011	Text	HER	experiment	1	4	verb	list	4	2	match	zdn	paul	her	dive	green	her
+KEY	p	0.88772	40.2811	Text	HIS	experiment	1	5	verb	phrase	4	1	nomatch_2	vcm	paul	can	rarely	breathe	his
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:44:09
+
+START	412990.3542		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	s	1.1488	2.1649	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.6316	3.9171	Paragraph	Please lie still and close your eyes.
+KEY	a	1.0793	6.0061	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:44:24
+
+START	413005.957		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.72301	1.7373	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.47991	3.8264	Blank	
+KEY	a	0.43595	4.2664	Paragraph	Eyetracker calibrated.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 00:44:35
+
+START	413016.7445		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.64071	1.6722	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.34837	2.1293	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.54583	2.7936	Paragraph	Please lie still as we start the recording.
+KEY	p	0.63204	3.913	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:47:43
+
+START	416804.7164		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.54799	1.58	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.33319	2.0173	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.82575	2.9609	Paragraph	Please lie still as we start the recording.
+KEY	p	0.67313	4.1611	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:48:27
+
+START	416849.1		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.35048	1.3785	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.30827	1.8038	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.22505	2.155	Paragraph	Please lie still as we start the recording.
+KEY	p	0.43159	3.1154	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:49:06
+
+START	416888.4172		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.47907	1.5078	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.27784	1.9079	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.18854	2.2195	Paragraph	Please lie still as we start the recording.
+KEY	p	0.35715	3.0918	Paragraph	Press any key to continue.
+KEY	p	2.0424	11.2387	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:50:32
+
+START	416974.3781		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.59427	1.6306	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	p	0.21252	1.9671	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.12619	2.2146	Paragraph	Please lie still as we start the recording.
+KEY	p	0.3525	3.0947	Paragraph	Press any key to continue.
+KEY	o	1.0923	10.2825	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+KEY	a	4.6237	15.4166	Paragraph	Please lie still as we save the data.	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:54:18
+
+START	417199.8278		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.54958	1.5881	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.29169	1.9817	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.28904	2.3966	Paragraph	Please lie still as we start the recording.
+KEY	p	0.43111	3.3405	Paragraph	Press any key to continue.
+KEY	o	1.3343	10.7766	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+KEY	a	22.0211	33.3172	Paragraph	Please lie still as we save the data.	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:56:40
+
+START	417341.9576		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.81906	1.8339	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.097701	2.0346	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.12937	2.2664	Paragraph	Please lie still as we start the recording.
+KEY	p	0.51924	3.2899	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 01:58:53
+
+START	417474.7157		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.24294	1.2549	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.15097	1.4962	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.13189	1.7436	Paragraph	Please lie still as we start the recording.
+KEY	p	0.3784	2.6401	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:02:36
+
+START	417697.675		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.44804	1.474	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.3295	1.9062	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.34406	2.3537	Paragraph	Please lie still as we start the recording.
+KEY	a	0.48765	3.3308	Paragraph	Press any key to continue.
+KEY	p	1.6428	11.0747	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+KEY	a	2.7728	14.3705	Paragraph	Please lie still as we save the data.	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:03:13
+
+START	417734.5229		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.40675	1.4106	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.31303	1.8114	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.28739	2.2191	Paragraph	Please lie still as we start the recording.
+KEY	p	0.53525	3.2674	Paragraph	Press any key to continue.
+KEY	o	1.1425	10.5184	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+KEY	p	1.1182	17.7465	Text	CLOSET	experiment	1	2	noun	list	5	2	match	fhl	vdlh	ltzj	tfzhwm	closet	closet
+KEY	o	0.91571	24.843	Text	SLIDE	experiment	1	3	verb	list	1	1	nomatch_1	kvptzxb	qv	ltzj	xpzrj	dive	slide
+KEY	p	0.87162	31.7493	Text	BY	experiment	1	4	noun	phrase	4	1	match	hbfm	by	her	brown	window	by
+KEY	o	1.3704	39.4616	Text	BLUE	experiment	1	5	noun	phrase	3	2	nomatch_1	vzljk	qv	his	keyboard	black	blue
+KEY	o	0.74856	46.4259	Text	LATER	experiment	1	6	verb	phrase	4	1	nomatch_2	bxkmz	ringo	must	soon	slide	later
+KEY	p	0.98444	53.657	Text	LATER	experiment	1	7	verb	phrase	5	1	match	mxkn	jbnzcx	ltzj	zqbxs	later	later
+KEY	p	1.0106	61.0031	Text	CLOSET	experiment	1	8	noun	list	1	1	match	msg	jbnzcx	bdl	sfzklv	closet	closet
+KEY	p	0.76482	67.9351	Text	HIS	experiment	1	9	noun	phrase	3	1	match	kwrqtmv	qzhbj	his	brown	bed	his
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:05:11
+
+START	417852.5243		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.0299	2.0581	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.47416	2.6351	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.58014	3.3078	Paragraph	Please lie still as we start the recording.
+KEY	p	0.74889	4.5547	Paragraph	Press any key to continue.
+KEY	p	0.84662	10.8966	Text	WITH	experiment	1	1	noun	list	3	1	nomatch_2	hsj	lpgvtd	his	soon	closet	with
+KEY	p	1.7007	18.1113	Text	CLOSET	experiment	1	2	noun	list	5	2	match	fhl	vdlh	ltzj	tfzhwm	closet	closet
+KEY	p	3.3374	27.0205	Text	SLIDE	experiment	1	3	verb	list	1	1	nomatch_1	kvptzxb	qv	ltzj	xpzrj	dive	slide
+KEY	p	1.7755	34.2282	Text	BY	experiment	1	4	noun	phrase	4	1	match	hbfm	by	her	brown	window	by
+KEY	p	0.499	40.4635	Text	BLUE	experiment	1	5	noun	phrase	3	2	nomatch_1	vzljk	qv	his	keyboard	black	blue
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:06:25
+
+START	417927.2512		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.49013	1.5039	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.26035	1.8734	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.13156	2.1285	Paragraph	Please lie still as we start the recording.
+KEY	p	0.57032	3.2005	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:11:37
+
+START	418239.3259		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.2448	2.269	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.16064	2.5338	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.33003	2.9656	Paragraph	Please lie still as we start the recording.
+KEY	p	0.41607	3.9015	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:12:16
+
+START	418277.9589		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	0.44138	1.4701	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.059405	1.6391	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.42687	2.1905	Paragraph	Please lie still as we start the recording.
+KEY	p	0.41543	3.1187	Paragraph	Press any key to continue.
+KEY	p	1.8117	10.4258	Text	BED	experiment	1	1	noun	list	2	2	match		wjfd	jkgz	bed	later	bed
+KEY	p	1.2577	17.3188	Text	BLUE	experiment	1	2	verb	phrase	1	2	nomatch_2		sxkn	jkgz	rjlv	rarely	blue
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 02:13:09
+
+START	418331.3234		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.47563	1.4879	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.27942	1.8932	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.31822	2.3328	Paragraph	Please lie still as we start the recording.
+KEY	p	0.41676	3.2686	Paragraph	Press any key to continue.
+KEY	p	0.70162	10.0819	Text	BLACK	experiment	1	1	noun	phrase	4	1	match	smf	above	her	black	window	black
+KEY	o	0.90354	17.2323	Text	CAN	experiment	1	2	verb	phrase	4	1	nomatch_1	hjvdrc	paul	must	later	throw	can
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:54:53
+
+START	454000.7516		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.79511	1.9356	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.63501	2.659	Paragraph	Please blink every time the cross disappears.
+KEY	a	1.5819	8.2424	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:55:17
+
+START	454025.448		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.34748	1.3786	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.31438	1.795	Paragraph	Please blink every time the cross disappears.
+KEY	a	0.90573	8.6981	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:57:14
+
+START	454141.5463		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.32991	1.3443	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.4728	2.9042	Paragraph	Please blink every time the cross disappears.
+KEY	a	0.94997	8.1519	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:57:35
+
+START	454162.8175		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.29355	1.2965	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.34968	1.7611	Paragraph	Please blink every time the cross disappears.
+KEY	a	1.4644	13.4487	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:58:07
+
+START	454195.1651		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 16:58:25
+
+START	454213.1288		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	z	0.33696	1.3448	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	1.3984	2.8572	Paragraph	Please lie still and close your eyes.
+KEY	a	1.3002	9.1773	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:19:54
+
+START	455502.4581		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	1.2586	2.313	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.83584	3.2568	Paragraph	Please blink every time the cross disappears.
+KEY	a	1.2068	16.5921	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:20:50
+
+START	455558.0231		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.5493	1.574	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.39759	2.0888	Paragraph	Please follow the cross with your eyes.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:22:08
+
+START	455636.4881		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.6224	1.6353	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.68637	2.4507	Paragraph	Please follow the cross with your eyes.
+KEY	a	0.9127	8.5062	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:22:36
+
+START	455664.4134		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.68133	1.7088	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.43569	2.2294	Paragraph	Please follow the cross with your eyes.
+KEY	a	0.90918	14.5007	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:27:20
+
+START	455948.2664		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.83335	1.8555	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	2.2745	4.2323	Paragraph	Please open and close your moth every time the cross disappears.
+KEY	a	0.85118	16.4718	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:34:11
+
+START	456358.899		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.56654	1.5906	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	2.6345	4.3432	Paragraph	Please breath deaply every time the cross disappears.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:34:42
+
+START	456389.6984		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.68044	1.72	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.34511	2.1686	Paragraph	Please breath deaply every time the cross disappears.
+KEY	a	1.7698	23.0877	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:35:15
+
+START	456422.8524		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.6291	1.6374	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.80649	2.5663	Paragraph	Please lie still and close your eyes.
+KEY	a	1.1296	8.702	Paragraph	Please blink every time the cross disappears.
+
+----------------------------------------------------------------------------
+Started at: 23-Dec-2012 17:35:45
+
+START	456452.8101		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	a	0.42473	1.4398	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	a	0.20258	1.7688	Paragraph	Please lie still and close your eyes.
+KEY	a	1.0874	7.8648	Paragraph	Please blink every time the cross disappears.
+KEY	a	1.2071	19.9603	Paragraph	Please follow the cross with your eyes.
+KEY	a	4.1674	33.1761	Paragraph	Please open and close your mouth every time the cross disappears.
+KEY	a	3.5652	49.08	Paragraph	Please breath deaply every time the cross disappears.
+KEY	a	0.64642	65.8163	Paragraph	Please lie still as we save the data.
+
+----------------------------------------------------------------------------
+Started at: 17-Jan-2013 21:46:07
+
+START	13416.6098		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	1.3437	2.3775	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.56006	3.047	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.76288	3.9345	Paragraph	Please lie still as we start the recording.
+KEY	p	1.4367	5.8943	Paragraph	Press any key to continue.
+
+----------------------------------------------------------------------------
+Started at: 17-Jan-2013 21:46:38
+
+START	13447.1964		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.34924	1.3956	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.26561	1.7797	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	1.7865	3.6847	Paragraph	Please lie still as we start the recording.
+KEY	p	0.34226	4.532	Paragraph	Press any key to continue.
+KEY	p	1.0184	6.0757	Paragraph	Press any key to continue.
+KEY	p	0.92862	13.1157	Text	LATER	1	1	noun	list	1	2	match	frvkpj	jnhdb	wsgp	hptbvxjc	later	later
+KEY	y	1.2327	20.4037	Text	MY	1	2	noun	list	3	2	nomatch_2	whxqzs	tjhfl	will	keyboard	soon	my
+KEY	p	0.93386	27.2681	Text	HIS	1	4	noun	list	4	1	match	rlmvcb	john	his	soon	door	his
+
+----------------------------------------------------------------------------
+Started at: 17-Jan-2013 21:47:57
+
+START	13526.2466		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	n	0.41746	1.4338	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.26704	1.8178	Paragraph	WARNING! WARNING! WARNING! WARNING! WARNING! WARNING!
+KEY	n	0.6827	2.6177	Paragraph	Please lie still as we start the recording.
+KEY	p	0.36598	3.5057	Paragraph	Press any key to continue.
+KEY	p	0.50467	4.5297	Paragraph	Press any key to continue.
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	1	noun	list	1	2	match	frvkpj	jnhdb	wsgp	hptbvxjc	later	later
+TIMEOUT	TIMEOUT	-1	-1	Text	MY	1	2	noun	list	3	2	nomatch_2	whxqzs	tjhfl	will	keyboard	soon	my
+TIMEOUT	TIMEOUT	-1	-1	Text	HIS	1	4	noun	list	4	1	match	rlmvcb	john	his	soon	door	his
+TIMEOUT	TIMEOUT	-1	-1	Text	RARELY	1	8	noun	list	1	1	nomatch_2	xdpq	wldbx	cml	rzhwdm	attic	rarely
+TIMEOUT	TIMEOUT	-1	-1	Text	CLOSET	1	11	noun	list	3	2	match	jlzfscr	jnhdb	will	closet	always	closet
+TIMEOUT	TIMEOUT	-1	-1	Text	HIS	1	13	noun	list	3	1	match	cxvw	jlxb	his	soon	cabinet	his
+TIMEOUT	TIMEOUT	-1	-1	Text	ATTIC	1	14	noun	list	3	2	match	fzrgd	jnhdb	will	attic	often	attic
+TIMEOUT	TIMEOUT	-1	-1	Text	OFTEN	1	15	noun	list	1	2	match	xsnzdfh	tjhfl	hbrf	xjpkfq	often	often
+TIMEOUT	TIMEOUT	-1	-1	Text	BED	1	16	noun	list	5	1	nomatch_2	mnj	jlxb	cml	mjkns	always	bed
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	18	noun	list	4	2	nomatch_2	nrwgdk	with	will	window	later	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	BLUE	1	19	noun	list	3	1	nomatch_2	sgxwcvj	jlxb	his	rarely	bed	blue
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	23	verb	list	3	1	match	wpbtrq	tjhfl	will	black	punch	black
+TIMEOUT	TIMEOUT	-1	-1	Text	ALWAYS	1	24	noun	list	5	1	nomatch_1	cpwjdgz	xmgq	cml	fmwnks	soon	always
+TIMEOUT	TIMEOUT	-1	-1	Text	CAN	1	26	noun	list	4	2	match	phr	with	can	boat	later	can
+TIMEOUT	TIMEOUT	-1	-1	Text	RARELY	1	27	noun	list	5	1	match	lcdx	pthzrd	cml	cgz	rarely	rarely
+TIMEOUT	TIMEOUT	-1	-1	Text	ALWAYS	1	28	noun	list	5	2	nomatch_2	nbqstx	hnfm	kvt	tzlrwd	window	always
+TIMEOUT	TIMEOUT	-1	-1	Text	ATTIC	1	29	noun	list	4	2	match	mkpczdr	above	must	attic	always	attic
+TIMEOUT	TIMEOUT	-1	-1	Text	OFTEN	1	32	noun	list	2	1	nomatch_1	jrzxsb	sxfgcv	cml	rarely	closet	often
+TIMEOUT	TIMEOUT	-1	-1	Text	OFTEN	1	33	noun	list	5	1	match	nlp	xmgq	vm	dzc	often	often
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	37	verb	list	5	1	match	gxhbs	jnhdb	kvt	bzphg	black	black
+TIMEOUT	TIMEOUT	-1	-1	Text	WINDOW	1	39	noun	list	4	2	nomatch_1	jwgvm	near	can	keyboard	rarely	window
+TIMEOUT	TIMEOUT	-1	-1	Text	BED	1	40	noun	list	2	2	match	bwjkp	qf	kvt	bed	rarely	bed
+TIMEOUT	TIMEOUT	-1	-1	Text	MY	1	45	noun	list	2	2	nomatch_2	cmxth	hnfm	wsgp	cabinet	often	my
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	46	noun	list	1	1	nomatch_2	ckft	pthzrd	cml	rzhwdm	cabinet	later
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	47	noun	list	1	1	nomatch_2	hlbpqsj	sxfgcv	psf	dsthq	car	black
+TIMEOUT	TIMEOUT	-1	-1	Text	PUNCH	1	50	verb	list	1	2	nomatch_2	wxn	xmgq	vm	bzphg	black	punch
+TIMEOUT	TIMEOUT	-1	-1	Text	OFTEN	1	51	verb	list	4	1	nomatch_2	zcknpsd	with	must	red	breathe	often
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	52	verb	list	1	2	match	wslmrf	pthzrd	cml	bzrn	brown	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	54	noun	list	2	1	match	bscrq	pthzrd	psf	later	attic	later
+TIMEOUT	TIMEOUT	-1	-1	Text	SOON	1	55	noun	list	2	1	match	dsbknzw	sxfgcv	vm	soon	door	soon
+TIMEOUT	TIMEOUT	-1	-1	Text	STEVEN	1	58	verb	list	2	1	nomatch_2	jrpcwk	qf	kvt	red	dive	steven
+TIMEOUT	TIMEOUT	-1	-1	Text	JUMP	1	60	verb	list	1	1	nomatch_1	kgvc	hnfm	hbrf	fpc	slide	jump
+TIMEOUT	TIMEOUT	-1	-1	Text	BLUE	1	63	verb	list	2	1	match	krjls	hnfm	kvt	blue	eat	blue
+TIMEOUT	TIMEOUT	-1	-1	Text	GREEN	1	64	verb	list	3	1	match	tdr	hnfm	can	green	eat	green
+TIMEOUT	TIMEOUT	-1	-1	Text	GREEN	1	65	verb	list	2	2	match	vqd	jlxb	vm	punch	green	green
+TIMEOUT	TIMEOUT	-1	-1	Text	GEORGE	1	66	verb	list	4	2	match	dtnvlw	george	his	dive	red	george
+TIMEOUT	TIMEOUT	-1	-1	Text	RUN	1	69	verb	list	5	2	match	wlkxj	jlxb	psf	lmjqw	run	run
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	71	verb	list	1	1	nomatch_2	vrfhzpw	tjhfl	hbrf	lmjqw	punch	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	RINGO	1	73	verb	list	4	2	match	sljc	ringo	my	punch	blue	ringo
+TIMEOUT	TIMEOUT	-1	-1	Text	RUN	1	74	verb	list	4	2	nomatch_1	xhf	paul	my	breathe	brown	run
+TIMEOUT	TIMEOUT	-1	-1	Text	EAT	1	77	verb	list	5	2	nomatch_1	fqsw	sxfgcv	cml	ghcpb	slide	eat
+TIMEOUT	TIMEOUT	-1	-1	Text	RINGO	1	78	verb	list	3	2	nomatch_2	xmbn	sxfgcv	my	eat	green	ringo
+TIMEOUT	TIMEOUT	-1	-1	Text	ABOVE	1	81	verb	list	3	2	nomatch_2	htr	xmgq	her	jump	green	above
+TIMEOUT	TIMEOUT	-1	-1	Text	SLIDE	1	82	verb	list	4	1	nomatch_1	wcrqnz	by	must	brown	punch	slide
+TIMEOUT	TIMEOUT	-1	-1	Text	DIVE	1	85	verb	list	5	2	match	sgwvdbt	pthzrd	vm	vkbln	dive	dive
+TIMEOUT	TIMEOUT	-1	-1	Text	GREEN	1	86	verb	list	1	2	nomatch_1	nrmwq	sxfgcv	cml	hszgw	red	green
+TIMEOUT	TIMEOUT	-1	-1	Text	SLIDE	1	87	verb	list	2	1	nomatch_1	dnj	qf	kvt	blue	throw	slide
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	90	verb	list	5	1	nomatch_1	kwltn	hnfm	hbrf	hszgw	blue	black
+TIMEOUT	TIMEOUT	-1	-1	Text	MUST	1	91	verb	list	2	2	nomatch_2	clptmw	xmgq	vm	slide	brown	must
+TIMEOUT	TIMEOUT	-1	-1	Text	GREEN	1	94	verb	list	3	1	match	rmbp	qf	will	green	breathe	green
+KEY	n	10.4413	110.4575	Paragraph	Press any key to continue.	1	94	verb	list	3	1	match	rmbp	qf	will	green	breathe	green
+TIMEOUT	TIMEOUT	-1	-1	Text	MY	1	3	noun	phrase	4	1	match	tdcs	above	my	blue	cabinet	my
+TIMEOUT	TIMEOUT	-1	-1	Text	UNDER	1	5	noun	phrase	2	1	nomatch_2	xgs	jnhdb	psf	blue	car	under
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	6	noun	phrase	2	1	nomatch_1	lndcb	hnfm	psf	brown	keyboard	black
+TIMEOUT	TIMEOUT	-1	-1	Text	RARELY	1	7	noun	phrase	3	2	nomatch_2	qdflr	hnfm	his	closet	red	rarely
+TIMEOUT	TIMEOUT	-1	-1	Text	MY	1	9	noun	phrase	4	1	match	kqzdfln	under	my	red	car	my
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	10	noun	phrase	4	2	nomatch_1	bmlfxnp	with	his	boat	blue	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	ATTIC	1	12	noun	phrase	3	1	nomatch_1	stp	jnhdb	my	blue	closet	attic
+TIMEOUT	TIMEOUT	-1	-1	Text	KEYBOARD	1	17	noun	phrase	2	2	match	qgs	tjhfl	psf	keyboard	black	keyboard
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	20	noun	phrase	5	1	match	svdgzc	jnhdb	cml	mjkns	brown	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	HIS	1	21	noun	phrase	3	2	match	jzfxbh	tpvq	his	car	black	his
+TIMEOUT	TIMEOUT	-1	-1	Text	BLUE	1	22	noun	phrase	1	2	nomatch_1	chgqwb	hnfm	vm	mhfs	green	blue
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	25	noun	phrase	3	1	match	fzphjmr	tjhfl	his	brown	cabinet	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	MUST	1	30	noun	phrase	1	1	nomatch_2	tlfhzq	tjhfl	cml	vkbln	cabinet	must
+TIMEOUT	TIMEOUT	-1	-1	Text	WRITE	1	31	noun	phrase	1	1	nomatch_2	lfxz	hnfm	vm	ghcpb	bed	write
+TIMEOUT	TIMEOUT	-1	-1	Text	SOON	1	34	noun	phrase	4	2	nomatch_2	kjsrdv	by	her	door	green	soon
+TIMEOUT	TIMEOUT	-1	-1	Text	BOX	1	35	noun	phrase	3	2	match	gxtb	tjhfl	his	box	red	box
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	36	noun	phrase	5	1	match	ztfb	qf	psf	ngmv	black	black
+TIMEOUT	TIMEOUT	-1	-1	Text	BOAT	1	38	noun	phrase	5	2	match	nvhfqk	tjhfl	cml	vkbln	boat	boat
+TIMEOUT	TIMEOUT	-1	-1	Text	MUST	1	41	verb	phrase	3	1	match	dzktxfm	wldbx	must	often	eat	must
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	42	noun	phrase	2	2	nomatch_1	wfkvxb	hnfm	psf	attic	brown	black
+TIMEOUT	TIMEOUT	-1	-1	Text	DOOR	1	43	noun	phrase	1	1	match	jktnsv	hnfm	psf	ghcpb	door	door
+TIMEOUT	TIMEOUT	-1	-1	Text	BROWN	1	44	noun	phrase	2	2	match	tpsm	qf	cml	car	brown	brown
+TIMEOUT	TIMEOUT	-1	-1	Text	OFTEN	1	48	verb	phrase	2	2	match	mpq	sxfgcv	wsgp	run	often	often
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	49	noun	phrase	4	1	match	mdwfr	near	her	black	bed	black
+TIMEOUT	TIMEOUT	-1	-1	Text	CAN	1	53	verb	phrase	3	2	match	xgkbj	wldbx	can	run	often	can
+TIMEOUT	TIMEOUT	-1	-1	Text	BLACK	1	56	noun	phrase	1	2	match	lvwms	tpvq	cml	xjpkfq	black	black
+TIMEOUT	TIMEOUT	-1	-1	Text	STEVEN	1	57	verb	phrase	4	1	nomatch_1	pdmsf	paul	can	rarely	write	steven
+TIMEOUT	TIMEOUT	-1	-1	Text	BREATHE	1	59	verb	phrase	2	1	match	hnfbtxq	pthzrd	kvt	often	breathe	breathe
+TIMEOUT	TIMEOUT	-1	-1	Text	BOX	1	61	noun	phrase	5	2	nomatch_1	cwqnstp	tpvq	cml	fkgt	bed	box
+TIMEOUT	TIMEOUT	-1	-1	Text	MY	1	62	noun	phrase	5	1	nomatch_2	mtvwzk	qf	vm	gqdklmp	blue	my
+TIMEOUT	TIMEOUT	-1	-1	Text	JUMP	1	67	verb	phrase	4	1	match	jhmgvzl	george	will	rarely	jump	jump
+TIMEOUT	TIMEOUT	-1	-1	Text	RARELY	1	68	verb	phrase	1	2	match	vctdm	pthzrd	kvt	zpg	rarely	rarely
+TIMEOUT	TIMEOUT	-1	-1	Text	RUN	1	70	verb	phrase	1	1	match	zwdg	jlxb	hbrf	qjgcd	run	run
+TIMEOUT	TIMEOUT	-1	-1	Text	THROW	1	72	verb	phrase	1	1	match	srxpqh	sxfgcv	wsgp	dsthq	throw	throw
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	75	verb	phrase	3	1	nomatch_1	jsq	sxfgcv	must	often	slide	later
+TIMEOUT	TIMEOUT	-1	-1	Text	CAN	1	76	verb	phrase	3	1	nomatch_1	bmtsq	wldbx	will	always	jump	can
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	79	verb	phrase	1	2	match	bznwdj	pthzrd	kvt	jfdxc	later	later
+TIMEOUT	TIMEOUT	-1	-1	Text	SOON	1	80	verb	phrase	5	1	match	ksz	pthzrd	hbrf	hcn	soon	soon
+TIMEOUT	TIMEOUT	-1	-1	Text	ALWAYS	1	83	verb	phrase	5	1	match	wksx	pthzrd	kvt	msct	always	always
+TIMEOUT	TIMEOUT	-1	-1	Text	STEVEN	1	84	verb	phrase	4	1	match	zdk	steven	will	often	throw	steven
+TIMEOUT	TIMEOUT	-1	-1	Text	ALWAYS	1	88	verb	phrase	4	1	match	nbs	george	can	always	dive	always
+TIMEOUT	TIMEOUT	-1	-1	Text	RED	1	89	verb	phrase	2	2	nomatch_2	tndhj	pthzrd	hbrf	jump	rarely	red
+TIMEOUT	TIMEOUT	-1	-1	Text	WALK	1	92	verb	phrase	5	2	match	zrdqbwl	wldbx	wsgp	rzhwdm	walk	walk
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	93	verb	phrase	2	1	match	ghqmvfr	xmgq	hbrf	later	throw	later
+TIMEOUT	TIMEOUT	-1	-1	Text	THROW	1	95	verb	phrase	2	2	match	bpvzn	pthzrd	wsgp	throw	always	throw
+TIMEOUT	TIMEOUT	-1	-1	Text	LATER	1	96	verb	phrase	5	1	match	lqwg	pthzrd	kvt	hszgw	later	later
+TIMEOUT	TIMEOUT	-1	-1	Text	EAT	1	97	verb	phrase	1	1	nomatch_1	lndzfr	jlxb	kvt	dsthq	punch	eat
+TIMEOUT	TIMEOUT	-1	-1	Text	BLUE	1	98	verb	phrase	3	2	nomatch_2	lgr	xmgq	will	jump	soon	blue
+TIMEOUT	TIMEOUT	-1	-1	Text	RARELY	1	99	verb	phrase	4	2	nomatch_1	kfrds	steven	can	punch	always	rarely
+TIMEOUT	TIMEOUT	-1	-1	Text	BLUE	1	100	verb	phrase	5	2	nomatch_2	gdrjcpq	jlxb	wsgp	dsthq	jump	blue
+KEY	n	1.892	207.8496	Paragraph	Please lie still as we save the data.	1	100	verb	phrase	5	2	nomatch_2	gdrjcpq	jlxb	wsgp	dsthq	jump	blue
+
+----------------------------------------------------------------------------
+Started at: 25-Jan-2013 15:58:02
+
+START	5411.719		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	p	1.1794	2.3069	Paragraph	Press 'n' to continue.
+KEY	p	3.6077	12.0007	Text	GREEN	0	1	noun	phrase	3	2	match	krmf	mlznd	my	window	green	green
+KEY	p	1.0576	19.1048	Text	HIS	0	2	noun	list	3	1	match	rsndbx	kdhts	his	later	door	his
+KEY	p	2.0008	27.2635	Text	BOAT	0	3	noun	phrase	4	2	match	rphx	under	her	boat	blue	boat
+KEY	p	49.5457	82.9758	Text	BROWN	0	4	noun	list	2	1	nomatch	mqdbgrw	xnqgr	fwm	rarely	attic	brown
+KEY	p	18.7701	107.9036	Text	MY	0	5	noun	phrase	4	1	match	fxsvqj	above	my	red	car	my
+KEY	p	2.6151	116.7358	Text	ALWAYS	0	6	noun	list	5	1	match	tkngzdv	mctsk	jmv	svltc	always	always
+KEY	p	2.0061	124.8956	Text	BLACK	0	7	verb	list	3	2	match	ztvcpkb	cvmrk	her	run	black	black
+KEY	y	16.6042	147.7115	Text	BLACK	0	8	noun	list	5	2	nomatch	sfw	dlvsp	lsr	qjbcg	bed	black
+KEY	p	3.0784	156.7675	Text	RARELY	0	9	verb	list	4	2	nomatch	bdzqkc	john	his	dive	red	rarely
+KEY	y	8.5009	171.3599	Text	LATER	0	10	verb	phrase	4	1	nomatch	fdj	steven	must	often	throw	later
+KEY	p	34.0152	211.4555	Text	SOON	0	11	noun	phrase	1	1	nomatch	zrwgfkt	lpctj	frj	hpjqb	box	soon

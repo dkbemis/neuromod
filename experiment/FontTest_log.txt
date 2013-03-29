@@ -1,0 +1,788 @@
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:26:33
+
+START	1359458793.4708		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.025469
+STIM	Blank		1.026
+STIM	Cleanup		1.1254
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:16
+
+START	1359459376.3737		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0084369
+STIM	Text	+	1.0092
+STIM	Cleanup		1.6097
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:32
+
+START	1359459392.07		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.007987
+STIM	Text	+	1.0089
+STIM	Text	This	1.6092
+STIM	Cleanup		2.41
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:36:55
+
+START	1359459416.0044		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0095479
+STIM	Text	+	1.0097
+STIM	Text	This	1.6101
+STIM	Cleanup		2.4106
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:37:42
+
+START	1359459462.491		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008441
+STIM	Text	+	1.0094
+STIM	Text	This	1.6096
+STIM	Text	+	1.8099
+STIM	Text	is	2.2102
+STIM	Text	+	2.4103
+STIM	Text	a	2.8106
+STIM	Text	+	3.0109
+STIM	Text	test	3.411
+STIM	Text	+	3.6113
+STIM	Blank		4.0116
+STIM	Cleanup		4.1116
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:39:21
+
+START	1359459561.7181		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008661
+STIM	Text	+	1.0093
+STIM	Text	This	1.6098
+STIM	Text	+	2.6105
+STIM	Text	is	3.0108
+STIM	Text	+	3.6448
+STIM	Text	humongous	4.0449
+STIM	Text	+	5.0627
+STIM	Text	and	5.4626
+STIM	Text	+	6.4802
+STIM	Text	this	6.8805
+STIM	Text	+	7.2156
+STIM	Text	is	7.6155
+STIM	Text	+	7.998
+STIM	Text	tiny	8.3983
+STIM	Text	+	8.6986
+STIM	Blank		9.0988
+STIM	Cleanup		9.199
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:40:32
+
+START	1359459632.6213		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.010532
+STIM	Text	+	1.0114
+STIM	Text	This	1.6118
+STIM	Text	+	1.8119
+STIM	Text	is	2.2122
+STIM	Text	+	2.4123
+STIM	Text	humongous	2.8127
+STIM	Text	+	3.0129
+STIM	Text	and	3.4132
+STIM	Text	+	3.6134
+STIM	Text	this	4.0136
+STIM	Text	+	4.2137
+STIM	Text	is	4.6141
+STIM	Text	+	4.8142
+STIM	Text	tiny	5.2146
+STIM	Text	+	5.4147
+STIM	Blank		5.815
+STIM	Cleanup		5.9151
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:41:02
+
+START	1359459662.8628		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008935
+STIM	Text	+	1.0096
+STIM	Text	This	1.61
+STIM	Text	+	1.8101
+STIM	Text	is	2.2105
+STIM	Text	+	2.4107
+STIM	Text	humongous	2.811
+STIM	Text	+	3.0113
+STIM	Text	and	3.4114
+STIM	Text	+	3.6116
+STIM	Text	this	4.012
+STIM	Text	+	4.2121
+STIM	Text	is	4.6124
+STIM	Text	+	4.8125
+STIM	Text	tiny	5.2128
+STIM	Text	+	5.4129
+STIM	Blank		5.8133
+STIM	Cleanup		5.9134
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:42:11
+
+START	1359459731.4665		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0079491
+STIM	Text	+	0.99206
+STIM	Text	This	1.5758
+STIM	Text	+	1.7759
+STIM	Text	is	2.1762
+STIM	Text	+	2.3764
+STIM	Text	humongous	2.7768
+STIM	Text	+	2.9769
+STIM	Text	and	3.3772
+STIM	Text	+	3.5795
+STIM	Text	this	3.9776
+STIM	Text	+	4.1778
+STIM	Text	is	4.5781
+STIM	Text	+	4.7783
+STIM	Text	tiny	5.1786
+STIM	Text	+	5.3787
+STIM	Blank		5.7791
+STIM	Cleanup		5.8791
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:49:46
+
+START	1359460186.8033		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.00858
+STIM	Text	+	0.99268
+STIM	Text	This	1.5931
+STIM	Text	+	1.7932
+STIM	Text	is	2.1935
+STIM	Text	+	2.3937
+STIM	Text	humongous	2.794
+STIM	Text	+	2.9942
+STIM	Text	and	3.3945
+STIM	Text	+	3.5946
+STIM	Text	this	3.995
+STIM	Text	+	4.1951
+STIM	Text	is	4.5954
+STIM	Text	+	4.7956
+STIM	Text	tiny	5.1959
+STIM	Text	+	5.396
+STIM	Blank		5.7963
+STIM	Cleanup		5.8964
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:50:01
+
+START	1359460201.3476		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008889
+STIM	Text	+	0.993
+STIM	Text	This	1.5935
+STIM	Text	+	1.7935
+STIM	Text	is	2.1939
+STIM	Text	+	2.394
+STIM	Text	humongous	2.7944
+STIM	Text	+	2.9945
+STIM	Text	and	3.3948
+STIM	Text	+	3.5949
+STIM	Text	this	3.9953
+STIM	Text	+	4.1955
+STIM	Text	is	4.5957
+STIM	Text	+	4.7959
+STIM	Text	tiny	5.1963
+STIM	Text	+	5.3963
+STIM	Blank		5.7966
+STIM	Cleanup		5.8967
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:50:21
+
+START	1359460221.0964		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008734
+STIM	Text	+	0.99284
+STIM	Text	This	1.5933
+STIM	Text	+	31.1829
+STIM	Text	is	31.5833
+STIM	Text	+	61.9903
+STIM	Text	humongous	62.3905
+STIM	Cleanup		87.9772
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:51:55
+
+START	1359460315.87		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0088031
+STIM	Text	+	0.99291
+STIM	Text	This	1.5766
+STIM	Text	+	1.7769
+STIM	Text	is	2.1771
+STIM	Text	+	2.3773
+STIM	Text	humongous	2.7776
+STIM	Text	+	2.9778
+STIM	Text	and	3.3781
+STIM	Text	+	3.5783
+STIM	Text	this	3.9791
+STIM	Text	+	4.1787
+STIM	Text	is	4.579
+STIM	Text	+	4.7809
+STIM	Text	tiny	5.1795
+STIM	Text	+	5.3797
+STIM	Blank		5.78
+STIM	Cleanup		5.88
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:52:08
+
+START	1359460328.4464		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0088489
+STIM	Text	+	0.99296
+STIM	Text	This	1.5767
+STIM	Text	+	1.7769
+STIM	Text	is	2.1772
+STIM	Text	+	2.3773
+STIM	Text	humongous	2.7777
+STIM	Text	+	2.9778
+STIM	Text	and	3.3781
+STIM	Text	+	3.5783
+STIM	Text	this	3.9786
+STIM	Text	+	4.1787
+STIM	Text	is	4.579
+STIM	Text	+	4.7792
+STIM	Text	tiny	5.1795
+STIM	Text	+	5.3797
+STIM	Blank		5.78
+STIM	Cleanup		5.8801
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:52:24
+
+START	1359460344.7475		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.020561
+STIM	Text	+	1.0046
+STIM	Text	This	1.5885
+STIM	Text	+	25.2401
+STIM	Text	is	25.6405
+STIM	Text	+	34.7809
+STIM	Text	humongous	35.1813
+STIM	Cleanup		49.1255
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:54:44
+
+START	1359460484.235		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0084891
+STIM	Text	+	0.99256
+STIM	Text	This	1.5764
+STIM	Text	+	1.7264
+STIM	Text	is	2.1268
+STIM	Text	+	3.5612
+STIM	Text	humongous	3.9616
+STIM	Cleanup		14.6866
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:55:06
+
+START	1359460506.869		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0087972
+STIM	Text	+	0.99291
+STIM	Text	This	1.5767
+STIM	Text	+	2.0104
+STIM	Text	is	2.4107
+STIM	Text	+	2.8944
+STIM	Text	humongous	3.2947
+STIM	Text	+	21.3922
+STIM	Text	and	21.7925
+STIM	Cleanup		22.96
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:55:52
+
+START	1359460552.1384		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0080419
+STIM	Text	+	0.99212
+STIM	Text	This	1.5926
+STIM	Text	+	3.1438
+STIM	Text	is	3.5441
+STIM	Text	+	4.3948
+STIM	Text	humongou	4.7952
+STIM	Cleanup		12.3677
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:56:10
+
+START	1359460570.2015		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0090718
+STIM	Text	+	0.9932
+STIM	Text	This	1.577
+STIM	Text	+	5.1965
+STIM	Text	is	5.5967
+STIM	Text	+	6.5308
+STIM	Text	humongou	6.9311
+STIM	Cleanup		15.2877
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:56:40
+
+START	1359460600.3426		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0082378
+STIM	Text	+	0.99236
+STIM	Text	This	1.5928
+STIM	Text	+	1.8097
+STIM	Text	is	2.2099
+STIM	Text	+	2.5936
+STIM	Text	humongou	2.994
+STIM	Cleanup		11.6674
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:05
+
+START	1359460625.7121		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0085239
+STIM	Text	+	0.99262
+STIM	Text	This	1.5764
+STIM	Text	+	1.7765
+STIM	Text	is	2.1603
+STIM	Text	+	2.3603
+STIM	Text	humongou	2.744
+STIM	Text	+	2.9442
+STIM	Text	and	3.3444
+STIM	Text	+	3.5446
+STIM	Text	this	3.9283
+STIM	Text	+	4.1283
+STIM	Text	is	4.5121
+STIM	Text	+	4.7121
+STIM	Text	tiny	5.0959
+STIM	Text	+	5.2959
+STIM	Blank		5.6962
+STIM	Cleanup		5.7963
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:18
+
+START	1359460638.4888		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008522
+STIM	Text	+	0.99264
+STIM	Text	This	1.5764
+STIM	Text	+	1.7766
+STIM	Text	is	2.1769
+STIM	Text	+	2.377
+STIM	Text	humongou	2.7773
+STIM	Text	+	2.9775
+STIM	Text	and	3.3778
+STIM	Text	+	3.5779
+STIM	Text	this	3.9616
+STIM	Text	+	4.1617
+STIM	Text	is	4.5454
+STIM	Text	+	4.7455
+STIM	Text	tiny	5.1292
+STIM	Text	+	5.3293
+STIM	Blank		5.713
+STIM	Cleanup		5.813
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:57:30
+
+START	1359460650.6653		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0081859
+STIM	Text	+	0.99232
+STIM	Text	This	1.5761
+STIM	Text	+	1.7762
+STIM	Text	is	2.1765
+STIM	Text	+	2.3767
+STIM	Text	humongou	2.7603
+STIM	Text	+	2.9605
+STIM	Text	and	3.3608
+STIM	Text	+	3.561
+STIM	Text	this	3.9613
+STIM	Text	+	4.1614
+STIM	Text	is	4.5617
+STIM	Text	+	4.7619
+STIM	Text	tiny	5.1622
+STIM	Text	+	5.3623
+STIM	Blank		5.7627
+STIM	Cleanup		5.8627
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:58:16
+
+START	1359460696.0339		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008317
+STIM	Text	+	0.99242
+STIM	Text	This	1.5929
+STIM	Text	+	1.793
+STIM	Text	is	2.1933
+STIM	Text	+	2.3935
+STIM	Text	humongou	2.7772
+STIM	Text	+	2.9773
+STIM	Text	and	3.3776
+STIM	Text	+	3.5777
+STIM	Text	this	3.9615
+STIM	Text	+	4.1615
+STIM	Text	is	4.5453
+STIM	Text	+	4.7453
+STIM	Text	tiny	5.1459
+STIM	Text	+	5.3458
+STIM	Blank		5.7294
+STIM	Cleanup		5.8295
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:58:29
+
+START	1359460709.4438		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0090051
+STIM	Text	+	0.9931
+STIM	Text	This	1.5936
+STIM	Text	+	3.0447
+STIM	Text	is	3.445
+STIM	Text	+	3.9121
+STIM	Text	humongou	4.3124
+STIM	Cleanup		13.8198
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:01
+
+START	1359460741.5358		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0087059
+STIM	Text	+	0.99283
+STIM	Text	This	1.5933
+STIM	Text	+	2.961
+STIM	Text	is	3.3612
+STIM	Text	+	4.4955
+STIM	Text	humongou	4.8958
+STIM	Text	+	7.698
+STIM	Text	and	8.0983
+STIM	Text	+	8.6488
+STIM	Text	this	9.049
+STIM	Cleanup		9.9497
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:19
+
+START	1359460759.9882		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0039721
+STIM	Text	+	0.9881
+STIM	Text	This	1.5719
+STIM	Text	+	1.772
+STIM	Text	is	2.1557
+STIM	Text	+	2.3558
+STIM	Text	humongou	2.7561
+STIM	Text	+	2.9563
+STIM	Text	and	3.3566
+STIM	Text	+	3.5567
+STIM	Text	this	3.9571
+STIM	Text	+	4.1572
+STIM	Text	is	4.5576
+STIM	Text	+	4.7577
+STIM	Text	tiny	5.158
+STIM	Text	+	5.3581
+STIM	Blank		5.7585
+STIM	Cleanup		5.8586
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:36
+
+START	1359460776.4961		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.00895
+STIM	Text	+	0.99302
+STIM	Text	This	1.5768
+STIM	Text	+	1.777
+STIM	Text	is	2.1773
+STIM	Text	+	2.3774
+STIM	Text	humongou	2.7777
+STIM	Text	+	2.9779
+STIM	Text	and	3.3783
+STIM	Text	+	3.5784
+STIM	Text	this	3.9787
+STIM	Text	+	4.1789
+STIM	Text	is	4.5791
+STIM	Text	+	4.7793
+STIM	Text	tiny	5.1797
+STIM	Text	+	5.3798
+STIM	Blank		5.7802
+STIM	Cleanup		5.8802
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 12:59:51
+
+START	1359460791.0069		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.009541
+STIM	Text	+	0.99366
+STIM	Text	This	1.5774
+STIM	Text	+	14.1706
+STIM	Text	is	14.571
+STIM	Text	+	20.7758
+STIM	Text	humongou	21.1761
+STIM	Cleanup		36.9051
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:00:44
+
+START	1359460844.6996		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008801
+STIM	Text	+	0.9928
+STIM	Text	This	1.5766
+STIM	Text	+	2.3105
+STIM	Text	is	2.7108
+STIM	Text	+	3.7283
+STIM	Text	humongou	4.1286
+STIM	Text	+	12.7521
+STIM	Text	and	13.1523
+STIM	Text	+	13.5527
+STIM	Text	this	13.9529
+STIM	Cleanup		14.2698
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:01:37
+
+START	1359460897.1752		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.024036
+STIM	Text	+	1.0081
+STIM	Text	This	1.5919
+STIM	Text	+	9.8317
+STIM	Text	is	10.2319
+STIM	Text	+	13.301
+STIM	Text	humongou	13.6848
+STIM	Cleanup		40.3054
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:02:24
+
+START	1359460944.094		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0083511
+STIM	Text	+	0.9925
+STIM	Text	This	1.5763
+STIM	Cleanup		11.434
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:02:44
+
+START	1359460964.7097		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.008759
+STIM	Text	+	0.99282
+STIM	Text	This	1.5766
+STIM	Text	+	12.4709
+STIM	Text	is	12.8687
+STIM	Text	+	13.2706
+STIM	Text	humongou	13.6694
+STIM	Cleanup		23.4104
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:03:26
+
+START	1359461006.643		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0081961
+STIM	Text	+	0.99228
+STIM	Text	This	1.5927
+STIM	Text	+	2.1598
+STIM	Text	is	2.5601
+STIM	Text	+	2.9104
+STIM	Text	humongou	3.3107
+STIM	Text	+	3.6276
+STIM	Text	and	4.0279
+STIM	Text	+	12.5013
+STIM	Text	this	12.9015
+STIM	Cleanup		20.2406
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:04:23
+
+START	1359461063.5029		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0094011
+STIM	Text	+	0.9935
+STIM	Text	This	1.5772
+STIM	Text	+	12.0521
+STIM	Text	is	12.4524
+STIM	Text	+	13.1863
+STIM	Text	humongou	13.5866
+STIM	Cleanup		20.5254
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 13:04:54
+
+START	1359461094.7115		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.0084441
+STIM	Text	+	0.99256
+STIM	Text	This	1.5763
+STIM	Text	+	10.2013
+STIM	Text	is	10.6001
+STIM	Text	+	11.0338
+STIM	Text	humongou	11.434
+STIM	Cleanup		17.8057
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:24:12
+
+START	1230438.5705		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.011582
+STIM	Text	+	1.0111
+STIM	Text	This	1.6109
+STIM	Text	+	64.8995
+STIM	Text	is	65.2993
+STIM	Text	+	67.6983
+STIM	Text	humongou	68.0981
+STIM	Cleanup		132.2364
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:43:54
+
+START	1231620.6278		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.01439
+STIM	Text	+	1.014
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:51:03
+
+START	1232048.8881		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014443
+STIM	Text	+	1.014
+STIM	Text	This	1.6137
+STIM	Text	+	21.7881
+STIM	Text	is	22.188
+STIM	Text	+	22.3212
+STIM	Text	humongou	22.721
+STIM	Text	+	43.6285
+STIM	Text	and	44.0283
+STIM	Cleanup		45.8941
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 14:53:38
+
+START	1232204.4526		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014406
+STIM	Text	+	1.0139
+STIM	Text	This	1.6137
+STIM	Cleanup		30.3343
+
+----------------------------------------------------------------------------
+Started at: 29-Jan-2013 15:05:42
+
+START	1232928.4655		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014382
+STIM	Text	+	1.0139
+STIM	Text	THIS	1.6137
+STIM	Text	+	30.8846
+STIM	Text	IS	31.2839
+STIM	Text	+	31.4005
+STIM	Text	HUMONGOU	31.8003
+STIM	Cleanup		34.4492
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:16:59
+
+START	24804.3516		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014351
+STIM	Text	+	0.9998
+STIM	Text	THIS	1.5843
+STIM	Text	+	12.0901
+STIM	Text	IS	12.4744
+STIM	Text	+	12.7417
+STIM	Text	HUMONGOU	13.1255
+STIM	Text	+	15.1969
+STIM	Text	AND	15.5809
+STIM	Cleanup		16.2993
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:17:22
+
+START	24826.9831		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014817
+STIM	Text	+	1.0005
+STIM	Text	This	1.5849
+STIM	Text	+	9.1344
+STIM	Text	is	9.5187
+STIM	Text	+	10.07
+STIM	Text	humongou	10.4539
+STIM	Cleanup		20.008
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:36:39
+
+START	25984.0231		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.015979
+STIM	Text	+	1.0015
+STIM	Text	This	1.5858
+STIM	Text	+	3.6738
+STIM	Text	is	4.0579
+STIM	Text	+	4.4923
+STIM	Text	humongou	4.8761
+STIM	Cleanup		14.4303
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 01:37:46
+
+START	26051.0526		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014151
+STIM	Text	+	0.99956
+STIM	Text	This	1.5841
+STIM	Text	+	2.8201
+STIM	Text	is	3.2041
+STIM	Text	+	3.5885
+STIM	Text	humongou	3.9725
+STIM	Cleanup		12.0734
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:23:13
+
+START	529957.1481		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.11981
+STIM	Text	+	1.1202
+STIM	Text	This	1.7204
+STIM	Text	+	3.2377
+STIM	Text	is	3.6378
+STIM	Text	+	4.2881
+STIM	Text	humongou	4.6882
+STIM	Cleanup		47.4545
+
+----------------------------------------------------------------------------
+Started at: 30-Jan-2013 14:25:06
+
+START	530070.3133		0
+Display	Stimulus	Tag	Time
+STIM	Blank		0.014262
+STIM	Text	+	1.0146
+STIM	Text	This	1.6149
+STIM	Text	+	25.9241
+STIM	Text	is	26.3243
+STIM	Text	+	26.7077
+STIM	Text	humongou	27.1079
+STIM	Cleanup		48.8495

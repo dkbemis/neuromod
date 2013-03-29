@@ -1,0 +1,6 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+vert	4	1	24.74	1.3934	3	ADJ	1318513	6.1201
+bleu	4	1	31.24	1.4947	3	ADJ	1088768	6.0369
+noir	4	1	72.2	1.8585	4	ADJ	2762772	6.4413
+blanc	5	1	53.93	1.7318	3	ADJ	3349037	6.5249
+rouge	5	1	79.7	1.9015	3	ADJ	2783642	6.4446

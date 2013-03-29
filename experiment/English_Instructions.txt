@@ -1,0 +1,54 @@
+* general
+The experiment is about to begin.
+If the test word appeared during the trial,
+getCorrectResponseStr().
+Otherwise, getIncorrectResponseStr().
+getContinueStr().
+* practice_end
+The practice is now over.
+getContinueStr().
+* speed_feedback
+Please respond faster.
+* wrong_response
+WRONG
+* eyetracker_calibration
+We will now calibrate the eyetracker.
+Please look at the dots on the screen.
+* eyetracker_calibration_end
+Eyetracker calibrated.
+* scan_start
+Please lie still as we start the recording.
+* scan_end
+The scan is over.
+Please lie still as we save the data.
+* eye_move
+Follow the cross with your eyes.
+* blinks
+Blink when the cross disappears.
+* breaths
+Please breath deaply every time the cross disappears.
+* mouth_move
+Please open and close your mouth every time the cross disappears.
+* noise
+We will now record some baseline data.
+Please lie still and close your eyes.
+* localizer_start
+You will see sentences and lists of pseudowords.
+If you see either ***cliquez*** or ***appuyez***
+Respond with your right hand.
+* phrase_trials
+The next set of trials will be phrases.
+Press any key to continue.
+* list_trials
+The next set of trials will be lists.
+Press any key to continue.
+* keyboard_continue
+Press 'n' to continue
+* machine_continue
+Press any key to continue
+* keyboard_press
+press
+* right_response
+respond with your right hand
+* left_response
+respond with your left hand

@@ -1,0 +1,6 @@
+ortho	nblettres	nbsyll	freqfilms2	log_freqfilms2	nbphons	cgram	google	log_google
+mieux	5	1	651.73	2.8141	3	ADV	9665355	6.9852
+trop	4	1	859.54	2.9343	3	ADV	12781756	7.1066
+beaucoup	8	2	626	2.7966	4	ADV	15422301	7.1881
+plus	4	1	4062.45	3.6088	3	ADV	169331940	8.2287
+moins	5	1	478.75	2.6801	3	ADV	32508503	7.512
