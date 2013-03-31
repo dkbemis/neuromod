@@ -1,0 +1,7 @@
+
+----------------------------------------------------------------------------
+Started at: 22-Oct-2012 21:57:31
+
+START	10035.7675		0
+Response	Key	RT	Abs_RT	Stimulus	Tag
+KEY	0)	1.9221	2.1937	Matrix	Test picture

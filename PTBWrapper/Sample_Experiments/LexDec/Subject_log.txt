@@ -1,0 +1,60 @@
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:33:38
+
+START	78538.0074		0
+Display	Stimulus	Tag	Time	block_type	stim_list	id	answer	target
+STIM	Blank		0.044314
+STIM	Paragraph	 	0.32762
+STIM	Paragraph	Press any key to begin.	2.0732
+STIM	Blank		2.6897
+STIM	Text	+	3.173	experiment	Stim_List.txt	14	word	starting
+STIM	Blank	ISI	3.4729	experiment	Stim_List.txt	14	word	starting
+STIM	Text	starting	3.7721	experiment	Stim_List.txt	14	word	starting
+STIM	Cleanup		5.9892
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:33:58
+
+START	78558.5203		0
+Display	Stimulus	Tag	Time	block_type	stim_list	id	answer	target
+STIM	Blank		0.034617
+STIM	Paragraph	 	0.31833
+STIM	Paragraph	Press any key to begin.	0.90309
+STIM	Blank		1.2873
+STIM	Text	+	1.7716	experiment	Stim_List.txt	10	word	words
+STIM	Blank	ISI	2.0723	experiment	Stim_List.txt	10	word	words
+STIM	Text	words	2.3731	experiment	Stim_List.txt	10	word	words
+STIM	Blank	Response_Catcher	3.2416	experiment	Stim_List.txt	10	word	words
+STIM	Blank	ITI	3.9265	experiment	Stim_List.txt	10	word	words
+STIM	Text	+	4.3607	experiment	Stim_List.txt	2	word	is
+STIM	Blank	ISI	4.6614	experiment	Stim_List.txt	2	word	is
+STIM	Text	is	4.962	experiment	Stim_List.txt	2	word	is
+STIM	Blank	Response_Catcher	4.9787	experiment	Stim_List.txt	2	word	is
+STIM	Blank	ITI	5.6634	experiment	Stim_List.txt	2	word	is
+STIM	Text	+	6.1144	experiment	Stim_List.txt	13	word	are
+STIM	Blank	ISI	6.4152	experiment	Stim_List.txt	13	word	are
+STIM	Cleanup		6.5154
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:34:30
+
+START	78590.0902		0
+Display	Stimulus	Tag	Time	block_type	stim_list	id	answer	target
+STIM	Blank		0.048026
+STIM	Paragraph	 	0.33144
+STIM	Paragraph	Press any key to begin.	1.014
+STIM	Blank		1.3647
+STIM	Text	+	1.8476	experiment	Stim_List.txt	2	word	is
+STIM	Blank	ISI	2.1374	experiment	Stim_List.txt	2	word	is
+STIM	Text	is	2.4546	experiment	Stim_List.txt	2	word	is
+STIM	Blank	Response_Catcher	2.6217	experiment	Stim_List.txt	2	word	is
+STIM	Blank	ITI	3.3065	experiment	Stim_List.txt	2	word	is
+STIM	Text	+	3.7573	experiment	Stim_List.txt	8	word	some
+STIM	Blank	ISI	4.0579	experiment	Stim_List.txt	8	word	some
+STIM	Text	some	4.3586	experiment	Stim_List.txt	8	word	some
+STIM	Blank	Response_Catcher	4.3753	experiment	Stim_List.txt	8	word	some
+STIM	Blank	ITI	5.0601	experiment	Stim_List.txt	8	word	some
+STIM	Text	+	5.7284	experiment	Stim_List.txt	16	word	second
+STIM	Blank	ISI	6.0291	experiment	Stim_List.txt	16	word	second
+STIM	Cleanup		6.2629

@@ -1,0 +1,28 @@
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:33:38
+
+START	78538.0074		0
+Response	Key	RT	Abs_RT	Stimulus	Tag	block_type	stim_list	id	answer	target
+KEY	f	1.7328	2.0604	Paragraph	 
+KEY	d	0.60999	2.6832	Paragraph	Press any key to begin.
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:33:58
+
+START	78558.5203		0
+Response	Key	RT	Abs_RT	Stimulus	Tag	block_type	stim_list	id	answer	target
+KEY	a	0.57039	0.88872	Paragraph	 
+KEY	a	0.37117	1.2743	Paragraph	Press any key to begin.
+KEY	sound	0.85043	3.2235	Text	words	experiment	Stim_List.txt	10	word	words
+KEY	sound	-0.00036357	4.9617	Text	is	experiment	Stim_List.txt	2	word	is
+
+----------------------------------------------------------------------------
+Started at: 24-Oct-2012 02:34:30
+
+START	78590.0902		0
+Response	Key	RT	Abs_RT	Stimulus	Tag	block_type	stim_list	id	answer	target
+KEY	s	0.66864	1.0001	Paragraph	 
+KEY	s	0.3384	1.3524	Paragraph	Press any key to begin.
+KEY	sound	0.15586	2.6105	Text	is	experiment	Stim_List.txt	2	word	is
+KEY	sound	-0.00035338	4.3582	Text	some	experiment	Stim_List.txt	8	word	some

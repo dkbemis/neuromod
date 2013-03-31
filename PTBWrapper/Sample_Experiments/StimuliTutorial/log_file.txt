@@ -1,0 +1,11 @@
+
+----------------------------------------------------------------------------
+Started at: 22-Oct-2012 21:57:31
+
+START	10035.7675		0
+Display	Stimulus	Tag	Time
+STIM	Matrix	Test picture	0.27159
+STIM	Text	First screen	2.226
+STIM	Blank	Blank	3.2151
+STIM	Text	Press any key	3.5119	Condition	Item Num
+STIM	Cleanup		3.8961
