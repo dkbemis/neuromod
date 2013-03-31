@@ -1,0 +1,190 @@
+--------------------
+* Before the experiment:
+
+* Login to the computer: inserm; inserm
+
+* Turn on monitor
+	- Check the settings of the monitor (1024x768; 60Hz)
+	- Click Epson Net-Panel
+	- Click 'Local Search'
+	- Select projector (VIEDEOEMP83003T)
+	- 'Power on'
+
+* Test eyetracker
+	* NOTE: This doesn't really seem to be worth it. So, feel free to skip these steps and any below that deal with the eyetracker if it's not working
+		- IMPORTANT: If you do not use the eye tracker, set the use_eyetracker variables in the script to 0.
+	- Plug in eyetracker
+	- Activate local network 3 on stim computer
+	- Turn on eyelink computer
+	- Set the settings on the ET computer
+		- Long Range
+		- Left eye
+
+* Start matlab
+	- NOTE: The experiment depends on psychtoolbox (PTB) and the PTBWrapper functions
+		- This setup appears to be somewhat fragile, so it's best to use the version of PTB and PTBWrapper included in the experiment folder. Also, the version of matlab must be 32-bit (PTB cannot currently handle 64-bit).
+	- Open Run_fMRI_NeuroMod.m
+	- NOTE: To exit any of the running experiments, hit 'v' when the experiment is waiting for a keypress.
+		- If debugging, set the is_debugging variable to 1 and the program will only take up 3/4 of the screen
+	- NOTE: Each cell has run specific variables
+		- is_debugging: If set to 1 will run the program in only 3/4 of the screen. This allows debugging in case of crashes
+		- is_speeded: If set to 1, this will run the experiment quickly without waiting for responses. Useful for testing if all of the stimuli will run
+		- environment: This sets the response keys and font size correctly depending on where the experiment is being run. Options:
+			- 'MEG': In the MSR
+			- 'fMRI': In the scanner
+			- fMRI_computer: The computer in the fMRI lab (for practice)
+			- MEG_computer: The computer in the MEG lab (for practice)
+			- work_computer: A computer in the NS lab (for debugging)
+			- See NeuroMod_SetEnvironment.m
+		- use_eyetracker: Set to 1 if you're successfully using the eyetracker during the experiment
+		- Before starting make sure that the is_* variables are set to 0.
+		- Also, set the environment variables accordingly
+	- In the first cell, set the first argument of NeuroMod_SetupSubject to 'Test'
+		- Set: localizer_stim_file = 'lists_miniblocks/run01.csv';
+	- Evaluate the first cell: This sets all of the parameters for the experiment
+		* IMPORTANT: If matlab or the program crashes unexpectedly, you should rerun this cell to make sure the global variables are set correctly
+	- Evaluate the 2nd cell: This creates the practice lists
+		- IMPORTANT: Check that the words printed out in matlab are formatted correctly (they should have accents in them). If they are, then the formatting should display correctly in the experiment.
+	- Evaluate the 4th cell: This calibrates the eye tracker
+		- This time, the only purpose is to run to the calibration screen (i.e. after pushing 'c').
+		- If the program runs to there, there the eyetracker should be setup correctly
+
+* Test the TTL advance
+	- Evaluate the 5th cell: This just runs a dummy screen during the structural
+	- Hit the TTL button. The screen should advance
+
+* Test the experiment
+	- Evaluate the 6th cell to generate stim lists
+		- Check encoding
+	- Set run_num in the 7th cell to 1 
+	- Evaluate the cell
+	- Test responses
+		- Hit TTL during response and make sure it has no effect
+		- Try both response keys in the scanner to make sure they advance the trials
+		- Wait for a time out and make sure the next trial starts
+			- NOTE: When 'environment' is set to fMRI, 'y' and 'p' will advance the trials
+	- Stop the program by hitting 'v' at a response
+	- NOTE: The eyetracker setup appears broken such that retrieving the ET data will crash the first couple of times
+		- Test that the workaround works by running: NeuroMod_GetETFile([et_subject_id '_1']) until the answer is a large number
+		- IMPORTANT: Do not run this function again until after the whole experiment is over. The et data files will stay on the et computer even if it is shut down, so there is no immediate hurry to retrieve these files (i.e. it does not have to be done after each run. It should be done right after the experiment however).
+		- Check for the MEG trigger in .asc file
+			- Open a terminal
+			- Change to the experiment folder
+			- Run edf2asc Test_1.edf
+			- Open the .asc file (Make sure the modified date is correct - i.e. new)
+			- Search for 'MEG'
+
+* Test the localizer
+	- Evaluate the 8th cell to create the localizer list
+	- Evaluate the 9th cell to run the localizer
+		- Try out some response keys, etc. to make sure everything is working
+
+* Prepare the scripts / recording
+	- All is_debugging = 0;
+	- environment to 'fMRI'
+	- run_num = 1
+	- Subject settings
+		- Set the subject id correctly in the first cell
+		- Set the response type
+		- Increment the localizer list from the last subject (the .csv file name)
+			- Evaluate the 2nd, 6th and 8th cells to make sure the stimuli lists are created correctly
+	- Set the TTL switch correctly 
+		- Switch on bottom should be down
+		- Switch on top should be to the left
+		
+
+--------------------
+During the experiment
+
+* Run the practice first, outside the scanner
+	- Evaluate the 2nd cell to create the practice lists
+	- Evaluate the 3rd cell to run the practice
+		- IMPORTANT: Set the environment to 'fMRI_computer' when outside the scanner
+		- This is long, and so can be stopped (using 'v') whenever 
+	- Inform the subject that the feedback for wrong and slow answers will not be present in the actual experiment
+		- Also, inform the subject that occasionally there will be long pauses between trials in the scanner
+
+* Remember to set the eye tracker in the right place if you are using it
+	- Use the 'Track' program on stim computer to see where it is pointing
+	- Position eyetracker in scanner
+	- Make sure eyelink mirror used in scanner
+	- Focus on eye
+	- Outside, adjust thresholds until good
+	* IMPORTANT: Remember to set the use_eyetracker variables to 0 if you are not using the eye tracker
+
+* Setup monitor
+	- Ask if need to adjust height (Using Epson Net-Panel)
+
+* Test response keys
+	- Ask to press both, check matlab prompt
+
+* Calibrate eyetracker, if using it, before the structural
+	- Adjust the eyetracker settings if necessary
+	- Evaluate the 4th cell
+	- Hit 'c' to set the calibration running
+	- Hit 'enter' when the cross is stable on the 1st dot
+		- The rest should go automatically. If they don't make sure the setting on the ET computer is correct. If the ET is having trouble, manually hit enter to advance
+		- If the calibration will not work, try hitting escape and restarting it (by hitting 'c')
+		- If it fails a couple of times, give up and set the use_eyetracker variables to 0
+	- After it finishes, it 'v' for validation
+		- Again hit 'enter' for the first dot
+	- After the calibration is done, hit escape, and then 'n' until the program ends
+
+* Run structural
+	- Can evaluate the 5th cell during the structural to show a screen
+
+* Create stimuli lists
+
+* Run the experiment
+	- First, evaluate the 6th cell to create the stimulus lists (You can check the folder on the stim computer to make sure the appropriate lists have been made)
+	- Make sure to load the subject preparation in the MEG acquisition program
+	- For each run:
+		- Increment the run_num variable in the 7th cell appropriately
+		- Evaluate the cell and let the program stop at the wait screen
+			- It will remain here until the first TTL is detected
+		- Hit 'n' at the end of each run
+
+* Run localizer
+	- Evaluate the 8th cell to create the stimuli list
+	- Make sure the subject knows the task
+		- I.e. respond with the right hand when they see 'cliquez' or 'appuyez'
+	- Evaluate the 9th cell to run
+
+* After the localizer, run the baseline if the eye tracker is being used
+	- In the 10th cell, make sure 'tasks' is set to {'Blinks','EyeMove'};
+	- Evaluate the cell 
+
+
+--------------------
+After
+
+* Get the ET files
+	- For each run, 
+		- Run: NeuroMod_GetETFile([et_subject_id '_#']) (#: 1-5) until the answer is a large number
+		- Test the conversion of edf files as before
+	- Do this for the baseline as well: NeuroMod_GetETFile([et_subject_id '_B'])
+		- And the localizer:  NeuroMod_GetETFile([et_subject_id '_L'])
+
+* Now, run the last cell
+
+- Transfer / rename all of the files
+	- Record which runs corresponded to the experiment, localizer, and baseline tasks
+	- Transfer all .asc ET files
+		- Rename to SubjID_run_#.asc (_baseline.asc)
+	- Transfer the _log.txt and _data.txt files from the stim computer
+
+* Close eyetracker
+	- Run final cell
+	- Deactivate local network 3
+	- Power off eyelink
+
+* Turn off monitor
+	- 'Epson Net-Panel'
+	- 'Local Search'
+	- Select projector (VIEDEOEMP83003T)
+	- 'Power off'
+
+* Log out of computer
+* Turn off lights
+
+

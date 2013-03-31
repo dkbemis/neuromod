@@ -83,6 +83,7 @@ Before the experiment:
 		- Test each key to make sure it works on a trial (the two thumb keys are the response keys)
 		- Let the program wait at the response and set the diode over the white square
 	- Run some trials using the keyboard
+		- NOTE: When 'environment' is set to MEG, '1' and '6' will advance the trials
 	- Look for:
 		- EEG trigger (if net plugged in)
 		- MEG trigger
@@ -130,7 +131,6 @@ matching trials with
 			- Uncheck maxshield
 			- Find / fix bad sensor
 			- recheck maxshield
-
 
 ----------------
 To prepare the subject:
@@ -262,6 +262,8 @@ After the experiment
 		- Run: NeuroMod_GetETFile([et_subject_id '_#']) (#: 1-5) until the answer is a large number
 		- Test the conversion of edf files as before
 	- Do this for the baseline as well: NeuroMod_GetETFile([et_subject_id '_B'])
+
+* Now, run the last cell
 	
 * On the Mac
 	- Convert the six data files
