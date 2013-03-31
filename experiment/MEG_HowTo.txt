@@ -1,0 +1,276 @@
+----------------
+Before the experiment:
+
+* Setup lab
+	* Turn MSR lights on
+	* Turn MSR camera on
+	* Turn the projector on
+	* Transfer any updated files / PTBWrapper
+	* Connect eye tracker
+		- Attach camera to screen
+		- Ensure fiber optic plugged into ET computer
+		- Turn on ET computer
+		- Make sure camera is found
+		- Check settings
+			- Long range mount
+			- Right eye
+	* Set diode on screen
+		- [NOTE: Will adjust to correct position below]
+		- Put fiber optic through MSR to electronics cabinet
+		- Connect to power supply
+			- Will be in supply cabinet if not in electronics cabinet
+		- Turn on power supply
+		- Connect power supply to BNC 4 inside
+		- Connect BNC 4 outside to Misc 4 on shelf
+	* Response keys out
+	* EGI connector on table
+	* EGI sync from 8 out to sync clock
+	* Plug in EGI cap
+	* Turn on EGI amp
+		- Two switches
+
+* Start matlab
+	- NOTE: The experiment depends on psychtoolbox (PTB) and the PTBWrapper functions
+		- This setup appears to be somewhat fragile, so it's best to use the version of PTB and PTBWrapper included in the experiment folder. Also, the version of matlab must be 32-bit (PTB cannot currently handle 64-bit).
+	- Open Run_MEG_NeuroMod.m
+	- NOTE: To exit any of the running experiments, hit 'v' when the experiment is waiting for a keypress.
+		- If debugging, set the is_debugging variable to 1 and the program will only take up 3/4 of the screen
+	- NOTE: Each cell has run specific variables
+		- is_debugging: If set to 1 will run the program in only 3/4 of the screen. This allows debugging in case of crashes
+		- is_speeded: If set to 1, this will run the experiment quickly without waiting for responses. Useful for testing if all of the stimuli will run
+		- environment: This sets the response keys and font size correctly depending on where the experiment is being run. Options:
+			- 'MEG': In the MSR
+			- 'fMRI': In the scanner
+			- fMRI_computer: The computer in the fMRI lab (for practice)
+			- MEG_computer: The computer in the MEG lab (for practice)
+			- work_computer: A computer in the NS lab (for debugging)
+			- See NeuroMod_SetEnvironment.m
+		- use_eyetracker: Set to 1 if you're successfully using the eyetracker during the experiment
+		- Before starting make sure that the is_* variables are set to 0.
+		- Also, set the environment variables accordingly
+	- In the first cell, set the first argument of NeuroMod_SetupSubject to 'Test'
+	- Evaluate the first cell: This sets all of the parameters for the experiment
+		* IMPORTANT: If matlab or the program crashes unexpectedly, you should rerun this cell to make sure the global variables are set correctly
+	- Evaluate the 2nd cell: This creates the practice lists
+		- IMPORTANT: Check that the words printed out in matlab are formatted correctly (they should have accents in them). If they are, then the formatting should display correctly in the experiment.
+	- Evaluate the 4th cell: This calibrates the eye tracker
+		- This time, the only purpose is to run to the calibration screen (i.e. after pushing 'c').
+		- If the program runs to there, there the eyetracker should be setup correctly
+
+* Test the EGI setup
+	- Plug in a cap (with no metal)
+	- Turn on the Mac
+	- Make sure there is enough space on the harddrive to record (~2GB)
+	- Open Netstation program
+	- Wait for the program to settle and display EEG data
+	- NOTE: If there is an error and 'no EEG amp found'
+		- Quit the program and restart
+		- If that fails, restart the EGI amp
+		- If that fails, restart the Mac
+		- If that fails, it's broken
+
+* Test the experiment
+	- Start the Acquisition program
+		- Load project
+		- Load settings
+	- Run the 5th cell: This will create experimental lists. Again, check the output in matlab for formatting
+	- In the 6th cell, set the run_num to 1
+	- Set the diode and test the response keys
+		- Evaluate the 6th cell: This will set the experiment running
+		- IMPORTANT: The first delay screen can only be advanced using the 'n' key on the keyboard. This is to prevent the subject from accidentally starting the experiment early
+		- For now, hit the 'n' key to advance
+		- In the MSR, use the response keys to advance past the next screen
+		- Test each key to make sure it works on a trial (the two thumb keys are the response keys)
+		- Let the program wait at the response and set the diode over the white square
+	- Run some trials using the keyboard
+	- Look for:
+		- EEG trigger (if net plugged in)
+		- MEG trigger
+		- Diode 
+	- Stop the program by hitting 'v' at a response
+	- NOTE: The eyetracker setup appears broken such that retrieving the ET data will crash the first couple of times
+		- Test that the workaround works by running: NeuroMod_GetETFile([et_subject_id '_1']) until the answer is a large number
+		- IMPORTANT: Do not run this function again until after the whole experiment is over. The et data files will stay on the et computer even if it is shut down, so there is no immediate hurry to retrieve these files (i.e. it does not have to be done after each run. It should be done right after the experiment however).
+		- Check for the MEG trigger in .asc file
+			- Open a terminal
+			- Change to the experiment folder
+			- Run edf2asc Test_1.edf
+			- Open the .asc file (Make sure the modified date is correct - i.e. new)
+			- Search for 'MEG'
+	- Close NetStation
+	- Stop MEG recording
+
+* Prepare the EGI cap
+	- Measure subject's head before Dr. visit
+		- (30 min. before)
+	- Get appropriate cap
+		- In EEG room cabinet
+		- No metal
+	- Get tub, and NaCl
+	- Two small pippettes as well
+	- Soak cap in 2'' of NaCl for at least five minutes
+		- Microwave solution first to be warmer
+
+* Prepare the scripts / recording
+	- Remove EGI cap
+matching trials with 
+	* Check / fix MEG sensors
+		- Check acquisition settings
+		- Go!
+		- Reset all
+		- Restart beforehand
+		- Gantry position upright
+			- If bad
+			- Heat
+			- Reset all
+		- Else
+			- Mode > Tune
+			- xy
+		- If noise everywhere
+			- Uncheck maxshield
+			- Find / fix bad sensor
+			- recheck maxshield
+
+
+----------------
+To prepare the subject:
+
+* Instructions
+	- You will see a set of five stimuli followed by a blank and then a test word
+		- If the word appeared previously in the trial, respond with your (right / left) hand. Otherwise, with your (left / right) hand.
+		- Ignore all non-word stimuli
+		- Blink after your response, as much as possible
+ 
+* EEG
+	- To put on
+		- Hand subject connector on their left shoulder
+		- Stretch from behind the subject
+		- Pull down ears
+		- Make sure plastic is connected in front (like a mask)
+		- Measure placement
+			- Cz should be equidistant between ears
+				[Also, subjects will put their finger in the middle of the head if asked]
+			- FP1, 2 should be 10% of distance between naision and bone at back of head
+				- Also aligned equidistant from the mid-line
+
+* Digitization
+	- HPI coils attached to electrodes
+		- Two in front, two in back
+		- At about hairline height
+		- ** Do not make symmetrical
+		- It is probably good to make a note of which electrodes these are attached to. This may be necessary / helpful when combining the EGI data and MEG data in source reconstruction
+	- Attach glasses
+		- Tighten to hold in place
+	- Digitize
+		- Open Acquisition
+		- Load project
+		- Load settings
+		- Load subject
+			- Last: initials
+			- First: Numbers
+		- Hit ‘Change’ on HPI alignment
+		- Hit ‘Coordinate system alignment’
+		- Digitize reference points first
+			- LPA, nasion, RPA
+		- HPI: In any order
+		- Digitize head
+			- Outside of EGI
+		- When done, click away from head
+		- Save preparation
+
+* In MSR
+	- Connect HPI on left (facing)
+		- Careful of connector
+	- EGI connector by door
+		- Put on table to hold weight
+	- Connect electrodes on right
+	* Check EGI impedance 
+		- Open EGI program on mac
+		- Open session ‘2011_MEG_EGI_1k’
+		- Hit ‘Measure net impedance’
+		- Switch displays so the Mac is visible in the MSR
+		- Use pipette to put saline solution under bad electrodes
+		- Save impedance when enough electrodes are green
+		- Switch the display back
+	- Raise subject until top of head is touching the dewar
+	- Hand response keys
+	- Set the screen (on Lucie's marks)
+	- Focus eyetracker camera
+		- Run the track program (on the desktop of the stim PC)
+	- Set diode
+		- Evaluate the 2nd cell to create the practice lists
+		- Evaluate the 3rd cell to run the practice
+		- Advance until the diode square is on the screen
+		- Set the diode
+		- Quit the practice with 'v'
+	- Close the MSR door
+	- Make sure the subject can hear you using the speaker
+
+* Set the script to go
+	- Set all is_debugging to 0
+	- In the 1st cell, set the first argument to be the subject ID number
+		- Alternate the second argument between 'right' and 'left': This is the hand the subject should respond to * NOTE: Remember, if the eyetracker breaks or does not calibrate, set the use_eyetracker variables to 0
+	- Otherwise, make sure they are set to 1 
+	 - Make sure the environment variables are set to 'MEG'
+	- Evaluate the 1st cell to set the subject variable
+	- Evaluate the 2nd cell to create the practice lists
+	- Evaluate the 3rd cell to start the practice
+		- NOTE: This is probably best done while retuning the sensors so that the subject has something to do
+		- NOTE: The practice is pretty long, so can be aborted (using 'v' on the keyboard) when necessary
+
+* Calibrate the eyetracker
+	- Adjust the eyetracker settings if necessary
+	- Evaluate the 4th cell
+	- Hit 'c' to set the calibration running
+	- Hit 'enter' when the cross is stable on the 1st dot
+		- The rest should go automatically. If they don't make sure the setting on the ET computer is correct. If the ET is having trouble, manually hit enter to advance
+		- If the calibration will not work, try hitting escape and restarting it (by hitting 'c')
+		- If it fails a couple of times, give up and set the use_eyetracker variables to 0
+	- After it finishes, it 'v' for validation
+		- Again hit 'enter' for the first dot
+	- After the calibration is done, hit escape, and then 'n' until the program ends
+
+* Run the experiment
+	- First, evaluate the 5th cell to create the stimulus lists (You can check the folder on the stim computer to make sure the appropriate lists have been made)
+	- Make sure to load the subject preparation in the MEG acquisition program
+	- For each run:
+		- Increment the run_num variable in the 6th cell appropriately
+		- Evaluate the cell and let the program stop at the wait screen
+		- Start NetStation and make sure the amp is found
+			- Start the EGI recording
+		- Start the MEG acquisition.
+			- Calculate the head position
+			- Hit record raw_raw
+		- Hit 'n' to start the run
+	- After the end, stop the MEG acquisition
+		- Save the data appropriately
+	- Stop the EGI acquisition
+		- Quit the program entirely, using Command-Q
+		
+* After the fifth run, run the baseline
+	- In the 7th cell, make sure 'tasks' is set to {'Blinks','EyeMove','Noise'};
+	- Evaluate the cell and follow the same recording procedure as with a run
+
+--------------------------
+After the experiment
+
+* Cleanup the lab
+	- See the wiki for a complete checklist, but basically, undo everything that you did
+
+* Get the ET files
+	- For each run, 
+		- Run: NeuroMod_GetETFile([et_subject_id '_#']) (#: 1-5) until the answer is a large number
+		- Test the conversion of edf files as before
+	- Do this for the baseline as well: NeuroMod_GetETFile([et_subject_id '_B'])
+	
+* On the Mac
+	- Convert the six data files
+
+- Transfer / rename all of the files
+	- Record the name of the MEG data files
+	- Transfer the EGI .raw files (from the conversion)
+		- Rename to SubjID_run_#.raw (_baseline.raw)
+	- Transfer all .asc ET files
+		- Rename to SubjID_run_#.asc (_baseline.asc)
+	- Transfer the _log.txt and _data.txt files from the stim computer
+
