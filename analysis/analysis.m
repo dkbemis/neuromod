@@ -1,12 +1,12 @@
 %% Run this first to set the current analysis
 
 % Home
-% global GLA_meeg_dir; GLA_meeg_dir = '/Users/Doug/Documents/neurospin/meeg';
-% global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
-% 
+global GLA_meeg_dir; GLA_meeg_dir = '/Users/Doug/Documents/neurospin/meeg';
+global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
+
 % Work
-global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
-global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
+% global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
+% global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % The current analysis parameters
 global GLA_subject; GLA_subject = 'sa130042';
