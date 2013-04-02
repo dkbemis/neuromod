@@ -17,7 +17,7 @@ end
 % Set and save
 subject_data = GLA_subject_data; %#ok<NASGU>
 save_file = [NM_GetCurrentDataDirectory() '/analysis/' ...
-    GLA_subject '/' GLA_subject '.mat'];
+    GLA_subject '/' GLA_subject '_subject_data.mat'];
 save(save_file, 'subject_data');
 
 

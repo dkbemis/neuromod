@@ -16,7 +16,6 @@ disp('Done.');
 % Check the runs
 markOutliers();
 
-
 % No responses in the baseline...
 
 % Resave...

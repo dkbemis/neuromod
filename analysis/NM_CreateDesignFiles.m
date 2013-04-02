@@ -22,7 +22,6 @@ switch GLA_fmri_type
                 GLA_subject_data.runs(r).first_ttl);
         end
         
-        
     otherwise
         error('Unknown type');
 end

@@ -83,7 +83,7 @@ end
 
 % Make the contrasts
 contrasts{1} = makeContrast('Finterest', {[eye(num_conditions*2)  zeros(2*num_conditions,6)]}, 'f'); % 6 - movement params
-contrasts{2} = makeContrast('structure', (reg.phrase_2+reg.phrase_3+reg.phrase_4)-(reg.list_1+reg.list_3+reg.list_4), 't');
+contrasts{2} = makeContrast('structure', (reg.phrase_2+reg.phrase_3+reg.phrase_4)-(reg.list_2+reg.list_3+reg.list_4), 't');
 contrasts{3} = makeContrast('linear_phrase', -3*reg.phrase_1-reg.phrase_2+reg.phrase_3+3*reg.phrase_4, 't');
 contrasts{4} = makeContrast('linear_list', -3*reg.list_1-reg.list_2+reg.list_3+3*reg.list_4, 't');
 contrasts{5} = makeContrast('interaction_phrase', (-3*reg.phrase_1-reg.phrase_2+reg.phrase_3+3*reg.phrase_4)-...
@@ -145,7 +145,8 @@ disp('Done.');
 % And save it
 global GL_analysis_dir;
 global GLA_subject;
-mat_file = [GL_analysis_dir '/' GLA_subject '_design_batch.mat'];
+global GLA_fmri_type;
+mat_file = [GL_analysis_dir '/' GLA_subject '_' GLA_fmri_type '_design_batch.mat'];
 save(mat_file,'matlabbatch');
 disp('Done.');
 

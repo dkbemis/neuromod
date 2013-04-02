@@ -6,7 +6,8 @@ global GLA_subject;
 disp(['Initializing analysis for ' GLA_subject '...']);
 
 % See if we already have it
-save_file = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/' GLA_subject '.mat'];
+save_file = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/' ...
+    GLA_subject '_subject_data.mat'];
 if exist(save_file,'file')
     load(save_file); 
 end

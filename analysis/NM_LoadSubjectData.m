@@ -1,6 +1,6 @@
 % Helper to load the subject data 
 %   or create it if not initialized
-% This will be stored in subject.mat
+% This will be stored in NIP_subject_data.mat
 %   in data_dir/analysis/subject/
 %
 % Will assign the loaded data to GLA_subject_data
@@ -83,7 +83,7 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
 
     % And reset
     load([NM_GetCurrentDataDirectory() '/analysis/' ...
-       GLA_subject '/' GLA_subject '.mat']);
+       GLA_subject '/' GLA_subject '_subject_data.mat']);
     GLA_subject_data = subject_data;
 end
 
@@ -104,7 +104,7 @@ function getSubjectData()
 % See if it exists
 global GLA_subject;
 save_file = [NM_GetCurrentDataDirectory() '/analysis/' ...
-    GLA_subject '/' GLA_subject '.mat'];
+    GLA_subject '/' GLA_subject '_subject_data.mat'];
 
 % If not, 
 if ~exist(save_file,'file')
