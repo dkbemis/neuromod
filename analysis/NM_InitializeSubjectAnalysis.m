@@ -62,10 +62,10 @@ subject_data.parameters.meeg_word_1_epoch = [-200 600];
 subject_data.parameters.meeg_target_epoch = [-200 1000];
 subject_data.parameters.meeg_delay_epoch = [-200 2000];
 subject_data.parameters.meeg_all_epoch = [-200 6000];
-subject_data.parameters.meeg_filter_raw = 0;    % 1 - will filter the raw data
-subject_data.parameters.meeg_hpf = [];
-subject_data.parameters.meeg_lpf = 120;
-subject_data.parameters.meeg_bsf = [50 100];
+subject_data.parameters.meeg_filter_raw = 1;    % 1 - will filter the raw data
+subject_data.parameters.meeg_hpf = [];  % .1
+subject_data.parameters.meeg_lpf = []; % 120
+subject_data.parameters.meeg_bsf = [];    % [50 100]
 subject_data.parameters.meeg_bsf_width = 1;
 
 

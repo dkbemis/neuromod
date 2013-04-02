@@ -8,7 +8,10 @@ global GLA_meeg_type;
 global GLA_meeg_trial_type;
 global GLA_meeg_data;
 disp(['Initializing ' GLA_meeg_type ' ' GLA_meeg_trial_type ' data...']);
-NM_LoadSubjectData({{[GLA_meeg_type '_triggers_checked'],1}});
+NM_LoadSubjectData({{[GLA_meeg_type '_triggers_checked'],1},...     % Need the triggers
+    {'et_triggers_checked',1},...    % Need blink data
+    {'timing_checked',1},...    % Need to make sure the triggers have been readjusted
+    });
 
 % Reset
 NM_ClearMEEGData();
@@ -33,7 +36,7 @@ else
 end
 
 % And clear the tmp 
-global GL_tmp_data;
+global GL_tmp_data; %#ok<NUSED>
 clear global GL_tmp_data;
 
 % And save
@@ -224,9 +227,19 @@ GLA_meeg_data.lpf = GLA_subject_data.parameters.meeg_lpf;
 GLA_meeg_data.bsf = GLA_subject_data.parameters.meeg_bsf;
 GLA_meeg_data.bsf_width = GLA_subject_data.parameters.meeg_bsf_width;
 
+% TODO: This should probably be dependent on the frequency of the hpf.
+min_trial_length = 2000;
+curr_trial_length = GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) -...
+    GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1);
+if curr_trial_length < min_trial_length
+    filter_buffer = round((min_trial_length - curr_trial_length)/2);
+else
+    filter_buffer = 0; 
+end
+
+
 % Have to cut it so that it'll finish, but wide enough to let the filter work.
 % So, reset this and epoch
-filter_buffer = 2000;
 GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) = ...
     GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) - filter_buffer;
 GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) = ...
@@ -239,7 +252,7 @@ GL_tmp_data = ft_redefinetrial(cfg, GL_tmp_data);
 if ~isempty(GLA_meeg_data.hpf)
     disp(['Applying high pass filter: ' num2str(GLA_meeg_data.hpf) 'Hz...']);
     cfg = []; 
-    cfg.hpfilter = 'yes';
+    cfg.hpfilter = 'yes';   
     cfg.hpfreq = GLA_meeg_data.hpf;
     if GLA_meeg_data.hpf < 1
         cfg.hpfilttype = 'fir'; % Necessary to not crash

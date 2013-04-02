@@ -29,6 +29,7 @@ function checkSubjectData(param, val)
 global GLA_subject;
 global GLA_subject_data;
 global GLA_fmri_type;
+global GLA_meeg_type;
 if ~isfield(GLA_subject_data.parameters,param) || ...
         (ischar(val) && ~strcmp(GLA_subject_data.parameters.(param),val)) ||...
         (isnumeric(val) && GLA_subject_data.parameters.(param) ~= val)
@@ -36,7 +37,7 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
     % Might know how to add it
     switch param
         case 'log_parsed'
-            NM_ParseLogFile();    
+            NM_ParseLogFile();
             
         case 'log_checked'
             NM_CheckLogFile();    
@@ -44,11 +45,17 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
         case 'et_data_converted'
             NM_ConvertETData();    
             
+        case 'timing_checked'
+            NM_CheckTiming();
+            
         case 'responses_preprocessed'
             NM_PreprocessResponses();
             
         case 'et_triggers_checked'
             NM_CheckETTriggers();
+            
+        case 'responses_checked'
+            NM_CheckDataFile();
             
         case 'meg_data_preprocessed'
             NM_PreprocessMEEGData('meg');
@@ -60,10 +67,16 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
             NM_PreprocessETData();
             
         case 'eeg_triggers_checked'
-            NM_CheckEEGTriggers();
+            old_type = GLA_meeg_type;
+            GLA_meeg_type = 'eeg'; %#ok<NASGU>
+            NM_CheckMEEGTriggers();
+            GLA_meeg_type = old_type;
             
         case 'meg_triggers_checked'
-            NM_CheckMEGTriggers();
+            old_type = GLA_meeg_type;
+            GLA_meeg_type = 'meg'; %#ok<NASGU>
+            NM_CheckMEEGTriggers();
+            GLA_meeg_type = old_type;
             
         case 'fmri_localizer_data_preprocessed'
             old_type = GLA_fmri_type;

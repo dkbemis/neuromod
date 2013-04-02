@@ -3,7 +3,12 @@
 function NM_CheckTiming()
 
 % Load the data
-loadData();
+NM_LoadSubjectData({{'log_checked',1},... % Need to have checked the log
+    {'meg_triggers_checked',1},...      % And all the triggers...
+    {'eeg_triggers_checked',1},...
+    {'et_triggers_checked',1},...
+    {'responses_checked',1},...
+    });
 
 % Try to set the diode timing, if we haven't
 global GLA_subject_data;
@@ -305,29 +310,4 @@ else
     time = measures(pos).([type '_time']);
 end
 
-
-
-% Make sure we've done all that we can do
-function loadData()
-
-NM_LoadSubjectData({{'log_checked',1}});
-
-% Make sure we've processed everything we can
-global GLA_subject_data;
-if GLA_subject_data.parameters.eye_tracker && ...
-        (~isfield(GLA_subject_data.parameters,'et_triggers_checked') ||...
-        ~GLA_subject_data.parameters.et_triggers_checked)
-    NM_CheckETTriggers(); 
-end
-if GLA_subject_data.parameters.meg && ...
-        ~GLA_subject_data.parameters.meg_triggers_checked
-    NM_CheckMEGTriggers(); 
-end
-if GLA_subject_data.parameters.eeg && ...
-        ~GLA_subject_data.parameters.eeg_triggers_checked
-    NM_CheckEEGTriggers(); 
-end
-if ~GLA_subject_data.parameters.data_file_checked
-    NM_CheckDataFile();
-end
 
