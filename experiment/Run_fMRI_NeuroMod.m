@@ -13,7 +13,7 @@
 % NOTE: Can set subject to 'English' to get english phrases.
 %   * Should probably also change a_positions to 1 then as well...
 et_subject_id = NeuroMod_SetupSubject('Test','right');
-localizer_stim_file = 'lists_miniblocks/run03.csv';
+localizer_stim_file = 'lists_miniblocks/run01.csv';
 disp('Subject setup.');
 
 
@@ -49,24 +49,10 @@ NeuroMod_fMRI_Practice(environment,is_debugging, is_speeded);
 
 %% 
 
-%%%%%%%%%%%%%%%%%%%%%%%%
-% 
-% STRUCTURAL (4)
-%
-%%%%%%%%%%%%%%%%%%%%%%%
-
-
-is_debugging = 0;
-environment = 'fMRI';
-NeuroMod_fMRI_Structural(environment, is_debugging); 
-
-
-%% 
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 % 
-% EYETRACKER (5): Calibration
+% EYETRACKER (4): Calibration
 %
 %%%%%%%%%%%%%%%%%%%%%%%
 
@@ -75,6 +61,20 @@ is_debugging = 0;
 environment = 'fMRI';
 NeuroMod_fMRI_SetParameters();
 NeuroMod_ETCalibration(environment, is_debugging)
+
+%% 
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% STRUCTURAL (5)
+%
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+is_debugging = 0;
+environment = 'fMRI';
+NeuroMod_fMRI_Structural(environment, is_debugging); 
+
 
 
 %% 

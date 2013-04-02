@@ -32,6 +32,10 @@ else
     end
 end
 
+% And clear the tmp 
+global GL_tmp_data;
+clear global GL_tmp_data;
+
 % And save
 NM_SaveMEEGData();
 disp('Done.');
@@ -46,14 +50,8 @@ global GLA_subject;
 cfg = [];
 cfg.channel = GLA_meeg_data.channel;
 cfg.datafile = [NM_GetCurrentDataDirectory() '/meg_data/' ...
-            GLA_subject '/' GLA_subject '_' run_id '_sss.fif'];
+    GLA_subject '/' GLA_subject '_' run_id '_sss.fif'];
 GL_tmp_data = ft_preprocessing(cfg);
-
-% Apply some filtering now, if filtering on raw data
-global GLA_subject_data;
-if GLA_subject_data.parameters.meeg_filter_raw
-    filterData();
-end
 
 % Then epoch
 epochData(run_id);
@@ -199,23 +197,43 @@ disp('Epoching data...');
 cfg = [];
 cfg.trialfun = 'NM_DefineMEEGTrial';
 cfg.run_id = run_id;
-cfg = ft_definetrial(cfg);
+
+% Apply some filtering now, if filtering on raw data
+% NOTE: This will have to cut the data some to let the hpf finish
+global GLA_subject_data;
+if GLA_subject_data.parameters.meeg_filter_raw
+    cfg = filterData(cfg);
+else
+    cfg = ft_definetrial(cfg);
+end
 
 % And cut the data
 global GL_tmp_data;
 GL_tmp_data = ft_redefinetrial(cfg, GL_tmp_data);
 
 
-function filterData()
+function cfg = filterData(cfg)
 
 global GL_tmp_data;
 global GLA_subject_data;
 global GLA_meeg_data;
+global GLA_meeg_trial_type;
 GLA_meeg_data.filter_raw = GLA_subject_data.parameters.meeg_filter_raw;
 GLA_meeg_data.hpf = GLA_subject_data.parameters.meeg_hpf;
 GLA_meeg_data.lpf = GLA_subject_data.parameters.meeg_lpf;
 GLA_meeg_data.bsf = GLA_subject_data.parameters.meeg_bsf;
 GLA_meeg_data.bsf_width = GLA_subject_data.parameters.meeg_bsf_width;
+
+% Have to cut it so that it'll finish, but wide enough to let the filter work.
+% So, reset this and epoch
+filter_buffer = 2000;
+GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) = ...
+    GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) - filter_buffer;
+GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) = ...
+    GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) + filter_buffer;
+cfg = ft_definetrial(cfg);
+GL_tmp_data = ft_redefinetrial(cfg, GL_tmp_data);
+
 
 % High pass...
 if ~isempty(GLA_meeg_data.hpf)
@@ -251,6 +269,17 @@ for f = 1:length(GLA_meeg_data.bsf)
     disp('Done.');
 end
 
+
+% Reset these, and set to recut
+GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) = ...
+    GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1) + filter_buffer;
+GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) = ...
+    GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2) - filter_buffer;
+GLA_meeg_data.pre_stim = GLA_meeg_data.pre_stim + filter_buffer;
+GLA_meeg_data.post_stim = GLA_meeg_data.post_stim - filter_buffer;
+cfg = [];
+cfg.begsample = filter_buffer + 1;
+cfg.endsample = filter_buffer + GLA_meeg_data.post_stim - GLA_meeg_data.pre_stim;
 
 
 

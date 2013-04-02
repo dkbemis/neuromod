@@ -94,9 +94,9 @@ disp('Stim lists created.');
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-run_num = 5;
+run_num = 1;
 is_speeded = 0;
-is_debugging = 0;
+is_debugging = 1;
 use_eyetracker = 1;
 environment = 'MEG';
 run_ET_file_name = [et_subject_id '_' num2str(run_num)];
