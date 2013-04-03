@@ -3,25 +3,22 @@ function NM_PreprocessData()
 % The easy stuff
 NM_PreprocessBehavioralData();
 
-% Go with word 5 for now...
+% Process these for now...
 global GLA_trial_type;
-GLA_trial_type = 'word_5';
-NM_PreprocessETData();
-
-% For this global function, just do the blinks and then the final word
 global GLA_meeg_type;
-global GLA_meeg_trial_type;
-m_types = {'meg','eeg'};
-for t = 1:length(m_types)
-    GLA_meeg_type = m_types{t};
-    
-    % This gives us the component to reject
-    GLA_meeg_trial_type = 'blinks'; %#ok<NASGU>
-    NM_PreprocessMEEGData();
+meeg_types = {'meg','eeg'};
+trial_types = {'blinks','word_5'};
+for t = 1:length(trial_types)
+    GLA_trial_type = trial_types{t};
 
-    % And then the basic epoch
-    GLA_meeg_trial_type = 'word_5';
-    NM_PreprocessMEEGData();
+    % Eye tracking data...
+    NM_PreprocessETData();
+
+    % Both meg and eeg
+    for m = 1:length(meeg_types)
+        GLA_meeg_type = meeg_types{m};
+        NM_PreprocessMEEGData();
+    end
 end
 
 global GLA_fmri_type;

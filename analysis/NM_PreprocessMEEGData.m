@@ -8,30 +8,36 @@ if ~strcmp(GLA_rec_type,'meeg')
     return;
 end
 
-% Load up the data
+global GLA_subject;
+global GLA_trial_type;
 global GLA_meeg_type;
-disp('Loading data...');
-NM_LoadSubjectData({{[GLA_meeg_type '_triggers_checked'],1}});
-disp('Done.');
-
 global GLA_subject_data;
+disp(['Preprocessing ' GLA_meeg_type ' ' GLA_trial_type ' data for ' GLA_subject '...']);
+
+% Make sure we're ready and have something to do
+NM_LoadSubjectData({{[GLA_meeg_type '_data_checked'],1}});
 if ~GLA_subject_data.parameters.(GLA_meeg_type)
+    disp(['No ' GLA_meeg_type ' data.']);
+    NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed'],1}});
     return;
 end
 
-% Start from scratch
-NM_ClearMEEGData();
+% Initialize
+NM_InitializeMEEGData();
 
-% First, filter the data
-NM_FilterMEEGData();
+% Then filter the data, if we need to
+if ~GLA_subject_data.parameters.meeg_filter_raw
+    NM_FilterMEEGData();
+end
 
-% Then reject trials
-NM_RejectMEEGTrials();
+% Remove outlying trials
+NM_SetMEEGRejections();
 
 % Then, decompose, reject, and recompose the data
 NM_RemoveMEEGComponents();
 
-global GLA_meeg_trial_type;
-NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_meeg_trial_type '_data_preprocessed'],1}});
-disp('Done.');
+% Save...
+disp('Saving...');
+NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed'],1}});
+disp([GLA_meeg_type ' ' GLA_trial_type ' data preprocessed for ' GLA_subject '.']);
 

@@ -7,7 +7,8 @@ NM_LoadSubjectData();
 
 % Default to use matching data in memory
 global GLA_et_data;
-if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) 
+if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) ||...
+        ~strcmp(GLA_trial_type,GLA_et_data.settings.trial_type)
 
     % Load if we've made one
     f_name = NM_GetCurrentETDataFilename();

@@ -11,8 +11,8 @@ function trl = NM_DefineMEEGTrial(cfg)
 
 % Set the trials we're using
 global GLA_subject_data;
-global GLA_meeg_trial_type;
-switch GLA_meeg_trial_type
+global GLA_trial_type;
+switch GLA_trial_type
     case 'blinks'
         trials = GLA_subject_data.baseline.blinks;
         trig_values = 1;
@@ -55,8 +55,8 @@ end
 
 % Set the epoch length
 global GLA_meeg_data;
-GLA_meeg_data.pre_stim = GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(1);
-GLA_meeg_data.post_stim = GLA_subject_data.parameters.(['meeg_' GLA_meeg_trial_type '_epoch'])(2);
+GLA_meeg_data.settings.pre_stim = GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1);
+GLA_meeg_data.settings.post_stim = GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2);
 
 trl = [];
 global GLA_meeg_type;
@@ -72,16 +72,16 @@ for t = 1:length(trials)
         % NOTE: Samples are 1-1 with ms for now.
         % Just get the critical trigger.
         trigger_time = triggers(i).([GLA_meeg_type '_time']);
-        trl(end+1,:) = [trigger_time+GLA_meeg_data.pre_stim...
-            trigger_time+GLA_meeg_data.post_stim-1 ...
-            GLA_meeg_data.pre_stim cond]; %#ok<AGROW>
+        trl(end+1,:) = [trigger_time+GLA_meeg_data.settings.pre_stim...
+            trigger_time+GLA_meeg_data.settings.post_stim-1 ...
+            GLA_meeg_data.settings.pre_stim cond]; %#ok<AGROW>
     end
 end
 
 function cond = getCondition(trial)
 
-global GLA_meeg_trial_type;
-if strcmp(GLA_meeg_trial_type,'blinks')
+global GLA_trial_type;
+if strcmp(GLA_trial_type,'blinks')
     cond = 2;
 else
 

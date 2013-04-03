@@ -1,13 +1,13 @@
 
 function NM_FilterMEEGData()
 
-% If we're filtering the raw data, then clear and load
 global GLA_subject_data;
 NM_LoadSubjectData({});
+
+
+% Make sure we don't want to filter the raw data
 if GLA_subject_data.parameters.meeg_filter_raw
-    NM_ClearMEEGData();
-    NM_LoadMEEGData();
-    return;
+    error('Settings call for filtering raw data. Call NM_InitializeMEEGData instead.');
 end
 
 % Otherwise, load and go
@@ -15,19 +15,19 @@ NM_LoadMEEGData();
    
 % Set the parameters
 global GLA_meeg_data;
-GLA_meeg_data.filter_raw = GLA_subject_data.parameters.meeg_filter_raw;
-GLA_meeg_data.hpf = GLA_subject_data.parameters.meeg_hpf;
-GLA_meeg_data.lpf = GLA_subject_data.parameters.meeg_lpf;
-GLA_meeg_data.bsf = GLA_subject_data.parameters.meeg_bsf;
-GLA_meeg_data.bsf_width = GLA_subject_data.parameters.meeg_bsf_width;
+GLA_meeg_data.settings.filter_raw = GLA_subject_data.parameters.meeg_filter_raw;
+GLA_meeg_data.settings.hpf = GLA_subject_data.parameters.meeg_hpf;
+GLA_meeg_data.settings.lpf = GLA_subject_data.parameters.meeg_lpf;
+GLA_meeg_data.settings.bsf = GLA_subject_data.parameters.meeg_bsf;
+GLA_meeg_data.settings.bsf_width = GLA_subject_data.parameters.meeg_bsf_width;
 
 % High pass...
-if ~isempty(GLA_meeg_data.hpf)
-    disp(['Applying high pass filter: ' num2str(GLA_meeg_data.hpf) 'Hz...']);
+if ~isempty(GLA_meeg_data.settings.hpf)
+    disp(['Applying high pass filter: ' num2str(GLA_meeg_data.settings.hpf) 'Hz...']);
     cfg = []; 
     cfg.hpfilter = 'yes';
-    cfg.hpfreq = GLA_meeg_data.hpf;
-    if GLA_meeg_data.hpf < 1
+    cfg.hpfreq = GLA_meeg_data.settings.hpf;
+    if GLA_meeg_data.settings.hpf < 1
         cfg.hpfilttype = 'fir'; % Necessary to not crash
     end
     GLA_meeg_data.data = ft_preprocessing(cfg, GLA_meeg_data.data);
@@ -35,22 +35,22 @@ if ~isempty(GLA_meeg_data.hpf)
 end
 
 % Low pass...
-if ~isempty(GLA_meeg_data.lpf)
-    disp(['Applying low pass filter: ' num2str(GLA_meeg_data.lpf) 'Hz...']);
+if ~isempty(GLA_meeg_data.settings.lpf)
+    disp(['Applying low pass filter: ' num2str(GLA_meeg_data.settings.lpf) 'Hz...']);
     cfg = []; 
     cfg.lpfilter = 'yes';
-    cfg.lpfreq = GLA_meeg_data.lpf;
+    cfg.lpfreq = GLA_meeg_data.settings.lpf;
     GLA_meeg_data.data = ft_preprocessing(cfg, GLA_meeg_data.data);
     disp('Done.');
 end
 
 % Notches...
-for f = 1:length(GLA_meeg_data.bsf)
-    disp(['Applying band stop filter: ' num2str(GLA_meeg_data.bsf(f)) 'Hz...']);
+for f = 1:length(GLA_meeg_data.settings.bsf)
+    disp(['Applying band stop filter: ' num2str(GLA_meeg_data.settings.bsf(f)) 'Hz...']);
     cfg = [];
     cfg.bsfilter = 'yes';
-    cfg.bsfreq = [GLA_meeg_data.bsf(f)-GLA_meeg_data.bsf_width ...
-        GLA_meeg_data.bsf(f)+GLA_meeg_data.bsf_width];
+    cfg.bsfreq = [GLA_meeg_data.settings.bsf(f)-GLA_meeg_data.settings.bsf_width ...
+        GLA_meeg_data.settings.bsf(f)+GLA_meeg_data.settings.bsf_width];
     GLA_meeg_data.data = ft_preprocessing(cfg, GLA_meeg_data.data);
     disp('Done.');
 end

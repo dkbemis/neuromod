@@ -1,9 +1,8 @@
 function NM_SaveETData()
 
-global GLA_et_data; %#ok<NUSED>
-global GLA_trial_type;
-global GLA_subject;
-disp(['Saving ' GLA_trial_type ' eye tracking data for ' GLA_subject '...']);
+global GLA_et_data;
+disp(['Saving ' GLA_et_data.settings.trial_type ' eye tracking data for '...
+    GLA_et_data.settings.subject '...']);
 save(NM_GetCurrentETDataFilename(),'GLA_et_data','-v7.3');
 disp('Done');
 
