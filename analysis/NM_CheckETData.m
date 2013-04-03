@@ -5,9 +5,9 @@
 %
 % This will then add the triggers to the trial structures
 
-function NM_CheckETTriggers()
+function NM_CheckETData()
 
-% Load / create the data
+% Make sure the log has been parsed
 NM_LoadSubjectData({{'log_parsed',1}});
 
 % Make sure this is useful
@@ -17,7 +17,7 @@ if ~GLA_subject_data.parameters.eye_tracker
 end
     
 global GLA_subject;
-disp(['Checking eyetracker triggers for ' GLA_subject '...']);
+disp(['Checking eyetracker data for ' GLA_subject '...']);
 
 % Check the runs
 checkRuns();
@@ -29,8 +29,8 @@ checkLocalizer();
 checkBaseline();
 
 % Resave...
-NM_SaveSubjectData({{'et_triggers_checked',1}});
-disp(['Checked eye tracking triggers for ' GLA_subject '.']);
+NM_SaveSubjectData({{'et_data_checked',1}});
+disp(['Checked eye tracking data for ' GLA_subject '.']);
 
 
 function checkBaseline()

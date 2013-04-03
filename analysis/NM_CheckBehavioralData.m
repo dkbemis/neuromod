@@ -5,13 +5,16 @@
 %
 % This will then add the triggers to the trial structures
 
-function NM_CheckDataFile()
+function NM_CheckBehavioralData()
 
 global GLA_subject;
-disp(['Checking date file for ' GLA_subject '...']);
+disp(['Checking behavioral data for ' GLA_subject '...']);
+
+% Make sure we've checked the log
+NM_LoadSubjectData({{'log_checked',1}});
 
 % Load / create the data
-loadData();
+loadBehavioralData();
 
 % Check the runs
 checkRuns();
@@ -22,8 +25,8 @@ checkLocalizer();
 % No responses in the baseline...
 
 % Resave...
-disp('Data file checked.');
-NM_SaveSubjectData({{'data_file_checked',1}});
+disp('Behavioral data checked.');
+NM_SaveSubjectData({{'behavioral_data_checked',1}});
 
 
 function checkLocalizer()
@@ -304,10 +307,9 @@ end
 
 
 
-function loadData()
+function loadBehavioralData()
 
 disp('Loading data...');
-NM_LoadSubjectData({{'log_checked',1}});
 
 global GL_response_data;
 global GLA_subject;

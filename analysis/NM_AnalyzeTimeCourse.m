@@ -6,6 +6,12 @@
 
 function stats = NM_AnalyzeTimeCourse(cfg)
 
+cfg = [];
+cfg.name = 'Test';
+cfg.type = 'meg_rms';
+cfg.trial_type = 'word_5';
+cfg.window_width = 25;
+
 global GLA_subject;
 disp(['Analyzing ' cfg.name ' for ' GLA_subject '...']);
 

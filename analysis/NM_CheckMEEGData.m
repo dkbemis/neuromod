@@ -1,6 +1,6 @@
 % Check the triggers
 
-function NM_CheckMEEGTriggers()
+function NM_CheckMEEGData()
 
 % See if we need to do this
 global GLA_rec_type;
@@ -8,17 +8,17 @@ if ~strcmp(GLA_rec_type,'meeg')
     return;
 end
 
-% Load / create the data
-NM_LoadSubjectData({{'log_parsed',1}});
+% Make sure we're parsed
+NM_LoadSubjectData({{'log_checked',1}});
 
 global GLA_subject_data;
 global GLA_meeg_type;
+global GLA_subject;
 if ~GLA_subject_data.parameters.(GLA_meeg_type)
     return;
 end
 
-global GLA_subject;
-disp(['Checking ' GLA_meeg_type ' triggers for ' GLA_subject '...']);
+disp(['Checking ' GLA_meeg_type ' data for ' GLA_subject '...']);
 
 % Check the runs
 for r = 1:GLA_subject_data.parameters.num_runs
@@ -45,9 +45,14 @@ for b = 1:length(b_tasks)
     end
 end
 
+% For MEG data, get the diode timing
+if strcmp(GLA_meeg_type,'meg')
+    getDiodeTiming(); 
+end
+
 % Resave...
-NM_SaveSubjectData({{[GLA_meeg_type '_triggers_checked'],1}});
-disp(['All ' GLA_meeg_type ' triggers accounted for.']);
+NM_SaveSubjectData({{[GLA_meeg_type '_data_checked'],1}});
+disp([GLA_meeg_type ' data checked for ' GLA_subject ]);
 
 
 
@@ -435,4 +440,102 @@ function trigger = createTriggerStruct(time, val)
 global GLA_meeg_type;
 trigger.([GLA_meeg_type '_time']) = time;
 trigger.value = val;
+
+% Helper to make sure we're keeping good time
+
+function getDiodeTiming()
+
+% Load the data
+disp('Finding diode timing...');
+
+% Find for each run
+global GLA_subject_data;
+for r = 1:GLA_subject_data.parameters.num_runs
+    GLA_subject_data.runs(r).trials = setRunDiodes(...
+        ['run_' num2str(r)], GLA_subject_data.runs(r).trials);
+end
+
+b_types = {'blinks','eye_movements','noise'};
+for t = 1:length(b_types)
+    GLA_subject_data.baseline.(b_types{t}) = setRunDiodes(...
+        'baseline', GLA_subject_data.baseline.(b_types{t}));
+end
+disp('Diodes set.');
+
+
+function trials = setRunDiodes(run_id, trials)
+
+% Get the diode times
+d_times = readDiodeTimes(run_id);
+
+% Find the first trigger diode
+for d = 1:length(d_times)
+    if abs(d_times(d) - trials(1).meg_triggers(1).meg_time) < 200
+        d_times = d_times(d:end);
+        break;
+    end
+end
+
+
+% Check and set
+for t = 1:length(trials)
+    [trials(t).diode_times d_times] = setTrialDiodes(trials(t), d_times);
+end
+
+
+function [trial_diodes d_times] = setTrialDiodes(trial, d_times)
+
+% Check against each meg trigger
+max_delay = 100;     
+trial_diodes = [];
+for t = 1:length(trial.meg_triggers)
+
+    % Could do this automatically, but faster and more secure to make sure
+    % we have all of them and they occur in order
+    % NOTE: Always expecting the diode after the trigger.
+    next_d_time = d_times(1); 
+    if (next_d_time - trial.meg_triggers(t).meg_time) > max_delay ||...
+            (next_d_time < trial.meg_triggers(t).meg_time)
+        
+        % No diode for the delay start
+        if t == 6
+            continue;
+        end
+        error('Bad diode time.');
+    end
+    d_times = d_times(2:end);    
+    trial_diodes(end+1) = next_d_time; %#ok<AGROW>
+
+    % Nothing to check the offsets against...
+    next_d_time = d_times(1); d_times = d_times(2:end);
+    trial_diodes(end+1) = next_d_time; %#ok<AGROW>
+end
+
+
+    
+
+function d_times = readDiodeTimes(run_id)
+
+% Load the info
+global GLA_subject;
+file_name = [NM_GetCurrentDataDirectory() '/meg_data/' GLA_subject '/'...    
+    GLA_subject '_' run_id '_sss.fif'];
+hdr = ft_read_header(file_name);
+
+% Get the diode index
+d_ind = find(strcmp(hdr.label,'MISC004'));
+
+% Load all at once, unless we start hitting space issues
+disp('Loading trigger line data...');
+dat = ft_read_data(file_name,'chanindx',d_ind);
+disp('Done.');
+
+% Get all of the onsets and offsets
+diode_threshold = 0.1;
+on_ind = find(dat > diode_threshold);
+d_times = sort(on_ind([1,find(diff(on_ind) > 1)+1, find(diff(on_ind) > 1)-1, end]));
+
+
+
+
 

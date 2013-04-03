@@ -1,22 +1,19 @@
 % Checks the various data...
-function NM_CheckFiles()
+function NM_CheckData()
 
 % This ensures we showed what we meant to
-NM_CheckLogFile();
+NM_CheckLog();
 
 % This checks and adds the responses from the data file
-NM_CheckDataFile();
+NM_CheckBehavioralData();
 
 % This checks and adds the eye tracking triggers
-NM_CheckETTriggers();
+NM_CheckETData();
 
 % Check the M/EEG triggers 
 global GLA_meeg_type;
 meeg_types = {'meg','eeg'};
 for t = 1:length(meeg_types)
     GLA_meeg_type = meeg_types{t};
-    NM_CheckMEEGTriggers();
+    NM_CheckMEEGData();
 end
-
-% Timing check
-NM_CheckTiming();

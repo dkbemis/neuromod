@@ -35,10 +35,7 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
         (isnumeric(val) && GLA_subject_data.parameters.(param) ~= val)
     
     % Might know how to add it
-    switch param
-        case 'log_parsed'
-            NM_ParseLogFile();
-            
+    switch param            
         case 'log_checked'
             NM_CheckLogFile();    
             
