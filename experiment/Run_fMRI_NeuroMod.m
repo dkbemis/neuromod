@@ -1,7 +1,7 @@
 %%
 %%%%%%%%%%%%%%%%%%%%%%%%
 % 
-% Setup (1): Run this first
+% Setup (1): Run this first AND WHENEVER THERE IS A CRASH
 %
 % REMEMBER: 
 %   * Switch between 'left' and 'right'
@@ -10,8 +10,6 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%
 
-% NOTE: Can set subject to 'English' to get english phrases.
-%   * Should probably also change a_positions to 1 then as well...
 et_subject_id = NeuroMod_SetupSubject('Test','right');
 localizer_stim_file = 'lists_miniblocks/run01.csv';
 disp('Subject setup.');
@@ -41,9 +39,9 @@ disp('Practice lists created.');
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-is_speeded = 0;
-is_debugging = 0;
-environment = 'fMRI';
+is_speeded = 0;     % 0 to run the experiment
+is_debugging = 0;     % 0 to run the experiment
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 NeuroMod_fMRI_Practice(environment,is_debugging, is_speeded); 
 
 
@@ -57,8 +55,8 @@ NeuroMod_fMRI_Practice(environment,is_debugging, is_speeded);
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-is_debugging = 0;
-environment = 'fMRI';
+is_debugging = 0;     % 0 to run the experiment
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 NeuroMod_fMRI_SetParameters();
 NeuroMod_ETCalibration(environment, is_debugging)
 
@@ -71,8 +69,8 @@ NeuroMod_ETCalibration(environment, is_debugging)
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-is_debugging = 0;
-environment = 'fMRI';
+is_debugging = 0;     % 0 to run the experiment
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 NeuroMod_fMRI_Structural(environment, is_debugging); 
 
 
@@ -109,11 +107,11 @@ disp('Stim lists created');
 
 
 
-run_num = 1;
-is_speeded = 0;
-is_debugging = 0;
-use_eyetracker = 1;
-environment = 'fMRI';
+run_num = 1;        % Increment from 1 to 4
+is_speeded = 0;     % 0 to run the experiment
+is_debugging = 0;     % 0 to run the experiment
+use_eyetracker = 0;     % 1 if using the eye tracker
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 run_ET_file_names{run_num} = [et_subject_id '_' num2str(run_num)];
 NeuroMod_fMRI_Run(environment,run_ET_file_names{run_num}, run_num,...
     is_debugging, is_speeded, use_eyetracker); 
@@ -144,10 +142,10 @@ disp('Localizer list created.');
 
 
 
-is_debugging = 0;
-is_speeded = 0;
-use_eyetracker = 0;
-environment = 'fMRI';
+is_debugging = 0;     % 0 to run the experiment
+is_speeded = 0;     % 0 to run the experiment
+use_eyetracker = 0;     % 1 if using the eye tracker
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 localizer_ET_file_name = [et_subject_id '_L'];
 NeuroMod_fMRI_Localizer(environment, localizer_ET_file_name,...
     is_debugging, is_speeded, use_eyetracker);
@@ -163,11 +161,11 @@ NeuroMod_fMRI_Localizer(environment, localizer_ET_file_name,...
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
-tasks = {'Blinks','EyeMove'};
-is_debugging = 0;
-is_speeded = 0;
-use_eyetracker = 1;
-environment = 'fMRI';
+tasks = {'Blinks','EyeMove'};   % Other options: 'Noise','Mouth','Breath'
+is_debugging = 0;     % 0 to run the experiment
+is_speeded = 0;     % 0 to run the experiment
+use_eyetracker = 0;     % 1 if using the eye tracker
+environment = 'fMRI';   % 'fMRI' when subject is in the scanner, 'fMRI_computer' when outside
 NeuroMod_fMRI_SetParameters();
 baseline_ET_file_name = [et_subject_id '_B'];
 NeuroMod_Baseline(environment, baseline_ET_file_name, tasks, ...
