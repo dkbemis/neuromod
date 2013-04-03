@@ -1,7 +1,7 @@
 % Checks the various data...
 function NM_PreprocessData()
 
-NM_PreprocessResponses();
+NM_PreprocessBehavioralData();
 NM_PreprocessETData();
 
 % For this global function, just do the blinks and then the final word

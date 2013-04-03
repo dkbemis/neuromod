@@ -48,6 +48,10 @@ subject_data.parameters.fmri_slice_order = ...
 subject_data.parameters.fmri_ref_slice = 1;
 subject_data.parameters.fmri_voxel_size = [1.5 1.5 1.5];
 
+% Behavrioal analysis settings
+subject_data.parameters.min_resp_time = 200;  % Fastest response to keep
+subject_data.parameters.max_resp_time = 2500;  % Slowest response to keep
+
 % MEEG analysis settings
 subject_data.parameters.meeg_rej_type = 'summary';  % summary, raw
 subject_data.parameters.meeg_decomp_method = 'pca'; % pca, fastica, runica
