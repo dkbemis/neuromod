@@ -1,7 +1,11 @@
-% Checks the various data...
 function NM_PreprocessData()
 
+% The easy stuff
 NM_PreprocessBehavioralData();
+
+% Go with word 5 for now...
+global GLA_trial_type;
+GLA_trial_type = 'word_5';
 NM_PreprocessETData();
 
 % For this global function, just do the blinks and then the final word

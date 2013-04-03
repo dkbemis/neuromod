@@ -42,8 +42,8 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
         case 'et_data_converted'
             NM_ConvertETData();    
             
-        case 'timing_checked'
-            NM_CheckTiming();
+        case 'timing_adjusted'
+            NM_AdjustTiming();
             
         case 'responses_preprocessed'
             NM_PreprocessResponses();

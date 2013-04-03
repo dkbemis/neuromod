@@ -8,15 +8,13 @@ function NM_PreprocessBehavioralData()
 global GLA_subject;
 disp(['Preprocessing behavioral data for ' GLA_subject '...']);
 
-% Load the checked data
-disp('Loading data...');
+% Make sure we're ready
 NM_LoadSubjectData({{'behavioral_data_checked',1}});
-disp('Done.');
 
-% Reset
-NM_ClearBehavioralData();
+% Initialize
+NM_InitializeBehavioralData()
 
-% Remove outliers, etc
+% Remove outliers, etc.
 NM_SetBehavioralRejections();
 
 % Resave...

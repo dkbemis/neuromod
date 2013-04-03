@@ -45,10 +45,15 @@ for b = 1:length(b_tasks)
     end
 end
 
+% Check the timing
+NM_CheckTiming(GLA_meeg_type);
+
 % For MEG data, get the diode timing
 if strcmp(GLA_meeg_type,'meg')
     getDiodeTiming(); 
+    NM_CheckTiming('diode');
 end
+
 
 % Resave...
 NM_SaveSubjectData({{[GLA_meeg_type '_data_checked'],1}});

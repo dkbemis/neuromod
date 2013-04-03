@@ -2,7 +2,7 @@ function NM_LoadBehavioralData()
 
 % Load up the subject data
 disp('Loading behavioral data...');
-NM_LoadSubjectData({{'behavioral_data_checked',1}});
+NM_LoadSubjectData();
 
 % Default to use matching data in memory
 global GLA_behavioral_data;

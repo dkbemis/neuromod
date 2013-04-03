@@ -27,6 +27,9 @@ checkLocalizer();
 % Check the baseline tasks
 checkBaseline();
 
+% And the timing
+NM_CheckTiming('log');
+
 % And resave
 disp('Log checked.');
 NM_SaveSubjectData({{'log_checked',1}});

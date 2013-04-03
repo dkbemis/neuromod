@@ -48,7 +48,18 @@ subject_data.parameters.fmri_slice_order = ...
 subject_data.parameters.fmri_ref_slice = 1;
 subject_data.parameters.fmri_voxel_size = [1.5 1.5 1.5];
 
-% Behavrioal analysis settings
+% Epoch settings
+subject_data.parameters.blinks_epoch = [-200 600];
+subject_data.parameters.word_5_epoch = [-200 600];
+subject_data.parameters.word_4_epoch = [-200 600];
+subject_data.parameters.word_3_epoch = [-200 600];
+subject_data.parameters.word_2_epoch = [-200 600];
+subject_data.parameters.word_1_epoch = [-200 600];
+subject_data.parameters.target_epoch = [-200 1000];
+subject_data.parameters.delay_epoch = [-200 2000];
+subject_data.parameters.all_epoch = [-200 6000];
+
+% Behavioral analysis settings
 subject_data.parameters.min_resp_time = 200;  % Fastest response to keep
 subject_data.parameters.max_resp_time = 2500;  % Slowest response to keep
 
@@ -57,15 +68,6 @@ subject_data.parameters.meeg_rej_type = 'summary';  % summary, raw
 subject_data.parameters.meeg_decomp_method = 'pca'; % pca, fastica, runica
 subject_data.parameters.meeg_decomp_comp_num = 10; 
 subject_data.parameters.meeg_decomp_type = 'combined';  % combined, separate (wrt decomposing)
-subject_data.parameters.meeg_blinks_epoch = [-200 600];
-subject_data.parameters.meeg_word_5_epoch = [-200 600];
-subject_data.parameters.meeg_word_4_epoch = [-200 600];
-subject_data.parameters.meeg_word_3_epoch = [-200 600];
-subject_data.parameters.meeg_word_2_epoch = [-200 600];
-subject_data.parameters.meeg_word_1_epoch = [-200 600];
-subject_data.parameters.meeg_target_epoch = [-200 1000];
-subject_data.parameters.meeg_delay_epoch = [-200 2000];
-subject_data.parameters.meeg_all_epoch = [-200 6000];
 subject_data.parameters.meeg_filter_raw = 0;    % 1 - will filter the raw data
 subject_data.parameters.meeg_hpf = [];  % .1
 subject_data.parameters.meeg_lpf = []; % 120

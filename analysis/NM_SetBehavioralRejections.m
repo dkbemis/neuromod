@@ -2,34 +2,10 @@ function NM_SetBehavioralRejections()
 
 % Load the data
 global GLA_subject;
-disp(['Rejecting behavioral trials for ' GLA_subject]);
+disp(['Setting behavioral rejections for ' GLA_subject]);
 NM_LoadBehavioralData();
 
 global GLA_behavioral_data;
-
-% Set parameters
-global GLA_subject_data;
-GLA_behavioral_data.settings.min_resp_time = ...
-    GLA_subject_data.parameters.min_resp_time;
-GLA_behavioral_data.settings.max_resp_time = ...
-    GLA_subject_data.parameters.max_resp_time;
-
-% Calcualte outliers, timeouts, and errors
-GLA_behavioral_data.data.outliers = [];
-GLA_behavioral_data.data.timeouts = [];
-GLA_behavioral_data.data.errors = [];
-for t = 1:length(GLA_behavioral_data.data.cond)
-    if GLA_behavioral_data.data.acc{t} == 0
-        GLA_behavioral_data.data.errors(end+1) = t;
-    end
-    if isempty(GLA_behavioral_data.data.acc{t})
-        GLA_behavioral_data.data.timeouts(end+1) = t;
-    end
-    if GLA_behavioral_data.data.rt{t} < GLA_behavioral_data.settings.min_resp_time ||...
-            GLA_behavioral_data.data.rt{t} > GLA_behavioral_data.settings.max_resp_time 
-        GLA_behavioral_data.data.outliers(end+1) = t;
-    end
-end
 
 % See what we want to reject
 GLA_behavioral_data.rejections.trials = [];

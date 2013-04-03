@@ -28,6 +28,9 @@ checkLocalizer();
 % Check the baseline
 checkBaseline();
 
+% And the timing
+NM_CheckTiming('et');
+
 % Resave...
 NM_SaveSubjectData({{'et_data_checked',1}});
 disp(['Checked eye tracking data for ' GLA_subject '.']);

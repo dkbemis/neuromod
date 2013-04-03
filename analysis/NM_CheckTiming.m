@@ -1,215 +1,65 @@
-% Checks and adjusts all of the timing
+function NM_CheckTiming(trigger_type)
 
-function NM_CheckTiming()
-
-% Load the data
-NM_LoadSubjectData({{'log_checked',1},... % Need to have checked the log
-    {'meg_triggers_checked',1},...      % And all the triggers...
-    {'eeg_triggers_checked',1},...
-    {'et_triggers_checked',1},...
-    {'responses_checked',1},...
-    });
-
-% Try to set the diode timing, if we haven't
-global GLA_subject_data;
-if ~isfield(GLA_subject_data.parameters,'diodes_set') || ...
-        ~GLA_subject_data.parameters.diodes_set
-    NM_GetDiodeTiming();
-end
-
-% What we'll be checking / adjusting
-trigger_types = {};
-if GLA_subject_data.parameters.meg
-    trigger_types{end+1} = 'meg';
-end
-if GLA_subject_data.parameters.eeg
-    trigger_types{end+1} = 'eeg';
-end
-if GLA_subject_data.parameters.eye_tracker
-    trigger_types{end+1} = 'et';
-end
-
-
+% Keep track of the check
 global GLA_subject;
-disp('Checking timing...');
+disp(['Checking timing for ' trigger_type ' data for ' GLA_subject '...']);
 fid = fopen([NM_GetCurrentDataDirectory() '/analysis/'...
-    GLA_subject '/' GLA_subject '_timing_report.txt'],'w');
+    GLA_subject '/' GLA_subject '_timing_report.txt'],'a');
 
-% assess the intervals for each measurement
+% No loading because we should be 
+%   in the middle of checking one of the data types
+global GLA_subject_data;
 for r = 1:GLA_subject_data.parameters.num_runs
-    checkRunTiming(r, trigger_types, fid);
+    checkRunTiming(r, trigger_type, fid);
 end
-
-% Now, readjust to the diodes
-readjustTriggers(trigger_types, fid)
-
-% And save
 fclose(fid);
 disp('Done.');
-NM_SaveSubjectData({{'timing_checked',1}});
-disp('Log timing checked.');
 
 
-function readjustTriggers(trigger_types, fid)
-
-% Might be nothing to do
-global GLA_subject_data;
-if ~isfield(GLA_subject_data.parameters,'diodes_set') || ...
-        ~GLA_subject_data.parameters.diodes_set
-    return;
-end
-
-% The run triggers...
-all_adjusts = [];
-disp('Adjusting trigger timing...');
-for r = 1:GLA_subject_data.parameters.num_runs
-    for t = 1:length(GLA_subject_data.runs(r).trials)
-        [GLA_subject_data.runs(r).trials(t) all_adjusts(end+1:end+length(GLA_subject_data.runs(r).trials(t).meg_triggers))] = ...
-            readjustTrialTriggers(GLA_subject_data.runs(r).trials(t), trigger_types);
-    end
-end
-
-adj_str = ['Adjusted run triggers by ' num2str(mean(all_adjusts)) ' ms avg. [' ...
-    num2str(std(all_adjusts)) ' ms std.]'];
-disp(adj_str);
-fprintf(fid,[adj_str '\n']);
-
-
-% And the baseline triggers...
-all_adjusts = [];
-b_types = {'blinks','eye_movements','noise'};
-for b = 1:length(b_types)
-    for t = 1:length(GLA_subject_data.baseline.(b_types{b}))
-        [GLA_subject_data.baseline.(b_types{b})(t) all_adjusts(end+1:end+length(GLA_subject_data.baseline.(b_types{b})(t).meg_triggers))] = ...
-            readjustTrialTriggers(GLA_subject_data.baseline.(b_types{b})(t), trigger_types);
-    end
-end
-adj_str = ['Adjusted baseline triggers by ' num2str(mean(all_adjusts)) ' ms avg. [' ...
-    num2str(std(all_adjusts)) ' ms std.]'];
-disp(adj_str);
-fprintf(fid,[adj_str '\n']);
-
-
-function [trial adjusts] = readjustTrialTriggers(trial, trigger_types)
-
-adjusts = zeros(length(trial.meg_triggers),1);
-max_adjust = 150;
-for t = 1:length(trial.meg_triggers)
-        
-    % Find the closest diode and set
-    t_time = trial.meg_triggers(t).meg_time;
-    adjusts(t) = max_adjust+1;
-    for d = 1:length(trial.diode_times)
-        if abs(trial.diode_times(d) - t_time) < abs(adjusts(t))
-            adjusts(t) = trial.diode_times(d) - t_time;
-        end
-    end
-
-    % Check
-    if abs(adjusts(t)) > max_adjust
-        
-        % Might be the delay, so just use the average so far...
-        if t == 6
-             adjusts(t) = round(mean(adjusts(1:t-1)));
-        else
-            error('Adjustment too big.');
-        end
-    end
-    
-    % Set them all
-    for i = 1:length(trigger_types)
-        trial.([trigger_types{i} '_triggers'])(t).([trigger_types{i} '_unadjusted_time']) = ...
-            trial.([trigger_types{i} '_triggers'])(t).([trigger_types{i} '_time']);
-        trial.([trigger_types{i} '_triggers'])(t).([trigger_types{i} '_time']) = ...
-            trial.([trigger_types{i} '_triggers'])(t).([trigger_types{i} '_time']) + adjusts(t);
-    end
-end
-
-
-        
-function checkRunTiming(r, trigger_types, fid)
+function checkRunTiming(r, trigger_type, fid)
 
 global GLA_subject_data;
 
 % Get the intervals
-types = {'log'};
-if GLA_subject_data.parameters.meg
-    types{end+1} = 'meg';
-end
-if GLA_subject_data.parameters.eeg
-    types{end+1} = 'eeg';
-end
-if GLA_subject_data.parameters.eye_tracker
-    types{end+1} = 'et';
-end
-if GLA_subject_data.parameters.meg
-    types{end+1} = 'diode';
-end
-for t = 1:length(types)
-    GLA_subject_data.runs(r).timing.([types{t} '_intervals']) = getRunIntervals(types{t},r);
+GLA_subject_data.runs(r).timing.([trigger_type '_intervals']) = getRunIntervals(trigger_type,r);
 
-    % Store some summaries
-    GLA_subject_data.runs(r).timing.([types{t} '_interval_means']) = ...
-        mean(GLA_subject_data.runs(r).timing.([types{t} '_intervals']));
-    GLA_subject_data.runs(r).timing.([types{t} '_interval_stds']) = ...
-        std(GLA_subject_data.runs(r).timing.([types{t} '_intervals']));
+% Store some summaries
+GLA_subject_data.runs(r).timing.([trigger_type '_interval_means']) = ...
+    mean(GLA_subject_data.runs(r).timing.([trigger_type '_intervals']));
+GLA_subject_data.runs(r).timing.([trigger_type '_interval_stds']) = ...
+    std(GLA_subject_data.runs(r).timing.([trigger_type '_intervals']));
 
-    % These are the times we expect, in ms
-    switch types{t}
+% These are the times we expect, in ms
+switch trigger_type
+
+    % Log has them all
+    case 'log'
+        exp_labels = {'fixation','stim_1','ISI_1','stim_2','ISI_2','stim_3','ISI_3',...
+            'stim_4','ISI_4','stim_5','ISI_5','delay'};
+        exp_times = [600 200 400 200 400 200 400 200 400 200 400 2000];
+
+    % Diode has most of them
+    case 'diode'
+        exp_labels = {'stim_1','ISI_1','stim_2','ISI_2','stim_3','ISI_3',...
+            'stim_4','ISI_4','stim_5','ISI_5+delay'};
+        exp_times = [200 400 200 400 200 400 200 400 200 2400];
+
+    % All of the other triggers have one per stim
+    otherwise
+        exp_labels = {'stim_1+ISI_1','stim_2+ISI_2','stim_3+ISI_3',...
+            'stim_4+ISI_4','stim_5+ISI_5','delay'};
+        exp_times = [600 600 600 600 600 2000];
+
+end            
+tolerance = 5;
     
-        % Log has them all
-        case 'log'
-            exp_labels = {'fixation','stim_1','ISI_1','stim_2','ISI_2','stim_3','ISI_3',...
-                'stim_4','ISI_4','stim_5','ISI_5','delay'};
-            exp_times = [600 200 400 200 400 200 400 200 400 200 400 2000];
-    
-        % Diode has most of them
-        case 'diode'
-            exp_labels = {'stim_1','ISI_1','stim_2','ISI_2','stim_3','ISI_3',...
-                'stim_4','ISI_4','stim_5','ISI_5+delay'};
-            exp_times = [200 400 200 400 200 400 200 400 200 2400];
-    
-        % All of the other triggers have one per stim
-        otherwise
-            exp_labels = {'stim_1+ISI_1','stim_2+ISI_2','stim_3+ISI_3',...
-                'stim_4+ISI_4','stim_5+ISI_5','delay'};
-            exp_times = [600 600 600 600 600 2000];
-    
-    end            
-    tolerance = 5;
-    
-    % And check them
-    for s = 1:length(exp_times)
-        checkStimulusTiming(GLA_subject_data.runs(r).timing.([types{t} '_interval_means'])(s),...
-            GLA_subject_data.runs(r).timing.([types{t} '_interval_stds'])(s),...
-            exp_times(s),exp_labels{s},types{t}, tolerance, fid);
-    end
+% And check them
+for s = 1:length(exp_times)
+    checkStimulusTiming(GLA_subject_data.runs(r).timing.([trigger_type '_interval_means'])(s),...
+        GLA_subject_data.runs(r).timing.([trigger_type '_interval_stds'])(s),...
+        exp_times(s),exp_labels{s},trigger_type, tolerance, fid);
 end
 
-% Now, check different trigger computers
-for t = 1:length(trigger_types)
-    for t2 = t+1:length(trigger_types)
-        total_diff = 0;
-        
-        % See if there's a systematic difference
-        for i = 1:size(GLA_subject_data.runs(r).timing.([trigger_types{t} '_intervals']),1)
-            
-            % NOTE: Last one is ITI, so will even out...
-            for j = 1:size(GLA_subject_data.runs(r).timing.([trigger_types{t} '_intervals']),2)-1
-                total_diff = total_diff + GLA_subject_data.runs(r).timing.([trigger_types{t} '_intervals'])(i,j) -...
-                    GLA_subject_data.runs(r).timing.([trigger_types{t2} '_intervals'])(i,j);
-            end
-        end
-        diff_str = [trigger_types{t} ' samples minus ' trigger_types{t2} ' samples: ' num2str(total_diff) '.'];
-        fprintf(fid, [diff_str '\n']);
-        disp(diff_str);
-    end
-end
-
-done_str = ['Run ' num2str(r) ' timing checked.'];
-fprintf(fid, [done_str '\n\n']);
-disp(done_str);
-disp(' ');
 
 
 function checkStimulusTiming(observed, deviation, ideal, ...
@@ -243,23 +93,23 @@ for t = 1:length(GLA_subject_data.runs(num).trials)
     
     % Timeouts have fewer intervals
     if strcmp(GLA_subject_data.runs(num).trials(t).response.key,'TIMEOUT')
-        ints = [ints 0];
+        ints = [ints 0]; %#ok<AGROW>
     end
     
     % Final trial can have many more
     if t == length(GLA_subject_data.runs(num).trials)
         ints = ints(1:size(intervals,2));
     end
-    intervals(t,:) = ints;
+    intervals(t,:) = ints; %#ok<AGROW>
     
     % And the ITI
     if t < length(GLA_subject_data.runs(num).trials)
         intervals(t,end) = getTime(type, GLA_subject_data.runs(num).trials(t+1), 1) -...
-            getTime(type, GLA_subject_data.runs(num).trials(t), size(intervals,2));
+            getTime(type, GLA_subject_data.runs(num).trials(t), size(intervals,2)); %#ok<AGROW>
 
     % Just set to the mean if there is no ITI
     else
-        intervals(t,end) = mean(intervals(1:end-1,end));
+        intervals(t,end) = mean(intervals(1:end-1,end)); %#ok<AGROW>
     end
 end
 
@@ -270,7 +120,7 @@ ctr = 1;
 intervals = [];
 while getTime(type,trial,ctr+1) > 0
     intervals(end+1) = getTime(type, trial, ctr+1) -...
-        getTime(type, trial, ctr);
+        getTime(type, trial, ctr); %#ok<AGROW>
     ctr = ctr+1;
 end
 
