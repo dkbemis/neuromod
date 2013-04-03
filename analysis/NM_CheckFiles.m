@@ -1,9 +1,6 @@
 % Checks the various data...
 function NM_CheckFiles()
 
-% First parse the log files
-NM_ParseLogFile();
-
 % This ensures we showed what we meant to
 NM_CheckLogFile();
 

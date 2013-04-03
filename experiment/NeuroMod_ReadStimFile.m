@@ -16,6 +16,9 @@ else
     values = [];
 end
 fid = fopen([name '_matched.txt']);
+if fid < 0
+    error('Unable to open file.');
+end
 header = fgetl(fid); %#ok<NASGU>
 while 1
     line = fgetl(fid);
