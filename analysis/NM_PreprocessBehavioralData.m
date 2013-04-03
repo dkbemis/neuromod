@@ -17,7 +17,7 @@ disp('Done.');
 NM_ClearBehavioralData();
 
 % Remove outliers, etc
-NM_RejectBehavioralTrials();
+NM_SetBehavioralRejections();
 
 % Resave...
 NM_SaveSubjectData({{'behavioral_data_preprocessed',1}});

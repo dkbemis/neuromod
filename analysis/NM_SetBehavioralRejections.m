@@ -1,4 +1,4 @@
-function NM_RejectBehavioralTrials()
+function NM_SetBehavioralRejections()
 
 % Load the data
 global GLA_subject;
