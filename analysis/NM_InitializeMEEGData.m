@@ -161,11 +161,10 @@ GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1) = ...
     GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1) + filter_buffer;
 GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2) = ...
     GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2) - filter_buffer;
-GLA_meeg_data.settings.pre_stim = GLA_meeg_data.settings.pre_stim + filter_buffer;
-GLA_meeg_data.settings.post_stim = GLA_meeg_data.settings.post_stim - filter_buffer;
 cfg = [];
 cfg.begsample = filter_buffer + 1;
-cfg.endsample = filter_buffer + GLA_meeg_data.settings.post_stim - GLA_meeg_data.settings.pre_stim;
+cfg.endsample = filter_buffer + GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2) +...
+    - GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1);
 
 
 

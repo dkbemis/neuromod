@@ -10,8 +10,8 @@ if ~exist('baseline_correct','var')
     baseline_correct = 0; 
 end
 
-% Load up the data
-NM_LoadMEEGData();
+% Get the cleaned data
+NM_ApplyMEEGRejections();
 
 % Default to average all
 global GL_avg_data;
@@ -41,22 +41,24 @@ for s = 1:length(s_types)
 end
 
 % And clear the memory
+clear global GLA_clean_meeg_data;
 clear global GL_avg_data;
+
 
 function averageData(baseline_correct)
 
 % Baseline correct first
 disp('Averaging data...');
-global GLA_meeg_data;
+global GLA_clean_meeg_data;
 global GL_avg_data;
-GL_avg_data = GLA_meeg_data.data;
+GL_avg_data = GLA_clean_meeg_data.data;
 
 % If we must...
 if baseline_correct
     disp('Baseline correcting data...');
     for t = 1:length(GL_avg_data.trial)
         GL_avg_data.trial{t} = ft_preproc_baselinecorrect(...
-            GL_avg_data.trial{t},1,-1*GLA_meeg_data.pre_stim);
+            GL_avg_data.trial{t},1,find(GL_avg_data.time{1} >0,1));
     end
     disp('Done.');
 end
@@ -97,16 +99,14 @@ end
 
 % Just a butterfly
 figure;
-global GLA_meeg_data;
-plot(GLA_meeg_data.pre_stim:GLA_meeg_data.post_stim-1, GL_avg_data.avg');
+plot(GL_avg_data.time*1000, GL_avg_data.avg');
 if ~isempty(save_name)
     saveas(gcf,[save_name '_butterfly.jpg']); 
 end
 
 % And the RMS
 figure
-plot(GLA_meeg_data.pre_stim:GLA_meeg_data.post_stim-1, ...
-    sqrt(mean(GL_avg_data.avg .^ 2)));
+plot(GL_avg_data.time*1000, sqrt(mean(GL_avg_data.avg .^ 2)));
 if ~isempty(save_name)
     saveas(gcf,[save_name '_rms.jpg']); 
 end
@@ -147,8 +147,7 @@ end
 
 % Plot equal intervals
 inter = 0.025;  % 25ms
-global GLA_meeg_data;
-cfg.xlim = 0:inter:GLA_meeg_data.post_stim/1000;  % Define 12 time intervals
+cfg.xlim = 0:inter:GL_avg_data.time(end);  % Define 12 time intervals
 
 % And plot
 ft_topoplotER(cfg,GL_avg_data)

@@ -10,40 +10,24 @@ NM_LoadMEEGData();
 % Use whichever type we set
 global GLA_subject_data;
 global GLA_meeg_data;
-GLA_meeg_data.rejections.trials = [];
-GLA_meeg_data.rejections.criteria = {GLA_subject_data.parameters.meeg_rej_type};
-switch GLA_meeg_data.rejections.criteria{1}
+GLA_meeg_data.rejections = {};
+GLA_meeg_data.rejections(1).type = ...
+    GLA_subject_data.parameters.meeg_rej_type;
+switch GLA_subject_data.parameters.meeg_rej_type
     case 'raw'
-        rej = rejectArtifacts_Raw();
+        GLA_meeg_data.rejections(1).trials = ...
+            rejectArtifacts_Raw();
         
     case 'summary'
-        rej = rejectArtifacts_Summary();
+        GLA_meeg_data.rejections(1).trials = ...
+            rejectArtifacts_Summary();
         
     otherwise
         error('Unknown type');
 end
 
-% See if we want to reject them
-if ~isempty(rej)
-    rej_str = ['Reject trials? (y/n) [' num2str(length(rej)) ': '];
-    for r = 1:length(rej)
-        rej_str = [rej_str num2str(rej(r)) ' '];  %#ok<AGROW>
-    end
-    rej_str = [rej_str ']: ']; 
-    while 1
-        ch = input(rej_str,'s');
-        if strcmp(ch,'y')
-            GLA_meeg_data.rejections.trials(end+1:end+length(rej)) = rej;
-            break;
-        elseif strcmp(ch,'n')
-            break;
-        end
-    end
-end
-
 
 % Take out duplicates and save
-GLA_meeg_data.rejections.trials = sort(unique(GLA_meeg_data.rejections.trials));
 NM_SaveMEEGData();
 disp('Done.');
 
@@ -79,7 +63,7 @@ global GLA_meeg_data;
 if ~isfield(GLA_meeg_data.data, 'sampleinfo')
     
     % Set to be contiguous
-    t_len = GLA_meeg_data.settings.post_stim - GLA_meeg_data.settings.pre_stim;
+    t_len = round((GLA_meeg_data.data.time{1}(end) - GLA_meeg_data.data.time{1}(1))*1000)+1;
     sampleinfo(:,1) = 1:t_len:length(GLA_meeg_data.data.trial)*t_len;
     sampleinfo(:,2) = t_len:t_len:length(GLA_meeg_data.data.trial)*t_len;
 else

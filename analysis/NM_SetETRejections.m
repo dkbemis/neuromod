@@ -8,33 +8,12 @@ NM_LoadETData();
 
 % See what we want to reject
 global GLA_et_data;
-GLA_et_data.rejections.trials = [];
-GLA_et_data.rejections.criteria = {};
+GLA_et_data.rejections = {};
 types = {'blink','saccade'};
 for t = 1:length(types)
-    rej = getPossibleRejections(types{t});
-    if isempty(rej)
-        continue;
-    end
-    rej_str = ['Reject ' types{t} 's? (y/n) [' num2str(length(rej)) ': '];
-    for r = 1:length(rej)
-        rej_str = [rej_str num2str(rej(r)) ' '];  %#ok<AGROW>
-    end
-    rej_str = [rej_str ']: ']; %#ok<AGROW>
-    while 1
-        ch = input(rej_str,'s');
-        if strcmp(ch,'y')
-            GLA_et_data.rejections.criteria{end+1} = types{t};
-            GLA_et_data.rejections.trials(end+1:end+length(rej)) = rej;
-            break;
-        elseif strcmp(ch,'n')
-            break;
-        end
-    end
+    GLA_et_data.rejections(t).trials = getPossibleRejections(types{t});
+    GLA_et_data.rejections(t).type = types{t};
 end
-
-% Take out duplicates and save
-GLA_et_data.rejections.trials = sort(unique(GLA_et_data.rejections.trials));
 NM_SaveETData();
 disp('Done.');
 

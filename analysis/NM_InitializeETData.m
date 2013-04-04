@@ -18,6 +18,8 @@ global GLA_et_data;
 global GLA_subject_data;
 GLA_et_data.settings.subject = GLA_subject;
 GLA_et_data.settings.trial_type = GLA_trial_type;
+GLA_et_data.data.epoch = ...
+    GLA_subject_data.parameters.([GLA_trial_type '_epoch']);
 GLA_et_data.data.x_pos = {};
 GLA_et_data.data.y_pos = {};
 GLA_et_data.data.pupil = {};
@@ -154,7 +156,7 @@ switch GLA_trial_type
         
     otherwise
         cond = trial.log_stims(1).cond;
-        if strcmp(trial.log_stims(1).parameters.p_l,'list')
+        if strcmp(trial.log_stims(1).p_l,'list')
             cond = cond + 5;
         end
 end

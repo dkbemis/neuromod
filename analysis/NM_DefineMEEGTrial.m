@@ -53,11 +53,7 @@ switch GLA_trial_type
         error('Unknown type');
 end
 
-% Set the epoch length
-global GLA_meeg_data;
-GLA_meeg_data.settings.pre_stim = GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1);
-GLA_meeg_data.settings.post_stim = GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2);
-
+% Set the trials
 trl = [];
 global GLA_meeg_type;
 for t = 1:length(trials)
@@ -72,9 +68,9 @@ for t = 1:length(trials)
         % NOTE: Samples are 1-1 with ms for now.
         % Just get the critical trigger.
         trigger_time = triggers(i).([GLA_meeg_type '_time']);
-        trl(end+1,:) = [trigger_time+GLA_meeg_data.settings.pre_stim...
-            trigger_time+GLA_meeg_data.settings.post_stim-1 ...
-            GLA_meeg_data.settings.pre_stim cond]; %#ok<AGROW>
+        trl(end+1,:) = [trigger_time + GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1)...
+            trigger_time + GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(2)-1 ...
+            GLA_subject_data.parameters.([GLA_trial_type '_epoch'])(1) cond]; %#ok<AGROW>
     end
 end
 

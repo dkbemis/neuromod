@@ -68,10 +68,10 @@ subject_data.parameters.meeg_rej_type = 'summary';  % summary, raw
 subject_data.parameters.meeg_decomp_method = 'pca'; % pca, fastica, runica
 subject_data.parameters.meeg_decomp_comp_num = 10; 
 subject_data.parameters.meeg_decomp_type = 'combined';  % combined, separate (wrt decomposing)
-subject_data.parameters.meeg_filter_raw = 0;    % 1 - will filter the raw data
-subject_data.parameters.meeg_hpf = [];  % .1
-subject_data.parameters.meeg_lpf = []; % 120
-subject_data.parameters.meeg_bsf = [];    % [50 100]
+subject_data.parameters.meeg_filter_raw = 1;    % 1 - will filter the raw data
+subject_data.parameters.meeg_hpf = .1;  % .1
+subject_data.parameters.meeg_lpf = 120; % 120
+subject_data.parameters.meeg_bsf = [50 100];    % [50 100]
 subject_data.parameters.meeg_bsf_width = 1;
 
 

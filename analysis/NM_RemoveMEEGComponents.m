@@ -1,17 +1,17 @@
 function NM_RemoveMEEGComponents(should_save)
 
-% Load up the data
-global GLA_meeg_data;
-NM_LoadMEEGData();
+% Incorporate any rejections we want to
+NM_ApplyMEEGRejections();
 
 % Set the options
+global GLA_meeg_data;
 global GLA_subject_data;
-GLA_meeg_data.decomp_method = GLA_subject_data.parameters.meeg_decomp_method;
-GLA_meeg_data.decomp_type = GLA_subject_data.parameters.meeg_decomp_type;  
-GLA_meeg_data.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp_comp_num;  
+GLA_meeg_data.settings.decomp_method = GLA_subject_data.parameters.meeg_decomp_method;
+GLA_meeg_data.settings.decomp_type = GLA_subject_data.parameters.meeg_decomp_type;  
+GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp_comp_num;  
 
 % See which type
-switch GLA_meeg_data.decomp_type
+switch GLA_meeg_data.settings.decomp_type
     case 'combined'
         removeComponents_Combined();
         
@@ -27,31 +27,37 @@ if ~exist('should_save','var') || should_save
     NM_SaveMEEGData();
 end
 
+% And clear the clean data
+clear global GLA_clean_meeg_data;
+
 
 function removeComponents_Combined()
 
-% Need to normalize the data first
-norms = getNorms();
-normalizeData(norms);
+% Need to normalize both data sets
+
+full_norms = getNorms('full');
+clean_norms = getNorms('clean');
+normalizeData(full_norms, 'full');
+normalizeData(clean_norms, 'clean');
 
 global GLA_meeg_data;
 GLA_meeg_data.data = computeRejections('MEG', 'MEG');
 
-% And unnormalize
-norms = 1./norms;
-normalizeData(norms);
+% And unnormalize the full data
+full_norms = 1./full_norms;
+normalizeData(full_norms, 'full');
 
 
 function data = computeRejections(type, channels)
 
 % See if we already computed on blinks
-global GLA_subject;
 global GLA_meeg_type;
-global GLA_meeg_trial_type;
-blinks_file_name = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
-    GLA_subject '_' GLA_meeg_type '_blinks_data.mat'];
-if ~strcmp(GLA_meeg_trial_type,'blinks') && exist(blinks_file_name,'file')
-    
+global GLA_subject_data;
+global GLA_trial_type;
+if ~strcmp(GLA_trial_type,'blinks') && ...
+    isfield(GLA_subject_data.parameters, [GLA_meeg_type '_blinks_data_preprocessed']) && ...
+        GLA_subject_data.parameters.([GLA_meeg_type '_blinks_data_preprocessed'])
+        
     % See if we want to use the blinks
     while 1
         ch = input('Use saved blinks decomposition? (y/n) ','s');
@@ -70,7 +76,7 @@ end
 
 % Either use the blinks or not
 if use_blinks
-    setComponentsFromBlinks(type, blinks_file_name);
+    setComponentsFromBlinks(type);
 else
     decomposeData(type, channels); 
 end
@@ -80,69 +86,126 @@ end
 global GLA_meeg_data;
 cfg = [];
 cfg.demean = 'no';
-cfg.component = GLA_meeg_data.([type '_comp_rej']);
-data = ft_rejectcomponent(cfg,GLA_meeg_data.([type '_comp']),GLA_meeg_data.data);
+cfg.component = GLA_meeg_data.settings.([type '_comp_rej']);
+data = ft_rejectcomponent(cfg,GLA_meeg_data.settings.([type '_comp']),GLA_meeg_data.data);
 
 
-function setComponentsFromBlinks(type, blinks_file_name)
-
+function setComponentsFromBlinks(type)
+error
 % Just set exactly 
 global GLA_meeg_data;
-b_data = load(blinks_file_name);
-GLA_meeg_data.([type '_comp']) = b_data.GLA_meeg_data.([type '_comp']);
-GLA_meeg_data.([type '_comp_rej']) = b_data.GLA_meeg_data.([type '_comp_rej']);
+b_data = load([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
+    GLA_subject '_' GLA_meeg_type '_blinks_data.mat']);
+GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
+GLA_meeg_data.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);
 
 
 function decomposeData(type, channels)
 
+% Used the cleaned data
 global GLA_meeg_data;
+global GLA_clean_meeg_data;
 cfg = [];
-cfg.method = GLA_meeg_data.decomp_method;
-cfg.numcomponent = GLA_meeg_data.decomp_comp_num;
+cfg.method = GLA_meeg_data.settings.decomp_method;
+cfg.numcomponent = GLA_meeg_data.settings.decomp_comp_num;
 cfg.channel = channels;
-GLA_meeg_data.([type '_comp']) = ft_componentanalysis(cfg,GLA_meeg_data.data);
-GLA_meeg_data.([type '_comp']).typechan = cfg.channel;
+GLA_meeg_data.settings.([type '_comp']) = ft_componentanalysis(cfg,GLA_clean_meeg_data.data);
+GLA_meeg_data.settings.([type '_comp']).typechan = cfg.channel;
 
 % Browse...
 cfg = [];
 cfg.layout='neuromag306all.lay';
-ft_databrowser(cfg, GLA_meeg_data.([type '_comp']));
+ft_databrowser(cfg, GLA_meeg_data.settings.([type '_comp']));
 
 % Display some helpful blink info
 displayBlinkInfo(type);
 
 % Get the components to reject
-GLA_meeg_data.([type '_comp_rej']) = [];
+GLA_meeg_data.settings.([type '_comp_rej']) = [];
 while 1
     rej = input('Comp to reject (enter to end): ');
     if isempty(rej)
         break;
     end
-    GLA_meeg_data.([type '_comp_rej'])(end+1) = rej; 
+    GLA_meeg_data.settings.([type '_comp_rej'])(end+1) = rej; 
 end
 
 
 function displayBlinkInfo(type)
 
 % Are there blinks?
-has_blinks = 0;
+global GLA_subject_data;
+global GLA_trial_type;
+if ~isfield(GLA_subject_data.parameters,['et_' GLA_trial_type '_data_preprocessed']) ||...
+        GLA_subject_data.parameters.(['et_' GLA_trial_type '_data_preprocessed']) ~= 1
+    disp('WARNING: No blink data yet.');
+    return;
+end
+
+% Match the data
+global GLA_clean_meeg_data;
+NM_ApplyETRejections(GLA_clean_meeg_data.rejections);
+
+% Print out where the blinks were
+has_blinks = displayBlinkOccurrenceInfo();
+if ~has_blinks
+    return;
+end
+
+% Compute and print the correlation
+displayBlinkCorrelationInfo(type);
+
+% And clear the data
+clear global GLA_clean_et_data;
+
+
+function displayBlinkCorrelationInfo(type)
+
 global GLA_meeg_data;
+num_comp = size(GLA_meeg_data.settings.([type '_comp']).trial{1},1);
+all_corr = zeros(num_comp, length(GLA_meeg_data.settings.([type '_comp']).trial));
+for t = 1:length(GLA_meeg_data.settings.([type '_comp']).trial)
+    all_corr(:,t) = corr(GLA_meeg_data.settings.([type '_comp']).trial{t}',...
+        createBlinkTrial(t)');
+end
+mean_corr = nanmean(all_corr,2);
+[val s_ord] = sort(abs(mean_corr),'descend'); %#ok<ASGLU>
+disp('Correlation with blinks:');
+for c = s_ord'
+    disp(['     ' num2str(c) ': ' num2str(mean_corr(c))]); 
+end
+
+
+function b_trial = createBlinkTrial(t)
+
+% For now, just a binary 1 / 0 for blinking
+global GLA_clean_et_data;
+b_trial = isnan(GLA_clean_et_data.data.x_pos{t});
+
+
+
+function has_blinks = displayBlinkOccurrenceInfo()
+
+% Use the cleaned data
+has_blinks = 0;
 disp('Blinks:');
-for t = 1:length(GLA_meeg_data.blinks.trials)
-    if ~isempty(GLA_meeg_data.blinks.starts{t}) || ~isempty(GLA_meeg_data.blinks.stops{t})
+global GLA_clean_et_data;
+for t = 1:length(GLA_clean_et_data.data.blink_starts)
+    if ~isempty(GLA_clean_et_data.data.blink_starts{t}) ||...
+            ~isempty(GLA_clean_et_data.data.blink_ends{t})
         has_blinks = 1;
         b_str = ['    ' num2str(t) ': '];
-        if ~isempty(GLA_meeg_data.blinks.starts{t})
+        if ~isempty(GLA_clean_et_data.data.blink_starts{t})
             b_str = [b_str 'Starts (']; %#ok<AGROW>
-            for b = 1:length(GLA_meeg_data.blinks.starts{t})
-                b_str = [b_str num2str(GLA_meeg_data.blinks.starts{t}(b) + GLA_meeg_data.pre_stim) ',']; %#ok<AGROW>
+            for b = 1:length(GLA_clean_et_data.data.blink_starts{t})
+                b_str = [b_str num2str(GLA_clean_et_data.data.blink_starts{t}(b).time) ',']; %#ok<AGROW>
             end
             b_str = [b_str ') ']; %#ok<AGROW>
         end
-        if ~isempty(GLA_meeg_data.blinks.stops{t})
+        if ~isempty(GLA_clean_et_data.data.blink_ends{t})
             b_str = [b_str 'Ends (']; %#ok<AGROW>
-            for b = 1:length(GLA_meeg_data.blinks.stops{t})
-                b_str = [b_str num2str(GLA_meeg_data.blinks.stops{t}(b) + GLA_meeg_data.pre_stim) ',']; %#ok<AGROW>
+            for b = 1:length(GLA_clean_et_data.data.blink_ends{t})
+                b_str = [b_str num2str(GLA_clean_et_data.data.blink_ends{t}(b).time) ',']; %#ok<AGROW>
             end
             b_str = [b_str ') ']; %#ok<AGROW>
         end
@@ -152,28 +215,29 @@ end
 
 if ~has_blinks
     disp('     No blinks!');
-    return;
 end
 
-% Compute the correlation
-num_comp = size(GLA_meeg_data.([type '_comp']).trial{1},1);
-all_corr = zeros(num_comp, length(GLA_meeg_data.([type '_comp']).trial));
-for t = 1:length(GLA_meeg_data.([type '_comp']).trial)
-    all_corr(:,t) = corr(GLA_meeg_data.([type '_comp']).trial{t}',GLA_meeg_data.blinks.trials{t}); 
-end
-mean_corr = nanmean(all_corr,2);
-[val s_ord] = sort(abs(mean_corr),'descend'); %#ok<ASGLU>
-disp('Correlation with blinks:');
-for c = s_ord'
-    disp(['     ' num2str(c) ': ' num2str(mean_corr(c))]); 
-end
 
-    
 
-function normalizeData(norms)
+function normalizeData(norms, type)
 global GLA_meeg_data;
-for ch = 1:length(GLA_meeg_data.data.label)
-    switch NM_GetMEGChannelType(GLA_meeg_data.data.label{ch})
+global GLA_clean_meeg_data;
+
+% Set
+switch type
+    case 'full'
+        data = GLA_meeg_data.data;
+        
+    case 'clean'
+        data = GLA_clean_meeg_data.data;
+        
+    otherwise
+        error('Bad type');
+end
+
+% Normalize
+for ch = 1:length(data.label)
+    switch NM_GetMEGChannelType(data.label{ch})
         case 'grad_1'
             ind = 1;
         case 'grad_2'
@@ -181,30 +245,53 @@ for ch = 1:length(GLA_meeg_data.data.label)
         case 'mag'
             ind = 3;
     end
-    for t = 1:length(GLA_meeg_data.data.trial)
-        GLA_meeg_data.data.trial{t}(ch,:) = ...
-            GLA_meeg_data.data.trial{t}(ch,:)/norms(ind);
+    for t = 1:length(data.trial)
+        data.trial{t}(ch,:) = ...
+            data.trial{t}(ch,:)/norms(ind);
     end
 end
 
+% Set back
+switch type
+    case 'full'
+        GLA_meeg_data.data = data;
+        
+    case 'clean'
+        GLA_clean_meeg_data.data = data;
+        
+    otherwise
+        error('Bad type');
+end
 
-function norms = getNorms()
+
+function norms = getNorms(type)
 
 global GLA_meeg_data;
+global GLA_clean_meeg_data;
+switch type
+    case 'full'
+        data = GLA_meeg_data.data;
+        
+    case 'clean'
+        data = GLA_clean_meeg_data.data;
+        
+    otherwise
+        error('Bad type');
+end
 
 % Grab all the limits
-ch_limits = ones(length(GLA_meeg_data.data.label),2);
+ch_limits = ones(length(data.label),2);
 ch_limits(:,1) = ch_limits(:,1)*-1000; ch_limits(:,2) = ch_limits(:,2)*1000; 
-for t = 1:length(GLA_meeg_data.data.trial)
-    ch_limits(:,1) = max([ch_limits(:,1) max(GLA_meeg_data.data.trial{1},[],2)],[],2);
-    ch_limits(:,2) = min([ch_limits(:,2) min(GLA_meeg_data.data.trial{1},[],2)],[],2);
+for t = 1:length(data.trial)
+    ch_limits(:,1) = max([ch_limits(:,1) max(data.trial{1},[],2)],[],2);
+    ch_limits(:,2) = min([ch_limits(:,2) min(data.trial{1},[],2)],[],2);
 end
 
 % Distill the norms
 limits = ones(3,2); 
 limits(:,1) = limits(:,1)*-1000; limits(:,2) = limits(:,2)*1000; 
-for ch = 1:length(GLA_meeg_data.data.label)
-    switch NM_GetMEGChannelType(GLA_meeg_data.data.label{ch})
+for ch = 1:length(data.label)
+    switch NM_GetMEGChannelType(data.label{ch})
         case 'grad_1'
             ind = 1;
         case 'grad_2'
