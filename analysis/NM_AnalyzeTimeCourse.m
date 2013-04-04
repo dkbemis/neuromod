@@ -1,168 +1,80 @@
 
-% cfg.name = 'word_5_meg_rms_all';
-% cfg.type = 'meg_rms';
+% cfg.data_type = 'et';
 % cfg.trial_type = 'word_5';
-% cfg.window_width = 25;
+% cfg.p_threshold = .5;
+% cfg.rejections = NM_SuggestRejections();
+% cfg.measure = 'x_pos';
 
-function stats = NM_AnalyzeTimeCourse(cfg)
-
-cfg = [];
-cfg.name = 'Test';
-cfg.type = 'meg_rms';
-cfg.trial_type = 'word_5';
-cfg.window_width = 25;
+function NM_AnalyzeTimeCourse(cfg)
 
 global GLA_subject;
-disp(['Analyzing ' cfg.name ' for ' GLA_subject '...']);
+disp(['Analyzing ' cfg.measure ' ' cfg.trial_type ' ' ...
+    cfg.data_type ' data for ' GLA_subject '...']);
 
 % Get the timecourse
-global GL_TC_data;
-GL_TC_data = NM_GetTimeCourseData(cfg);
+setTimeCourseData(cfg);
 
 % Plot it by condition
-plotTimeCourseData(cfg);
+plotTimeCourseData();
 
-% Analyze moving windows in the timecourse
-stats = analyzeTimeWindows(cfg);
-
-% And some plotting
-plotStats(stats);
+% Do a point-by-point comparison
+analyzeTimeCourseData(cfg);
 
 % And save
 saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/'...
-    GLA_subject '/' GLA_subject '_' cfg.name '.jpg']);
+    GLA_subject '/' GLA_subject '_' cfg.data_type ...
+    '_' cfg.trial_type '_' cfg.measure '.jpg']);
     
 
+function analyzeTimeCourseData(cfg)
 
-function plotStats(stats)
-
-for s = 1:length(stats)
-    plotStat(stats{s}); 
+% Plot both types
+for t = 1:2
+    plotStats(t,(t-1)*5+1:t*5-1, cfg);
 end
+    
 
+function plotStats(t_num, conditions, cfg)
 
-function plotStat(stat)
+% Set the plotting parameters
+subplot(2,1,t_num);
+a = axis(); 
+line_spacing = (a(4)-a(3))/20;
+axis([a(1) a(2) a(3) a(4) + line_spacing*6]);
+hold on;
+colors = {'b','g','r','c'};
 
-types = {'phrases','lists'};
-effects = {{'linear_r','linear_p','k'},...
-    {'diff_2_1','p_2_1','g'},{'diff_3_2','p_3_2','r'},...
-    {'diff_4_3','p_4_3','c'},};
-for t = 1:length(types)
-    subplot(2,1,t); hold on; a = axis;
-    for e = 1:length(effects)
-        if stat.(types{t}).(effects{e}{1}) > 0
-            plotEffect(stat.(types{t}).(effects{e}{2}), ...
-                types{t}, stat.epoch,(effects{e}{3}));
-            if stat.(types{t}).(effects{e}{2}) < .1
-                break;
-            end
-        end
-    end
-    axis(a);
-end
-
-function plotEffect(p, type, epoch, l_color)
-
-% Plotting settings
-line_height = 5e-13;
-text_height = 7e-13;
-
-% Set the text
-if p > .1
-    return;
-elseif p > .05
-    sig_str = '(*)';
-    x = mean(epoch) - 0.01;
-elseif p > .01
-    sig_str = '*';
-    x = mean(epoch);
-elseif p > .001
-    sig_str = '**';
-    x = mean(epoch) - 0.005;
-else
-    sig_str = '***';
-    x = mean(epoch) - 0.01;
-end
-
-% Find the height
+% Calculate point-by-point linear correlation
 global GL_TC_data;
-beg_ind = find(GL_TC_data.time == epoch(1),1);
-end_ind = find(GL_TC_data.time == epoch(2),1);
-if strcmp(type,'phrases')
-    conditions = 1:4;
-else
-    conditions = 6:9;
-end
-m = 0;
+corr_data_x = [];
+corr_data_y = [];
 for c = conditions
-    avg_data = averageData(c);
-    m_2 = max(avg_data(beg_ind:end_ind));
-    if m_2 > m
-        m = m_2;
-    end
+    corr_data_x = vertcat(corr_data_x,GL_TC_data.condition_data{c}); %#ok<AGROW>
+    corr_data_y = vertcat(corr_data_y,c*ones(size(GL_TC_data.condition_data{c},1),1)); %#ok<AGROW>
 end
+[r p] = corr(corr_data_x, corr_data_y);
+plotStat(a, line_spacing, 1, p, r, {'k','y'}, cfg);
 
-% Plot the marker
-errorbar(epoch,[m+line_height m+line_height],[5e-14 5e-14],l_color)
-
-% And the significance
-text(x,m+text_height,sig_str)
-
-
-function stats = analyzeTimeWindows(cfg)
-
-% Roll along
-global GL_TC_data;
-stats = {};
-types = {'phrases','lists'};
-for w = 1:cfg.window_width:length(GL_TC_data.time)-cfg.window_width
+% And the pairwise comparisons
+for c = 1:length(conditions)-1
     
-    % Average all the conditions for the time window
-    for t = 1:length(types)
-        avg_data.(types{t}) = cell(4,1);
-        for i = 1:length(GL_TC_data.trials)
-            type_cond = GL_TC_data.conditions(i);
-            if strcmp(types{t},'lists')
-                type_cond = type_cond - 5;
-            end
-            if type_cond < 5 && type_cond > 0
-                avg_data.(types{t}){type_cond}(end+1) = ...
-                    mean(GL_TC_data.trials{i}(w:w+cfg.window_width));
-            end
-        end
-    end
-    
-    % Then get the stats
-    stats{end+1} = analyzeTimeWindow(avg_data, [w w+cfg.window_width]); %#ok<AGROW>
-end
-
-function stats = analyzeTimeWindow(avg_data, epoch)
-
-% Check the linear trends
-global GL_TC_data;
-stats.epoch = GL_TC_data.time(epoch);
-types = {'phrases','lists'};
-for t = 1:length(types)
-    all_measures = [];
-    for c = 1:4
-        all_measures = [all_measures; ...
-            [avg_data.(types{t}){c}' repmat(c,length(avg_data.(types{t}){c}),1)]]; %#ok<AGROW>
-        
-        % Test for increases
-        if c > 1
-            [h p] = ttest2(avg_data.(types{t}){c},avg_data.(types{t}){c-1});  %#ok<ASGLU>
-            stats.(types{t}).(['p_' num2str(c) '_' num2str(c-1)]) = p;
-            stats.(types{t}).(['diff_' num2str(c) '_' num2str(c-1)]) = ...
-                mean(avg_data.(types{t}){c}) - mean(avg_data.(types{t}){c-1});
-        end
-    end
-    [r p] = corr(all_measures);
-    stats.(types{t}).linear_r = r(1,2);
-    stats.(types{t}).linear_p = p(1,2);
+    [h p ci s] = ttest2(GL_TC_data.condition_data{conditions(c)},...
+        GL_TC_data.condition_data{conditions(c+1)}); %#ok<ASGLU>
+    plotStat(a, line_spacing, c+1, p, s.tstat, {colors{c},colors{c+1}}, cfg);
 end
 
 
-function plotTimeCourseData(cfg)
+function plotStat(a, line_spacing, line_num, p, dir, colors, cfg)
+
+% Fix the points
+x = a(1):a(2)-1; y = (a(4)+line_num*line_spacing)*ones(1,a(2)-a(1));
+
+% And plot both sides
+scatter(x(p<cfg.p_threshold & dir > 0), y(p<cfg.p_threshold & dir > 0),1,'.',colors{1});
+scatter(x(p<cfg.p_threshold & dir < 0), y(p<cfg.p_threshold & dir < 0),1,'.',colors{2});
+
+
+function plotTimeCourseData()
 
 % Phrases first...
 figure; hold on; subplot(2,1,1);
@@ -171,11 +83,6 @@ plotSet('phrases');
 % Then lists...
 subplot(2,1,2);
 plotSet('lists');
-
-% And save
-global GLA_subject;
-saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
-    '/' GLA_subject '_' cfg.name '.jpg']);
 
 
 function plotSet(type)
@@ -197,7 +104,7 @@ end
 % I.e. not the extraneous one-word condition for now
 avg_data = zeros(length(conditions),length(GL_TC_data.time));
 for c = 1:length(conditions)
-    avg_data(c,:) = averageData(conditions(c));
+    avg_data(c,:) = mean(GL_TC_data.condition_data{conditions(c)});
 end
 plot(GL_TC_data.time,avg_data');
 
@@ -206,14 +113,137 @@ title(type);
 legend('1','2','3','4','Location','NorthEastOutside');
 
 
+function setTimeCourseData(cfg)
 
-function avg_data = averageData(c)
+% Make sure we're loaded
+NM_LoadSubjectData();
+
+% Send to right function
+clear global GL_TC_data;
+switch cfg.data_type
+    case 'meg_rms'
+        setMegRMSData(cfg);
+        
+    case 'et'
+        setETData(cfg);
+        
+    otherwise
+        error('Unimplemented.');
+end
+
+% Pre-group as well, so we can average / test easier
+grougData();
+
+
+function grougData()
 
 global GL_TC_data;
-avg_data = zeros(1,length(GL_TC_data.time));
-c_ind = find(GL_TC_data.conditions == c);
-for t = c_ind
-    avg_data = avg_data + GL_TC_data.trials{t};
+for c = unique(GL_TC_data.conditions)
+    t_ctr = 1;
+    GL_TC_data.condition_data{c} = [];
+    for t = find(GL_TC_data.conditions == c)
+        GL_TC_data.condition_data{c}(t_ctr,:) = ...
+            GL_TC_data.trials{t};
+        t_ctr = t_ctr+1;
+    end
 end
-avg_data = avg_data ./ length(c_ind);
+
+
+function setETData(cfg)
+
+% Should be preprocessed
+global GLA_subject_data;
+global GLA_trial_type; GLA_trial_type = cfg.trial_type; 
+if ~isfield(GLA_subject_data.parameters,['et_' GLA_trial_type '_data_preprocessed']) ||...
+        GLA_subject_data.parameters.(['et_' GLA_trial_type '_data_preprocessed']) ~= 1
+    error(['Eye tracking ' GLA_trial_type ' data not preprocessed.']);
+end
+        
+% Load the cleaned data
+if isfield(cfg,'rejections')
+    NM_ApplyETRejections(cfg.rejections);
+else
+    NM_ApplyETRejections();    
+end
+
+% Get each trial
+global GL_TC_data;
+global GLA_clean_et_data;
+for t = 1:length(GLA_clean_et_data.data.cond)
+    GL_TC_data.trials{t} = GLA_clean_et_data.data.(cfg.measure){t};
+    GL_TC_data.conditions(t) = GLA_clean_et_data.data.cond(t); 
+end
+
+% Only one timecourse
+GL_TC_data.time = GLA_clean_et_data.data.epoch(1):GLA_clean_et_data.data.epoch(2)-1;
+
+% And clear the data
+clear global GLA_clean_et_data;
+
+
+function setMegRMSData(cfg)
+error();
+
+% Should be preprocessed
+global GLA_rec_type; GLA_rec_type = 'meeg';
+global GLA_subject_data;
+global GLA_meeg_type; GLA_meeg_type = 'meg'; 
+global GLA_meeg_trial_type; GLA_meeg_trial_type = cfg.trial_type; 
+if ~isfield(GLA_subject_data.parameters,[GLA_meeg_type '_' GLA_meeg_trial_type '_data_preprocessed']) ||...
+        GLA_subject_data.parameters.([GLA_meeg_type '_' GLA_meeg_trial_type '_data_preprocessed']) ~= 1
+    while 1
+        ch = input([GLA_meeg_type ' ' GLA_meeg_trial_type ' not processed yet. Process now? (y/n) '],'s');
+        if strcmp(ch,'n')
+            error('Cannot proceed');
+        elseif strcmp(ch,'y')
+            NM_PreprocessMEEGData(); 
+            break;
+        end
+    end    
+end
+        
+
+% Load the data
+NM_LoadMEEGData();
+
+% Get each trial
+global GLA_meeg_data;
+for t = 1:length(GLA_meeg_data.data.trial)
+    data.trials{t} = calculateRMS(cfg, GLA_meeg_data.data.trial{t});
+    data.conditions(t) = GLA_meeg_data.data.trialinfo(t); 
+end
+
+% Only one timecourse
+data.time = GLA_meeg_data.data.time{1};
+
+
+function rms = calculateRMS(cfg, t_data)
+
+% Might baseline correct
+global GLA_meeg_data;
+if isfield(cfg,'baseline_correct') && ...
+        strcmp(cfg.baseline_correct,'yes')
+    t_data = ft_preproc_baselinecorrect(...
+        t_data,1,-1*GLA_meeg_data.pre_stim);
+end
+
+% Might only have some channels
+channels = [];
+if isfield(cfg,'channel')
+    for c = 1:length(cfg.channel)
+        ind = find(strcmp(GLA_meeg_data.data.label,cfg.channel{c}) == 1);
+        if length(ind) ~= 1
+            error('Bad channel');
+        end
+        channels(end+1) = ind; %#ok<AGROW>
+    end
+else
+    channels = 1:size(t_data,1);
+end
+
+% TODO: Might want to multiply the mag sensors...
+rms = sqrt(mean(t_data(channels,:).^2,1));
+
+
+
 

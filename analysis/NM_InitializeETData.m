@@ -149,6 +149,20 @@ while isnan(str2double(GL_et_run_data{1}{ind})) || ...
     ind = ind+1; 
 end
 
+% Check for unexpected nans...
+nan_starts = find(diff(isnan(x_pos)) == 1) + t_epoch(1);
+nan_ends = find(diff(isnan(x_pos)) == -1) + (t_epoch(1)-1);
+for b = 1:length(nan_starts)
+    if b_starts(b).time ~= nan_starts(b)
+        error('Unexpected blink');
+    end
+end
+for b = 1:length(nan_ends)
+    if b_ends(b).time ~= nan_ends(b)
+        error('Unexpected blink');
+    end
+end
+
 % Set the condition
 switch GLA_trial_type
     case 'blinks'

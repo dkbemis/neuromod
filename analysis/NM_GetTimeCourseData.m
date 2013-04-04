@@ -5,14 +5,70 @@ function data = NM_GetTimeCourseData(cfg)
 NM_LoadSubjectData();
 
 % Send to right function
-switch cfg.type
+switch cfg.data_type
     case 'meg_rms'
         data = getMegRMSData(cfg);
+        
+    case 'et'
+        data = getETData(cfg);
         
     otherwise
         error('Unimplemented.');
 end
 
+% Pre-group as well, so we can average / test easier
+data = grougData(data);
+
+% Set to return and clear
+global GL_tc_data;
+data = 
+
+
+function data = grougData(data)
+
+for c = unique(data.conditions)
+    data.condition_data = getConditionData(c);
+end
+
+function condition_data = getConditionData(c)
+
+
+
+
+function data = getETData(cfg)
+
+% Should be preprocessed
+global GLA_subject_data;
+global GLA_trial_type; GLA_trial_type = cfg.trial_type; 
+if ~isfield(GLA_subject_data.parameters,['et_' GLA_trial_type '_data_preprocessed']) ||...
+        GLA_subject_data.parameters.(['et_' GLA_trial_type '_data_preprocessed']) ~= 1
+    while 1
+        ch = input(['et_' GLA_trial_type ' not processed yet. Process now? (y/n) '],'s');
+        if strcmp(ch,'n')
+            error('Cannot proceed');
+        elseif strcmp(ch,'y')
+            NM_PreprocessETData(); 
+            break;
+        end
+    end    
+end
+        
+
+% Load the cleaned data
+NM_ApplyETRejections();
+
+% Get each trial
+global GLA_clean_et_data;
+for t = 1:length(GLA_clean_et_data.data.cond)
+    data.trials{t} = GLA_clean_et_data.data.(cfg.measure){t};
+    data.conditions(t) = GLA_clean_et_data.data.cond(t); 
+end
+
+% Only one timecourse
+data.time = GLA_clean_et_data.data.epoch(1):GLA_clean_et_data.data.epoch(2)-1;
+
+% And clear the data
+clear global GLA_clean_et_data;
 
 
 function data = getMegRMSData(cfg)
