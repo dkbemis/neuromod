@@ -16,11 +16,6 @@ disp(['Preprocessing ' GLA_meeg_type ' ' GLA_trial_type ' data for ' GLA_subject
 
 % Make sure we're ready and have something to do
 NM_LoadSubjectData({{[GLA_meeg_type '_data_checked'],1}});
-if ~GLA_subject_data.parameters.(GLA_meeg_type)
-    disp(['No ' GLA_meeg_type ' data.']);
-    NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed'],1}});
-    return;
-end
 
 % Initialize
 NM_InitializeMEEGData();
@@ -29,6 +24,9 @@ NM_InitializeMEEGData();
 if ~GLA_subject_data.parameters.meeg_filter_raw
     NM_FilterMEEGData();
 end
+
+% Fix the channels
+NM_RepairMEEGChannels();
 
 % Remove outlying trials
 NM_SetMEEGRejections();

@@ -77,19 +77,10 @@ cfg = [];
 cfg.showlabels = 'yes'; 
 cfg.interactive = 'yes';
 cfg.fontsize = 12; 
-
-switch GLA_meeg_type
-    case 'meg'
-        cfg.layout = 'neuromag306all.lay';
-        cfg.magscale = 10;
-        
-    case 'eeg'
-        cfg.layout = 'GSN-HydroCel-256.sfp';
-        
-    otherwise
-        error('Unknown type.');
+cfg.layout = NM_GetCurrentMEEGLayout();
+if strcmp(GLA_meeg_type,'meg')
+    cfg.magscale = 10;
 end
-
 
 % Plot and save
 ft_multiplotER(cfg, GL_avg_data);

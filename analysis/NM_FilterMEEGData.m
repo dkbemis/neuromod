@@ -15,7 +15,7 @@ NM_LoadMEEGData();
    
 % Set the parameters
 global GLA_meeg_data;
-GLA_meeg_data.settings.filter_raw = GLA_subject_data.parameters.meeg_filter_raw;
+GLA_meeg_data.settings.filter_raw = 0;
 GLA_meeg_data.settings.hpf = GLA_subject_data.parameters.meeg_hpf;
 GLA_meeg_data.settings.lpf = GLA_subject_data.parameters.meeg_lpf;
 GLA_meeg_data.settings.bsf = GLA_subject_data.parameters.meeg_bsf;

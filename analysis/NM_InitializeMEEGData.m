@@ -20,9 +20,7 @@ global GLA_meeg_data;
 GLA_meeg_data.settings.subject = GLA_subject;
 GLA_meeg_data.settings.trial_type = GLA_trial_type;
 GLA_meeg_data.settings.meeg_type = GLA_meeg_type;
-
-% TTest
-GLA_meeg_data.settings.channel = 'MEG';
+GLA_meeg_data.settings.channel = upper(GLA_meeg_type);
 GLA_meeg_data.data = {};
 
 switch GLA_trial_type
@@ -30,6 +28,7 @@ switch GLA_trial_type
         setRunData('baseline');
 
     otherwise
+        
         for r = 1:GLA_subject_data.parameters.num_runs
             setRunData(['run_' num2str(r)]);
         end
@@ -46,10 +45,25 @@ function setRunData(run_id)
 global GLA_meeg_data;
 global GL_tmp_data;
 global GLA_subject;
+global GLA_meeg_type;
 cfg = [];
 cfg.channel = GLA_meeg_data.settings.channel;
-cfg.datafile = [NM_GetCurrentDataDirectory() '/meg_data/' ...
-    GLA_subject '/' GLA_subject '_' run_id '_sss.fif'];
+cfg.datafile = [NM_GetCurrentDataDirectory() '/' GLA_meeg_type '_data/' ...
+    GLA_subject '/' GLA_subject '_' run_id];
+
+% Set the suffix
+switch GLA_meeg_type
+    case 'meg'
+        cfg.datafile = [cfg.datafile '_sss.fif'];
+
+    case 'eeg'
+        cfg.datafile = [cfg.datafile '.raw'];
+        
+    otherwise 
+        error('Bad type');
+end
+
+% And load
 GL_tmp_data = ft_preprocessing(cfg);
 
 % Then epoch

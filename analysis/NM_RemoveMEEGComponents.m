@@ -10,16 +10,20 @@ GLA_meeg_data.settings.decomp_method = GLA_subject_data.parameters.meeg_decomp_m
 GLA_meeg_data.settings.decomp_type = GLA_subject_data.parameters.meeg_decomp_type;  
 GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp_comp_num;  
 
-% See which type
-switch GLA_meeg_data.settings.decomp_type
-    case 'combined'
-        removeComponents_Combined();
-        
-    case 'separate'
-        removeComponents_Separate();
-           
-    otherwise
-        error('Unknown type');
+% EEG is easier...
+global GLA_meeg_type;
+if strcmp(GLA_meeg_type,'eeg')
+    GLA_meeg_data.settings.decomp_type = 'combined';  
+    GLA_meeg_data.data = computeRejections(...
+        'eeg', 'EEG');
+    
+% Otherwise, see which method we need
+elseif strcmp(GLA_meeg_data.settings.decomp_type,'combined') 
+    removeComponents_Combined();
+elseif strcmp(GLA_meeg_data.settings.decomp_type,'separate') 
+    removeComponents_Separate();
+else
+    error('Unknown type');
 end
 
 % Default to save
@@ -41,7 +45,7 @@ normalizeData(full_norms, 'full');
 normalizeData(clean_norms, 'clean');
 
 global GLA_meeg_data;
-GLA_meeg_data.data = computeRejections('MEG', 'MEG');
+GLA_meeg_data.data = computeRejections('meg', 'MEG');
 
 % And unnormalize the full data
 full_norms = 1./full_norms;
@@ -91,13 +95,15 @@ data = ft_rejectcomponent(cfg,GLA_meeg_data.settings.([type '_comp']),GLA_meeg_d
 
 
 function setComponentsFromBlinks(type)
-error
+
 % Just set exactly 
 global GLA_meeg_data;
+global GLA_subject;
+global GLA_meeg_type;
 b_data = load([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
     GLA_subject '_' GLA_meeg_type '_blinks_data.mat']);
-GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
-GLA_meeg_data.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);
+`GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
+GLA_meeg_data.settings.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);
 
 
 function decomposeData(type, channels)
@@ -114,7 +120,7 @@ GLA_meeg_data.settings.([type '_comp']).typechan = cfg.channel;
 
 % Browse...
 cfg = [];
-cfg.layout='neuromag306all.lay';
+cfg.layout = NM_GetCurrentMEEGLayout();
 ft_databrowser(cfg, GLA_meeg_data.settings.([type '_comp']));
 
 % Display some helpful blink info

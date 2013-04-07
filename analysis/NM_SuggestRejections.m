@@ -1,7 +1,7 @@
 function rejections = NM_SuggestRejections()
 
 rejections = [];
-r_types = {'behavioral','et','meeg'};
+r_types = {'behavioral','et','meg','eeg'};
 for r = 1:length(r_types)
     rejections = getDataRejections(r_types{r}, rejections);
 end
@@ -11,6 +11,7 @@ rejections = sort(unique(rejections));
 function rej_to_use = getDataRejections(r_type, rej_to_use)
 
 % Load the rejections, if we have them
+global GLA_meeg_type;
 switch r_type
     case 'behavioral'
         if ~exist(NM_GetCurrentBehavioralDataFilename(),'file')
@@ -24,11 +25,25 @@ switch r_type
         end
         load(NM_GetCurrentETDataFilename(),'rejections');
 
-    case 'meeg'
+    case 'meg'
+        curr_meeg_type = GLA_meeg_type;
+        GLA_meeg_type = 'meg';
         if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
+            GLA_meeg_type = curr_meeg_type;
             return;
         end
         load(NM_GetCurrentMEEGDataFilename(),'rejections');
+        GLA_meeg_type = curr_meeg_type;
+        
+    case 'eeg'
+        curr_meeg_type = GLA_meeg_type;
+        GLA_meeg_type = 'eeg';
+        if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
+            GLA_meeg_type = curr_meeg_type;
+            return;
+        end
+        load(NM_GetCurrentMEEGDataFilename(),'rejections');
+        GLA_meeg_type = curr_meeg_type;
 
     otherwise
         error('Unknown rejection type.');
