@@ -2,7 +2,7 @@
 function NM_InitializeBehavioralData()
 
 % Initialize the data
-disp('Initializing behavioral data...');
+disp(['Initializing ' NM_GetBehavioralDataType() ' behavioral data...']);
 NM_LoadSubjectData({{'behavioral_data_checked',1},...
     {'log_checked',1},...
     });
@@ -14,15 +14,49 @@ NM_ClearBehavioralData();
 global GLA_subject;
 global GLA_behavioral_data;
 GLA_behavioral_data.settings.subject = GLA_subject;
+GLA_behavioral_data.settings.type = NM_GetBehavioralDataType();
+
+% Set parameters
+switch GLA_behavioral_data.settings.type
+    case 'experiment'
+        initializeExperimentData();
+
+    case 'localizer'
+        initializeLocalizerData();
+        
+    otherwise
+        error('Unknown type');
+end
+
+
+% And save
+NM_SaveBehavioralData();
+disp('Done.');
+
+
+function initializeLocalizerData()
+
+global GLA_subject_data;
+global GLA_behavioral_data;
+GLA_behavioral_data.data.rt = {};
+for b = 1:length(GLA_subject_data.localizer.blocks)
+    if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
+        GLA_behavioral_data.data.rt{end+1} = ...
+            GLA_subject_data.localizer.blocks(b).params.catch_trial{3};
+    end
+end
+
+
+function initializeExperimentData()
+
+global GLA_subject_data;
+global GLA_behavioral_data;
 GLA_behavioral_data.data.acc = {};
 GLA_behavioral_data.data.rt = {};
 GLA_behavioral_data.data.cond = [];
 GLA_behavioral_data.data.outliers = [];
 GLA_behavioral_data.data.timeouts = [];
 GLA_behavioral_data.data.errors = [];
-
-% Set parameters
-global GLA_subject_data;
 GLA_behavioral_data.settings.min_resp_time = ...
     GLA_subject_data.parameters.min_resp_time;
 GLA_behavioral_data.settings.max_resp_time = ...
@@ -53,18 +87,13 @@ for r = 1:GLA_subject_data.parameters.num_runs
 end
 
 
-% And save
-NM_SaveBehavioralData();
-disp('Done.');
-
-
 function [acc rt cond] = getTrialData(t,r)
        
 % Might be a timeout
 global GLA_subject_data;
 if GLA_subject_data.runs(r).trials(t).response.rt == -1
-    acc{end+1} = [];
-    rt{end+1} = [];
+    acc = [];
+    rt = [];
 
 % Otherwise, set the rt and accuracy
 else

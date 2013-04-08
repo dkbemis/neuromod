@@ -7,7 +7,9 @@ NM_LoadSubjectData();
 % Default to use matching data in memory
 global GLA_behavioral_data;
 global GLA_subject;
-if isempty(GLA_behavioral_data) || ~strcmp(GLA_subject,GLA_behavioral_data.settings.subject) 
+if isempty(GLA_behavioral_data) || ...
+        ~strcmp(GLA_subject,GLA_behavioral_data.settings.subject) ||...
+        ~strcmp(NM_GetBehavioralDataType(),GLA_behavioral_data.settings.type) 
 
     % Load if we've made one
     f_name = NM_GetCurrentBehavioralDataFilename();

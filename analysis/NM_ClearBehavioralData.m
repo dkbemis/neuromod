@@ -10,6 +10,6 @@ if exist(NM_GetCurrentBehavioralDataFilename(),'file')
 end
 
 global GLA_subject;
-disp(['Cleared behavioral data for ' GLA_subject '.']);
+disp(['Cleared ' NM_GetBehavioralDataType() ' behavioral data for ' GLA_subject '.']);
 
 

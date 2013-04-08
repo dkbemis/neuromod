@@ -1,17 +1,21 @@
 % Check for high accuracy and low time outs
 
-function NM_SanityCheckResponses()
+function NM_SanityCheckBehavioralData()
 
 global GLA_subject;
-disp(['Sanity checking responses for ' GLA_subject '...']);
+disp(['Sanity behavioral data for ' GLA_subject '...']);
 
 % Make sure we're processed 
 disp('Loading data...');
-NM_LoadSubjectData({{'behavioral_data_preprocessed',1}});
+NM_LoadSubjectData({{'experiment_behavioral_data_preprocessed',1}});
 disp('Done.');
 
 % Load the data
+global GLA_fmri_type;
+curr_ft = GLA_fmri_type;
+GLA_fmri_type = 'experiment'; %#ok<NASGU>
 NM_LoadBehavioralData();
+GLA_fmri_type = curr_ft;
 
 % Check the number of outliers and timeouts
 global GLA_behavioral_data;
@@ -38,32 +42,45 @@ text(pos(2),pos(4)-3,['Outliers: ' num2str(100*length(GLA_behavioral_data.data.o
     (length(GLA_behavioral_data.data.cond) - length(GLA_behavioral_data.data.timeouts))) '%']);
 text(pos(2),pos(4)-6,['Timeouts: ' num2str(100*length(GLA_behavioral_data.data.timeouts) / ...
     GLA_subject_data.parameters.num_trials) '%']);
+
+% And check the localizer, if we have it
+global GLA_rec_type;
+if strcmp(GLA_rec_type,'fmri')
+    r_times = checkLocalizerResponses();
+    disp(['Average localizer response time: ' num2str(1000*mean(r_times)) ' ms.']);
+    text(pos(2),pos(4)-9,['Localizer: ' num2str(1000*mean(r_times)) ' ms.']);
+end
+
+% And save
 saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
     '/' GLA_subject '_Behavioral_Sanity_Check.jpg'],'jpg');
 
 
-function checkLocalizerResponses()
+function r_times = checkLocalizerResponses()
 
-% Might be nothing to do
-global GLA_subject_data;
-if GLA_subject_data.parameters.num_localizer_blocks == 0
-    return;
-end
+global GLA_fmri_type;
+curr_ft = GLA_fmri_type;
+GLA_fmri_type = 'localizer'; %#ok<NASGU>
+NM_LoadBehavioralData();
+GLA_fmri_type = curr_ft;
 
 % Else, make sure we're right
 r_times = [];
 warn_time = 1.5;
+global GLA_subject_data;
+global GLA_behavioral_data;
+r_ctr = 1;
 for b = 1:GLA_subject_data.parameters.num_localizer_blocks
     if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
-        if length(GLA_subject_data.localizer.blocks(b).params.catch_trial) < 3
+        rt = GLA_behavioral_data.data.rt{r_ctr}; 
+        if isempty(rt)
             error('No localizer response found.');
-        elseif GLA_subject_data.localizer.blocks(b).params.catch_trial{3} > warn_time
-            disp(['WARNING: Localizer response ' num2str(length(r_times)+1) ' is pretty slow: ' ...
-                num2str(1000*GLA_subject_data.localizer.blocks(b).params.catch_trial{3}) ' ms']);
+        elseif rt > warn_time
+            disp(['WARNING: Localizer response ' num2str(r_ctr) ' is pretty slow: ' ...
+                num2str(1000*rt) ' ms']);
         end
-        r_times(end+1) = GLA_subject_data.localizer.blocks(b).params.catch_trial{3};
+        r_times(end+1) = rt; r_ctr = r_ctr+1; %#ok<AGROW>
     end
 end
-disp(['Average localizer response time: ' num2str(1000*mean(r_times)) ' ms.']);
 
 

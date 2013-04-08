@@ -2,7 +2,7 @@
 function NM_PerformSanityChecks()
 
 % This looks for high accuracy 
-NM_SanityCheckResponses();
+NM_SanityCheckBehavioralData();
 
 % Checks the baselines
 NM_SanityCheckETData();

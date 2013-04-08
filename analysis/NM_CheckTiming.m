@@ -1,5 +1,8 @@
 function NM_CheckTiming(trigger_type)
 
+% TTest
+trigger_type = 'log';
+
 % Keep track of the check
 global GLA_subject;
 disp(['Checking timing for ' trigger_type ' data for ' GLA_subject '...']);
@@ -92,8 +95,10 @@ for t = 1:length(GLA_subject_data.runs(num).trials)
     ints = getTrialIntervals(type, GLA_subject_data.runs(num).trials(t));
     
     % Timeouts have fewer intervals
-    if strcmp(GLA_subject_data.runs(num).trials(t).response.key,'TIMEOUT')
-        ints = [ints 0]; %#ok<AGROW>
+    % Let's hope that's what's going on here.
+    % To know for sure we'd have to interleave checks...
+    if exist('intervals','var') && length(ints) < size(intervals,2)
+        ints = [ints 0];    %#ok<AGROW> % Timeouts should be only one short
     end
     
     % Final trial can have many more
