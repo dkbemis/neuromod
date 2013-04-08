@@ -34,10 +34,19 @@ switch GLA_trial_type
     case 'blinks'
         setRunData('baseline');
         
-    otherwise
+    case 'left_eye_movements'
+        setRunData('baseline');
+        
+    case 'right_eye_movements'
+        setRunData('baseline');
+        
+    case 'word_5'
         for r = 1:length(GLA_subject_data.runs)
             setRunData(['run_' num2str(r)]);
         end
+        
+    otherwise
+        error('Unknown type');
 end
 
 % And save
@@ -57,15 +66,7 @@ GL_et_run_data = textscan(fid,'%s%s%s%s%s%s%s%s%s%s%s');
 fclose(fid);
 
 % Get each trial data
-global GLA_subject_data;
-global GLA_trial_type;
-switch GLA_trial_type
-    case 'blinks'
-        trials = GLA_subject_data.baseline.blinks;
-        
-    otherwise
-        trials = GLA_subject_data.runs(str2double(run_id(end))).trials;
-end
+trials = NM_GetTrials(str2double(run_id(end)));
 
 global GLA_et_data;
 for t = 1:length(trials)
@@ -84,7 +85,7 @@ clear global GL_et_run_data;
 function [x_pos y_pos pupil b_starts b_ends s_starts s_ends cond] = getTrialData(trial)
 
 % Get the trigger time
-t_time = getTriggerTime(trial);
+t_time = NM_GetTrialTriggerTime(trial,'et');
 
 % Find the start of the trial in the data
 global GLA_subject_data;
@@ -164,31 +165,8 @@ for b = 1:length(nan_ends)
 end
 
 % Set the condition
-switch GLA_trial_type
-    case 'blinks'
-        cond = 2;
-        
-    otherwise
-        cond = trial.log_stims(1).cond;
-        if strcmp(trial.log_stims(1).p_l,'list')
-            cond = cond + 5;
-        end
-end
+cond = NM_GetTrialCondition(trial);
 
-
-function t_time = getTriggerTime(trial)
-
-global GLA_trial_type;
-switch GLA_trial_type
-    case 'blinks'
-        t_time = trial.et_triggers(1).et_time;
-        
-    case 'word_5'
-        t_time = trial.et_triggers(5).et_time;
-        
-    otherwise
-        error('Unknown type.');
-end
 
 
 

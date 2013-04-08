@@ -27,11 +27,19 @@ switch GLA_trial_type
     case 'blinks'
         setRunData('baseline');
 
-    otherwise
-        
+    case 'left_eye_movements'
+        setRunData('baseline');
+
+    case 'right_eye_movements'
+        setRunData('baseline');
+
+    case 'word_5'        
         for r = 1:GLA_subject_data.parameters.num_runs
             setRunData(['run_' num2str(r)]);
         end
+        
+    otherwise
+        error('Unknown type');
 end
 
 % And save

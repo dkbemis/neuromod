@@ -7,42 +7,40 @@ disp(['Sanity checking responses for ' GLA_subject '...']);
 
 % Make sure we're processed 
 disp('Loading data...');
-NM_LoadSubjectData({{'responses_preprocessed',1}});
+NM_LoadSubjectData({{'behavioral_data_preprocessed',1}});
 disp('Done.');
 
-% Check the localizer first
-checkLocalizerResponses();
+% Load the data
+NM_LoadBehavioralData();
 
 % Check the number of outliers and timeouts
-% NOTE: There should be no timeouts for MEG data.
-% TODO: Implement timeouts
-filter.is_timeout = {1};
-num_timeouts = length(NM_FilterTrials(filter));
-
-% Get the outlier trials
-filter.is_timeout = {0};
-filter.is_response_outlier = {1};
-num_outliers = length(NM_FilterTrials(filter));
-
-% Get the summary for non-outlier trials
-filter.is_response_outlier = {0};
-[good_rts good_accs] = NM_SummarizeTrialSetResponses(NM_FilterTrials(filter)); 
+global GLA_behavioral_data;
+good_rts = []; good_accs = [];
+for t = 1:length(GLA_behavioral_data.data.cond)
+    if isempty(find(GLA_behavioral_data.data.outliers == t,1)) && ...
+            isempty(find(GLA_behavioral_data.data.timeouts == t,1))
+        good_rts(end+1) = GLA_behavioral_data.data.rt{t}; %#ok<AGROW>
+        good_accs(end+1) = GLA_behavioral_data.data.acc{t}; %#ok<AGROW>
+    end
+end
 
 % Plot the results
 figure;
 global GLA_subject_data;
-num_good_trials = GLA_subject_data.parameters.num_trials - num_timeouts;
-hist(good_rts,round(num_good_trials/10));
+hist(good_rts,round(length(good_rts)/10));
 title(['Behavioral Sanity Check (' GLA_subject ')']);
 ylabel('Num trials'); xlabel('msec');
 
 % Add the info and save
 pos = round(.75*axis);
 text(pos(2),pos(4),['Accuracy: ' num2str(100*mean(good_accs)) '%']);
-text(pos(2),pos(4)-3,['Outliers: ' num2str(100*num_outliers/num_good_trials) '%']);
-text(pos(2),pos(4)-6,['Timeouts: ' num2str(100*num_timeouts/GLA_subject_data.parameters.num_trials) '%']);
-saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/' GLA_subject '_Behavioral_Sanity_Check.jpg'],'jpg');
-NM_SaveSubjectData({{'response_sanity_check',1}});
+text(pos(2),pos(4)-3,['Outliers: ' num2str(100*length(GLA_behavioral_data.data.outliers) / ...
+    (length(GLA_behavioral_data.data.cond) - length(GLA_behavioral_data.data.timeouts))) '%']);
+text(pos(2),pos(4)-6,['Timeouts: ' num2str(100*length(GLA_behavioral_data.data.timeouts) / ...
+    GLA_subject_data.parameters.num_trials) '%']);
+saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
+    '/' GLA_subject '_Behavioral_Sanity_Check.jpg'],'jpg');
+
 
 function checkLocalizerResponses()
 

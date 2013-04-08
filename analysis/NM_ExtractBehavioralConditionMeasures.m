@@ -1,7 +1,6 @@
 % Wrapper for extracting data summaries
 function measures = NM_ExtractBehavioralConditionMeasures(type)
 
-
 % Load the checked data
 disp('Loading data...');
 NM_LoadSubjectData({{'responses_preprocessed',1}});

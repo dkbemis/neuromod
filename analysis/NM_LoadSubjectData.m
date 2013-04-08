@@ -45,9 +45,6 @@ if ~isfield(GLA_subject_data.parameters,param) || ...
         case 'timing_adjusted'
             NM_AdjustTiming();
             
-        case 'responses_preprocessed'
-            NM_PreprocessResponses();
-            
         case 'et_triggers_checked'
             NM_CheckETTriggers();
             

@@ -74,6 +74,6 @@ end
 
 % And set the condition
 cond = GLA_subject_data.runs(r).trials(t).parameters.cond;
-if strcmp(GLA_subject_data.runs(1).trials(1).parameters.p_l,'list')
+if strcmp(GLA_subject_data.runs(1).trials(t).parameters.p_l,'list')
     cond = cond + 5;
 end

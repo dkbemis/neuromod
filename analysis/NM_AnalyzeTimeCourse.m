@@ -11,6 +11,9 @@ global GLA_subject;
 disp(['Analyzing ' cfg.measure ' ' cfg.trial_type ' ' ...
     cfg.data_type ' data for ' GLA_subject '...']);
 
+% Make sure we're loaded
+NM_LoadSubjectData();
+
 % Get the timecourse
 setTimeCourseData(cfg);
 
@@ -114,9 +117,6 @@ legend('1','2','3','4','Location','NorthEastOutside');
 
 
 function setTimeCourseData(cfg)
-
-% Make sure we're loaded
-NM_LoadSubjectData();
 
 % Send to right function
 clear global GL_TC_data;

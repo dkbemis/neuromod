@@ -16,6 +16,12 @@ for t = 1:length(types)
     % No blinks, for blinks
     if strcmp(GLA_trial_type,'blinks')
         GLA_et_data.rejections(t).type = ['no_' types{t}];       
+
+    % No saccades for eye movements
+    elseif (strcmp(GLA_trial_type,'left_eye_movements') ||...
+                strcmp(GLA_trial_type,'right_eye_movements')) && ... 
+                strcmp(types{t},'saccade')
+        GLA_et_data.rejections(t).type = ['no_' types{t}];       
     else
         GLA_et_data.rejections(t).type = types{t};
     end
@@ -37,7 +43,14 @@ for t = 1:length(GLA_et_data.data.cond)
     % Want no blinks if averaging blinks
     if strcmp(GLA_trial_type,'blinks') 
         if isempty(starts{t}) || isempty(ends{t})
-            rej(end+1) + t;
+            rej(end+1) = t; %#ok<AGROW>
+        end
+    % No saccades for eye movements
+    elseif (strcmp(GLA_trial_type,'left_eye_movements') ||...
+                strcmp(GLA_trial_type,'right_eye_movements')) && ... 
+                strcmp(type,'saccade')
+        if isempty(starts{t}) || isempty(ends{t})
+            rej(end+1) = t; %#ok<AGROW>
         end
     else
         if ~isempty(starts{t}) || ~isempty(ends{t})

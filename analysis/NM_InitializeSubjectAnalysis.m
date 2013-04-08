@@ -50,6 +50,8 @@ subject_data.parameters.fmri_voxel_size = [1.5 1.5 1.5];
 
 % Epoch settings
 subject_data.parameters.blinks_epoch = [-200 600];
+subject_data.parameters.left_eye_movements_epoch = [-200 600];
+subject_data.parameters.right_eye_movements_epoch = [-200 600];
 subject_data.parameters.word_5_epoch = [-200 600];
 subject_data.parameters.word_4_epoch = [-200 600];
 subject_data.parameters.word_3_epoch = [-200 600];
