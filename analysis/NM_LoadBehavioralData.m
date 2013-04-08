@@ -16,8 +16,17 @@ if isempty(GLA_behavioral_data) || ...
     if exist(f_name,'file')
         GLA_behavioral_data = load(f_name);
 
-    % "preprocess" the raw data to load as a single long trial
+    % Or initialize
     else
+        while 1
+            ch = input([NM_GetBehavioralDataType() ' behavioral data for '...
+                GLA_subject ' not found. Create (y/n)? '],'s');
+            if strcmp(ch,'y')
+                break;
+            elseif strcmp(ch,'n')
+                error('Data not loaded.');
+            end
+        end
         NM_InitializeBehavioralData();
     end
 end

@@ -1,7 +1,8 @@
 % 
 % % TTest
 % cfg.data_type = 'behavioral';
-% cfg.value_type = 'rt';
+% cfg.measure = 'rt';
+% cfg.rejections = ...;
 
 
 % Quick analysis of condition measures
@@ -9,7 +10,7 @@ function NM_AnalyzeSingleValues(cfg)
 
 global GLA_subject;
 disp(['Analyzing ' cfg.data_type ' ' ...
-    cfg.value_type ' data for ' GLA_subject '...']);
+    cfg.measure ' data for ' GLA_subject '...']);
 
 % Make sure we're loaded
 NM_LoadSubjectData();
@@ -26,7 +27,7 @@ analyzeLinearEffect(cfg);
 % And save and clear the data
 saveas(gcf, [NM_GetCurrentDataDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_' cfg.data_type '_' ...
-    cfg.value_type '_analysis.jpg'],'jpg');
+    cfg.measure '_analysis.jpg'],'jpg');
 clear global GL_SV_data;
 
 
@@ -46,15 +47,24 @@ end
 function setBehavioralValues(cfg)
 
 % Make the clean data
-NM_CreateCleanBehavioralData();
+if isfield(cfg,'rejections')
+    NM_CreateCleanBehavioralData(cfg.rejections);
+else
+    NM_CreateCleanBehavioralData();    
+end
 
 % Set and arrange the right measure
 global GL_SV_data;
 global GLA_clean_behavioral_data;
-switch cfg.value_type
+switch cfg.measure
     case 'rt'
         GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
         GL_SV_data.trial_data = [GLA_clean_behavioral_data.data.rt{:}];
+        arrangeData();
+
+    case 'acc'
+        GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
+        GL_SV_data.trial_data = [GLA_clean_behavioral_data.data.acc{:}];
         arrangeData();
         
     otherwise
@@ -102,7 +112,7 @@ end
 % And plot
 global GLA_subject;
 subplot(1,2,2); hold on; 
-title([GLA_subject ' ' cfg.data_type ' ' cfg.value_type]);
+title([GLA_subject ' ' cfg.data_type ' ' cfg.measure]);
 colors = {'r','g'};
 for t = 1:length(types)
     plot(means(t,:),colors{t},'LineWidth',2);
@@ -163,7 +173,7 @@ pooled.lists = horzcat(GL_SV_data.condition_data{7},...
 % And plot
 global GLA_subject;
 figure; subplot(1,2,1); hold on; 
-title([GLA_subject ' ' cfg.data_type ' ' cfg.value_type]);
+title([GLA_subject ' ' cfg.data_type ' ' cfg.measure]);
 
 % Plot the means
 types = {'phrases','lists'};
