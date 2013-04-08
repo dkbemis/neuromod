@@ -68,6 +68,7 @@ subject_data.parameters.meeg_rej_type = 'summary';  % summary, raw
 subject_data.parameters.meeg_decomp_method = 'pca'; % pca, fastica, runica
 subject_data.parameters.meeg_decomp_comp_num = 10; 
 subject_data.parameters.meeg_decomp_type = 'combined';  % combined, separate (wrt decomposing)
+subject_data.parameters.meeg_decomp_baseline_correct = 'no';  % Should we baseline correct before decomposing
 subject_data.parameters.meeg_filter_raw = 1;    % 1 - will filter the raw data
 subject_data.parameters.meeg_hpf = .1;  % .1
 subject_data.parameters.meeg_lpf = 120; % 120

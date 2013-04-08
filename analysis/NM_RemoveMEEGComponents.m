@@ -9,6 +9,7 @@ global GLA_subject_data;
 GLA_meeg_data.settings.decomp_method = GLA_subject_data.parameters.meeg_decomp_method;
 GLA_meeg_data.settings.decomp_type = GLA_subject_data.parameters.meeg_decomp_type;  
 GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp_comp_num;  
+GLA_meeg_data.settings.decomp_baseline_correct = GLA_subject_data.parameters.meeg_decomp_baseline_correct;  
 
 % EEG is easier...
 global GLA_meeg_type;
@@ -104,6 +105,7 @@ b_data = load([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
     GLA_subject '_' GLA_meeg_type '_blinks_data.mat']);
 GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
 GLA_meeg_data.settings.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);
+GLA_meeg_data.settings.decomp_type = 'blinks';
 
 
 function decomposeData(type, channels)
@@ -115,6 +117,7 @@ cfg = [];
 cfg.method = GLA_meeg_data.settings.decomp_method;
 cfg.numcomponent = GLA_meeg_data.settings.decomp_comp_num;
 cfg.channel = channels;
+cfg.demean       = GLA_meeg_data.settings.decomp_baseline_correct;
 GLA_meeg_data.settings.([type '_comp']) = ft_componentanalysis(cfg,GLA_clean_meeg_data.data);
 GLA_meeg_data.settings.([type '_comp']).typechan = cfg.channel;
 
