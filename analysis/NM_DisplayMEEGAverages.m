@@ -1,22 +1,17 @@
-function NM_DisplayMEEGAverages(save_name, baseline_correct, avg_data)
+function NM_DisplayMEEGAverages(save_name, avg_data)
 
 % Default not to save
 if ~exist('save_name','var')
     save_name = [];
 end
 
-% Default not to baseline correct
-if ~exist('baseline_correct','var')
-    baseline_correct = 0; 
-end
-
 % Get the cleaned data
-NM_ApplyMEEGRejections();
+NM_CreateCleanMEEGData();
 
 % Default to average all
 global GL_avg_data;
 if ~exist('avg_data','var') || isempty(avg_data)
-    averageData(baseline_correct);
+    averageData();
 else
     GL_avg_data = avg_data;
 end
@@ -45,21 +40,15 @@ clear global GLA_clean_meeg_data;
 clear global GL_avg_data;
 
 
-function averageData(baseline_correct)
+function averageData()
 
 % Baseline correct first
 disp('Averaging data...');
 global GLA_clean_meeg_data;
 global GL_avg_data;
-GL_avg_data = GLA_clean_meeg_data.data;
-
-% If we must...
-if baseline_correct
-    GL_avg_data = NM_BaselineCorrectMEEGData(GL_avg_data);
-end
 
 cfg = [];
-GL_avg_data = ft_timelockanalysis(cfg, GL_avg_data);
+GL_avg_data = ft_timelockanalysis(cfg, GLA_clean_meeg_data.data);
 disp('Done');
 
 

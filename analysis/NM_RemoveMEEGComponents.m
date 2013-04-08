@@ -1,7 +1,7 @@
 function NM_RemoveMEEGComponents(should_save)
 
-% Incorporate any rejections we want to
-NM_ApplyMEEGRejections();
+% Get the clean data
+NM_CreateCleanMEEGData();
 
 % Set the options
 global GLA_meeg_data;
@@ -153,7 +153,7 @@ end
 
 % Match the data
 global GLA_clean_meeg_data;
-NM_ApplyETRejections(GLA_clean_meeg_data.rejections);
+NM_CreateCleanETData(GLA_clean_meeg_data.rejections);
 
 % Print out where the blinks were
 has_blinks = displayBlinkOccurrenceInfo();

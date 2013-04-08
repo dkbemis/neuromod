@@ -34,8 +34,12 @@ function rej_to_use = getDataRejections(r_type, rej_to_use)
 
 % Load the rejections, if we have them
 global GLA_meeg_type;
+global GLA_trial_type;
 switch r_type
     case 'behavioral'
+        if strcmp(GLA_trial_type,'blinks')
+            return;
+        end
         if ~exist(NM_GetCurrentBehavioralDataFilename(),'file')
             return;
         end

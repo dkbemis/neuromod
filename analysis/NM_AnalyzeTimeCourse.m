@@ -161,9 +161,9 @@ end
         
 % Load the cleaned data
 if isfield(cfg,'rejections')
-    NM_ApplyETRejections(cfg.rejections);
+    NM_CreateCleanETData(cfg.rejections);
 else
-    NM_ApplyETRejections();    
+    NM_CreateCleanETData();    
 end
 
 % Get each trial

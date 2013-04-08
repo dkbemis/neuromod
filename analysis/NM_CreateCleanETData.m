@@ -1,4 +1,4 @@
-function NM_ApplyETRejections(rejections)
+function NM_CreateCleanETData(rejections)
 
 % Load the data
 NM_LoadETData();

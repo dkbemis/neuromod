@@ -1,7 +1,9 @@
-function NM_ApplyMEEGRejections(rejections)
+function NM_CreateCleanMEEGData(rejections)
 
-% Load the data
+% Load the unclean data
 NM_LoadMEEGData();
+
+% Set the rejections...
 
 % Get suggested rejections if we're not given them
 clear global GLA_clean_meeg_data;
@@ -25,4 +27,28 @@ for r = 1:length(GLA_clean_meeg_data.rejections)
 end
 GLA_clean_meeg_data.data = ft_redefinetrial(cfg,GLA_meeg_data.data);
 
+% Rereference maybe
+global GLA_meeg_type;
+if strcmp(GLA_meeg_type,'eeg')
+    while 1
+        ch = input('Rereference data (y/n)? ','s');
+        if strcmp(ch,'y')
+            GLA_clean_meeg_data.data = NM_RereferenceEEGData(GLA_clean_meeg_data.data);
+            break;
+        elseif strcmp(ch,'n')
+            break;
+        end
+    end
+end
+
+% Baseline correct it
+while 1
+    ch = input('Baseline correct data (y/n)? ','s');
+    if strcmp(ch,'y')
+        GLA_clean_meeg_data.data = NM_BaselineCorrectMEEGData(GLA_clean_meeg_data.data);
+        break;
+    elseif strcmp(ch,'n')
+        break;
+    end
+end
 
