@@ -4,11 +4,11 @@ global GLA_trial_type;
 switch GLA_trial_type
     case 'blinks'
         cond = 2;
-        
-    case 'left_eye_movements'
-        cond = 3;
-        
+            
     case 'right_eye_movements'
+        cond = 3;
+
+    case 'left_eye_movements'
         cond = 4;
         
     case 'word_5';

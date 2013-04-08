@@ -17,6 +17,15 @@ if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) ||.
 
     % "preprocess" the raw data to load as a single long trial
     else
+        while 1
+            ch = input([GLA_trial_type ' et data for '...
+                GLA_subject ' not found. Create (y/n)? '],'s');
+            if strcmp(ch,'y')
+                break;
+            elseif strcmp(ch,'n')
+                error('Data not loaded.');
+            end
+        end
         NM_InitializeETData();
     end
 end
