@@ -1,11 +1,33 @@
 function rejections = NM_SuggestRejections()
 
+% First check if we have some saved to use
+global GLA_subject;
+global GLA_trial_type;
+rej_file_name = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
+    '/' GLA_subject '_' GLA_trial_type '_rejections.mat'];
+if exist(rej_file_name,'file')
+    while 1
+        ch = input('Use saved rejections (y/n)? ','s');
+        if strcmp(ch,'y')
+            load(rej_file_name);
+            return;
+        elseif strcmp(ch,'n')
+            break;
+        end
+    end
+
+end
+
+% If not, search for any we might have set
 rejections = [];
 r_types = {'behavioral','et','meg','eeg'};
 for r = 1:length(r_types)
     rejections = getDataRejections(r_types{r}, rejections);
 end
 rejections = sort(unique(rejections));
+
+% And save for later
+save(rej_file_name,'rejections');
 
 
 function rej_to_use = getDataRejections(r_type, rej_to_use)
@@ -27,7 +49,7 @@ switch r_type
 
     case 'meg'
         curr_meeg_type = GLA_meeg_type;
-        GLA_meeg_type = 'meg';
+        GLA_meeg_type = 'meg'; %#ok<NASGU>
         if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
             GLA_meeg_type = curr_meeg_type;
             return;
@@ -37,7 +59,7 @@ switch r_type
         
     case 'eeg'
         curr_meeg_type = GLA_meeg_type;
-        GLA_meeg_type = 'eeg';
+        GLA_meeg_type = 'eeg'; %#ok<NASGU>
         if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
             GLA_meeg_type = curr_meeg_type;
             return;

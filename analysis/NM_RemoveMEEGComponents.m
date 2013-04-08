@@ -102,7 +102,7 @@ global GLA_subject;
 global GLA_meeg_type;
 b_data = load([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
     GLA_subject '_' GLA_meeg_type '_blinks_data.mat']);
-`GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
+GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
 GLA_meeg_data.settings.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);
 
 

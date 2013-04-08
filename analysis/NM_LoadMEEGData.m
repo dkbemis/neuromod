@@ -19,6 +19,15 @@ if isempty(GLA_meeg_data) || ~strcmp(GLA_subject,GLA_meeg_data.settings.subject)
 
     % Otherwise initialize
     else
+        while 1
+            ch = input([GLA_trial_type ' ' GLA_meeg_type ' data for '...
+                GLA_subject ' not found. Create (y/n)? '],'s');
+            if strcmp(ch,'y')
+                break;
+            elseif strcmp(ch,'n')
+                error('Data not loaded.');
+            end
+        end
         NM_InitializeMEEGData();
     end
 end

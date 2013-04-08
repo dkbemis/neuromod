@@ -55,12 +55,7 @@ GL_avg_data = GLA_clean_meeg_data.data;
 
 % If we must...
 if baseline_correct
-    disp('Baseline correcting data...');
-    for t = 1:length(GL_avg_data.trial)
-        GL_avg_data.trial{t} = ft_preproc_baselinecorrect(...
-            GL_avg_data.trial{t},1,find(GL_avg_data.time{1} >0,1));
-    end
-    disp('Done.');
+    GL_avg_data = NM_BaselineCorrectMEEGData(GL_avg_data);
 end
 
 cfg = [];
