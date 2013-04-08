@@ -1,5 +1,13 @@
 function NM_RemoveMEEGComponents(should_save)
 
+% Make sure we've preprocessed the blinks
+global GLA_meeg_type;
+global GLA_trial_type;
+NM_LoadSubjectData({...
+    {['et_' GLA_trial_type '_data_preprocessed'],1},...
+    {[GLA_meeg_type '_blinks_data_preprocessed'],1},...
+    });
+
 % Get the clean data
 NM_CreateCleanMEEGData();
 
@@ -12,7 +20,6 @@ GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp
 GLA_meeg_data.settings.decomp_baseline_correct = GLA_subject_data.parameters.meeg_decomp_baseline_correct;  
 
 % EEG is easier...
-global GLA_meeg_type;
 if strcmp(GLA_meeg_type,'eeg')
     GLA_meeg_data.settings.decomp_type = 'combined';  
     GLA_meeg_data.data = computeRejections(...
@@ -56,13 +63,9 @@ normalizeData(full_norms, 'full');
 function data = computeRejections(type, channels)
 
 % See if we already computed on blinks
-global GLA_meeg_type;
-global GLA_subject_data;
 global GLA_trial_type;
-if ~strcmp(GLA_trial_type,'blinks') && ...
-    isfield(GLA_subject_data.parameters, [GLA_meeg_type '_blinks_data_preprocessed']) && ...
-        GLA_subject_data.parameters.([GLA_meeg_type '_blinks_data_preprocessed'])
-        
+if ~strcmp(GLA_trial_type,'blinks')
+    
     % See if we want to use the blinks
     while 1
         ch = input('Use saved blinks decomposition? (y/n) ','s');
@@ -141,15 +144,6 @@ end
 
 
 function displayBlinkInfo(type)
-
-% Are there blinks?
-global GLA_subject_data;
-global GLA_trial_type;
-if ~isfield(GLA_subject_data.parameters,['et_' GLA_trial_type '_data_preprocessed']) ||...
-        GLA_subject_data.parameters.(['et_' GLA_trial_type '_data_preprocessed']) ~= 1
-    disp('WARNING: No blink data yet.');
-    return;
-end
 
 % Match the data
 global GLA_clean_meeg_data;
