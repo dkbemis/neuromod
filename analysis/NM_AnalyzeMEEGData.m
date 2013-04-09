@@ -21,15 +21,18 @@ cfg.rejections = NM_SuggestRejections();
 
 % Analyze the time courses
 cfg.measure = 'rms';
-% NM_AnalyzeTimeCourse(cfg);
+cfg.tc_name = [GLA_meeg_type '_all'];
+NM_AnalyzeTimeCourse(cfg);
 
 % The posterior sensors
 
 
 % And the different bands
 bands = {[4 8], [8 13], [12 30], [30 50], [50 100]};
+band_names = {'theta','alpha','beta','low_gamma','high_gamma'};
 for b = 1:length(bands)
     cfg.bpf = bands{b};
+    cfg.tc_name = [GLA_meeg_type '_' band_names{b}];
     NM_AnalyzeTimeCourse(cfg);
 end
 

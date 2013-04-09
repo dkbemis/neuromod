@@ -1,4 +1,5 @@
 % cfg = [];
+% cfg.tc_name = 'Test'
 % cfg.data_type = 'meeg';
 % cfg.trial_type = 'word_5';
 % cfg.p_threshold = .05;
@@ -29,8 +30,7 @@ analyzeTimeCourseData(cfg);
 
 % And save
 saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/'...
-    GLA_subject '/' GLA_subject '_' cfg.data_type ...
-    '_' cfg.trial_type '_' cfg.measure '.jpg']);
+    GLA_subject '/' GLA_subject '_' cfg.tc_name '_analysis.jpg']);
 
 % And any time windows    
 if isfield(cfg,'time_windows')
@@ -72,7 +72,9 @@ for t = 1:length(GL_TC_data.trials)
             error('Unknown measure');
     end
 end
-cfg.measure = [cfg.trial_type ' ' cfg.measure ' ' cfg.time_window_measure ...
+
+% Set the name and analyze
+cfg.sv_name = [cfg.tc_name '_' cfg.time_window_measure ...
     ' (' num2str(window(1)) '-' num2str(window(2)) ')'];       % For naming
 NM_AnalyzeSingleValues(cfg);
 
@@ -154,8 +156,7 @@ plot(GL_TC_data.time,avg_data');
 
 % Labels
 global GLA_subject;
-title([type ': ' GLA_subject ' ' cfg.data_type ...
-    ' ' cfg.trial_type ' ' cfg.measure]);
+title([type ': ' GLA_subject ' ' cfg.tc_name]);
 legend('1','2','3','4','Location','NorthEastOutside');
 
 

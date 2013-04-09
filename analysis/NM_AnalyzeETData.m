@@ -22,6 +22,7 @@ cfg.rejections = NM_SuggestRejections();
 measures =  {'x_pos','y_pos','pupil','x_vel','y_vel'};
 for m = 1:length(measures)
     cfg.measure = measures{m};
+    cfg.tc_name = cfg.measure;
     NM_AnalyzeTimeCourse(cfg);
 end
 
@@ -29,6 +30,7 @@ end
 measures =  {'num_saccades','saccade_length'};
 for m = 1:length(measures)
     cfg.measure = measures{m};
+    cfg.sv_name = cfg.measure;
     NM_AnalyzeSingleValues(cfg);
 end
 

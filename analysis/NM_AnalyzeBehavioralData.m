@@ -20,5 +20,6 @@ GLA_trial_type = curr_tt;
 measures =  {'rt'};     % Acc
 for m = 1:length(measures)
     cfg.measure = measures{m};
+    cfg.sv_name = 'Behavioral_rt';
     NM_AnalyzeSingleValues(cfg);
 end

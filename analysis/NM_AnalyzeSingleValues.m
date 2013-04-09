@@ -4,7 +4,7 @@
 % cfg.measure = 'rt';
 % cfg.rejections = ...;
 % cfg.SV_data
-
+% cfg.sv_name = 'Test'
 
 % Quick analysis of condition measures
 function NM_AnalyzeSingleValues(cfg)
@@ -27,8 +27,7 @@ analyzeLinearEffect(cfg);
 
 % And save and clear the data
 saveas(gcf, [NM_GetCurrentDataDirectory() '/analysis/'...
-    GLA_subject '/' GLA_subject '_' cfg.data_type '_' ...
-    cfg.measure '_analysis.jpg'],'jpg');
+    GLA_subject '/' GLA_subject '_' cfg.sv_name '_analysis.jpg'],'jpg');
 clear global GL_SV_data;
 
 
@@ -155,7 +154,7 @@ end
 % And plot
 global GLA_subject;
 subplot(1,2,2); hold on; 
-title([GLA_subject ' ' cfg.data_type ' ' cfg.measure]);
+title([GLA_subject ' ' cfg.sv_name]);
 colors = {'r','g'};
 for t = 1:length(types)
     plot(means(t,:),colors{t},'LineWidth',2);
@@ -216,7 +215,7 @@ pooled.lists = horzcat(GL_SV_data.condition_data{7},...
 % And plot
 global GLA_subject;
 figure; subplot(1,2,1); hold on; 
-title([GLA_subject ' ' cfg.data_type ' ' cfg.measure]);
+title([GLA_subject ' ' cfg.sv_name]);
 
 % Plot the means
 types = {'phrases','lists'};
