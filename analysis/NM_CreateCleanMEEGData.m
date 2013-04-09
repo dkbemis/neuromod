@@ -3,7 +3,10 @@ function NM_CreateCleanMEEGData(cfg)
 % Load the unclean data
 NM_LoadMEEGData();
 
-% Set the rejections...
+% Default if no input
+if ~exist('cfg','var')
+    cfg = [];
+end
 
 % Get suggested rejections if we're not given them
 clear global GLA_clean_meeg_data;

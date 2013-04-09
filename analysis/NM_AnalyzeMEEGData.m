@@ -21,10 +21,13 @@ cfg.rejections = NM_SuggestRejections();
 
 % Analyze the time courses of sensor sets
 cfg.measure = 'rms';
-s_types = {'all','posterior','left'};
+s_types = {'all','posterior'};
+if strcmp(GLA_meeg_type,'meg')
+    s_types{end+1} = 'left';
+end
 for s = 1:length(s_types)
     cfg.tc_name = [GLA_meeg_type '_' s_types{s}];
-    cfg.channels = NM_GetMEGChannels(s_types{s});
+    cfg.channels = NM_GetMEEGChannels(s_types{s});
     NM_AnalyzeTimeCourse(cfg);
 end
 cfg = rmfield(cfg,'channels');
