@@ -19,14 +19,16 @@ global GLA_trial_type;
 GLA_trial_type = cfg.trial_type;
 cfg.rejections = NM_SuggestRejections();
 
-% Analyze the time courses
+% Analyze the time courses of sensor sets
 cfg.measure = 'rms';
-cfg.tc_name = [GLA_meeg_type '_all'];
-NM_AnalyzeTimeCourse(cfg);
-
-% The posterior sensors
-
-
+s_types = {'all','posterior','left'};
+for s = 1:length(s_types)
+    cfg.tc_name = [GLA_meeg_type '_' s_types{s}];
+    cfg.channels = NM_GetMEGChannels(s_types{s});
+    NM_AnalyzeTimeCourse(cfg);
+end
+cfg = rmfield(cfg,'channels');
+        
 % And the different bands
 bands = {[4 8], [8 13], [12 30], [30 50], [50 100]};
 band_names = {'theta','alpha','beta','low_gamma','high_gamma'};
