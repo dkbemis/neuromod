@@ -22,6 +22,6 @@ if set_data
 end
 
 % Default not to save
-if exist('should_save','var') || should_save
+if exist('should_save','var') && should_save
     NM_SaveMEEGData(); 
 end

@@ -34,7 +34,10 @@ switch GLA_trial_type
         setRunData('baseline');
 
     case 'word_5'        
-        for r = 1:GLA_subject_data.parameters.num_runs
+
+        % TTest
+%         for r = 1:GLA_subject_data.parameters.num_runs
+        for r = 1:2
             setRunData(['run_' num2str(r)]);
         end
         

@@ -4,7 +4,6 @@ function NM_FilterMEEGData()
 global GLA_subject_data;
 NM_LoadSubjectData({});
 
-
 % Make sure we don't want to filter the raw data
 if GLA_subject_data.parameters.meeg_filter_raw
     error('Settings call for filtering raw data. Call NM_InitializeMEEGData instead.');

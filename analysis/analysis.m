@@ -4,15 +4,15 @@
 global GLA_meeg_dir; GLA_meeg_dir = '/Users/Doug/Documents/neurospin/meeg';
 global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
 
-% Work
+% WorkNM_Disp
 % global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
 % global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % The current analysis parameters
-global GLA_subject; GLA_subject = 'sa130042';
+global GLA_subject; GLA_subject = 'ap100009';
 global GLA_rec_type; GLA_rec_type = 'meeg';
 global GLA_meeg_type; GLA_meeg_type = 'meg'; 
-global GLA_meeg_trial_type; GLA_meeg_trial_type = 'word_4'; 
+global GLA_trial_type; GLA_trial_type = 'blinks'; 
 global GLA_fmri_type; GLA_fmri_type = 'localizer';
 
 
@@ -54,7 +54,7 @@ NM_ImportData()
 
 % This function will check that all of the data is as expected (e.g. the 
 %   stimuli, matching, triggers, timing, etc., etc.
-NM_CheckFiles();
+NM_CheckData();
 
 
 %% Some preprocessing
@@ -71,7 +71,7 @@ NM_PerformSanityChecks();
 
 %% Now, should run the analysis functions
 
-NM_AnalyzeAllTimeCourses();
+NM_AnalyzeData();
 
 
 %% Test
@@ -304,5 +304,25 @@ cfg.baseline = [-0.2 0];
 ft_multiplotER(cfg, avg_data);
 
 
+%%
+global GLA_clean_et_data;
+global GL_TC_data;
+for t = 1:length(GLA_clean_et_data.data.x_pos)
+    if sum(isnan(GLA_clean_et_data.data.x_pos{t})) > 0
+        t
+    end
+end
+disp('Done')
+
+%%
+
+
+global GLA_meeg_data;
+cfg = [];
+cfg.method = 'distance';
+cfg.neighbourdist = 4;
+cfg.elec = ft_read_sens('GSN-HydroCel-256.sfp'); % add electrode positions information from the sfp file because EGI is not directly supported by ft_repairchannel
+cfg.feedback = 'no';
+neighbours = ft_prepare_neighbours(cfg, GLA_meeg_data.data);
 
 

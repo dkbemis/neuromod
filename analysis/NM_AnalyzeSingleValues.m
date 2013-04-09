@@ -3,6 +3,7 @@
 % cfg.data_type = 'behavioral';
 % cfg.measure = 'rt';
 % cfg.rejections = ...;
+% cfg.SV_data
 
 
 % Quick analysis of condition measures
@@ -35,13 +36,64 @@ function setValues(cfg)
 
 % Calculate the measures
 clear global GL_SV_data;
-switch cfg.data_type
-    case 'behavioral'
-        setBehavioralValues(cfg);
+
+% Might have been given it
+global GL_SV_data;
+if isfield(cfg,'SV_data')
+    GL_SV_data = cfg.SV_data;
+    arrangeData();
     
+% Otherwise need to load
+else
+    switch cfg.data_type
+        case 'behavioral'
+            setBehavioralValues(cfg);
+
+        case 'et'
+            setETValues(cfg);
+
+        otherwise
+            error('Unknown type');
+    end
+end
+
+
+function setETValues(cfg)
+
+% Make the clean data
+if isfield(cfg,'rejections')
+    NM_CreateCleanETData(cfg.rejections);
+else
+    NM_CreateCleanETData();    
+end
+
+% Set and arrange the right measure
+global GL_SV_data;
+global GLA_clean_et_data;
+switch cfg.measure
+    case 'num_saccades'
+        GL_SV_data.trial_data = zeros(size(GLA_clean_et_data.data.cond));
+        for t = 1:length(GLA_clean_et_data.data.cond)
+            if ~isempty(GLA_clean_et_data.data.saccade_starts{t}) ||...
+                    ~isempty(GLA_clean_et_data.data.saccade_ends{t})
+                GL_SV_data.trial_data(t) = 1;
+            end
+        end
+        
+    case 'saccade_length'
+        GL_SV_data.trial_data = zeros(size(GLA_clean_et_data.data.cond));
+        for t = 1:length(GLA_clean_et_data.data.cond)
+            for s = 1:length(GLA_clean_et_data.data.saccade_ends{t})
+                GL_SV_data.trial_data(t) = GL_SV_data.trial_data(t) + ...
+                    GLA_clean_et_data.data.saccade_ends{t}(s).length;
+            end
+        end
+        
     otherwise
         error('Unknown type');
 end
+GL_SV_data.trial_cond = GLA_clean_et_data.data.cond;
+arrangeData();
 
 
 function setBehavioralValues(cfg)
@@ -58,18 +110,17 @@ global GL_SV_data;
 global GLA_clean_behavioral_data;
 switch cfg.measure
     case 'rt'
-        GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
         GL_SV_data.trial_data = [GLA_clean_behavioral_data.data.rt{:}];
-        arrangeData();
 
     case 'acc'
-        GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
         GL_SV_data.trial_data = [GLA_clean_behavioral_data.data.acc{:}];
-        arrangeData();
         
     otherwise
         error('Unknown type');
 end
+GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
+arrangeData();
+
 
 function arrangeData()
 

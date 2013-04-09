@@ -4,8 +4,21 @@
 % cfg.p_threshold = .5;
 % cfg.rejections = NM_SuggestRejections();
 % cfg.measure = 'x_pos';
+% cfg.time_windows = {[200 300]};
 
 function NM_AnalyzeTimeCourse(cfg)
+
+cfg = [];
+cfg.data_type = 'meeg';
+cfg.trial_type = 'word_5';
+cfg.p_threshold = .05;
+cfg.time_windows = {[200 300] [300 500]};
+cfg.time_window_measure = 'rms';
+cfg.measure = 'rms';
+% cfg.bpf = [8 13];
+cfg.rejections = [];
+% cfg.baseline_correct = 0;
+
 
 global GLA_subject;
 disp(['Analyzing ' cfg.measure ' ' cfg.trial_type ' ' ...
@@ -18,7 +31,7 @@ NM_LoadSubjectData();
 setTimeCourseData(cfg);
 
 % Plot it by condition
-plotTimeCourseData();
+plotTimeCourseData(cfg);
 
 % Do a point-by-point comparison
 analyzeTimeCourseData(cfg);
@@ -27,7 +40,14 @@ analyzeTimeCourseData(cfg);
 saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_' cfg.data_type ...
     '_' cfg.trial_type '_' cfg.measure '.jpg']);
-    
+
+% And any time windows    
+if isfield(cfg,'time_windows')
+    for w = 1:length(cfg.time_windows)
+        analyzeTimeWindow(cfg.time_windows{w}, cfg);
+    end
+end
+
 
 function analyzeTimeCourseData(cfg)
 
@@ -35,7 +55,37 @@ function analyzeTimeCourseData(cfg)
 for t = 1:2
     plotStats(t,(t-1)*5+1:t*5-1, cfg);
 end
-    
+
+
+function analyzeTimeWindow(window, cfg)
+
+global GL_TC_data;
+w_start = find(GL_TC_data.time == window(1),1);
+w_end = find(GL_TC_data.time == window(2),1);
+cfg.SV_data.trial_cond = GL_TC_data.conditions;
+for t = 1:length(GL_TC_data.trials)
+    switch cfg.time_window_measure
+        case 'mean'
+           cfg.SV_data.trial_data(t) = mean(GL_TC_data.trials{t}(w_start:w_end));
+
+        case 'rms'
+           cfg.SV_data.trial_data(t) = sqrt(mean(GL_TC_data.trials{t}(w_start:w_end) .^2));
+        
+        case 'max'
+           cfg.SV_data.trial_data(t) = max(GL_TC_data.trials{t}(w_start:w_end));
+        
+        case 'min'
+           cfg.SV_data.trial_data(t) = min(GL_TC_data.trials{t}(w_start:w_end));
+           
+        otherwise
+            error('Unknown measure');
+    end
+end
+cfg.measure = [cfg.trial_type ' ' cfg.measure ' ' cfg.time_window_measure ...
+    ' (' num2str(window(1)) '-' num2str(window(2)) ')'];       % For naming
+NM_AnalyzeSingleValues(cfg);
+
+
 
 function plotStats(t_num, conditions, cfg)
 
@@ -77,18 +127,18 @@ scatter(x(p<cfg.p_threshold & dir > 0), y(p<cfg.p_threshold & dir > 0),1,'.',col
 scatter(x(p<cfg.p_threshold & dir < 0), y(p<cfg.p_threshold & dir < 0),1,'.',colors{2});
 
 
-function plotTimeCourseData()
+function plotTimeCourseData(cfg)
 
 % Phrases first...
 figure; hold on; subplot(2,1,1);
-plotSet('phrases');
+plotSet('phrases', cfg);
 
 % Then lists...
 subplot(2,1,2);
-plotSet('lists');
+plotSet('lists', cfg);
 
 
-function plotSet(type)
+function plotSet(type, cfg)
 
 global GL_TC_data;
 
@@ -112,7 +162,9 @@ end
 plot(GL_TC_data.time,avg_data');
 
 % Labels
-title(type);
+global GLA_subject;
+title([type ': ' GLA_subject ' ' cfg.data_type ...
+    ' ' cfg.trial_type ' ' cfg.measure]);
 legend('1','2','3','4','Location','NorthEastOutside');
 
 
@@ -121,14 +173,14 @@ function setTimeCourseData(cfg)
 % Send to right function
 clear global GL_TC_data;
 switch cfg.data_type
-    case 'meg_rms'
-        setMegRMSData(cfg);
+    case 'meeg'
+        setMEEGData(cfg);
         
     case 'et'
         setETData(cfg);
         
     otherwise
-        error('Unimplemented.');
+        error('Unknown type');
 end
 
 % Pre-group as well, so we can average / test easier
@@ -170,80 +222,97 @@ end
 global GL_TC_data;
 global GLA_clean_et_data;
 for t = 1:length(GLA_clean_et_data.data.cond)
-    GL_TC_data.trials{t} = GLA_clean_et_data.data.(cfg.measure){t};
-    GL_TC_data.conditions(t) = GLA_clean_et_data.data.cond(t); 
+    switch cfg.measure
+        case 'x_pos'
+            GL_TC_data.trials{t} = GLA_clean_et_data.data.x_pos{t};
+    
+        case 'y_pos'
+            GL_TC_data.trials{t} = GLA_clean_et_data.data.y_pos{t};
+            
+        case 'pupil'
+            GL_TC_data.trials{t} = GLA_clean_et_data.data.pupil{t};
+
+        case 'x_vel'
+            GL_TC_data.trials{t} = [0 diff(GLA_clean_et_data.data.x_pos{t})];
+
+        case 'y_vel'
+            GL_TC_data.trials{t} = [0 diff(GLA_clean_et_data.data.y_pos{t})];
+
+        otherwise
+            error('Unknown measure');
+    end            
 end
 
-% Only one timecourse
+% Set these faster...
+GL_TC_data.conditions = GLA_clean_et_data.data.cond; 
 GL_TC_data.time = GLA_clean_et_data.data.epoch(1):GLA_clean_et_data.data.epoch(2)-1;
 
 % And clear the data
 clear global GLA_clean_et_data;
 
 
-function setMegRMSData(cfg)
-error();
+function setMEEGData(cfg)
 
 % Should be preprocessed
-global GLA_rec_type; GLA_rec_type = 'meeg';
 global GLA_subject_data;
-global GLA_meeg_type; GLA_meeg_type = 'meg'; 
-global GLA_meeg_trial_type; GLA_meeg_trial_type = cfg.trial_type; 
-if ~isfield(GLA_subject_data.parameters,[GLA_meeg_type '_' GLA_meeg_trial_type '_data_preprocessed']) ||...
-        GLA_subject_data.parameters.([GLA_meeg_type '_' GLA_meeg_trial_type '_data_preprocessed']) ~= 1
-    while 1
-        ch = input([GLA_meeg_type ' ' GLA_meeg_trial_type ' not processed yet. Process now? (y/n) '],'s');
-        if strcmp(ch,'n')
-            error('Cannot proceed');
-        elseif strcmp(ch,'y')
-            NM_PreprocessMEEGData(); 
-            break;
-        end
-    end    
+global GLA_meeg_type;
+global GLA_trial_type; GLA_trial_type = cfg.trial_type; 
+if ~isfield(GLA_subject_data.parameters,[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed']) ||...
+        GLA_subject_data.parameters.([GLA_meeg_type '_' GLA_trial_type '_data_preprocessed']) ~= 1
+    error([GLA_meeg_type ' ' GLA_trial_type ' data not preprocessed.']);
 end
         
-
-% Load the data
-NM_LoadMEEGData();
-
-% Get each trial
-global GLA_meeg_data;
-for t = 1:length(GLA_meeg_data.data.trial)
-    data.trials{t} = calculateRMS(cfg, GLA_meeg_data.data.trial{t});
-    data.conditions(t) = GLA_meeg_data.data.trialinfo(t); 
+% Load the cleaned data
+if isfield(cfg,'rejections')
+    NM_CreateCleanMEEGData(cfg.rejections);
+else
+    NM_CreateCleanMEEGData();    
 end
 
-% Only one timecourse
-data.time = GLA_meeg_data.data.time{1};
-
-
-function rms = calculateRMS(cfg, t_data)
-
-% Might baseline correct
-global GLA_meeg_data;
-if isfield(cfg,'baseline_correct') && ...
-        strcmp(cfg.baseline_correct,'yes')
-    t_data = ft_preproc_baselinecorrect(...
-        t_data,1,-1*GLA_meeg_data.pre_stim);
-end
-
-% Might only have some channels
+% Might only want some channels
+global GLA_clean_meeg_data;
 channels = [];
-if isfield(cfg,'channel')
-    for c = 1:length(cfg.channel)
-        ind = find(strcmp(GLA_meeg_data.data.label,cfg.channel{c}) == 1);
+if isfield(cfg,'channels')
+    for c = 1:length(cfg.channels)
+        ind = find(strcmp(GLA_clean_meeg_data.data.label,cfg.channels{c}) == 1);
         if length(ind) ~= 1
             error('Bad channel');
         end
         channels(end+1) = ind; %#ok<AGROW>
     end
 else
-    channels = 1:size(t_data,1);
+    channels = 1:size(GLA_clean_meeg_data.data.label,1);
 end
 
-% TODO: Might want to multiply the mag sensors...
-rms = sqrt(mean(t_data(channels,:).^2,1));
+% See if there's a filter
+if isfield(cfg,'bpf')
+    disp(['Applying band pass filter: ' num2str(cfg.bpf(1)) '-' ...
+        num2str(cfg.bpf(2)) 'Hz...']);
+    filt_cfg = []; 
+    filt_cfg.bpfilter = 'yes';
+    filt_cfg.bpfreq = cfg.bpf;
+    GLA_clean_meeg_data.data = ft_preprocessing(filt_cfg, GLA_clean_meeg_data.data);
+    disp('Done.');
+end
 
+% Get each trial
+global GL_TC_data;
+for t = 1:length(GLA_clean_meeg_data.data.trial)
+    switch cfg.measure
+        case 'rms'
+            % TODO: Might want to multiply the mag sensors...
+            GL_TC_data.trials{t} = sqrt(mean(GLA_clean_meeg_data.data.trial{t}(channels,:).^2,1));
 
+        otherwise
+            error('Unknown measure');
+    end            
+end
+
+% Set these faster...
+GL_TC_data.conditions = GLA_clean_meeg_data.data.trialinfo'; 
+GL_TC_data.time = GLA_clean_meeg_data.data.time{1}*1000;        % In ms...
+
+% And clear the data
+clear global GLA_clean_meeg_data;
 
 

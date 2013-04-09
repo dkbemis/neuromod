@@ -12,7 +12,7 @@ function trl = NM_DefineMEEGTrial(cfg)
 
 % Set the trials
 trl = [];
-trials = NM_GetTrials(cfg.run_id(end));
+trials = NM_GetTrials(str2double(cfg.run_id(end)));
 global GLA_subject_data;
 global GLA_trial_type;
 global GLA_meeg_type;

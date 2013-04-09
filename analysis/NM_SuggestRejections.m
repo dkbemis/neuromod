@@ -7,7 +7,7 @@ rej_file_name = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
     '/' GLA_subject '_' GLA_trial_type '_rejections.mat'];
 if exist(rej_file_name,'file')
     while 1
-        ch = input('Use saved rejections (y/n)? ','s');
+        ch = input(['Use saved rejections for ' GLA_trial_type ' (y/n)? '],'s');
         if strcmp(ch,'y')
             load(rej_file_name);
             return;
