@@ -153,7 +153,9 @@ function displayBlinkInfo(type)
 
 % Match the data
 global GLA_clean_meeg_data;
-NM_CreateCleanETData(GLA_clean_meeg_data.rejections);
+cfg = [];
+cfg.rejections = GLA_clean_meeg_data.rejections;
+NM_CreateCleanETData(cfg);
 
 % Print out where the blinks were
 has_blinks = displayBlinkOccurrenceInfo();
