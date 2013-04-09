@@ -17,7 +17,7 @@ cfg.rejections = NM_SuggestRejections();
 GLA_trial_type = curr_tt;
 
 % Analyze the measures
-measures =  {'rt','acc'};
+measures =  {'rt'};     % Acc
 for m = 1:length(measures)
     cfg.measure = measures{m};
     NM_AnalyzeSingleValues(cfg);

@@ -12,6 +12,7 @@ cfg.trial_type = 'word_5';
 cfg.p_threshold = .05;
 cfg.time_windows = {[200 300] [300 500]};
 cfg.time_window_measure = 'rms';
+cfg.baseline_correct = 0;
 
 % Get the rejections once
 global GLA_trial_type;
@@ -20,13 +21,15 @@ cfg.rejections = NM_SuggestRejections();
 
 % Analyze the time courses
 cfg.measure = 'rms';
-NM_AnalyzeTimeCourse(cfg);
+% NM_AnalyzeTimeCourse(cfg);
 
-% 
-% % And the saccades
-% measures =  {'num_saccades','saccade_length'};
-% for m = 1:length(measures)
-%     cfg.measure = measures{m};
-%     NM_AnalyzeSingleValues(cfg);
-% end
-% 
+% The posterior sensors
+
+
+% And the different bands
+bands = {[4 8], [8 13], [12 30], [30 50], [50 100]};
+for b = 1:length(bands)
+    cfg.bpf = bands{b};
+    NM_AnalyzeTimeCourse(cfg);
+end
+

@@ -1,4 +1,4 @@
-function NM_CreateCleanBehavioralData(rejections)
+function NM_CreateCleanBehavioralData(cfg)
 
 % Load the data
 NM_LoadBehavioralData();
@@ -6,10 +6,10 @@ NM_LoadBehavioralData();
 % Get suggested rejections if we're not given them
 clear global GLA_clean_behavioral_data;
 global GLA_clean_behavioral_data;
-if ~exist('rejections','var')
-    GLA_clean_behavioral_data.rejections = NM_SuggestRejections();
+if isfield(cfg,'rejections')
+    GLA_clean_behavioral_data.rejections = cfg.rejections;
 else
-    GLA_clean_behavioral_data.rejections = rejections;
+    GLA_clean_behavioral_data.rejections = NM_SuggestRejections();
 end
 
 % Set the rejected data

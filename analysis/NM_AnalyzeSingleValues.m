@@ -61,11 +61,7 @@ end
 function setETValues(cfg)
 
 % Make the clean data
-if isfield(cfg,'rejections')
-    NM_CreateCleanETData(cfg.rejections);
-else
-    NM_CreateCleanETData();    
-end
+NM_CreateCleanETData(cfg);    
 
 % Set and arrange the right measure
 global GL_SV_data;
@@ -99,11 +95,7 @@ arrangeData();
 function setBehavioralValues(cfg)
 
 % Make the clean data
-if isfield(cfg,'rejections')
-    NM_CreateCleanBehavioralData(cfg.rejections);
-else
-    NM_CreateCleanBehavioralData();    
-end
+NM_CreateCleanBehavioralData(cfg);    
 
 % Set and arrange the right measure
 global GL_SV_data;

@@ -1,4 +1,4 @@
-function NM_CreateCleanETData(rejections)
+function NM_CreateCleanETData(cfg)
 
 % Load the data
 NM_LoadETData();
@@ -6,10 +6,10 @@ NM_LoadETData();
 % Get suggested rejections if we're not given them
 clear global GLA_clean_et_data;
 global GLA_clean_et_data;
-if ~exist('rejections','var')
-    GLA_clean_et_data.rejections = NM_SuggestRejections();
+if isfield(cfg,'rejections')
+    GLA_clean_et_data.rejections = cfg.rejections;
 else
-    GLA_clean_et_data.rejections = rejections;
+    GLA_clean_et_data.rejections = NM_SuggestRejections();
 end
 
 % Set the rejected data

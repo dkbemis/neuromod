@@ -1,24 +1,15 @@
-
-% cfg.data_type = 'et';
+% cfg = [];
+% cfg.data_type = 'meeg';
 % cfg.trial_type = 'word_5';
-% cfg.p_threshold = .5;
-% cfg.rejections = NM_SuggestRejections();
-% cfg.measure = 'x_pos';
-% cfg.time_windows = {[200 300]};
-
-function NM_AnalyzeTimeCourse(cfg)
-
-cfg = [];
-cfg.data_type = 'meeg';
-cfg.trial_type = 'word_5';
-cfg.p_threshold = .05;
-cfg.time_windows = {[200 300] [300 500]};
-cfg.time_window_measure = 'rms';
-cfg.measure = 'rms';
-% cfg.bpf = [8 13];
-cfg.rejections = [];
+% cfg.p_threshold = .05;
+% cfg.time_windows = {[200 300] [300 500]};
+% cfg.time_window_measure = 'rms';
+% cfg.measure = 'rms';
+% % cfg.bpf = [8 13];
+% cfg.rejections = [93   101   102   113   115   117   122   127   145   149   151   155   156   330];
 % cfg.baseline_correct = 0;
 
+function NM_AnalyzeTimeCourse(cfg)
 
 global GLA_subject;
 disp(['Analyzing ' cfg.measure ' ' cfg.trial_type ' ' ...
@@ -212,11 +203,7 @@ if ~isfield(GLA_subject_data.parameters,['et_' GLA_trial_type '_data_preprocesse
 end
         
 % Load the cleaned data
-if isfield(cfg,'rejections')
-    NM_CreateCleanETData(cfg.rejections);
-else
-    NM_CreateCleanETData();    
-end
+NM_CreateCleanETData(cfg);
 
 % Get each trial
 global GL_TC_data;
@@ -263,11 +250,7 @@ if ~isfield(GLA_subject_data.parameters,[GLA_meeg_type '_' GLA_trial_type '_data
 end
         
 % Load the cleaned data
-if isfield(cfg,'rejections')
-    NM_CreateCleanMEEGData(cfg.rejections);
-else
-    NM_CreateCleanMEEGData();    
-end
+NM_CreateCleanMEEGData(cfg);
 
 % Might only want some channels
 global GLA_clean_meeg_data;
