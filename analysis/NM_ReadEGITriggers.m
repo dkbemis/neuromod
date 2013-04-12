@@ -1,5 +1,24 @@
-% NOTE: Adapted from the readegi eeglab function, which was prohibitively slow.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_ReadEGITriggers.m
 %
+% Notes:
+%   * Minimally adapted from the eeglab function, which was prohibitively slow.
+%       - Essentially force the paging option so that we don't try to load 
+%           the entire file into memory at once.
+%
+% Inputs:
+%   * file_name: The file name of the raw eeglab file
+%
+% Outputs:
+%   * head: The header information from the data
+%   * eventData: The trigger data from the file
+%
+% Usage: [head eventData] = NM_ReadEGITriggers('*.raw')
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 % readegi() - read EGI Simple Binary datafile (versions 2,3,4,5,6,7).
 %	      Return header info, EEG data, and any event data.
 % Usage:
@@ -111,6 +130,7 @@ else
     nframes = length(desiredFrames);
 
     % Save on space...
+    % CHANGE - DB
     EventData = zeros(head.eventtypes,nframes);
 %     TrialData = zeros(FrameVals,nframes);
     readexpected = FrameVals*nframes;

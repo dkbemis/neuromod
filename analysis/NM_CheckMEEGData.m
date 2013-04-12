@@ -1,4 +1,29 @@
-% Check the triggers
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckMEEGData.m
+%
+% Notes:
+%   * Reads in the triggers from the M/EEG file
+%   * Adds m/eeg_trigger structures to the GLA_subject_data, with:
+%       - m/eeg_time: The time of the trigger according to the acquisition computer.
+%       - value: The decimal number (1-256) of the trigger.
+%   * EEG triggers just have a problem
+%       - Missing triggers are automatically added based on the relative 
+%           log timing. 
+%           - This is probably close because we make sure we find the first
+%               trigger either automatically, or manually be inspecting the
+%               data file and adding the value to the
+%               meeg_subject_notes.txt file. 
+%   * For meg, the diodes are also identified.
+%       - Their time and value are also added to the GLA_subject_data 
+%   * The timing of these triggers (and diodes) is checked as well.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_CheckMEEGData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_CheckMEEGData()
 
@@ -14,17 +39,17 @@ NM_LoadSubjectData({{'log_checked',1}});
 global GLA_subject_data;
 global GLA_meeg_type;
 global GLA_subject;
-if ~GLA_subject_data.parameters.(GLA_meeg_type)
+if ~GLA_subject_data.settings.(GLA_meeg_type)
     return;
 end
 
 disp(['Checking ' GLA_meeg_type ' data for ' GLA_subject '...']);
 
 % Check the runs
-for r = 1:GLA_subject_data.parameters.num_runs
+for r = 1:GLA_subject_data.settings.num_runs
     triggers = parseRun(['run_' num2str(r)]);
-    GLA_subject_data.runs(r).trials = checkRunTriggers(...
-        GLA_subject_data.runs(r).trials,triggers);
+    GLA_subject_data.data.runs(r).trials = checkRunTriggers(...
+        GLA_subject_data.data.runs(r).trials,triggers);
 end 
 
 % Check the baseline
@@ -33,15 +58,15 @@ triggers = parseRun('baseline');
 % NOTE: Will need to generalize if order of baseline tasks changes or are
 % not parsed in order
 last_t_ind = 0;
-b_tasks = fieldnames(GLA_subject_data.baseline);
+b_tasks = fieldnames(GLA_subject_data.data.baseline);
 for b = 1:length(b_tasks)
     
-    if ~isempty(GLA_subject_data.baseline.(b_tasks{b}))
+    if ~isempty(GLA_subject_data.data.baseline.(b_tasks{b}))
         if ~isempty(triggers)
             triggers = triggers(last_t_ind+1:end);
         end
-        [GLA_subject_data.baseline.(b_tasks{b}) last_t_ind] = ...
-            checkRunTriggers(GLA_subject_data.baseline.(b_tasks{b}), triggers);
+        [GLA_subject_data.data.baseline.(b_tasks{b}) last_t_ind] = ...
+            checkRunTriggers(GLA_subject_data.data.baseline.(b_tasks{b}), triggers);
     end
 end
 
@@ -96,11 +121,11 @@ for t = 1:length(triggers)
         if t > 5
             % See if we know about it
             is_ok = 0;
-            if isfield(GLA_subject_data.parameters,'eeg_start_triggers')
-                for i = 1:2:length(GLA_subject_data.parameters.eeg_start_triggers)
-                    if (str2double(GLA_subject_data.parameters.eeg_start_triggers{i}) ==...
-                            first_trial.parameters.run_id) && ...
-                            (str2double(GLA_subject_data.parameters.eeg_start_triggers{i+1}) == t)
+            if isfield(GLA_subject_data.settings,'eeg_start_triggers')
+                for i = 1:2:length(GLA_subject_data.settings.eeg_start_triggers)
+                    if (str2double(GLA_subject_data.settings.eeg_start_triggers{i}) ==...
+                            first_trial.settings.run_id) && ...
+                            (str2double(GLA_subject_data.settings.eeg_start_triggers{i+1}) == t)
                         is_ok = 1;
                     end
                 end
@@ -116,13 +141,13 @@ end
 
 % Should manually add start time to the subject notes file
 run_id = first_trial.log_stims(1).run_id;
-if isfield(GLA_subject_data.parameters,'eeg_start_times')
-    for t = 1:2:length(GLA_subject_data.parameters.eeg_start_times)
+if isfield(GLA_subject_data.settings,'eeg_start_times')
+    for t = 1:2:length(GLA_subject_data.settings.eeg_start_times)
 
-        if (isnumeric(run_id) && str2double(GLA_subject_data.parameters.eeg_start_times{t}) == run_id) ||...
-                (ischar(run_id) && strcmp(GLA_subject_data.parameters.eeg_start_times{t}, run_id)) 
+        if (isnumeric(run_id) && str2double(GLA_subject_data.settings.eeg_start_times{t}) == run_id) ||...
+                (ischar(run_id) && strcmp(GLA_subject_data.settings.eeg_start_times{t}, run_id)) 
              last_meeg_trigger_time = round(str2double(...
-                 GLA_subject_data.parameters.eeg_start_times{t+1}));
+                 GLA_subject_data.settings.eeg_start_times{t+1}));
              return;
         end
     end
@@ -346,7 +371,7 @@ function t_times = readMEGTriggerLines(run_id)
 
 % Load the info
 global GLA_subject;
-file_name = [NM_GetCurrentDataDirectory() '/meg_data/' GLA_subject '/'...    
+file_name = [NM_GetRootDirectory() '/meg_data/' GLA_subject '/'...    
     GLA_subject '_' run_id '_sss.fif'];
 hdr = ft_read_header(file_name);
 
@@ -395,7 +420,7 @@ disp(['Parsing run ' num2str(run_id) '...']);
 
 % Load the data
 global GLA_subject
-file_name = [NM_GetCurrentDataDirectory() '/eeg_data/' GLA_subject '/'...    
+file_name = [NM_GetRootDirectory() '/eeg_data/' GLA_subject '/'...    
     GLA_subject '_' run_id '.raw'];
 [data.head data.event_data] = NM_ReadEGITriggers(file_name);
 
@@ -455,15 +480,15 @@ disp('Finding diode timing...');
 
 % Find for each run
 global GLA_subject_data;
-for r = 1:GLA_subject_data.parameters.num_runs
-    GLA_subject_data.runs(r).trials = setRunDiodes(...
-        ['run_' num2str(r)], GLA_subject_data.runs(r).trials);
+for r = 1:GLA_subject_data.settings.num_runs
+    GLA_subject_data.data.runs(r).trials = setRunDiodes(...
+        ['run_' num2str(r)], GLA_subject_data.data.runs(r).trials);
 end
 
 b_types = {'blinks','eye_movements','noise'};
 for t = 1:length(b_types)
-    GLA_subject_data.baseline.(b_types{t}) = setRunDiodes(...
-        'baseline', GLA_subject_data.baseline.(b_types{t}));
+    GLA_subject_data.data.baseline.(b_types{t}) = setRunDiodes(...
+        'baseline', GLA_subject_data.data.baseline.(b_types{t}));
 end
 disp('Diodes set.');
 
@@ -523,7 +548,7 @@ function d_times = readDiodeTimes(run_id)
 
 % Load the info
 global GLA_subject;
-file_name = [NM_GetCurrentDataDirectory() '/meg_data/' GLA_subject '/'...    
+file_name = [NM_GetRootDirectory() '/meg_data/' GLA_subject '/'...    
     GLA_subject '_' run_id '_sss.fif'];
 hdr = ft_read_header(file_name);
 

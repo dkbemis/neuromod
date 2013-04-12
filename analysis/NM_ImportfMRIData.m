@@ -1,5 +1,24 @@
-% This gets the data from the acquisition computer and runs the maxfilter
-%   on it so that it is useable
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_ImportfMRIData.m
+%
+% Notes:
+%   * This function imports the fmri data from the acquisition computer
+%       - '/neurospin/acquisition/database/TrioTim'
+%   * Then converts the data from dcm to nii
+%       * The dcm2nii script does not seem to work with linux / matlab so
+%           really we write a script to /fmri_data/NIP/. This function then
+%           waits until you signal that you have run the script.
+%   * This script then produces the NIP_run_#.nii and NIP_anat.nii files in 
+%       /fmri_data/NIP/experiment, and NIP_loc.nii / NIP_anat.nii in 
+%       /fmri_data/NIP/localizer.
+%
+% Inputs:
+% Outputs:
+%
+% Usage: NM_ImportfMRIData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_ImportfMRIData()
 
@@ -10,7 +29,10 @@ if ~strcmp(GLA_rec_type,'fmri')
 end
 
 % Make sure we're initialized
-NM_LoadSubjectData({});
+NM_LoadSubjectData();
+
+% And see if we have it already
+checkForData();
 
 % Get the directory
 acq_dir = findAcqDir();
@@ -23,21 +45,25 @@ fid = setupImport();
 
 % Need to copy using the conversion script
 global GLA_subject_data;
-importScan(acq_dir, GLA_subject_data.parameters.anat_scan, 'anat', 'experiment', fid);
-for r = 1:GLA_subject_data.parameters.num_runs
-    importScan(acq_dir, GLA_subject_data.parameters.run_scans{r}, ...
+importScan(acq_dir, GLA_subject_data.settings.anat_scan, 'anat', 'experiment', fid);
+for r = 1:GLA_subject_data.settings.num_runs
+    importScan(acq_dir, GLA_subject_data.settings.run_scans{r}, ...
         ['run_' num2str(r)], 'experiment', fid);
 end
 
 % And the localizer
-importScan(acq_dir, GLA_subject_data.parameters.anat_scan, 'anat', 'localizer', fid);
-importScan(acq_dir, GLA_subject_data.parameters.loc_scan, 'loc', 'localizer', fid);
+importScan(acq_dir, GLA_subject_data.settings.anat_scan, 'anat', 'localizer', fid);
+importScan(acq_dir, GLA_subject_data.settings.loc_scan, 'loc', 'localizer', fid);
 fclose('all');
 
 % Now, wait for confirmation of running
-resp = input('Please run the script and then hit enter if ok. Otherwise, type n: ','s');
-if strcmp(resp,'n')
-    error('Not ok.');
+while 1
+    ch = input('Did the script run correctly (y/n)? ','s');
+    if strcmp(ch,'y')
+        break;
+    elseif strcmp(ch,'n')
+        error('Not ok.');
+    end
 end
 NM_SaveSubjectData({{'fmri_data_imported',1}});
 disp(['Imported fmri data for ' GLA_subject '.']);
@@ -46,7 +72,7 @@ function fid = setupImport()
 
 % Make the folders, otherwise the copy will be in the wrong place
 global GLA_subject;
-data_folder = [NM_GetCurrentDataDirectory() '/fmri_data/' GLA_subject];
+data_folder = [NM_GetRootDirectory() '/fmri_data/' GLA_subject];
 [success message message_id] = mkdir(data_folder); %#ok<NASGU,ASGLU>
 [success message message_id] = mkdir([data_folder '/localizer']); %#ok<NASGU,ASGLU>
 [success message message_id] = mkdir([data_folder '/experiment']); %#ok<NASGU,ASGLU>
@@ -63,8 +89,7 @@ function importScan(acq_dir, scan_num, label, run_type, fid)
 % Get the folder
 global GLA_subject;
 scan_dir = getScanDir(acq_dir, scan_num);
-dest_dir = [NM_GetCurrentDataDirectory() ...
-    '/fmri_data/' GLA_subject '/' run_type];
+dest_dir = [NM_GetRootDirectory() '/fmri_data/' GLA_subject '/' run_type];
 
 
 % Copy 
@@ -138,6 +163,51 @@ if isempty(subj_folder)
     error('Folder not found.');
 end
 acq_dir = [acq_dir '/' subj_folder];
+
+
+function checkForData()
+
+global GLA_subject;
+global GLA_subject_data;
+exist_f = {};
+data_folder = [NM_GetRootDirectory() '/fmri_data/' GLA_subject];
+for r = 1:GLA_subject_data.settings.num_runs
+    f_name = [data_folder '/experiment/' GLA_subject '_run_' num2str(r) '.nii'];
+    if exist(f_name,'file')
+        exist_f{end+1} = f_name; %#ok<AGROW>
+    end
+end
+f_name = [data_folder '/experiment/' GLA_subject '_anat.nii'];
+if exist(f_name,'file')
+    exist_f{end+1} = f_name;
+end
+
+% And the localizer
+f_name = [data_folder '/localizer/' GLA_subject '_loc.nii'];
+if exist(f_name,'file')
+    exist_f{end+1} = f_name;
+end
+f_name = [data_folder '/localizer/' GLA_subject '_anat.nii'];
+if exist(f_name,'file')
+    exist_f{end+1} = f_name;
+end
+
+if ~isempty(exist_f)
+    disp('WARNING. fmri data files found: ');
+    for f = 1:length(exist_f)
+        disp(['    ' exist_f{f}]); 
+    end
+    while 1
+        ch = input('Overwrite (y/n)? ','s');
+        if strcmp(ch,'y')
+            return;
+        elseif strcmp(ch,'n')
+            error('Fix the files.');
+        end
+    end
+end
+
+
 
 
 

@@ -1,134 +1,92 @@
-% Helper to load the subject data 
-%   or create it if not initialized
-% This will be stored in NIP_subject_data.mat
-%   in data_dir/analysis/subject/
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_ConvertETData.m
 %
-% Will assign the loaded data to GLA_subject_data
+% Notes:
+%   * Loads  GLA_subject_data or creates it if not initialized.
+%       - This data holds all of the analysis parameters for the subject.
+%       - This data is stored in the global GLA_subject_data.
+%       - This data is stored in analysis/NIP/NIP_subject_data.mat.
+%   * This should be called before most functions to make sure everything
+%       is set correctly.
 %
 % Inputs:
-%   * params: A set of parameter / value pairs that will be
-%       checked and added if necessary / possible
+%   * settings: A list of cells, each containing a setting name / value
+%       pair. The GLA_subject_data is then checked to make sure these value
+%       / name pairs are present and match
+%       - Value can be either a number or a string
+%   
+% Outputs:
+%
+% Usage: NM_LoadSubjectData({{'log_parsed',1}})
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function NM_LoadSubjectData(params)
 
-% First, make sure it exists
-getSubjectData();
+function NM_LoadSubjectData(settings)
+
+% Load up the subject data
+disp('Loading subject data...');
+
+% Default to use matching data in memory
+global GLA_subject_data;
+global GLA_subject;
+global GLA_rec_type;
+if isempty(GLA_subject_data) || ...
+        ~strcmp(GLA_subject,GLA_subject_data.settings.subject) ||...
+        ~strcmp(GLA_rec_type,GLA_subject_data.settings.rec_type) 
+
+    % Load if we've made one
+    f_name = NM_GetSubjectDataFilename();
+    if exist(f_name,'file')
+        GLA_subject_data = load(f_name);
+
+    % Or initialize
+    else
+        while 1
+            ch = input(['Subject data for '...
+                GLA_subject ' not found. Create (y/n)? '],'s');
+            if strcmp(ch,'y')
+                break;
+            elseif strcmp(ch,'n')
+                error('Data not loaded.');
+            end
+        end
+        NM_InitializeSubjectData();
+    end
+end
+disp('Done.');
+
 
 % Then check the params
-if ~exist('params','var') || isempty(params)
+if ~exist('settings','var') || isempty(settings)
     return;
 end
-
-for p = 1:length(params)
-    checkSubjectData(params{p}{1}, params{p}{2});
+for s = 1:length(settings)
+    checkSetting(settings{s}{1}, settings{s}{2});
 end
 
 
-function checkSubjectData(param, val)
+% Check each setting
+function checkSetting(param, val)
 
-global GLA_subject;
 global GLA_subject_data;
-global GLA_fmri_type;
-global GLA_meeg_type;
-if ~isfield(GLA_subject_data.parameters,param) || ...
-        (ischar(val) && ~strcmp(GLA_subject_data.parameters.(param),val)) ||...
-        (isnumeric(val) && GLA_subject_data.parameters.(param) ~= val)
+
+% Might not exist or is not equal
+if ~isfield(GLA_subject_data.settings,param) || ...
+        (ischar(val) && ~strcmp(GLA_subject_data.settings.(param),val)) ||...
+        (isnumeric(val) && GLA_subject_data.settings.(param) ~= val)
     
-    % Might know how to add it
-    switch param            
-        case 'log_checked'
-            NM_CheckLogFile();    
-            
-        case 'et_data_converted'
-            NM_ConvertETData();    
-            
-        case 'timing_adjusted'
-            NM_AdjustTiming();
-            
-        case 'et_triggers_checked'
-            NM_CheckETTriggers();
-            
-        case 'responses_checked'
-            NM_CheckDataFile();
-            
-        case 'meg_data_preprocessed'
-            NM_PreprocessMEEGData('meg');
-            
-        case 'eeg_data_preprocessed'
-            NM_PreprocessMEEGData('eeg');
-            
-        case 'et_data_preprocessed'
-            NM_PreprocessETData();
-            
-        case 'eeg_triggers_checked'
-            old_type = GLA_meeg_type;
-            GLA_meeg_type = 'eeg'; %#ok<NASGU>
-            NM_CheckMEEGTriggers();
-            GLA_meeg_type = old_type;
-            
-        case 'meg_triggers_checked'
-            old_type = GLA_meeg_type;
-            GLA_meeg_type = 'meg'; %#ok<NASGU>
-            NM_CheckMEEGTriggers();
-            GLA_meeg_type = old_type;
-            
-        case 'fmri_localizer_data_preprocessed'
-            old_type = GLA_fmri_type;
-            GLA_fmri_type = 'localizer'; %#ok<NASGU>
-            NM_PreprocessfMRIData();
-            GLA_fmri_type = old_type;
-            
-        case 'fmri_experiment_data_preprocessed'
-            old_type = GLA_fmri_type;
-            GLA_fmri_type = 'experiment'; %#ok<NASGU>
-            NM_PreprocessfMRIData();
-            GLA_fmri_type = old_type;
-            
-        otherwise
-            checkForContinue(param, val);
+    
+    % see if we want to go anyway
+    disp(['Parameter ' param ' not equal to ' num2str(val) '.']);
+    r = input('Set and continue? (y/n) ','s');
+    if strcmp(r,'y')
+        NM_SaveSubjectData({{param, val}});
+    else
+        error('Parameter not as expected.'); 
     end
-
-    % And reset
-    load([NM_GetCurrentDataDirectory() '/analysis/' ...
-       GLA_subject '/' GLA_subject '_subject_data.mat']);
-    GLA_subject_data = subject_data;
 end
-
-
-function checkForContinue(param, val)
-
-% see if we want to go anyway
-disp(['Parameter ' param ' not equal to ' num2str(val) '.']);
-r = input('Set and continue? (y/n) ','s');
-if strcmp(r,'y')
-    NM_SaveSubjectData({{param, val}});
-else
-    error('Parameter not as expected.'); 
-end
-
-function getSubjectData()
-
-% See if it exists
-global GLA_subject;
-save_file = [NM_GetCurrentDataDirectory() '/analysis/' ...
-    GLA_subject '/' GLA_subject '_subject_data.mat'];
-
-% If not, 
-if ~exist(save_file,'file')
-    
-    % Make the folder if it doesn't exist
-    if ~exist([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject], 'dir')
-        mkdir([NM_GetCurrentDataDirectory() '/analysis/'],GLA_subject);
-    end
-    
-    % And initialize the data
-    NM_InitializeSubjectAnalysis();
-end
-
-% Set to use
-global GLA_subject_data;
-load(save_file);
-GLA_subject_data = subject_data;
 
 
 

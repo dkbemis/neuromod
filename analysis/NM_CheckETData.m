@@ -5,6 +5,26 @@
 %
 % This will then add the triggers to the trial structures
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckETData.m
+%
+% Notes:
+%   * Reads the triggers from the eye tracking .asc files and adds them to
+%       the trial structures in the GLA_subject_data.
+%   * Each of these et_trigger structures has the subfields:
+%       - et_time: The time of the trigger, according to the eye tracker computer.
+%       - value: The value of the trigger
+%   * Also, the timing of the triggers is checked.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_CheckETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 function NM_CheckETData()
 
 % Make sure the log has been parsed
@@ -12,7 +32,7 @@ NM_LoadSubjectData({{'log_parsed',1}});
 
 % Make sure this is useful
 global GLA_subject_data;
-if ~GLA_subject_data.parameters.eye_tracker
+if ~GLA_subject_data.settings.eye_tracker
     return;
 end
     
@@ -43,11 +63,11 @@ triggers = parseRun('baseline');
 % Beware, this order could change later...
 global GLA_subject_data;
 t_ind = 1;
-b_types = fieldnames(GLA_subject_data.baseline);
+b_types = fieldnames(GLA_subject_data.data.baseline);
 for b = 1:length(b_types)
-    for t = 1:length(GLA_subject_data.baseline.(b_types{b}))
-        [GLA_subject_data.baseline.(b_types{b})(t).et_triggers t_ind] = ...
-            checkTrial(GLA_subject_data.baseline.(b_types{b})(t),t_ind,triggers);            
+    for t = 1:length(GLA_subject_data.data.baseline.(b_types{b}))
+        [GLA_subject_data.data.baseline.(b_types{b})(t).et_triggers t_ind] = ...
+            checkTrial(GLA_subject_data.data.baseline.(b_types{b})(t),t_ind,triggers);            
     end
 end
 
@@ -58,7 +78,7 @@ return;
 
 % Might not have it
 global GLA_subject_data;
-if GLA_subject_data.parameters.num_localizer_blocks == 0
+if GLA_subject_data.settings.num_localizer_blocks == 0
     return;
 end
 error('Unimplemented');
@@ -67,7 +87,7 @@ error('Unimplemented');
 function checkRuns()
 
 global GLA_subject_data;
-for r = 1:GLA_subject_data.parameters.num_runs
+for r = 1:GLA_subject_data.settings.num_runs
     checkRun(r); 
 end
 
@@ -80,9 +100,9 @@ triggers = parseRun(['run_' num2str(run_id)]);
 % Now, check and add them
 t_ind = 1;
 global GLA_subject_data;
-for t = 1:length(GLA_subject_data.runs(run_id).trials)
-    [GLA_subject_data.runs(run_id).trials(t).et_triggers t_ind] = ...
-        checkTrial(GLA_subject_data.runs(run_id).trials(t),t_ind,triggers);
+for t = 1:length(GLA_subject_data.data.runs(run_id).trials)
+    [GLA_subject_data.data.runs(run_id).trials(t).et_triggers t_ind] = ...
+        checkTrial(GLA_subject_data.data.runs(run_id).trials(t),t_ind,triggers);
 end
 
 % If it's good, it'll add it to it as well as checking
@@ -108,7 +128,7 @@ function triggers = parseRun(run_id)
 % Load it up
 global GLA_subject;
 disp(['Parsing ' run_id '...']);
-fid = fopen([NM_GetCurrentDataDirectory() '/eye_tracking_data/' ...
+fid = fopen([NM_GetRootDirectory() '/eye_tracking_data/' ...
     GLA_subject '/' GLA_subject '_' run_id '.asc']);
 
 % Only looking for the MEG trigger lines...

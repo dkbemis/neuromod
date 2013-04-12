@@ -1,19 +1,40 @@
-function NM_CheckTiming(trigger_type)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckTiming.m
+%
+% Notes:
+%   * This function checks the timing of the various stimuli and triggers 
+%       during the actual experiment run against the expected timing.
+%   * This is first called during the NM_Check* functions.
+%       - It will break if called before these have completed.
+%
+% Inputs:
+%   * type: What we're checking:
+%       - 'log': The stimuli recorded in the log
+%       - 'meg': The meg triggers
+%       - 'eeg': The eeg triggers
+%       - 'diode': The diode stimuli markers
+%       - 'et': The eye tracker triggers 
+%
+% Outputs:
+%
+% Usage: NM_CheckTiming('log')
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% TTest
-trigger_type = 'log';
+function NM_CheckTiming(type)
 
 % Keep track of the check
 global GLA_subject;
-disp(['Checking timing for ' trigger_type ' data for ' GLA_subject '...']);
-fid = fopen([NM_GetCurrentDataDirectory() '/analysis/'...
+disp(['Checking timing for ' type ' timing for ' GLA_subject '...']);
+fid = fopen([NM_GetRootDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_timing_report.txt'],'a');
 
 % No loading because we should be 
 %   in the middle of checking one of the data types
 global GLA_subject_data;
-for r = 1:GLA_subject_data.parameters.num_runs
-    checkRunTiming(r, trigger_type, fid);
+for r = 1:GLA_subject_data.settings.num_runs
+    checkRunTiming(r, type, fid);
 end
 fclose(fid);
 disp('Done.');
@@ -24,13 +45,13 @@ function checkRunTiming(r, trigger_type, fid)
 global GLA_subject_data;
 
 % Get the intervals
-GLA_subject_data.runs(r).timing.([trigger_type '_intervals']) = getRunIntervals(trigger_type,r);
+GLA_subject_data.data.runs(r).timing.([trigger_type '_intervals']) = getRunIntervals(trigger_type,r);
 
 % Store some summaries
-GLA_subject_data.runs(r).timing.([trigger_type '_interval_means']) = ...
-    mean(GLA_subject_data.runs(r).timing.([trigger_type '_intervals']));
-GLA_subject_data.runs(r).timing.([trigger_type '_interval_stds']) = ...
-    std(GLA_subject_data.runs(r).timing.([trigger_type '_intervals']));
+GLA_subject_data.data.runs(r).timing.([trigger_type '_interval_means']) = ...
+    mean(GLA_subject_data.data.runs(r).timing.([trigger_type '_intervals']));
+GLA_subject_data.data.runs(r).timing.([trigger_type '_interval_stds']) = ...
+    std(GLA_subject_data.data.runs(r).timing.([trigger_type '_intervals']));
 
 % These are the times we expect, in ms
 switch trigger_type
@@ -53,13 +74,13 @@ switch trigger_type
             'stim_4+ISI_4','stim_5+ISI_5','delay'};
         exp_times = [600 600 600 600 600 2000];
 
-end            
+end
 tolerance = 5;
     
 % And check them
 for s = 1:length(exp_times)
-    checkStimulusTiming(GLA_subject_data.runs(r).timing.([trigger_type '_interval_means'])(s),...
-        GLA_subject_data.runs(r).timing.([trigger_type '_interval_stds'])(s),...
+    checkStimulusTiming(GLA_subject_data.data.runs(r).timing.([trigger_type '_interval_means'])(s),...
+        GLA_subject_data.data.runs(r).timing.([trigger_type '_interval_stds'])(s),...
         exp_times(s),exp_labels{s},trigger_type, tolerance, fid);
 end
 
@@ -91,8 +112,8 @@ fprintf(fid,[rep_str '\n']);
 function intervals = getRunIntervals(type, num)
 
 global GLA_subject_data;
-for t = 1:length(GLA_subject_data.runs(num).trials)
-    ints = getTrialIntervals(type, GLA_subject_data.runs(num).trials(t));
+for t = 1:length(GLA_subject_data.data.runs(num).trials)
+    ints = getTrialIntervals(type, GLA_subject_data.data.runs(num).trials(t));
     
     % Timeouts have fewer intervals
     % Let's hope that's what's going on here.
@@ -102,15 +123,15 @@ for t = 1:length(GLA_subject_data.runs(num).trials)
     end
     
     % Final trial can have many more
-    if t == length(GLA_subject_data.runs(num).trials)
+    if t == length(GLA_subject_data.data.runs(num).trials)
         ints = ints(1:size(intervals,2));
     end
     intervals(t,:) = ints; %#ok<AGROW>
     
     % And the ITI
-    if t < length(GLA_subject_data.runs(num).trials)
-        intervals(t,end) = getTime(type, GLA_subject_data.runs(num).trials(t+1), 1) -...
-            getTime(type, GLA_subject_data.runs(num).trials(t), size(intervals,2)); %#ok<AGROW>
+    if t < length(GLA_subject_data.data.runs(num).trials)
+        intervals(t,end) = getTime(type, GLA_subject_data.data.runs(num).trials(t+1), 1) -...
+            getTime(type, GLA_subject_data.data.runs(num).trials(t), size(intervals,2)); %#ok<AGROW>
 
     % Just set to the mean if there is no ITI
     else

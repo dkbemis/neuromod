@@ -1,5 +1,21 @@
-% NOTE: Taken directly from eeglab.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_ReadEGIHdr.m
 %
+% Notes:
+%   * This is taken directly from eeglab to work with NM_ReadEGITriggers
+%   * The eeglab comments are below.
+%
+% Inputs:
+%   * fid: The open filestream to the raw eeglab file to read from
+%   
+% Outputs:
+%   * head: The header for the file
+%
+% Usage: head NM_ReadEGIHdr(fid)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % readegihdr() - read header information from EGI (versions 2,3,4,5,6,7) data file.
 %
 % Usage:

@@ -323,7 +323,7 @@ s_types = {'grad_1','grad_2','mag'};
 recon = {};
 global GLA_meeg_data;
 for s = 1:length(s_types)
-    s_channels.(s_types{s}) = NM_GetMEGChannels(GLA_meeg_data.data, s_types{s});
+    s_channels.(s_types{s}) = NM_GetMEEGChannels(GLA_meeg_data.data, s_types{s});
     recon.(s_types{s}) = computeRejections(s_types{s}, s_channels.(s_types{s}));
 end
 

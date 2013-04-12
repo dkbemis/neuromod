@@ -1,13 +1,25 @@
-% See if we have all the right trials in all the right places
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckLogFile.m
 %
-% This checks that:
-%   * The right number of stimuli per condition were displayed
-%   * The right sitmuli was displayed at each trial
-%   * All the correct matching was performed
-%   * The log record for each trigger is correct
-%   * The localizer and baseline runs are correct as well
+% Notes:
+%   * This function checks the log file and ensures that the stimuli were 
+%       structured how we expected. This includes:
+%       - The right number of stimuli per condition were displayed
+%       - The right sitmuli was displayed at each trial
+%       - All the correct matching was performed
+%       - The log record for each trigger is correct
+%       - The localizer and baseline runs are correct as well
+%       - The timing of the stimuli, as reported in the log
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_CheckLogFile()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function NM_CheckLog()
+function NM_CheckLogFile()
 
 % Load the data and stimuli to check
 parseLog();
@@ -45,26 +57,26 @@ function checkBaselineStimuli()
 
 % Make sure we have the right amount
 global GLA_subject_data;
-checkSimpleBaselineStimuli('blinks', GLA_subject_data.parameters.num_blinks);
-checkSimpleBaselineStimuli('mouth_movements', GLA_subject_data.parameters.num_mouth_movements);
-checkSimpleBaselineStimuli('breaths', GLA_subject_data.parameters.num_breaths);
+checkSimpleBaselineStimuli('blinks', GLA_subject_data.settings.num_blinks);
+checkSimpleBaselineStimuli('mouth_movements', GLA_subject_data.settings.num_mouth_movements);
+checkSimpleBaselineStimuli('breaths', GLA_subject_data.settings.num_breaths);
 
 % The "hardest" check
-if length(GLA_subject_data.baseline.eye_movements) ~= ...
-        GLA_subject_data.parameters.num_eye_movements
+if length(GLA_subject_data.data.baseline.eye_movements) ~= ...
+        GLA_subject_data.settings.num_eye_movements
     error('Wrong number of eye movements.');
 end
 
 % NOTE: Stimuli are not parsed correctly, because they involve spaces
-for t = 1:GLA_subject_data.parameters.num_eye_movements
+for t = 1:GLA_subject_data.settings.num_eye_movements
     movement_types = zeros(2,1);
     for s = 1:4
         if mod(s,2) == 1 
-            if GLA_subject_data.baseline.eye_movements(t).log_stims(s).stim_type ~= 1
+            if GLA_subject_data.data.baseline.eye_movements(t).log_stims(s).stim_type ~= 1
                 error('Bad trial');
             end
         else
-            movement_types(s/2) = GLA_subject_data.baseline.eye_movements(t).log_stims(s).stim_type;
+            movement_types(s/2) = GLA_subject_data.data.baseline.eye_movements(t).log_stims(s).stim_type;
         end
     end
     movement_types = sort(movement_types);
@@ -75,7 +87,7 @@ end
 disp('Eye movements are correct.');
 
 % And the easiest
-if length(GLA_subject_data.baseline.noise) ~= GLA_subject_data.parameters.num_noise
+if length(GLA_subject_data.data.baseline.noise) ~= GLA_subject_data.settings.num_noise
     error('Noise is incorrect');
 end
 disp('Noise is correct.');
@@ -84,15 +96,15 @@ disp('Noise is correct.');
 function checkSimpleBaselineStimuli(type, num)
 
 global GLA_subject_data;
-if length(GLA_subject_data.baseline.(type)) ~= num
+if length(GLA_subject_data.data.baseline.(type)) ~= num
     error('Wrong number of baseline trials');
 end
 
 % Should always alternate back and forth
 stims = {'+',''};
-for t = 1:length(GLA_subject_data.baseline.(type))
+for t = 1:length(GLA_subject_data.data.baseline.(type))
     for s = 1:2
-        if ~strcmp(GLA_subject_data.baseline.(type)(t).log_stims(s).value,stims{s})
+        if ~strcmp(GLA_subject_data.data.baseline.(type)(t).log_stims(s).value,stims{s})
             error('Bad stim.');
         end
     end
@@ -105,12 +117,13 @@ function checkLocalizer()
 
 % Check block number first
 global GLA_subject_data;
-if length(GLA_subject_data.localizer.blocks) ~= GLA_subject_data.parameters.num_localizer_blocks
+if length(GLA_subject_data.data.localizer.blocks) ~= ...
+        GLA_subject_data.settings.num_localizer_blocks
     error('Wrong number of localizer blocks');
 end
 
 % Might not need anything
-if GLA_subject_data.parameters.num_localizer_blocks == 0
+if GLA_subject_data.settings.num_localizer_blocks == 0
     return;
 end
     
@@ -134,20 +147,20 @@ function checkLocalizerCatchMatching()
 
 global GLA_subject_data;
 catches = {};
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
-    if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)    
-        catches{end+1} = {GLA_subject_data.localizer.blocks(b).params.catch_trial{2} ...
-            b GLA_subject_data.localizer.blocks(b).params.catch_trial{1}}; %#ok<AGROW>
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
+    if ~isempty(GLA_subject_data.data.localizer.blocks(b).params.catch_trial)    
+        catches{end+1} = {GLA_subject_data.data.localizer.blocks(b).params.catch_trial{2} ...
+            b GLA_subject_data.data.localizer.blocks(b).params.catch_trial{1}}; %#ok<AGROW>
     end
 end
 
-if GLA_subject_data.parameters.num_localizer_catch_trials ~= length(catches)
+if GLA_subject_data.settings.num_localizer_catch_trials ~= length(catches)
     error('Wrong number of catch trials');
 end
 for c = 1:length(catches)
-    if ~strcmp(GLA_subject_data.parameters.localizer_catches{(c-1)*3+1},catches{c}{1}) ||...
-            str2double(GLA_subject_data.parameters.localizer_catches{(c-1)*3+2}) ~= catches{c}{2} ||...
-            str2double(GLA_subject_data.parameters.localizer_catches{(c-1)*3+3}) ~= catches{c}{3}
+    if ~strcmp(GLA_subject_data.settings.localizer_catches{(c-1)*3+1},catches{c}{1}) ||...
+            str2double(GLA_subject_data.settings.localizer_catches{(c-1)*3+2}) ~= catches{c}{2} ||...
+            str2double(GLA_subject_data.settings.localizer_catches{(c-1)*3+3}) ~= catches{c}{3}
         error('Wrong catch trial.');
     end
 end
@@ -160,15 +173,15 @@ function checkLocalizerBlockMatching()
 global GLA_subject_data;
 conditions = {'sentence','pseudo'};
 c_cts = zeros(length(conditions),1);
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
     for c = 1:length(conditions)
-        if strcmp(GLA_subject_data.localizer.blocks(b).params.condition,conditions{c})
+        if strcmp(GLA_subject_data.data.localizer.blocks(b).params.condition,conditions{c})
             c_cts(c) = c_cts(c)+1;
             
             % Make sure the one before was different
             if b > 1
-                if strcmp(GLA_subject_data.localizer.blocks(b-1).params.condition,...
-                        GLA_subject_data.localizer.blocks(b).params.condition)
+                if strcmp(GLA_subject_data.data.localizer.blocks(b-1).params.condition,...
+                        GLA_subject_data.data.localizer.blocks(b).params.condition)
                     error('Two of the same condition in a row.'); 
                 end
             end
@@ -188,13 +201,13 @@ function checkLocalizerStimuli()
 disp('Checking localizer stimuli...');
 global GLA_subject;
 global GLA_subject_data;
-fid = fopen([NM_GetCurrentDataDirectory() '/logs/' ...
+fid = fopen([NM_GetRootDirectory() '/logs/' ...
     GLA_subject '/' GLA_subject '_localizer_list.csv']);
 line = fgetl(fid);  %#ok<NASGU> % Header
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
-    GLA_subject_data.localizer.blocks(b).params = ...
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
+    GLA_subject_data.data.localizer.blocks(b).params = ...
         checkLocalizerBlockStims(fgetl(fid), ...
-        GLA_subject_data.localizer.blocks(b).log_stims);
+        GLA_subject_data.data.localizer.blocks(b).log_stims);
 end
 fclose(fid);
 disp('Localizer stimuli as expected.');
@@ -253,9 +266,9 @@ values.onset = str2double(values.onset);
 % And the stims
 values.stims = {};
 global GLA_subject_data;
-for i = 1:GLA_subject_data.parameters.num_localizer_block_stims
+for i = 1:GLA_subject_data.settings.num_localizer_block_stims
     values.stims{i} = {};
-    for j = 1:GLA_subject_data.parameters.num_localizer_stim_words
+    for j = 1:GLA_subject_data.settings.num_localizer_stim_words
         [values.stims{i}{j} line] = parseCSVItem(line); 
     end
     for j = 1:3
@@ -275,16 +288,16 @@ function checkLocalizerTriggers()
 
 % Might have none
 global GLA_subject_data;
-if ~GLA_subject_data.parameters.eeg && ...
-        ~GLA_subject_data.parameters.meg && ...
-        ~GLA_subject_data.parameters.eye_tracker 
+if ~GLA_subject_data.settings.eeg && ...
+        ~GLA_subject_data.settings.meg && ...
+        ~GLA_subject_data.settings.eye_tracker 
     return;
 end
 
 % Should be all or none
 disp('Checking localizer triggers...');
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
-    checkLocalizerBlockTriggers(GLA_subject_data.localizer.blocks(b));
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
+    checkLocalizerBlockTriggers(GLA_subject_data.data.localizer.blocks(b));
 end
 disp('All localizer triggers have right value and placement.');
 
@@ -341,10 +354,10 @@ global GLA_subject_data;
 
 % Find where it is in the stims
 t_stim = findClosetStimToTrigger(trigger,...
-    GLA_subject_data.localizer.blocks(trigger.block_num).log_stims);
+    GLA_subject_data.data.localizer.blocks(trigger.block_num).log_stims);
 
 % We trigger everything, so should line up
-if ~strcmp(t_stim.value,GLA_subject_data.localizer.blocks(trigger.block_num).log_stims(trigger.order+offset).value)
+if ~strcmp(t_stim.value,GLA_subject_data.data.localizer.blocks(trigger.block_num).log_stims(trigger.order+offset).value)
     error('Trigger in wrong place.');
 end
 
@@ -353,22 +366,22 @@ function checkBaselineTriggers()
 disp('Checking triggers...');
 global GLA_subject_data;
 for b = {'blinks','breaths','mouth_movements'}
-    checkBaselineTypeTriggers(GLA_subject_data.baseline.(b{1}));
+    checkBaselineTypeTriggers(GLA_subject_data.data.baseline.(b{1}));
 end
 
 % See how many types we expect
-if GLA_subject_data.parameters.eye_tracker && ...
-        (GLA_subject_data.parameters.eeg || GLA_subject_data.parameters.meg)
+if GLA_subject_data.settings.eye_tracker && ...
+        (GLA_subject_data.settings.eeg || GLA_subject_data.settings.meg)
     num_trigger_types = 2;
 else
     num_trigger_types = 1;
 end
 
 % Check the eye movements
-for t = 1:length(GLA_subject_data.baseline.eye_movements)
+for t = 1:length(GLA_subject_data.data.baseline.eye_movements)
 
     % Should be two triggers
-    trial = GLA_subject_data.baseline.eye_movements(t);
+    trial = GLA_subject_data.data.baseline.eye_movements(t);
     if length(trial.log_triggers) ~= num_trigger_types*2
         error('Bad triggers.');
     end
@@ -397,8 +410,8 @@ global GLA_subject_data;
 for t = 1:length(trials)
     
     % Should be only one pair
-    if GLA_subject_data.parameters.eye_tracker &&...
-            (GLA_subject_data.parameters.eeg || GLA_subject_data.parameters.meg)
+    if GLA_subject_data.settings.eye_tracker &&...
+            (GLA_subject_data.settings.eeg || GLA_subject_data.settings.meg)
         if length(trials(t).log_triggers) ~= 2
             error('Bad triggers.');
         end
@@ -417,16 +430,16 @@ function checkTriggers()
 
 % Might have none
 global GLA_subject_data;
-if ~GLA_subject_data.parameters.eeg && ...
-        ~GLA_subject_data.parameters.meg && ...
-        ~GLA_subject_data.parameters.eye_tracker 
+if ~GLA_subject_data.settings.eeg && ...
+        ~GLA_subject_data.settings.meg && ...
+        ~GLA_subject_data.settings.eye_tracker 
     return;
 end
 
 disp('Checking triggers...');
-for r = 1:length(GLA_subject_data.runs)
-    for t = 1:length(GLA_subject_data.runs(r))
-        checkTrialTriggers(GLA_subject_data.runs(r).trials(t)); 
+for r = 1:length(GLA_subject_data.data.runs)
+    for t = 1:length(GLA_subject_data.data.runs(r))
+        checkTrialTriggers(GLA_subject_data.data.runs(r).trials(t)); 
     end
 end
 disp('All triggers have right value and placement.');
@@ -436,8 +449,8 @@ function checkTrialTriggers(trial)
 
 % Check if we have paired M/EEG and eyelink triggers
 global GLA_subject_data;
-if GLA_subject_data.parameters.eye_tracker && ...
-        (GLA_subject_data.parameters.eeg || GLA_subject_data.parameters.meg)
+if GLA_subject_data.settings.eye_tracker && ...
+        (GLA_subject_data.settings.eeg || GLA_subject_data.settings.meg)
     num_trigger_types = 2;
 else
     num_trigger_types = 1;     
@@ -456,8 +469,8 @@ end
 % Use the script creation function to grab the triggers
 [stim_trigger critical_trigger delay_trigger probe_trigger] = ...
     NeuroMod_GetTrialTriggerValues(...
-    trial.parameters.p_l, trial.parameters.n_v,...
-    trial.parameters.cond, trial.parameters.answer);
+    trial.settings.p_l, trial.settings.n_v,...
+    trial.settings.cond, trial.settings.answer);
 
 % And transform to what we should have
 % NOTE: For both types of triggers...
@@ -483,7 +496,7 @@ for t = 1:length(trial.log_triggers)
 
     % Get the closest stim
     t_stim = findClosetStimToTrigger(trial.log_triggers(t),...
-        GLA_subject_data.runs(trial.log_triggers(t).run_id).trials(trial.log_triggers(t).trial_num).log_stims);
+        GLA_subject_data.data.runs(trial.log_triggers(t).run_id).trials(trial.log_triggers(t).trial_num).log_stims);
 
     % Check the number
     if trial.log_triggers(t).value ~= t_values(t)
@@ -503,7 +516,7 @@ function checkTrigger(trigger,t_stim,stim_trigger,...
 global GLA_subject_data;
 
 % Could be a first stim
-for s = 1:GLA_subject_data.parameters.num_critical_stim-1
+for s = 1:GLA_subject_data.settings.num_critical_stim-1
     if strcmp(t_stim.value,t_stim.trial_stim{s})
         if trigger.value == stim_trigger
             return;
@@ -512,7 +525,7 @@ for s = 1:GLA_subject_data.parameters.num_critical_stim-1
 end
 
 % Or a critical stim
-if strcmp(t_stim.value,t_stim.trial_stim{GLA_subject_data.parameters.num_critical_stim})
+if strcmp(t_stim.value,t_stim.trial_stim{GLA_subject_data.settings.num_critical_stim})
     if trigger.value == critical_trigger
         return;
     end
@@ -528,7 +541,7 @@ end
 
 % Or the delay, which is hard to check for
 min_delay = 1.5;    % Nothing else should be this big...
-next_stim = GLA_subject_data.runs(t_stim.run_id).trials(t_stim.trial_num).log_stims(t_stim.order+1);
+next_stim = GLA_subject_data.data.runs(t_stim.run_id).trials(t_stim.trial_num).log_stims(t_stim.order+1);
 if strcmp(t_stim.value,'+') && (next_stim.log_time-t_stim.log_time > min_delay)
     if trigger.value == delay_trigger
         return;
@@ -608,14 +621,14 @@ function checkWordRepetitions(word)
 
 global GLA_subject_data;
 filter.trial_stim = {word};
-for r = 1:GLA_subject_data.parameters.num_runs
+for r = 1:GLA_subject_data.settings.num_runs
     filter.run_id = {r};
     w_trials = NM_FilterTrials(filter);
 
     % Order
     w_ind = zeros(length(w_trials),1);
     for t = 1:length(w_trials)
-        w_ind(t) = w_trials(t).parameters.trial_num; 
+        w_ind(t) = w_trials(t).settings.trial_num; 
     end
     w_ind = sort(w_ind);
     if find(diff(w_ind) == 1)
@@ -659,8 +672,8 @@ cooccur = {};
 global GLA_subject_data;
 for t = 1:length(w_trials)
     pos = getWordPos(word,w_trials(t));
-    if pos+dist > 0 && pos+dist <= GLA_subject_data.parameters.num_critical_stim
-        cooccur{end+1} = w_trials(t).parameters.trial_stim{pos+dist}; %#ok<AGROW>
+    if pos+dist > 0 && pos+dist <= GLA_subject_data.settings.num_critical_stim
+        cooccur{end+1} = w_trials(t).settings.trial_stim{pos+dist}; %#ok<AGROW>
     end
 end
 
@@ -685,17 +698,17 @@ function checkWords()
 
 global GL_check_stimuli;
 global GLA_subject_data;
-num_trials_per_condition_per_cat = GLA_subject_data.parameters.num_trials /...
-    GLA_subject_data.parameters.num_conditions / GLA_subject_data.parameters.num_structure_types;
+num_trials_per_condition_per_cat = GLA_subject_data.settings.num_trials /...
+    GLA_subject_data.settings.num_conditions / GLA_subject_data.settings.num_structure_types;
 
 % Count / check the sets
 disp('Counting word sets...');
 filter.p_l = {'phrase'};
 phrase_set_counts = countAllWordSets(filter,...
-    num_trials_per_condition_per_cat/GLA_subject_data.parameters.num_structure_types);
+    num_trials_per_condition_per_cat/GLA_subject_data.settings.num_structure_types);
 filter.p_l = {'list'};
 list_set_counts = countAllWordSets(filter,...
-    num_trials_per_condition_per_cat/GLA_subject_data.parameters.num_structure_types);
+    num_trials_per_condition_per_cat/GLA_subject_data.settings.num_structure_types);
 disp('All words appeared in sets.');
 
 % Should have exactly the same words in the phrase and list conditions
@@ -727,17 +740,17 @@ counts.det = countCategoryWordSets(GL_check_stimuli.det,3,filter,...
 counts.modals = countCategoryWordSets(GL_check_stimuli.modals,3,filter,...
     num_trials_per_condition_per_cat/length(GL_check_stimuli.modals));
 counts.adj_pre = countCategoryWordSets(GL_check_stimuli.adj_pre,4,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.adj_pre)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.adj_pre)/GLA_subject_data.settings.num_a_pos);
 counts.adv_pre = countCategoryWordSets(GL_check_stimuli.adv_pre,4,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.adv_pre)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.adv_pre)/GLA_subject_data.settings.num_a_pos);
 counts.nouns = countCategoryWordSets(GL_check_stimuli.nouns,4,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.nouns)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.nouns)/GLA_subject_data.settings.num_a_pos);
 counts.verbs = countCategoryWordSets(GL_check_stimuli.verbs,4,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.verbs)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.verbs)/GLA_subject_data.settings.num_a_pos);
 counts.adj_post = countCategoryWordSets(GL_check_stimuli.adj_post,5,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.adj_post)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.adj_post)/GLA_subject_data.settings.num_a_pos);
 counts.adv_post = countCategoryWordSets(GL_check_stimuli.adv_post,5,filter,...
-    num_trials_per_condition_per_cat/length(GL_check_stimuli.adv_post)/GLA_subject_data.parameters.num_a_pos);
+    num_trials_per_condition_per_cat/length(GL_check_stimuli.adv_post)/GLA_subject_data.settings.num_a_pos);
 
 % Should have the same number of nouns / verbs in the final position
 for s = {'nouns','verbs'}
@@ -785,7 +798,7 @@ w_trials = NM_FilterTrials(filter);
 w_cond = [];
 for t = 1:length(w_trials)
     if getWordPos(word,w_trials(t)) == pos
-        w_cond(end+1) = w_trials(t).parameters.cond; %#ok<AGROW>
+        w_cond(end+1) = w_trials(t).settings.cond; %#ok<AGROW>
     end
 end
 
@@ -807,8 +820,8 @@ function pos = getWordPos(word,trial)
 
 global GLA_subject_data;
 pos = -1;
-for s = 1:GLA_subject_data.parameters.num_critical_stim
-    if strcmp(word,trial.parameters.trial_stim{s})
+for s = 1:GLA_subject_data.settings.num_critical_stim
+    if strcmp(word,trial.settings.trial_stim{s})
         pos = s;
         return;
     end
@@ -830,8 +843,8 @@ disp('Equal number of answers.');
 filter = {};
 global GLA_subject_data;
 % 2 - because match only
-exp_total = GLA_subject_data.parameters.num_trials / GLA_subject_data.parameters.num_conditions /...
-    GLA_subject_data.parameters.num_structure_types / 2;
+exp_total = GLA_subject_data.settings.num_trials / GLA_subject_data.settings.num_conditions /...
+    GLA_subject_data.settings.num_structure_types / 2;
 checkProbePositions(filter, exp_total);
 
 % Traded approximate matching of noun / verbs x phrase / list
@@ -854,8 +867,8 @@ list_counts = getProbePositionCounts(filter, exp_total);
 
 % Should be exactly the same position distribution for phrase and list
 global GLA_subject_data;
-for c = 1:GLA_subject_data.parameters.num_conditions
-    for p = 1:GLA_subject_data.parameters.num_critical_stim
+for c = 1:GLA_subject_data.settings.num_conditions
+    for p = 1:GLA_subject_data.settings.num_critical_stim
         if phrase_counts(c,p) ~= list_counts(c,p)
             disp('WARNING: Different number of probe positions.');
         end
@@ -867,17 +880,17 @@ function counts = getProbePositionCounts(filter, exp_total)
 
 % Check for equal number of probes in each position, for each condition
 global GLA_subject_data;
-counts = zeros(GLA_subject_data.parameters.num_conditions, ...
-    GLA_subject_data.parameters.num_critical_stim);
-for c = 1:GLA_subject_data.parameters.num_conditions
+counts = zeros(GLA_subject_data.settings.num_conditions, ...
+    GLA_subject_data.settings.num_critical_stim);
+for c = 1:GLA_subject_data.settings.num_conditions
     filter.answer = {'match'};
     filter.cond = {c};
 
     % Check each viable position
     if c == 5
-        pos = GLA_subject_data.parameters.num_critical_stim;
+        pos = GLA_subject_data.settings.num_critical_stim;
     else
-        pos = GLA_subject_data.parameters.num_critical_stim-c+1:GLA_subject_data.parameters.num_critical_stim;
+        pos = GLA_subject_data.settings.num_critical_stim-c+1:GLA_subject_data.settings.num_critical_stim;
     end
     for p = pos
         filter.p_pos = {p};
@@ -896,12 +909,12 @@ end
 function addProbePosition()
 
 global GLA_subject_data;
-for r = 1:GLA_subject_data.parameters.num_runs
-    for t = 1:GLA_subject_data.parameters.num_trials / GLA_subject_data.parameters.num_runs
-        if strcmp(GLA_subject_data.runs(r).trials(t).parameters.answer,'match')
-            for s = 1:GLA_subject_data.parameters.num_critical_stim
-                if strcmp(GLA_subject_data.runs(r).trials(t).parameters.probe,...
-                        GLA_subject_data.runs(r).trials(t).parameters.trial_stim{s})
+for r = 1:GLA_subject_data.settings.num_runs
+    for t = 1:GLA_subject_data.settings.num_trials / GLA_subject_data.settings.num_runs
+        if strcmp(GLA_subject_data.data.runs(r).trials(t).settings.answer,'match')
+            for s = 1:GLA_subject_data.settings.num_critical_stim
+                if strcmp(GLA_subject_data.data.runs(r).trials(t).settings.probe,...
+                        GLA_subject_data.data.runs(r).trials(t).settings.trial_stim{s})
                     p_pos = s;
                     break;
                 end
@@ -911,7 +924,7 @@ for r = 1:GLA_subject_data.parameters.num_runs
         end
         
         % Add to the global for later saving
-        GLA_subject_data.runs(r).trials(t).parameters.p_pos = p_pos;
+        GLA_subject_data.data.runs(r).trials(t).settings.p_pos = p_pos;
     end
 end
 
@@ -922,12 +935,12 @@ function checkProbeAnswers()
 %   noun / verb subdivisions. 
 %   * Same is true for the two nomatch types
 global GLA_subject_data;
-for c = 1:GLA_subject_data.parameters.num_conditions
+for c = 1:GLA_subject_data.settings.num_conditions
     for p_l = {'phrase','list'}
         for n_v = {'noun','verb'}
             
-            expected = GLA_subject_data.parameters.num_trials / GLA_subject_data.parameters.num_conditions /...
-                GLA_subject_data.parameters.num_structure_types / GLA_subject_data.parameters.num_phrase_types;
+            expected = GLA_subject_data.settings.num_trials / GLA_subject_data.settings.num_conditions /...
+                GLA_subject_data.settings.num_structure_types / GLA_subject_data.settings.num_phrase_types;
             filter.p_l = {p_l{1}};
             filter.cond = {c};
             filter.n_v = {n_v{1}};
@@ -938,7 +951,7 @@ for c = 1:GLA_subject_data.parameters.num_conditions
             end
             for a = {'nomatch_1','nomatch_2'}
                 filter.answer = {a{1}}; 
-                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.parameters.num_nomatch_types))
+                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.settings.num_nomatch_types))
                     error('Wrong number of nomatches');
                 end
             end
@@ -952,29 +965,29 @@ function checkTrialNumbers()
 % Check the basics
 global GLA_subject_data;
 disp('Checking trial counts...');
-if length(GLA_subject_data.runs) ~= GLA_subject_data.parameters.num_runs
+if length(GLA_subject_data.data.runs) ~= GLA_subject_data.settings.num_runs
     error('Wrong number of runs.');
 end
 
 % Check the conditions per run 
 for p_l = {'phrase','list'}
     for n_v = {'noun','verb'}
-        for c = 1:GLA_subject_data.parameters.num_conditions
+        for c = 1:GLA_subject_data.settings.num_conditions
             filter.p_l = {p_l{1}};
             filter.cond = {c};
             filter.n_v = {n_v{1}};
-            expected = GLA_subject_data.parameters.num_trials / GLA_subject_data.parameters.num_conditions /...
-                GLA_subject_data.parameters.num_structure_types / GLA_subject_data.parameters.num_phrase_types;
-            for r = 1:GLA_subject_data.parameters.num_runs
+            expected = GLA_subject_data.settings.num_trials / GLA_subject_data.settings.num_conditions /...
+                GLA_subject_data.settings.num_structure_types / GLA_subject_data.settings.num_phrase_types;
+            for r = 1:GLA_subject_data.settings.num_runs
                 filter.run_id = {r};
-                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.parameters.num_runs))
+                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.settings.num_runs))
                     error('Wrong number of trials.');
                 end
             end
             filter.run_id = {};
             for a_p = 1:2
                 filter.a_p = {a_p};
-                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.parameters.num_a_pos))
+                if (length(NM_FilterTrials(filter)) ~= (expected/GLA_subject_data.settings.num_a_pos))
                     error('Wrong number of trials.');
                 end
             end
@@ -990,21 +1003,21 @@ function checkStimuli()
 % Now check each trial description to make sure we got what we think we got
 disp('Checking the stimuli...');
 global GLA_subject_data;
-if length(GLA_subject_data.runs) ~= GLA_subject_data.parameters.num_runs
+if length(GLA_subject_data.data.runs) ~= GLA_subject_data.settings.num_runs
     error('Wrong number of runs.');
 end
-for r = 1:length(GLA_subject_data.runs)
+for r = 1:length(GLA_subject_data.data.runs)
     
     % And a quick check of the trial numbers
-    if length(GLA_subject_data.runs(r).trials) ~= ...
-            round(GLA_subject_data.parameters.num_trials / ...
-                GLA_subject_data.parameters.num_runs)
+    if length(GLA_subject_data.data.runs(r).trials) ~= ...
+            round(GLA_subject_data.settings.num_trials / ...
+                GLA_subject_data.settings.num_runs)
         error('Wrong number of trials.');
     end
     
     % Check and consolidate
-    for t = 1:length(GLA_subject_data.runs(r).trials)
-        checkTrialStimuli(GLA_subject_data.runs(r).trials(t).log_stims);
+    for t = 1:length(GLA_subject_data.data.runs(r).trials)
+        checkTrialStimuli(GLA_subject_data.data.runs(r).trials(t).log_stims);
     end
 end
 
@@ -1016,26 +1029,26 @@ disp('All stimuli as expected.');
 function consolidateAllTrialParameters()
 
 global GLA_subject_data;
-for r = 1:length(GLA_subject_data.runs)
+for r = 1:length(GLA_subject_data.data.runs)
     c_trials = {};
-    for t = 1:length(GLA_subject_data.runs(r).trials)
+    for t = 1:length(GLA_subject_data.data.runs(r).trials)
         c_trials = NM_AddStructToArray(...
-            consolidateTrialParameters(GLA_subject_data.runs(r).trials(t)), c_trials);
+            consolidateTrialParameters(GLA_subject_data.data.runs(r).trials(t)), c_trials);
     end
-    GLA_subject_data.runs(r).trials = c_trials;
+    GLA_subject_data.data.runs(r).trials = c_trials;
 end
 
 function trial = consolidateTrialParameters(trial)
 
-trial.parameters.run_id = trial.log_stims(1).run_id;
-trial.parameters.trial_num = trial.log_stims(1).trial_num;
-trial.parameters.n_v = trial.log_stims(1).n_v;
-trial.parameters.p_l = trial.log_stims(1).p_l;
-trial.parameters.cond = trial.log_stims(1).cond;
-trial.parameters.a_p = trial.log_stims(1).a_p;
-trial.parameters.answer = trial.log_stims(1).answer;
-trial.parameters.trial_stim = trial.log_stims(1).trial_stim;
-trial.parameters.probe = trial.log_stims(1).probe;
+trial.settings.run_id = trial.log_stims(1).run_id;
+trial.settings.trial_num = trial.log_stims(1).trial_num;
+trial.settings.n_v = trial.log_stims(1).n_v;
+trial.settings.p_l = trial.log_stims(1).p_l;
+trial.settings.cond = trial.log_stims(1).cond;
+trial.settings.a_p = trial.log_stims(1).a_p;
+trial.settings.answer = trial.log_stims(1).answer;
+trial.settings.trial_stim = trial.log_stims(1).trial_stim;
+trial.settings.probe = trial.log_stims(1).probe;
 
 
 
@@ -1138,10 +1151,10 @@ end
 function probe_exp = setMatchProbeExpectations(stims, cond)
 
 global GLA_subject_data;
-if cond < GLA_subject_data.parameters.num_conditions
-    probe_exp = {stims{GLA_subject_data.parameters.num_critical_stim-cond:GLA_subject_data.parameters.num_conditions}}; %#ok<*CCAT1>
+if cond < GLA_subject_data.settings.num_conditions
+    probe_exp = {stims{GLA_subject_data.settings.num_critical_stim-cond:GLA_subject_data.settings.num_conditions}}; %#ok<*CCAT1>
 else
-    probe_exp = {stims{GLA_subject_data.parameters.num_conditions}};
+    probe_exp = {stims{GLA_subject_data.settings.num_conditions}};
 end
 
 
@@ -1274,13 +1287,13 @@ if ~NM_IsEqualStim(stims(1).value,'+') || ~NM_IsEqualStim(stims(2).value,trial_s
 end
 
 % Then make sure all the rest are the same
-for s = 2:GLA_subject_data.parameters.num_all_stim
+for s = 2:GLA_subject_data.settings.num_all_stim
     if ~strcmp(n_v,stims(s).n_v) || ~strcmp(p_l,stims(s).p_l) || ...
             a_p ~= stims(s).a_p || cond ~= stims(s).cond || ...
             ~strcmp(answer,stims(s).answer)
         error('Trial description mismatch.');
     end
-    for i = 1:GLA_subject_data.parameters.num_critical_stim
+    for i = 1:GLA_subject_data.settings.num_critical_stim
         if ~strcmp(trial_stim{i},stims(s).trial_stim{i})
             error('Trial stim mismatch.');
         end
@@ -1312,13 +1325,13 @@ disp(['Parsing log file for ' GLA_subject '...']);
 NM_LoadSubjectData();
 
 % Load the runs
-GLA_subject_data.runs = parseRuns();
+GLA_subject_data.data.runs = parseRuns();
 
 % Then the localizer
-GLA_subject_data.localizer = parseLocalizer();
+GLA_subject_data.data.localizer = parseLocalizer();
 
 % And the baseline
-GLA_subject_data.baseline = parseBaseline();
+GLA_subject_data.data.baseline = parseBaseline();
 
 
 
@@ -1356,7 +1369,7 @@ function trials = parseRun(run_id)
 % Set the options for the run type
 global GLA_subject;
 disp(['Parsing run ' num2str(run_id) '...']);
-fid = fopen([NM_GetCurrentDataDirectory() '/logs/' ...
+fid = fopen([NM_GetRootDirectory() '/logs/' ...
     GLA_subject '/' GLA_subject '_log.txt']);
 line = findLine(fid,{{{'ANY'},{'ANY'},{'ANY'},{'ANY'},run_id,1}});
 

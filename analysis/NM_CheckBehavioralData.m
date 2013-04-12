@@ -1,9 +1,23 @@
-% Helper to parse and check the responses from the log files
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckBehavioralData.m
 %
-% NOTE: Already confirmed that the log accurately reflects what was
-%   displayed during the experiment. 
+% Notes:
+%   * Checks to make sure that the responses (in the NIP_data.txt) file are
+%       as expected. 
+%   * Adds a response field to each trial containing the subfields
+%       - rt: The response time relative to the probe
+%       - abs_rt: The response time relative to the beginning of the log
+%       - acc: 1 if the response is correct
+%       - key: The key the subject pressed
+%   * For timeouts, key = 'TIMEOUT' and rt / acc = -1
 %
-% This will then add the triggers to the trial structures
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_CheckBehavioralData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_CheckBehavioralData()
 
@@ -33,7 +47,7 @@ function checkLocalizer()
 
 % Might not have it
 global GLA_subject_data;
-if GLA_subject_data.parameters.num_localizer_blocks == 0
+if GLA_subject_data.settings.num_localizer_blocks == 0
     return;
 end
 
@@ -46,12 +60,12 @@ if ~strcmp(GL_response_data{1}{ttl_ind},'KEY') ||...
         ~strcmp(GL_response_data{2}{ttl_ind},'s') 
     error('Not the first TTL.');
 end
-GLA_subject_data.localizer.first_ttl = ...
+GLA_subject_data.data.localizer.first_ttl = ...
     str2double(GL_response_data{4}{ttl_ind});
 
 % TODO: Check for responses...
 ind = ttl_ind+1;
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
     ind = checkLocalizerBlockResponses(b,ind);
 end
 
@@ -61,18 +75,18 @@ function ind = checkLocalizerBlockResponses(b,ind)
 
 % Check each sentence
 global GLA_subject_data;
-for s = 1:length(GLA_subject_data.localizer.blocks(b).params.stims)
+for s = 1:length(GLA_subject_data.data.localizer.blocks(b).params.stims)
     ind = checkLocalizerSequenceResponses(b,s,ind);
 end
 
 % Make sure we got the right amount
-if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
-    if length(GLA_subject_data.localizer.blocks(b).params.catch_trial) ~= 4
+if ~isempty(GLA_subject_data.data.localizer.blocks(b).params.catch_trial)
+    if length(GLA_subject_data.data.localizer.blocks(b).params.catch_trial) ~= 4
         error('Response not found...');
     else
         disp(['Found localizer response in block ' num2str(b) ', sentence '...
-            num2str(GLA_subject_data.localizer.blocks(b).params.catch_trial{1}) ...
-            ' in ' num2str(1000*GLA_subject_data.localizer.blocks(b).params.catch_trial{3}) ' ms']);
+            num2str(GLA_subject_data.data.localizer.blocks(b).params.catch_trial{1}) ...
+            ' in ' num2str(1000*GLA_subject_data.data.localizer.blocks(b).params.catch_trial{3}) ' ms']);
     end
 end
 
@@ -82,23 +96,23 @@ function ind = checkLocalizerSequenceResponses(b,s,ind)
 % Check 
 global GLA_subject_data;
 global GL_response_data;
-for w = 1:length(GLA_subject_data.localizer.blocks(b).params.stims{s})
+for w = 1:length(GLA_subject_data.data.localizer.blocks(b).params.stims{s})
     
     % Check
     if ~strcmp(GL_response_data{7}{ind},'localizer') ||...
             ~strcmp(GL_response_data{8}{ind},num2str(b)) ||...
-            ~strcmp(GL_response_data{9}{ind},GLA_subject_data.localizer.blocks(b).params.condition)
+            ~strcmp(GL_response_data{9}{ind},GLA_subject_data.data.localizer.blocks(b).params.condition)
         error('Bad response');
     end
     
     % Looks like a bug(ish)...
-    if w < length(GLA_subject_data.localizer.blocks(b).params.stims{s})
+    if w < length(GLA_subject_data.data.localizer.blocks(b).params.stims{s})
         check_ind = w+1;
     else
         check_ind = w;
     end
     if ~NM_IsEqualStim(GL_response_data{10}{ind},...
-            GLA_subject_data.localizer.blocks(b).params.stims{s}{check_ind})
+            GLA_subject_data.data.localizer.blocks(b).params.stims{s}{check_ind})
         error('Bad response');
     end
     
@@ -112,22 +126,22 @@ for w = 1:length(GLA_subject_data.localizer.blocks(b).params.stims{s})
 end
 
 % See if there was supposed to be a response
-if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial) 
-    if GLA_subject_data.localizer.blocks(b).params.catch_trial{1} == s
+if ~isempty(GLA_subject_data.data.localizer.blocks(b).params.catch_trial) 
+    if GLA_subject_data.data.localizer.blocks(b).params.catch_trial{1} == s
 
         % Check
         if ~strcmp(GL_response_data{7}{ind},'localizer') ||...
                 ~strcmp(GL_response_data{8}{ind},num2str(b)) ||...
-                ~strcmp(GL_response_data{9}{ind},GLA_subject_data.localizer.blocks(b).params.condition) ||...
+                ~strcmp(GL_response_data{9}{ind},GLA_subject_data.data.localizer.blocks(b).params.condition) ||...
                 ~NM_IsEqualStim(GL_response_data{10}{ind},...
-                    GLA_subject_data.localizer.blocks(b).params.stims{s}{end})
+                    GLA_subject_data.data.localizer.blocks(b).params.stims{s}{end})
             error('Bad response');
         end
 
         % Should have the response here
         if ~strcmp(GL_response_data{5}{ind},'Text') ||...
                 ~strcmp(GL_response_data{6}{ind},...
-                GLA_subject_data.localizer.blocks(b).params.catch_trial{2})
+                GLA_subject_data.data.localizer.blocks(b).params.catch_trial{2})
             error('Bad catch trial');
         end
         
@@ -137,28 +151,26 @@ if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
         end
         
         % Check the response
-        if ~strcmp(GL_response_data{2}{ind},GLA_subject_data.parameters.localizer_response_key)
+        if ~strcmp(GL_response_data{2}{ind},GLA_subject_data.settings.localizer_response_key)
             error('Unexpected catch trial');
         end
         
         % Record the response
-        GLA_subject_data.localizer.blocks(b).params.catch_trial{3} = ...
+        GLA_subject_data.data.localizer.blocks(b).params.catch_trial{3} = ...
             str2double(GL_response_data{3}{ind});
         
         % Absolute time makes the design file easier
-        GLA_subject_data.localizer.blocks(b).params.catch_trial{4} = ...
+        GLA_subject_data.data.localizer.blocks(b).params.catch_trial{4} = ...
             str2double(GL_response_data{4}{ind});
         ind = ind+1;
     end
 end
 
 
-
-% Check that we got all the triggers
 function checkRuns()
 
 global GLA_subject_data;
-for r = 1:GLA_subject_data.parameters.num_runs
+for r = 1:GLA_subject_data.settings.num_runs
     checkRun(r); 
 end
 
@@ -189,15 +201,15 @@ if strcmp(GLA_rec_type,'fmri')
             ~strcmp(GL_response_data{2}{r_ind-1},'s')
         error('Not the ttl');
     end
-    GLA_subject_data.runs(run_id).first_ttl = str2double(GL_response_data{4}{r_ind-1});
+    GLA_subject_data.data.runs(run_id).first_ttl = str2double(GL_response_data{4}{r_ind-1});
 end
 
 % Now, check each and add
-for t = 1:length(GLA_subject_data.runs(run_id).trials)
-    GLA_subject_data.runs(run_id).trials(t).response = ...
-        checkResponse(GLA_subject_data.runs(run_id).trials(t).parameters,r_ind);
-    GLA_subject_data.runs(run_id).trials(t).parameters.acc = ...
-        GLA_subject_data.runs(run_id).trials(t).response.acc;
+for t = 1:length(GLA_subject_data.data.runs(run_id).trials)
+    GLA_subject_data.data.runs(run_id).trials(t).response = ...
+        checkResponse(GLA_subject_data.data.runs(run_id).trials(t).settings,r_ind);
+    GLA_subject_data.data.runs(run_id).trials(t).settings.acc = ...
+        GLA_subject_data.data.runs(run_id).trials(t).response.acc;
     r_ind = r_ind+1;
 end
 
@@ -252,7 +264,7 @@ if ~strcmp(GL_response_data{13}{r_ind},num2str(trial.answer))
     error('Bad response');
 end
 
-for s = 1:GLA_subject_data.parameters.num_critical_stim
+for s = 1:GLA_subject_data.settings.num_critical_stim
      if ~strcmp(NeuroMod_ConvertToUTF8(GL_response_data{13+s}{r_ind}),trial.trial_stim{s})
         error('Bad response');
     end
@@ -264,28 +276,28 @@ end
 % Add the accuracy
 switch response.key
     case '1'
-        if strcmp(GLA_subject_data.parameters.resp_type,'right')
+        if strcmp(GLA_subject_data.settings.resp_type,'right')
             resp = 0;
         else
             resp = 1;
         end
         
     case 'p'
-        if strcmp(GLA_subject_data.parameters.resp_type,'right')
+        if strcmp(GLA_subject_data.settings.resp_type,'right')
             resp = 0;
         else
             resp = 1;
         end
 
     case '6'
-        if strcmp(GLA_subject_data.parameters.resp_type,'right')
+        if strcmp(GLA_subject_data.settings.resp_type,'right')
             resp = 1;
         else
             resp = 0;
         end
 
     case 'y'
-        if strcmp(GLA_subject_data.parameters.resp_type,'right')
+        if strcmp(GLA_subject_data.settings.resp_type,'right')
             resp = 1;
         else
             resp = 0;
@@ -313,7 +325,7 @@ disp('Loading data...');
 
 global GL_response_data;
 global GLA_subject;
-fid = fopen([NM_GetCurrentDataDirectory() '/logs/' ...
+fid = fopen([NM_GetRootDirectory() '/logs/' ...
     GLA_subject '/' GLA_subject '_data.txt']);
 GL_response_data = textscan(fid,'%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s%s');
 fclose(fid);
