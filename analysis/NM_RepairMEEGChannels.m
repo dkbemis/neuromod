@@ -1,3 +1,20 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_RepairMEEGChannels.m
+%
+% Notes:
+%   * Repairs bad channels in the eeg data.
+%       - This is done by maxfilter for the meg data.
+%   * First, allows the user to reject channels using ft_rejectvisual
+%   * Then, uses ft_channelrepair to interpolate data for the bad channels.
+%   
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_RepairMEEGChannels()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_RepairMEEGChannels()
 
 % This is done by maxfilter for the meg data
@@ -32,7 +49,9 @@ global GLA_meeg_data;
 cfg = [];
 cfg.method = 'distance';
 cfg.neighbourdist = 4;
-cfg.elec = ft_read_sens('GSN-HydroCel-256.sfp'); % add electrode positions information from the sfp file because EGI is not directly supported by ft_repairchannel
+
+% add electrode positions information from the sfp file because EGI is not directly supported by ft_repairchannel
+cfg.elec = ft_read_sens('GSN-HydroCel-256.sfp'); 
 cfg.feedback = 'no';
 neighbours = ft_prepare_neighbours(cfg, GLA_meeg_data.data);
 

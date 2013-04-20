@@ -1,7 +1,17 @@
-% Helper to clean up the responses 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_PreprocessBehavioralData.m
 %
-% For now, just marks as outliers responses
-%   that are faster than 200ms or slower than 2500ms
+% Notes:
+%   * A wrapper function to run all of the steps necessary to create the
+%       behavioral data for analysis.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_PreprocessBehavioralData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_PreprocessBehavioralData()
 

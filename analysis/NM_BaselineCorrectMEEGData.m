@@ -1,7 +1,29 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_BaselineCorrectMEEGData.m
+%
+% Notes:
+%   * Baseline corrects meeg data using ft_preproc_baselinecorrect applied
+%       to each trial.
+%       - Uses the entire pretrigger portion of th epoch to correct
+%   
+% Inputs:
+%   * data (optional): The data (ft structure) to baseline correct.
+%       - If this is empty, we will load the GLA_meeg_data and baseline
+%       correct and set it.
+%   * should_save (optional): 1 to save the GLA_meeg_data. 
+%       - To be effective, needs to be called with data = [].
+%
+% Outputs:
+%   * data: The baseline corrected data
+%
+% Usage: 
+%   * data = NM_BaselineCorrectMEEGData(GLA_clean_meeg_data.data)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function data = NM_BaselineCorrectMEEGData(data, should_save)
 
-% Make sure we really mean it (i.e. can't just leave it out
-%   to set
 global GLA_meeg_data;
 set_data = 0;
 if isempty(data)

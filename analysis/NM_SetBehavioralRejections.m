@@ -1,3 +1,20 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SetBehavioralRejections.m
+%
+% Notes:
+%   * Sets the 'rejections' field of GLA_behavioral_data. For now, we will
+%       set outliers, timeouts, and errors.
+%   * IMPORTANT: This function does not actually reject the trials. This is
+%       done with NM_CreateCleanBehavioralData()
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SetBehavioralRejections()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_SetBehavioralRejections()
 
 % Nothing to do for the localizer

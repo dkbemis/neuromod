@@ -1,24 +1,34 @@
-% Check blinks at the blink triggers and eye position at the eye movements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SanityCheckETData.m
+%
+% Notes:
+%   * Checks to make sure that the eye tracking data is reasonable. 
+%       - Plots the average position of the eyes during left and right eye
+%           movement trials.
+%           - Also, the RT of the first saccade in each trial.
+%       - Prints the onset time of the blinks and what proportion of blink
+%           trials contained blinks.
+%   * Saves the results to NIP_ET_Sanity_Check.jpg
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SanityCheckETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_SanityCheckETData()
-
-% If we have it
-global GLA_subject_data;
-if ~GLA_subject_data.parameters.eye_tracker
-    return;
-end
 
 global GLA_subject;
 disp(['Sanity checking eye tracking data for ' GLA_subject '...']);
 
 % Make sure we're processed 
-disp('Loading data...');
 NM_LoadSubjectData({...
     {'et_right_eye_movements_data_preprocessed',1},...
     {'et_left_eye_movements_data_preprocessed',1},...
     {'et_blinks_data_preprocessed',1},...
     });
-disp('Done.');
 
 % Tally the blinks
 b_rts = getBlinkRTs();
@@ -35,14 +45,15 @@ title(['Eye tracker Sanity Check (' GLA_subject ')']);
 xlabel('x pos'); ylabel('y pos'); 
 a = axis(); axis([0 a(2)+a(1) a(3)+a(4) 0]); a = axis();
 legend('left','right');
-num_move = GLA_subject_data.parameters.num_eye_movements;
+global GLA_subject_data;
+num_move = GLA_subject_data.settings.num_eye_movements;
 text(mean(e_pos.left(:,1))-90, -(mean(e_pos.left(:,2))+50), ...
     [num2str(mean(e_rts.left)) 'ms (' num2str(100*length(e_pos.left)/num_move) '%)']);
 text(mean(e_pos.right(:,1))-90, -(mean(e_pos.right(:,2))-50), ...
     [num2str(mean(e_rts.right)) 'ms (' num2str(100*length(e_pos.right)/num_move) '%)']);
 text(.5*a(2)-100, .75*a(3), ['Blinks: ' num2str(mean(b_rts)) 'ms (' ...
-    num2str(100*length(b_rts)/GLA_subject_data.parameters.num_blinks) '%)']);
-saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/' GLA_subject '_ET_Sanity_Check.jpg'],'jpg');
+    num2str(100*length(b_rts)/GLA_subject_data.settings.num_blinks) '%)']);
+saveas(gcf,[NM_GetRootDirectory() '/analysis/' GLA_subject '/' GLA_subject '_ET_Sanity_Check.jpg'],'jpg');
 
 
 

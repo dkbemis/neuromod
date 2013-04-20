@@ -1,3 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_RemoveMEEGComponents.m
+%
+% Notes:
+%   * Allows the removal of artifacts through pca / ica decomposition.
+%   * First, decomposes using ft_componentanalysis and the 
+%       GLA_subject_data.settings.meeg_decomp_* variables:
+%       - decomp_type: How the meg data should be decomposed, either
+%           'combined' or 'separate'
+%           - The separate method decomposes three types, one for each
+%               sensory type.
+%           - The combined methods first normalizes the activity of all
+%               three sensor types separately, decomposes, removes the
+%               components, reconstructs, and then unnormalizes
+%           * NOTE: There seems to be no differene between these, and so
+%               you should probably use the combined method for simplicity.
+%           - This does not apply to EEG data, as there is only one sensor type.
+%       - decomp_method: The method given to ft_componentanalysis (pca, fastica, etc.)
+%       - decomp_comp_num: The number of components to decompose into
+%       - decomp_baseline_correct: 1 to baseline correct before decomposition.
+%   * Then, provides an interface, using ft_databrowser, to view the components
+%       - If possible, information about blinks is displayed, if the eye
+%           tracking data has been processed.
+%           - Shows the correlation of each component with the blinks
+%           - Shows when in the trials there are blinks.
+%   * The user can then select which components to reject.
+%       - These will then be saved in GLA_meeg_data.settings
+%   * These components are then removed from the data, which is
+%       reconstructed without them using ft_rejectcomponent
+%   * If the m/eeg blink data has been processed, the user can also select
+%       to use the same decomposition as for the blinks on the current data.
+%
+% Inputs:
+%   * should_save (optional): 0 not to save altered GLA_meeg_data
+%       - Defaults to save data with component(s) removed
+%
+% Outputs:
+% Usage: 
+%   * NM_RemoveMEEGComponents()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_RemoveMEEGComponents(should_save)
 
 % Make sure we've preprocessed the blinks, if we're not doing them now...
@@ -15,15 +58,15 @@ else
 end
 
 % Get the clean data
+global GLA_meeg_data;
 NM_CreateCleanMEEGData();
 
 % Set the options
-global GLA_meeg_data;
 global GLA_subject_data;
-GLA_meeg_data.settings.decomp_method = GLA_subject_data.parameters.meeg_decomp_method;
-GLA_meeg_data.settings.decomp_type = GLA_subject_data.parameters.meeg_decomp_type;  
-GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.parameters.meeg_decomp_comp_num;  
-GLA_meeg_data.settings.decomp_baseline_correct = GLA_subject_data.parameters.meeg_decomp_baseline_correct;  
+GLA_meeg_data.settings.decomp_method = GLA_subject_data.settings.meeg_decomp_method;
+GLA_meeg_data.settings.decomp_type = GLA_subject_data.settings.meeg_decomp_type;  
+GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.settings.meeg_decomp_comp_num;  
+GLA_meeg_data.settings.decomp_baseline_correct = GLA_subject_data.settings.meeg_decomp_baseline_correct;  
 
 % EEG is easier...
 if strcmp(GLA_meeg_type,'eeg')
@@ -132,7 +175,7 @@ GLA_meeg_data.settings.([type '_comp']).typechan = cfg.channel;
 
 % Browse...
 cfg = [];
-cfg.layout = NM_GetCurrentMEEGLayout();
+cfg.layout = NM_GetMEEGLayout();
 ft_databrowser(cfg, GLA_meeg_data.settings.([type '_comp']));
 
 % Display some helpful blink info
@@ -141,11 +184,13 @@ displayBlinkInfo(type);
 % Get the components to reject
 GLA_meeg_data.settings.([type '_comp_rej']) = [];
 while 1
-    rej = input('Comp to reject (enter to end): ');
+    rej = input('Comp to reject (enter to end): ','s');
     if isempty(rej)
         break;
     end
-    GLA_meeg_data.settings.([type '_comp_rej'])(end+1) = rej; 
+    if ~isnan(str2double(rej))
+        GLA_meeg_data.settings.([type '_comp_rej'])(end+1) = str2double(rej);
+    end
 end
 
 
@@ -248,13 +293,18 @@ end
 
 % Normalize
 for ch = 1:length(data.label)
-    switch NM_GetMEGChannelType(data.label{ch})
-        case 'grad_1'
-            ind = 1;
-        case 'grad_2'
-            ind = 2;
-        case 'mag'
-            ind = 3;
+    ind = -1;
+    types = NM_GetMEEGChannelTypes(data.label{ch});
+    for t = 1:length(types)
+        switch types{t}
+            case 'grad_1'
+                ind = 1;
+            case 'grad_2'
+                ind = 2;
+            case 'mag'
+                ind = 3;
+            otherwise
+        end
     end
     for t = 1:length(data.trial)
         data.trial{t}(ch,:) = ...
@@ -302,13 +352,19 @@ end
 limits = ones(3,2); 
 limits(:,1) = limits(:,1)*-1000; limits(:,2) = limits(:,2)*1000; 
 for ch = 1:length(data.label)
-    switch NM_GetMEGChannelType(data.label{ch})
-        case 'grad_1'
-            ind = 1;
-        case 'grad_2'
-            ind = 2;
-        case 'mag'
-            ind = 3;
+    ind = -1;
+    types = NM_GetMEEGChannelTypes(data.label{ch});
+    for t = 1:length(types)
+        switch types{t}
+            case 'grad_1'
+                ind = 1;
+            case 'grad_2'
+                ind = 2;
+            case 'mag'
+                ind = 3;
+            otherwise
+                % Try the next
+        end
     end
     limits(ind,1) = max(limits(ind,1),ch_limits(ch,1));
     limits(ind,2) = min(limits(ind,2),ch_limits(ch,2));
@@ -323,7 +379,7 @@ s_types = {'grad_1','grad_2','mag'};
 recon = {};
 global GLA_meeg_data;
 for s = 1:length(s_types)
-    s_channels.(s_types{s}) = NM_GetMEEGChannels(GLA_meeg_data.data, s_types{s});
+    s_channels.(s_types{s}) = NM_GetMEEGChannels(s_types{s}, GLA_meeg_data.data);
     recon.(s_types{s}) = computeRejections(s_types{s}, s_channels.(s_types{s}));
 end
 

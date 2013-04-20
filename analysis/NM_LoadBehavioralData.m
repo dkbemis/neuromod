@@ -1,3 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_LoadBehavioralData.m
+%
+% Notes:
+%   * "Loads" the current behavioral data in this order:
+%       - The current GLA_behavioral_data has the same subject and type
+%           as the current global settings.
+%       - Load from the current file if it exists
+%       - Creates the data from scracth
+%           - Will ask first, so as to not overwrite wrongly
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_LoadBehavioralData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_LoadBehavioralData()
 
 % Load up the subject data
@@ -12,7 +31,7 @@ if isempty(GLA_behavioral_data) || ...
         ~strcmp(NM_GetBehavioralDataType(),GLA_behavioral_data.settings.type) 
 
     % Load if we've made one
-    f_name = NM_GetCurrentBehavioralDataFilename();
+    f_name = NM_GetBehavioralDataFilename();
     if exist(f_name,'file')
         GLA_behavioral_data = load(f_name);
 

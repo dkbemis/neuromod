@@ -1,7 +1,32 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CreateCleanBehavioralData.m
+%
+% Notes:
+%   * Creates a "clean" version of the current behavioral data. This data is
+%       saved to GLA_clean_behavioral_data. This differs from the full data by:
+%       - Rejecting trials (determined by NM_SuggestRejections)
+%
+% Inputs:
+%   * cfg (optional): Can automatically set the rejections 
+%       - Useful for generating the same clean data repeatedly
+%
+% Outputs:
+% Usage: 
+%   * cfg = [];
+%   * cfg.rejections = [1 56 9];
+%   * NM_CreateCleanBehavioralData(cfg)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_CreateCleanBehavioralData(cfg)
 
 % Load the data
 NM_LoadBehavioralData();
+
+if ~exist('cfg','var')
+    cfg = [];
+end
 
 % Get suggested rejections if we're not given them
 clear global GLA_clean_behavioral_data;
@@ -13,7 +38,6 @@ else
 end
 
 % Set the rejected data
-% TODO: May need to clear full data for memory
 global GLA_behavioral_data;
 trials = 1:length(GLA_behavioral_data.data.cond);
 for r = 1:length(GLA_clean_behavioral_data.rejections)

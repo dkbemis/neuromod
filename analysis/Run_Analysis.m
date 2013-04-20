@@ -9,8 +9,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: Run_Analysis()
+% Usage: 
+%   * Run_Analysis()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -23,23 +23,15 @@ NM_InitializeGlobals();
 % Import the data...
 NM_ImportData()
 
-
 % Check the output to make sure everything looks good
 NM_CheckData();
 
-
-% Some preprocessing
-
+% Preprocess the data for analysis
 NM_PreprocessData();
-
-
-% Make sure our data is ok(ish)
 
 % This will preprocess the data that needs it and then perform simple
 %   sanity checks (e.g. visual responses, fmri localizer...)
-NM_PerformSanityChecks();
+NM_SanityCheckData();
 
-
-% Now, should run the analysis functions
-
+% Run the basis analysis functions
 NM_AnalyzeData();

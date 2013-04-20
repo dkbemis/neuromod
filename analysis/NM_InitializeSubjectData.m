@@ -137,6 +137,7 @@ GLA_subject_data.settings.num_noise = 0;
 
 
 % For the analysis
+GLA_subject_data.settings.fmri_do_slicetiming = 0;
 GLA_subject_data.settings.fmri_num_slices = 80;
 GLA_subject_data.settings.fmri_tr = 1.5;
 

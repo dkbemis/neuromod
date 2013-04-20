@@ -1,4 +1,17 @@
-% Check the visual responses to the critical words
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SanityCheckMEEGData.m
+%
+% Notes:
+%   * Checks to make sure that the m/eeg data looks ok. 
+%   * Creates and saves the averages for the 'blinks' and 'word_5' trials
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SanityCheckMEEGData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_SanityCheckMEEGData()
 
@@ -8,6 +21,7 @@ if ~strcmp(GLA_rec_type,'meeg')
     return;
 end
 
+% Make sure our data is ready
 global GLA_subject;
 global GLA_meeg_type;
 disp(['Sanity checking ' GLA_meeg_type ' data for ' GLA_subject '...']);
@@ -21,11 +35,8 @@ global GLA_trial_type;
 types = {'blinks','word_5'};
 for t = 1:length(types)
     GLA_trial_type = types{t};
-
-    % Save into the analysis folder
-    curr_dir = pwd;
-    cd([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ]);
-    NM_DisplayMEEGAverages([GLA_subject '_' types{t} '_' GLA_meeg_type '_averages']);
-    cd(curr_dir);
+    cfg = [];
+    cfg.save_name = [types{t} '_' GLA_meeg_type '_averages'];
+    NM_DisplayMEEGAverages(cfg);
 end
 

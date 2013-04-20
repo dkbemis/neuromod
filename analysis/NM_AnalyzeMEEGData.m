@@ -1,3 +1,18 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_AnalyzeMEEGData.m
+%
+% Notes:
+%   * Wrapper to run a quick analysis of the m/eeg data using
+%      NM_AnalyzeTimeCourse and NM_AnalyzeSingleValues.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_AnalyzeMEEGData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_AnalyzeMEEGData()
 
 % Make sure we're ready
@@ -7,9 +22,8 @@ NM_LoadSubjectData({...
     });
 
 cfg = [];
-cfg.data_type = 'meeg';
+cfg.data_type = GLA_meeg_type;
 cfg.trial_type = 'word_5';
-cfg.p_threshold = .05;
 cfg.time_windows = {[200 300] [300 500]};
 cfg.time_window_measure = 'rms';
 cfg.baseline_correct = 0;

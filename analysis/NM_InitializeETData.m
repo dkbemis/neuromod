@@ -1,3 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_InitializeETData.m
+%
+% Notes:
+%   * This creates the GLA_et_data structure, with two fields:
+%       - Settings: Not much - just subject and trial type
+%       - data: Holds the parsed data in the following fields:
+%           - cond: An array of conditions for each trial
+%           - x_pos: The timecourse of the x-position for each trial
+%           - y_pos: The timecourse of the y-position for each trial
+%           - pupil: The timecourse of the pupil size for each trial
+%           - blink_starts: An array of blink starts for each trial, with
+%               the following fields
+%               - time: The time of the blink start relative to the trigger 
+%           - blink_ends: An array of blink ends for each trial, with
+%               the following fields
+%               - time: The time of the blink end relative to the trigger 
+%               - length: The duration of the blink
+%               * NOTE: If the subject starts blinking before the start of
+%                   the trial or continues after, there will not be an even
+%                   number of these.
+%           - saccade_starts: An array of saccade starts for each trial, with
+%               the following fields
+%               - time: The time of the saccade start relative to the trigger 
+%           - saccade_ends: An array of saccade ends for each trial, with
+%               the following fields
+%               - time: The time of the saccade end relative to the trigger 
+%               - length: The duration of the saccade
+%               - x_start: The x-position the saccade began at
+%               - x_end: The x-position the saccade ended at
+%               - y_start: The y-position the saccade began at
+%               - y_end: The y-position the saccade ended at
+%               * NOTE: If the subject starts saccading before the start of
+%                   the trial or continues after, there will not be an even
+%                   number of these.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_InitializeETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_InitializeETData()
 
@@ -19,7 +62,7 @@ global GLA_subject_data;
 GLA_et_data.settings.subject = GLA_subject;
 GLA_et_data.settings.trial_type = GLA_trial_type;
 GLA_et_data.data.epoch = ...
-    GLA_subject_data.parameters.([GLA_trial_type '_epoch']);
+    GLA_subject_data.settings.([GLA_trial_type '_epoch']);
 GLA_et_data.data.x_pos = {};
 GLA_et_data.data.y_pos = {};
 GLA_et_data.data.pupil = {};
@@ -41,9 +84,7 @@ switch GLA_trial_type
         setRunData('baseline');
         
     case 'word_5'
-        % TTest
-%         for r = 1:length(GLA_subject_data.runs)
-        for r = 1:2
+        for r = 1:length(GLA_subject_data.data.runs)
             setRunData(['run_' num2str(r)]);
         end
         
@@ -62,7 +103,7 @@ function setRunData(run_id)
 global GLA_subject;
 global GL_et_run_data;
 disp(['Parsing ' run_id '...']);
-fid = fopen([NM_GetCurrentDataDirectory() '/eye_tracking_data/' ...
+fid = fopen([NM_GetRootDirectory() '/eye_tracking_data/' ...
     GLA_subject '/' GLA_subject '_' run_id '.asc']);
 GL_et_run_data = textscan(fid,'%s%s%s%s%s%s%s%s%s%s%s');
 fclose(fid);
@@ -93,7 +134,7 @@ t_time = NM_GetTrialTriggerTime(trial,'et');
 global GLA_subject_data;
 global GLA_trial_type;
 global GL_et_run_data;
-t_epoch = GLA_subject_data.parameters.([GLA_trial_type '_epoch']);
+t_epoch = GLA_subject_data.settings.([GLA_trial_type '_epoch']);
 ind = find(strcmp(GL_et_run_data{1},num2str(t_time+t_epoch(1))));
 
 % Grab the values

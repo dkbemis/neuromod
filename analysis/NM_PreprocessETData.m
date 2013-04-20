@@ -1,7 +1,17 @@
-% Helper to clean up the responses 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_PreprocessETData.m
 %
-% For now, just marks as outliers responses
-%   that are faster than 200ms or slower than 2500ms
+% Notes:
+%   * Preprocesses the eye tracking data so that it can be analyzed.
+%       - First initializes the data, then finds any potential rejections
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_PreprocessETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_PreprocessETData()
 
@@ -19,8 +29,7 @@ NM_InitializeETData()
 NM_SetETRejections();
 
 % Resave...
-disp('Saving...');
-NM_SaveSubjectData({{['et_' GLA_trial_type '_data_preprocessed'],1}});
 disp(['Eye tracking ' GLA_trial_type ' data preprocessed for ' GLA_subject '.']);
+NM_SaveSubjectData({{['et_' GLA_trial_type '_data_preprocessed'],1}});
 
 

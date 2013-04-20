@@ -1,15 +1,29 @@
-function NM_AnalyzeETData()
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_AnalyzeETData.m
+%
+% Notes:
+%   * Wrapper to run a quick analysis of the eye tracking data using
+%      NM_AnalyzeTimeCourse.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_AnalyzeETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+function NM_AnalyzeETData()
 
 % Make sure we're ready
 NM_LoadSubjectData({...
     {'et_word_5_data_preprocessed',1},...
     });
 
+% Set the config
 cfg = [];
 cfg.data_type = 'et';
 cfg.trial_type = 'word_5';
-cfg.p_threshold = .05;
 cfg.time_windows = {[200 300] [300 500]};
 cfg.time_window_measure = 'rms';
 

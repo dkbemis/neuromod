@@ -80,11 +80,14 @@ if ~isfield(GLA_subject_data.settings,param) || ...
     
     % see if we want to go anyway
     disp(['Parameter ' param ' not equal to ' num2str(val) '.']);
-    r = input('Set and continue? (y/n) ','s');
-    if strcmp(r,'y')
-        NM_SaveSubjectData({{param, val}});
-    else
-        error('Parameter not as expected.'); 
+    while 1
+        ch = input('Set and continue? (y/n) ','s');
+        if strcmp(ch,'y')
+            NM_SaveSubjectData({{param, val}});
+            break;
+        elseif strcmp(ch,'n')
+            error('Parameter not as expected.'); 
+        end
     end
 end
 

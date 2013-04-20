@@ -1,4 +1,18 @@
-% Check the localizer contrast
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SanityCheckfMRIData.m
+%
+% Notes:
+%   * Makes sure that the fMRI data looks good.
+%       - Plots the movement from both the localizer and experiment.
+%       - Analyzes the localizer data.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SanityCheckfMRIData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_SanityCheckfMRIData()
 
@@ -12,18 +26,16 @@ global GLA_subject;
 disp(['Sanity checking fMRI data for ' GLA_subject '...']);
 
 % Check movment for both
-global GLA_fmri_type; GLA_fmri_type = 'localizer';
-NM_CheckfMRIMovement();
-GLA_fmri_type = 'experiment';
-NM_CheckfMRIMovement();
-
+global GLA_fmri_type; 
+types = {'localizer','experiment'};
+for t = 1:length(types)
+    GLA_fmri_type = types{t}; %#ok<NASGU>
+    NM_CheckfMRIMovement();
+end
 
 % Analyze the localizer data
 GLA_fmri_type = 'localizer';
 NM_AnalyzefMRIData();
 
-% And save
-NM_SaveSubjectData({{'fmri_sanity_check',1}});
-disp(['Sanity check for fMRI data for ' GLA_subject ' done.']);
 
 

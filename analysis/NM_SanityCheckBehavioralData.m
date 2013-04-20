@@ -1,16 +1,31 @@
-% Check for high accuracy and low time outs
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SanityCheckBehavioralData.m
+%
+% Notes:
+%   * Quick sanity check of the behavioral data.
+%       - Plots a histogram of the rts.
+%       - Prints a summary of the errors / timouts on the graph
+%       - Saves the graph to NIP_Behavioral_Sanity_Check.jpg
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SanityCheckBehavioralData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_SanityCheckBehavioralData()
 
 global GLA_subject;
-disp(['Sanity behavioral data for ' GLA_subject '...']);
+disp(['Sanity checking behavioral data for ' GLA_subject '...']);
 
 % Make sure we're processed 
 disp('Loading data...');
 NM_LoadSubjectData({{'experiment_behavioral_data_preprocessed',1}});
 disp('Done.');
 
-% Load the data
+% Load the experiment data
 global GLA_fmri_type;
 curr_ft = GLA_fmri_type;
 GLA_fmri_type = 'experiment'; %#ok<NASGU>
@@ -41,7 +56,7 @@ text(pos(2),pos(4),['Accuracy: ' num2str(100*mean(good_accs)) '%']);
 text(pos(2),pos(4)-3,['Outliers: ' num2str(100*length(GLA_behavioral_data.data.outliers) / ...
     (length(GLA_behavioral_data.data.cond) - length(GLA_behavioral_data.data.timeouts))) '%']);
 text(pos(2),pos(4)-6,['Timeouts: ' num2str(100*length(GLA_behavioral_data.data.timeouts) / ...
-    GLA_subject_data.parameters.num_trials) '%']);
+    GLA_subject_data.settings.num_trials) '%']);
 
 % And check the localizer, if we have it
 global GLA_rec_type;
@@ -52,7 +67,7 @@ if strcmp(GLA_rec_type,'fmri')
 end
 
 % And save
-saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
+saveas(gcf,[NM_GetRootDirectory() '/analysis/' GLA_subject ...
     '/' GLA_subject '_Behavioral_Sanity_Check.jpg'],'jpg');
 
 
@@ -70,7 +85,7 @@ warn_time = 1.5;
 global GLA_subject_data;
 global GLA_behavioral_data;
 r_ctr = 1;
-for b = 1:GLA_subject_data.parameters.num_localizer_blocks
+for b = 1:GLA_subject_data.settings.num_localizer_blocks
     if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
         rt = GLA_behavioral_data.data.rt{r_ctr}; 
         if isempty(rt)

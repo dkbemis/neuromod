@@ -1,3 +1,27 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_InitializeBehavioralData.m
+%
+% Notes:
+%   * This function creates the behavioral data structure from the 
+%       GLA_subject_data, with the fields:
+%       - settings: Various parameters (name, type, outlier cutoffs)
+%       - data, with the fields:
+%           - acc: Cell array of accuracy per trial
+%               - 0: wrong; 1: right; []: timeout
+%           - rt: Cell array of reaction times per trial
+%               - []: timeout
+%           - cond: arrary of conditions per trial (1-10)
+%           - outliers: array of outlier trials
+%           - outliers: array of timeout trials
+%           - outliers: array of error trials
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_InitializeBehavioralData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_InitializeBehavioralData()
 
@@ -39,10 +63,10 @@ function initializeLocalizerData()
 global GLA_subject_data;
 global GLA_behavioral_data;
 GLA_behavioral_data.data.rt = {};
-for b = 1:length(GLA_subject_data.localizer.blocks)
-    if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
+for b = 1:length(GLA_subject_data.data.localizer.blocks)
+    if ~isempty(GLA_subject_data.data.localizer.blocks(b).params.catch_trial)
         GLA_behavioral_data.data.rt{end+1} = ...
-            GLA_subject_data.localizer.blocks(b).params.catch_trial{3};
+            GLA_subject_data.data.localizer.blocks(b).params.catch_trial{3};
     end
 end
 
@@ -58,13 +82,13 @@ GLA_behavioral_data.data.outliers = [];
 GLA_behavioral_data.data.timeouts = [];
 GLA_behavioral_data.data.errors = [];
 GLA_behavioral_data.settings.min_resp_time = ...
-    GLA_subject_data.parameters.min_resp_time;
+    GLA_subject_data.settings.min_resp_time;
 GLA_behavioral_data.settings.max_resp_time = ...
-    GLA_subject_data.parameters.max_resp_time;
+    GLA_subject_data.settings.max_resp_time;
 
 % Set each trial
-for r = 1:GLA_subject_data.parameters.num_runs
-    for t = 1:length(GLA_subject_data.runs(r).trials)
+for r = 1:GLA_subject_data.settings.num_runs
+    for t = 1:length(GLA_subject_data.data.runs(r).trials)
         [GLA_behavioral_data.data.acc{end+1}...
             GLA_behavioral_data.data.rt{end+1}...
             GLA_behavioral_data.data.cond(end+1)] = getTrialData(t,r);
@@ -91,18 +115,18 @@ function [acc rt cond] = getTrialData(t,r)
        
 % Might be a timeout
 global GLA_subject_data;
-if GLA_subject_data.runs(r).trials(t).response.rt == -1
+if GLA_subject_data.data.runs(r).trials(t).response.rt == -1
     acc = [];
     rt = [];
 
 % Otherwise, set the rt and accuracy
 else
-    acc = GLA_subject_data.runs(r).trials(t).response.acc;
-    rt = GLA_subject_data.runs(r).trials(t).response.rt;
+    acc = GLA_subject_data.data.runs(r).trials(t).response.acc;
+    rt = GLA_subject_data.data.runs(r).trials(t).response.rt;
 end
 
 % And set the condition
-cond = GLA_subject_data.runs(r).trials(t).parameters.cond;
-if strcmp(GLA_subject_data.runs(1).trials(t).parameters.p_l,'list')
+cond = GLA_subject_data.data.runs(r).trials(t).settings.cond;
+if strcmp(GLA_subject_data.data.runs(1).trials(t).settings.p_l,'list')
     cond = cond + 5;
 end

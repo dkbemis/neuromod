@@ -1,9 +1,30 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SuggestRejections.m
+%
+% Notes:
+%   * This function returns a set of trials to reject for the current
+%       analysis.
+%   * For each data type, it will load the saved data and ask the user if
+%       they would like to use any of the rejections saved in the
+%       rejections field of the data.
+%   * The chosen rejctions will then be saved for future reusing ease.
+%
+% Inputs:
+% Outputs:
+%   * rejections: The trials the user has decided to reject.
+%
+% Usage: 
+%   * rejections = NM_SuggestRejections()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function rejections = NM_SuggestRejections()
 
 % First check if we have some saved to use
 global GLA_subject;
 global GLA_trial_type;
-rej_file_name = [NM_GetCurrentDataDirectory() '/analysis/' GLA_subject ...
+rej_file_name = [NM_GetRootDirectory() '/analysis/' GLA_subject ...
     '/' GLA_subject '_' GLA_trial_type '_rejections.mat'];
 if exist(rej_file_name,'file')
     while 1
@@ -15,7 +36,6 @@ if exist(rej_file_name,'file')
             break;
         end
     end
-
 end
 
 % If not, search for any we might have set
@@ -34,37 +54,44 @@ function rej_to_use = getDataRejections(r_type, rej_to_use)
 
 % Load the rejections, if we have them
 global GLA_meeg_type;
+global GLA_trial_type;
 switch r_type
     case 'behavioral'
-        if ~exist(NM_GetCurrentBehavioralDataFilename(),'file')
+        
+        % Nothing to do for blinks
+        if strcmp(GLA_trial_type,'blinks')
             return;
         end
-        load(NM_GetCurrentBehavioralDataFilename(),'rejections');
+        
+        if ~exist(NM_GetBehavioralDataFilename(),'file')
+            return;
+        end
+        load(NM_GetBehavioralDataFilename(),'rejections');
 
     case 'et'
-        if ~exist(NM_GetCurrentETDataFilename(),'file')
+        if ~exist(NM_GetETDataFilename(),'file')
             return;
         end
-        load(NM_GetCurrentETDataFilename(),'rejections');
+        load(NM_GetETDataFilename(),'rejections');
 
     case 'meg'
         curr_meeg_type = GLA_meeg_type;
         GLA_meeg_type = 'meg'; %#ok<NASGU>
-        if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
+        if ~exist(NM_GetMEEGDataFilename(),'file')
             GLA_meeg_type = curr_meeg_type;
             return;
         end
-        load(NM_GetCurrentMEEGDataFilename(),'rejections');
+        load(NM_GetMEEGDataFilename(),'rejections');
         GLA_meeg_type = curr_meeg_type;
         
     case 'eeg'
         curr_meeg_type = GLA_meeg_type;
         GLA_meeg_type = 'eeg'; %#ok<NASGU>
-        if ~exist(NM_GetCurrentMEEGDataFilename(),'file')
+        if ~exist(NM_GetMEEGDataFilename(),'file')
             GLA_meeg_type = curr_meeg_type;
             return;
         end
-        load(NM_GetCurrentMEEGDataFilename(),'rejections');
+        load(NM_GetMEEGDataFilename(),'rejections');
         GLA_meeg_type = curr_meeg_type;
 
     otherwise

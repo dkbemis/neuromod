@@ -1,3 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SetMEEGRejections.m
+%
+% Notes:
+%   * Sets potential trial rejections for the current meeg data using one
+%       of two methods (set in GLA_subject_data.settings.meeg_rej_type)
+%       - raw: Uses ft_databrowser and allows inspection of the data
+%       - summary: Uses ft_rejectvisual to present trials for rejection
+%   * Stores the rejected trials in GLA_meeg_data.rejections
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SetMEEGRejections()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_SetMEEGRejections()
 
 % Load the data
@@ -10,16 +28,21 @@ NM_LoadMEEGData();
 % Use whichever type we set
 global GLA_subject_data;
 global GLA_meeg_data;
-GLA_meeg_data.rejections = {};
-GLA_meeg_data.rejections(1).type = ...
-    GLA_subject_data.parameters.meeg_rej_type;
-switch GLA_subject_data.parameters.meeg_rej_type
+if ~isfield(GLA_meeg_data, 'rejections')
+    GLA_meeg_data.rejections = {};
+    GLA_meeg_data.rejections(1).type = ...
+        GLA_subject_data.settings.meeg_rej_type;
+else
+    GLA_meeg_data.rejections(end+1).type = ...
+        GLA_subject_data.settings.meeg_rej_type;    
+end
+switch GLA_subject_data.settings.meeg_rej_type
     case 'raw'
-        GLA_meeg_data.rejections(1).trials = ...
+        GLA_meeg_data.rejections(end).trials = ...
             rejectArtifacts_Raw();
         
     case 'summary'
-        GLA_meeg_data.rejections(1).trials = ...
+        GLA_meeg_data.rejections(end).trials = ...
             rejectArtifacts_Summary();
         
     otherwise
@@ -60,7 +83,6 @@ rej = findTrialRejections(tmp_data.cfg.artifact);
 
 
 function r_trials = findTrialRejections(rejections)
-
 
 % Create sample data, if not there
 % NOTE: It gets deleted when we append runs

@@ -1,3 +1,20 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_LoadMEEGData.m
+%
+% Notes:
+%   * Loads the meeg data for the current analysis.
+%       - Will use the current GLA_meeg_data, if it matches the settings.
+%       - Otherwise, will load the data from the .mat file if it exists.
+%       - Otherwise, will initialize the data, if we want.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_LoadMEEGData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_LoadMEEGData()
 
 global GLA_subject;
@@ -13,7 +30,7 @@ if isempty(GLA_meeg_data) || ~strcmp(GLA_subject,GLA_meeg_data.settings.subject)
         ~strcmp(GLA_meeg_type,GLA_meeg_data.settings.meeg_type)
     
     % Load if we've made one
-    f_name = NM_GetCurrentMEEGDataFilename();
+    f_name = NM_GetMEEGDataFilename();
     if exist(f_name,'file')
         GLA_meeg_data = load(f_name);
 

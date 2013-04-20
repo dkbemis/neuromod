@@ -1,3 +1,23 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SetETRejections.m
+%
+% Notes:
+%   * This function identifies potential trials to reject based on the eye
+%       tracking data. These are stored in GLA_et_data.rejections in the
+%       following fields:
+%       - blink: Any trial with a blink in it.
+%       - saccade: Any trial with a saccade in it.
+%   * For the 'blinks' trial type, these criteria are reversed. (I.e. only
+%       trials without blinks or saccades are suggested as rejections).
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SetETRejections()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_SetETRejections()
 
 % Load the data

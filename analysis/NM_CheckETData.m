@@ -28,7 +28,7 @@
 function NM_CheckETData()
 
 % Make sure the log has been parsed
-NM_LoadSubjectData({{'log_parsed',1}});
+NM_LoadSubjectData({{'log_checked',1}});
 
 % Make sure this is useful
 global GLA_subject_data;

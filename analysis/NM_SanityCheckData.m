@@ -1,5 +1,18 @@
-% Checks the various data...
-function NM_PerformSanityChecks()
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_SanityCheckData.m
+%
+% Notes:
+%   * A high-level wrapper that performs sanity checks on all of the data
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_SanityCheckData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function NM_SanityCheckData()
 
 % This looks for high accuracy 
 NM_SanityCheckBehavioralData();

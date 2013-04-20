@@ -1,3 +1,21 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_LoadETData.m
+%
+% Notes:
+%   * This function sets the GLA_et_data variable
+%       - It will use the current data if it matches the current
+%           GLA_subject and GLA_trial_type variables.
+%       - Otherwise it will load any saved data.
+%       - Finally, it will ask to create the data if none is found.
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_LoadETData()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_LoadETData()
 
 global GLA_subject;
@@ -11,11 +29,11 @@ if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) ||.
         ~strcmp(GLA_trial_type,GLA_et_data.settings.trial_type)
 
     % Load if we've made one
-    f_name = NM_GetCurrentETDataFilename();
+    f_name = NM_GetETDataFilename();
     if exist(f_name,'file')
         GLA_et_data = load(f_name);
 
-    % "preprocess" the raw data to load as a single long trial
+    % Otherwise, make sure we want to create it
     else
         while 1
             ch = input([GLA_trial_type ' et data for '...

@@ -1,27 +1,50 @@
-% Check the localizer contrast
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_AnalyzefMRIData.m
+%
+% Notes:
+%   * Runs an analysis of the fmri data.
+%       - First creates and runs the design batch (estimation)
+%       - Then, creates and runs the contrast batch
+%   * To add contrasts, change the create*Contrasts() functions
+%   * Could use more options (through the cfg input) 
+%       - e.g. different response functions, design files, etc.
+%
+% Inputs:
+%   * cfg (optional): The configurations for the analysis. Fields:
+%       - smooth: Set to 0 to not smooth.
+%           - Default is to smooth and is saved in the 'normal' analysis folder.
+%
+% Outputs:
+% Usage: 
+%   * cfg = [];
+%   * NM_AnalyzefMRIData(cfg)
+%
+% Author: Douglas K. Bemis
+%   - Adpated from Christophe Pallier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function NM_AnalyzefMRIData()
+function NM_AnalyzefMRIData(cfg)
+
+% Default
+if ~exist('cfg','var')
+    cfg = [];
+end
 
 global GLA_fmri_type;
 global GLA_subject;
 disp(['Analyzing ' GLA_fmri_type ' fMRI data for ' GLA_subject '...']);
-
-% Make sure we're processed 
-disp('Loading subject data...');
 NM_LoadSubjectData({{['fmri_' GLA_fmri_type '_data_preprocessed'],1}});
-disp('Done.');
 
 % Setup
-setOptions();
+setOptions(cfg);
 
 % Run the design batch 
-runDesignBatch();
+runDesignBatch(cfg);
 
 % Create the contasts
 runContrastsBatch();
-    
-% Save
-NM_SaveSubjectData({{['fmri_' GLA_fmri_type '_analyzed'],1}});
+
+% And signal
 disp(['Analyzing ' GLA_fmri_type ' fMRI data for ' GLA_subject '... Done.']);
 
 
@@ -69,7 +92,7 @@ conditions(:,1:2:2*num_conditions) = eye(num_conditions);
 
 % Add the movement regressors
 conditions = repmat([conditions zeros(num_conditions, 6)], ...
-    GLA_subject_data.parameters.num_runs);
+    GLA_subject_data.settings.num_runs);
 
 % Set the conditions
 for c = 1:num_conditions
@@ -102,7 +125,7 @@ function contrasts = createLocalizerContrasts()
 
 % Check for no responses
 global GLA_subject_data;
-if GLA_subject_data.parameters.num_localizer_catch_trials == 0
+if GLA_subject_data.settings.num_localizer_catch_trials == 0
     nconditions = 2;
 else
     nconditions = 3;
@@ -114,7 +137,7 @@ conditions(:,1:2:2*nconditions) = eye(nconditions);
 sentence = conditions(1,:);
 pseudo = conditions(2,:);
 
-if GLA_subject_data.parameters.num_localizer_catch_trials > 0
+if GLA_subject_data.settings.num_localizer_catch_trials > 0
     response = conditions(3,:);
 end
 
@@ -134,11 +157,11 @@ con.([type 'con']).convec = matrix;
 con.([type 'con']).sessrep = 'none';
 
 
-function runDesignBatch()
+function runDesignBatch(cfg)
     
 % Create the batch
 disp('Creating batch...');
-matlabbatch{1}.spm.stats = createSpecificationBatch();  %#ok<*NASGU>
+matlabbatch{1}.spm.stats = createSpecificationBatch(cfg);  %#ok<*NASGU>
 matlabbatch{2}.spm.stats = createEstimationBatch();
 disp('Done.');
 
@@ -155,15 +178,14 @@ NM_RunSPMBatch(mat_file);
 
 
 
-function batch = createSpecificationBatch()
+function batch = createSpecificationBatch(cfg)
 
-global GL_options;
 global GLA_fmri_type;
 global GL_analysis_dir;
 global GLA_subject_data;
 batch.fmri_spec.dir{1} = GL_analysis_dir;
 batch.fmri_spec.timing.units = 'secs';
-batch.fmri_spec.timing.RT = GLA_subject_data.parameters.fmri_tr;
+batch.fmri_spec.timing.RT = GLA_subject_data.settings.fmri_tr;
 
 % Not sure...
 batch.fmri_spec.timing.fmri_t = 16;
@@ -173,25 +195,24 @@ batch.fmri_spec.timing.fmri_t0 = 1;
 if strcmp(GLA_fmri_type,'localizer')
     num_runs = 1;
 else
-    num_runs = GLA_subject_data.parameters.num_runs;
+    num_runs = GLA_subject_data.settings.num_runs;
 end
 global GLA_subject;
-% TODO: Get the filter from settings so can adapt to changes
 for r = 1:num_runs
     
     % Adjust for localizer name
     if strcmp(GLA_fmri_type,'localizer')
         filter = ['w' GLA_subject '_loc'];
-        batch.fmri_spec.sess(r).multi{1} = [NM_GetCurrentDataDirectory() '/fmri_data/'...
+        batch.fmri_spec.sess(r).multi{1} = [NM_GetRootDirectory() '/fmri_data/'...
             GLA_subject '/localizer/' GLA_subject '_localizer_design.mat'];
     else
         filter = ['w' GLA_subject '_run_' num2str(r)];
-        batch.fmri_spec.sess(r).multi{1} = [NM_GetCurrentDataDirectory() '/fmri_data/'...
+        batch.fmri_spec.sess(r).multi{1} = [NM_GetRootDirectory() '/fmri_data/'...
             GLA_subject '/experiment/' GLA_subject '_run_' num2str(r) '_design.mat'];
     end
     
     % Allow smoothed and unsmoothed version
-    if GL_options.smoothed
+    if ~isfield(cfg,'smooth') || cfg.smooth
         filter = ['s' filter]; %#ok<AGROW>
     end
 
@@ -239,23 +260,19 @@ batch.fmri_est.spmmat(1).src_exbranch = substruct('.','val', '{}',{1}, '.','val'
 batch.fmri_est.spmmat(1).src_output = substruct('.','spmmat');
 batch.fmri_est.method.Classical = 1;
 
-function setOptions()
+function setOptions(cfg)
 
 global GLA_subject;
 global GLA_fmri_type;
 global GL_analysis_dir;
-global GL_options;
-
-% TODO: add in as argument
-GL_options.smoothed = 1;
 
 % Set the directory by type
-if GL_options.smoothed
-    GL_analysis_dir = [NM_GetCurrentDataDirectory() '/analysis/' ...
-        GLA_subject '/' GLA_fmri_type '/normal'];
-else
-    GL_analysis_dir = [NM_GetCurrentDataDirectory() '/analysis/' ...
+if isfield(cfg,'smooth') && cfg.smooth == 0
+    GL_analysis_dir = [NM_GetRootDirectory() '/analysis/' ...
         GLA_subject '/' GLA_fmri_type '/unsmoothed'];    
+else
+    GL_analysis_dir = [NM_GetRootDirectory() '/analysis/' ...
+        GLA_subject '/' GLA_fmri_type '/normal'];
 end
 [success message message_id] = mkdir(GL_analysis_dir); %#ok<ASGLU>
 

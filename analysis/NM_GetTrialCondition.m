@@ -1,3 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_GetTrialCondition.m
+%
+% Notes:
+%   * Helper to get a condition number from a trial structure 
+%       - For baseline, will just give a contant number
+%       - For run trials, we'll get back 1-10
+%           - 1-5: Phrases; 6-10: Lists
+%
+% Inputs:
+%   * trial: A trial from GLA_subject_data
+%
+% Outputs:
+%   * The condition of that trial
+%
+% Usage: 
+%   * cond = NM_GetTrialCondition(GLA_subject_data.data.runs(1).trials(1))
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function cond = NM_GetTrialCondition(trial)
 
 global GLA_trial_type;

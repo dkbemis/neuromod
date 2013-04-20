@@ -1,7 +1,38 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CreateCleanETData.m
+%
+% Notes:
+%   * Creates a "clean" version of the current eye tracker data. This data is
+%       saved to GLA_clean_et_data. This differs from the full data by:
+%       - Rejecting trials (determined by NM_SuggestRejections)
+%
+% Inputs:
+%   * cfg (optional): Can automatically set the rejections 
+%       - Useful for generating the same clean data repeatedly
+%
+% Outputs:
+% Usage: 
+%   * cfg = [];
+%   * cfg.rejections = [1 56 9];
+%   * NM_CreateCleanETData(cfg)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function NM_CreateCleanETData(cfg)
+
+% Should be preprocessed
+global GLA_trial_type;
+NM_LoadSubjectData({...
+    {['et_' GLA_trial_type '_data_preprocessed'],1},...
+    });
 
 % Load the data
 NM_LoadETData();
+
+if ~exist('cfg','var')
+    cfg = [];
+end
 
 % Get suggested rejections if we're not given them
 clear global GLA_clean_et_data;

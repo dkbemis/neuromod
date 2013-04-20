@@ -1,3 +1,24 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_GetTrialTriggerTime.m
+%
+% Notes:
+%   * A quick helper to grab the trigger time for a given trial and trigger type.
+%   * The trigger in the trial is determined by the current trial type (GLA_trial_type)
+%
+% Inputs:
+%   * trial: The trial to get the trigger from
+%       - i.e. a trial structure from the GLA_subject_data
+%   * type: The type of trigger we want
+%       - e.g. 'log','meg','et','eeg'
+%
+% Outputs:
+%
+% Usage: 
+%   * t_time = NM_GetTrialTriggerTime(trials(1),'meg')
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function t_time = NM_GetTrialTriggerTime(trial, type)
 
 global GLA_trial_type;

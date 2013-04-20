@@ -1,3 +1,26 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_RereferenceEEGData.m
+%
+% Notes:
+%   * Rereferences eeg data to the mean 
+%       - Should be called after trials are rejected
+%   
+% Inputs:
+%   * data (optional): The data (ft structure) to rereference.
+%       - If this is empty, we will load the GLA_meeg_data and rereference
+%           and set it.
+%   * should_save (optional): 1 to save the GLA_meeg_data. 
+%       - To be effective, needs to be called with data = [].
+%
+% Outputs:
+%   * data: The rereferenced data
+%
+% Usage: 
+%   * data = NM_RereferenceEEGData(GLA_clean_meeg_data.data)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function data = NM_RereferenceEEGData(data, should_save)
 
 % Make sure we're eeg

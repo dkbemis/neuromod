@@ -490,6 +490,7 @@ for t = 1:length(b_types)
     GLA_subject_data.data.baseline.(b_types{t}) = setRunDiodes(...
         'baseline', GLA_subject_data.data.baseline.(b_types{t}));
 end
+GLA_subject_data.settings.diodes = 1;
 disp('Diodes set.');
 
 

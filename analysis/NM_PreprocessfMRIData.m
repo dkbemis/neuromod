@@ -1,5 +1,23 @@
-% This function creates averages per condition for the MEG data after
-% appropriate preprocessing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_PreprocessfMRIData.m
+%
+% Notes:
+%   * Preprocesses the fmri data.
+%       - Needs to be run for both the localizer and experiment.
+%   * Creates the design files first
+%   * Then, creates the spm batch structure (adapted from Pallier scripts)
+%   * Saves and script in the subject fmri_data folder
+%   * Uses spm_jobman to run the batch then
+%   * For now, no slice timing is used because of the acquisition protocol
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_PreprocessfMRIData()
+%
+% Author: Douglas K. Bemis
+%   - Adapted from Christophe Pallier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_PreprocessfMRIData()
 
@@ -8,16 +26,24 @@ if ~strcmp(GLA_rec_type,'fmri')
     return;
 end
 
-% Load up the data
+% Check the processing 
 disp('Loading data...');
-NM_LoadSubjectData({{'fmri_data_imported',1},{'log_checked',1}});
+NM_LoadSubjectData({...
+    {'fmri_data_imported',1},...
+    {'log_checked',1}...
+    });
 disp('Done.');
 
 % Create the design files
 NM_CreateDesignFiles();
 
-% We'll do these
-slicetiming_stage = 0; % NOTE: Set to 1 to use...
+% Set the stages to do
+global GLA_subject_data;
+if GLA_subject_data.settings.fmri_do_slicetiming
+    slicetiming_stage = 1; 
+else
+    slicetiming_stage = 0;
+end
 realign_stage = slicetiming_stage+1;
 coregister_stage = realign_stage+1;
 segmentation_stage = coregister_stage+1;
@@ -39,7 +65,7 @@ matlabbatch{smoothing_stage}.spm = createSmoothingBatch(normalization_stage);
 % Then save the batch
 global GLA_fmri_type;
 global GLA_subject;
-mat_file = [NM_GetCurrentDataDirectory() '/fmri_data/' GLA_subject ...
+mat_file = [NM_GetRootDirectory() '/fmri_data/' GLA_subject ...
     '/' GLA_fmri_type '/' GLA_subject '_preprocess_batch.mat'];
 save(mat_file,'matlabbatch');
 disp('Done.');
@@ -62,11 +88,11 @@ function batch = createSliceTimingBatch()
 % Set the scans
 global GLA_subject_data;
 batch.temporal.st.scans = getScanFiles();
-batch.temporal.st.nslices = GLA_subject_data.parameters.fmri_num_slices;
-batch.temporal.st.tr = GLA_subject_data.parameters.fmri_tr;
-batch.temporal.st.ta = GLA_subject_data.parameters.fmri_ta;
-batch.temporal.st.so = GLA_subject_data.parameters.fmri_slice_order;
-batch.temporal.st.refslice = GLA_subject_data.parameters.fmri_ref_slice;
+batch.temporal.st.nslices = GLA_subject_data.settings.fmri_num_slices;
+batch.temporal.st.tr = GLA_subject_data.settings.fmri_tr;
+batch.temporal.st.ta = GLA_subject_data.settings.fmri_ta;
+batch.temporal.st.so = GLA_subject_data.settings.fmri_slice_order;
+batch.temporal.st.refslice = GLA_subject_data.settings.fmri_ref_slice;
 batch.temporal.st.prefix = 'a';
 
 
@@ -246,39 +272,10 @@ for r = 1:getNumRuns()
 end
 
 global GLA_subject_data;
-% % Does not work. Only smoothes one...
-% % Per run parameters
-% for r = 1:getNumRuns()
-% 
-%     % DIFF: This section is not in the loop in the other script
-%     batch.spatial.normalise.write.subj(r).matname(1) = cfg_dep;
-%     batch.spatial.normalise.write.subj(r).matname(1).tname = 'Parameter File';
-%     batch.spatial.normalise.write.subj(r).matname(1).tgt_spec{1}(1).name = 'filter';
-%     batch.spatial.normalise.write.subj(r).matname(1).tgt_spec{1}(1).value = 'mat';
-%     batch.spatial.normalise.write.subj(r).matname(1).tgt_spec{1}(2).name = 'strtype';
-%     batch.spatial.normalise.write.subj(r).matname(1).tgt_spec{1}(2).value = 'e';
-%     batch.spatial.normalise.write.subj(r).matname(1).sname = 'Segment: Norm Params Subj->MNI';
-%     batch.spatial.normalise.write.subj(r).matname(1).src_exbranch =...
-%         substruct('.','val', '{}',{segmentation_stage}, '.','val', '{}',{1}, '.','val', '{}',{1});
-%     batch.spatial.normalise.write.subj(r).matname(1).src_output = substruct('()',{1}, '.','snfile', '()',{':'});
-% 
-%     batch.spatial.normalise.write.subj(r).resample(1) = cfg_dep;
-%     batch.spatial.normalise.write.subj(r).resample(1).tname = 'Images to Write';
-%     batch.spatial.normalise.write.subj(r).resample(1).tgt_spec{1}(1).name = 'filter';
-%     batch.spatial.normalise.write.subj(r).resample(1).tgt_spec{1}(1).value = 'image';
-%     batch.spatial.normalise.write.subj(r).resample(1).tgt_spec{1}(2).name = 'strtype';
-%     batch.spatial.normalise.write.subj(r).resample(1).tgt_spec{1}(2).value = 'e';
-%     batch.spatial.normalise.write.subj(r).resample(1).sname = ...
-%         sprintf('Realign: Estimate & Reslice: Realigned Images (Sess %d)',r);
-%     batch.spatial.normalise.write.subj(r).resample(1).src_exbranch = ...
-%         substruct('.','val', '{}',{realign_stage}, '.','val', '{}',{1}, '.','val', '{}',{1}, '.','val', '{}',{1});
-%     batch.spatial.normalise.write.subj(r).resample(1).src_output = ...
-%         substruct('.','sess', '()',{r}, '.','cfiles');
-% end
 batch.spatial.normalise.write.roptions.preserve = 0;
 batch.spatial.normalise.write.roptions.bb = [-78 -112 -50
                                                           78 76 85];
-batch.spatial.normalise.write.roptions.vox = GLA_subject_data.parameters.fmri_voxel_size; 
+batch.spatial.normalise.write.roptions.vox = GLA_subject_data.settings.fmri_voxel_size; 
 batch.spatial.normalise.write.roptions.interp = 1;
 batch.spatial.normalise.write.roptions.wrap = [0 0 0];
 batch.spatial.normalise.write.roptions.prefix = 'w';
@@ -328,7 +325,7 @@ function filename = getAnatFilename()
 
 global GLA_subject;
 global GLA_fmri_type;
-filename = [NM_GetCurrentDataDirectory() '/fmri_data/' GLA_subject ...
+filename = [NM_GetRootDirectory() '/fmri_data/' GLA_subject ...
     '/' GLA_fmri_type '/' GLA_subject '_anat.nii'];
 
 function files = getScanFiles()
@@ -342,7 +339,7 @@ switch GLA_fmri_type
         files{1} = NM_GetScanFiles(['^' GLA_subject '_loc']);
         
     case 'experiment'
-        for r = 1:GLA_subject_data.parameters.num_runs
+        for r = 1:GLA_subject_data.settings.num_runs
             files{r} = NM_GetScanFiles(['^' GLA_subject '_run_' num2str(r)]); %#ok<AGROW>
         end
 

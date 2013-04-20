@@ -1,13 +1,26 @@
-% Adapted from Christophe Pallier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_CheckfMRIMovement.m
+%
+% Notes:
+%   * Plots the movement throughout the experiment
+%       - Either localizer or experiment
+%       - For the experiment, all runs are concatenated together
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_CheckfMRIMovement()
+%
+% Author: Douglas K. Bemis
+%   - Adapted from Christophe Pallier
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_CheckfMRIMovement()
 
-global GLA_fmri_type;
-
 % Make sure we're processed 
-disp('Loading subject data...');
+global GLA_fmri_type;
+disp(['Checking movement for for ' GLA_fmri_type ' fmri data...']);
 NM_LoadSubjectData({{['fmri_' GLA_fmri_type '_data_preprocessed'],1}});
-disp('Done.');
 
 % Load movement data
 switch GLA_fmri_type 
@@ -36,7 +49,7 @@ legend({'pitch','roll','yaw'})
 xlabel('scans'); ylabel('degrees');
 
 % And save
-saveas(gcf,[NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/' ...
+saveas(gcf,[NM_GetRootDirectory() '/analysis/' GLA_subject '/' ...
     GLA_subject '_' GLA_fmri_type '_movement_plot.jpg'],'jpg');
 
 

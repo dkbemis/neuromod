@@ -1,13 +1,67 @@
-% 
-% % TTest
-% cfg.data_type = 'behavioral';
-% cfg.measure = 'rt';
-% cfg.rejections = ...;
-% cfg.SV_data
-% cfg.sv_name = 'Test'
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_AnalyzeSingleValues.m
+%
+% Notes:
+%   * Performs an analysis of single measures from each condition (i.e. one
+%       value per each of the ten conditions, compared to a full time course).
+%       - Will load and calculate these measures if possible
+%       - Or can be given as an argument
+%   * Analyzes the main effect between list and phrases, by pooling over
+%       all 2-4 word conditions in each.
+%       - A bar graph of this comparison is printed on the left side of the
+%           analysis results.
+%   * Analyzes the linear effects for both phrases and lists.
+%       - A  graph of this analysis is printed on the right side of the
+%           analysis results.
+%       - r^2 values for both linear correlations are displayed
+%       - Condition-by-condition uncorrected comparisons are displayed as
+%           well, along with a summary of an ANOVA over the four base
+%           conditions.
+%   * Saves the analysis results summary in the subject analysis folder.
+%
+% Inputs:
+%   * cfg: The settings for the analysis, with the following fields:
+%       - data_type: The type of data to analyze
+%           - E.g. 'behavioral','et'
+%       - trial_type: The trial type to analyze, if applicable
+%       - measure: The values to analyze. Specific to the data_type:
+%           - for 'et':
+%               - num_saccades: The number of saccades during each trial
+%               - saccade_length: The length of saccades during each trial
+%           - for 'behavioral':
+%               - rt: The reaction time for each trial
+%               - acc: The accuracy for each trial
+%       - sv_name: A name for the measured values.
+%           - Will be used to save the analysis summary.
+%       - SV_data (optional): A set of values to analyze
+%           - Should be arranged with the following fields:
+%               - trial_data: The value to analyze for each trial
+%               - trial_cond: An array of condition values for each trial
+%                   - 1:5 - The phrase conditions (1-5)
+%                   - 6:10 - The list conditions (6-10)
+%       - rejections, etc. (optional): All options used by 
+%           NM_CreateClean*Data functions.
+%
+% Outputs:
+% Usage: 
+%   * cfg = [];
+%   * cfg.data_type = 'et';
+%   * cfg.trial_type = 'word_5';
+%   * cfg.measure = 'num_saccades';
+%   * cfg.sv_name = 'num_sacc';
+%   * NM_AnalyzeSingleValues(cfg)
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Quick analysis of condition measures
 function NM_AnalyzeSingleValues(cfg)
+
+% Check the cfg
+if ~isfield(cfg,'measure') || ...
+        ~isfield(cfg,'data_type') ||...
+        ~isfield(cfg,'sv_name')
+    error('Badly formed cfg. See help.'); 
+end
 
 global GLA_subject;
 disp(['Analyzing ' cfg.data_type ' ' ...
@@ -19,6 +73,9 @@ NM_LoadSubjectData();
 % Set the measure
 setValues(cfg);
 
+% Arrange them in the way way expect
+arrangeData()
+
 % Take a look at the main effect
 analyzeMainEffect(cfg);
 
@@ -26,7 +83,7 @@ analyzeMainEffect(cfg);
 analyzeLinearEffect(cfg);
 
 % And save and clear the data
-saveas(gcf, [NM_GetCurrentDataDirectory() '/analysis/'...
+saveas(gcf, [NM_GetRootDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_' cfg.sv_name '_analysis.jpg'],'jpg');
 clear global GL_SV_data;
 
@@ -40,7 +97,6 @@ clear global GL_SV_data;
 global GL_SV_data;
 if isfield(cfg,'SV_data')
     GL_SV_data = cfg.SV_data;
-    arrangeData();
     
 % Otherwise need to load
 else
@@ -59,7 +115,9 @@ end
 
 function setETValues(cfg)
 
-% Make the clean data
+% Make the clean data with the right trial type
+global GLA_trial_type;
+GLA_trial_type = cfg.trial_type; 
 NM_CreateCleanETData(cfg);    
 
 % Set and arrange the right measure
@@ -88,7 +146,6 @@ switch cfg.measure
         error('Unknown type');
 end
 GL_SV_data.trial_cond = GLA_clean_et_data.data.cond;
-arrangeData();
 
 
 function setBehavioralValues(cfg)
@@ -110,7 +167,6 @@ switch cfg.measure
         error('Unknown type');
 end
 GL_SV_data.trial_cond = GLA_clean_behavioral_data.data.cond;
-arrangeData();
 
 
 function arrangeData()

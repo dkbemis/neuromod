@@ -2,15 +2,13 @@
 % File: NM_CheckData.m
 %
 % Notes:
-%   * In theory, this function runs the whole analysis, however, it's 
-%       primary purpose is to give the structure of the analysis. 
-%       - Almost always it would probably be easier to run the functions 
-%           one at a time...
+%   * This is another wrapper function. When run the whole way through, it
+%       will check all of the data (e.g. triggers, timing, stimuli, etc.)
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_CheckData()
+% Usage: 
+%   * NM_CheckData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,8 +29,10 @@ NM_CheckETData();
 
 % Check the M/EEG triggers 
 global GLA_meeg_type;
+curr_type = GLA_meeg_type;
 meeg_types = {'meg','eeg'};
 for t = 1:length(meeg_types)
-    GLA_meeg_type = meeg_types{t};
+    GLA_meeg_type = meeg_types{t}; %#ok<NASGU>
     NM_CheckMEEGData();
 end
+GLA_meeg_type = curr_type;

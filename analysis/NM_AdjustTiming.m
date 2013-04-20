@@ -1,4 +1,21 @@
-% Checks and adjusts all of the timing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% File: NM_AdjustTiming.m
+%
+% Notes:
+%   * This function adjusts the timing of the triggers by the delay between
+%       the meg trigger and corresponding diode.
+%   * All triggers (et, eeg, meg) are adjusted by the same amount.
+%   * The new times overwrite the trial.TYPE_trigger.TYPE_time field.
+%       - The old times are saved in the trial.TYPE_trigger.unadjusted_TYPE_time
+%   * A log of the adjustments is appended to NIP_timing_report.txt
+%
+% Inputs:
+% Outputs:
+% Usage: 
+%   * NM_AdjustTiming()
+%
+% Author: Douglas K. Bemis
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function NM_AdjustTiming()
 
@@ -13,20 +30,22 @@ NM_LoadSubjectData({{'log_checked',1},... % Need to have checked the log
 
 % Nothing to do, if no diodes
 global GLA_subject_data;
-if ~isfield(GLA_subject_data.runs(1).trials(1),'diode_times')
+if ~isfield(GLA_subject_data.settings,'diodes') ||...
+        GLA_subject_data.settings.diodes == 0
     return;
 end
 
 % Record the adjustments
-fid = fopen([NM_GetCurrentDataDirectory() '/analysis/'...
+fid = fopen([NM_GetRootDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_timing_report.txt'],'a');
 
 % The run triggers...
 all_adjusts = [];
-for r = 1:GLA_subject_data.parameters.num_runs
-    for t = 1:length(GLA_subject_data.runs(r).trials)
-        [GLA_subject_data.runs(r).trials(t) all_adjusts(end+1:end+length(GLA_subject_data.runs(r).trials(t).meg_triggers))] = ...
-            readjustTrialTriggers(GLA_subject_data.runs(r).trials(t));
+for r = 1:GLA_subject_data.settings.num_runs
+    for t = 1:length(GLA_subject_data.data.runs(r).trials)
+        [GLA_subject_data.data.runs(r).trials(t) ...
+            all_adjusts(end+1:end+length(GLA_subject_data.data.runs(r).trials(t).meg_triggers))] = ...
+                readjustTrialTriggers(GLA_subject_data.data.runs(r).trials(t));
     end
 end
 
@@ -40,9 +59,10 @@ fprintf(fid,[adj_str '\n']);
 all_adjusts = [];
 b_types = {'blinks','eye_movements','noise'};
 for b = 1:length(b_types)
-    for t = 1:length(GLA_subject_data.baseline.(b_types{b}))
-        [GLA_subject_data.baseline.(b_types{b})(t) all_adjusts(end+1:end+length(GLA_subject_data.baseline.(b_types{b})(t).meg_triggers))] = ...
-            readjustTrialTriggers(GLA_subject_data.baseline.(b_types{b})(t));
+    for t = 1:length(GLA_subject_data.data.baseline.(b_types{b}))
+        [GLA_subject_data.data.baseline.(b_types{b})(t) ...
+            all_adjusts(end+1:end+length(GLA_subject_data.data.baseline.(b_types{b})(t).meg_triggers))] = ...
+            readjustTrialTriggers(GLA_subject_data.data.baseline.(b_types{b})(t));
     end
 end
 adj_str = ['Adjusted baseline triggers by ' num2str(mean(all_adjusts)) ' ms avg. [' ...
@@ -51,9 +71,8 @@ disp(adj_str);
 fprintf(fid,[adj_str '\n']);
 
 
-fclose(fid);
-
 % And save
+fclose(fid);
 NM_SaveSubjectData({{'timing_adjusted',1}});
 disp('Done.');
 
