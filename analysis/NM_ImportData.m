@@ -10,8 +10,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_ImportData()
+% Usage: 
+%   * NM_ImportData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -292,6 +292,7 @@ function batch = createSmoothingBatch(normalization_stage)
 
 smoothing_kernel = [4 4 4];
 
+% TODO: This needs to be fixed.
 % for r = 1:getNumRuns()
 for r = 1
     batch.spatial.smooth.data(r) = cfg_dep;

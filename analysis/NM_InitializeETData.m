@@ -174,12 +174,14 @@ while isnan(str2double(GL_et_run_data{1}{ind})) || ...
             % Record blink starts
             case 'SBLINK'
                 b_starts(end+1).time = str2double(GL_et_run_data{3}{ind})-t_time; %#ok<AGROW>
-
+                b_starts(end).marked = 1;
+                
             % Record blink ends
             case 'EBLINK'
                 b_ends(end+1).time = str2double(GL_et_run_data{4}{ind})-t_time; %#ok<AGROW>
                 b_ends(end).length = str2double(GL_et_run_data{5}{ind});
-
+                b_ends(end).marked = 1;
+                
             otherwise
                 error('Unimplemented.');
         end
@@ -196,14 +198,45 @@ end
 % Check for unexpected nans...
 nan_starts = find(diff(isnan(x_pos)) == 1) + t_epoch(1);
 nan_ends = find(diff(isnan(x_pos)) == -1) + (t_epoch(1)-1);
+
+% Insert any missing
 for b = 1:length(nan_starts)
-    if b_starts(b).time ~= nan_starts(b)
-        error('Unexpected blink');
+    if (b > length(b_starts)) || (b_starts(b).time ~= nan_starts(b))
+        disp(['WARNING: Inserting blink start at ' num2str(nan_starts(b)) '.']);
+        tmp = b_starts;
+        b_starts = tmp(1:b-1);
+        b_starts(b).time = nan_starts(b);
+        b_starts(b).marked = 0;
+        if length(tmp) >= b
+            b_starts(b+1:length(tmp)+1) = tmp(b:end);
+        end
     end
 end
 for b = 1:length(nan_ends)
-    if b_ends(b).time ~= nan_ends(b)
-        error('Unexpected blink');
+    if (b > length(b_ends)) || (b_ends(b).time ~= nan_ends(b))
+        disp(['WARNING: Inserting blink end at ' num2str(nan_ends(b)) '.']);
+        tmp = b_ends;
+        b_ends = tmp(1:b-1);
+        b_ends(b).time = nan_ends(b);
+        b_ends(b).marked = 0;
+        b_ends(b).length = -1;
+        if length(tmp) >= b
+            b_ends(b+1:length(tmp)+1) = tmp(b:end);
+        end
+    end
+end
+
+% Make sure we have them all accounted for now
+if (length(b_starts) ~= length(nan_starts)) 
+    error('Blinks bad');
+end
+if (length(b_ends) ~= length(nan_ends))
+
+    % Ok, if we're just at the end
+    if (length(b_ends) == length(nan_ends)+1) &&...
+            (b_ends(end).time == t_epoch(2)-1)        
+    else
+        error('Blinks bad.');
     end
 end
 

@@ -10,6 +10,8 @@
 %
 % Inputs:
 % Outputs:
+% Usage: 
+%   * NM_InitializeGlobals()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -38,7 +40,7 @@ global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
 % global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % This is the NIP of the subject we're analyzing
-global GLA_subject; GLA_subject = 'ap100009';
+global GLA_subject; GLA_subject = 'mr080072';
 
 
 % This is the type of data we're analyzing. 
@@ -46,22 +48,6 @@ global GLA_subject; GLA_subject = 'ap100009';
 global GLA_rec_type; GLA_rec_type = 'meeg';
 
 % And the optional globals
-disp_str = ['Set analysis for subject ' GLA_subject ' and ' GLA_rec_type ' data'];
-disp_str = initializeOptionalGlobals(disp_str);
-disp([disp_str '.']);
-
-
-% Just to be clear, these are all optional and do not need to be set before
-%   beginning an analysis from the beginning. 
-%   - They will be set at various points during the analysis if not here.
-%   - To avoid confusion, 
-function disp_str = initializeOptionalGlobals(disp_str)
-
-% TTest
-% global GLA_meeg_type; GLA_meeg_type = 'meg'; 
-% global GLA_trial_type; GLA_trial_type = 'blinks'; 
-% global GLA_fmri_type; GLA_fmri_type = 'localizer';         
-
-
+disp(['Set analysis for subject ' GLA_subject ' and ' GLA_rec_type ' data']);
 
 

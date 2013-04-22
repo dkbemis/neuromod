@@ -6,7 +6,7 @@
 %       - Reads from handmade sets saved to m/eeg_channel_types.mat
 %   * MEG types: 
 %       - grad_1: The first set of gradiometers
-%       - grad_1: The second set of gradiometers
+%       - grad_2: The second set of gradiometers
 %       - mag: The magnetometers
 %       - posterior: A set of posterior sensors
 %       - left: A set of left sensors

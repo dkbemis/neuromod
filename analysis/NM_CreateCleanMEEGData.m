@@ -30,18 +30,12 @@
 
 function NM_CreateCleanMEEGData(cfg)
 
-% Should be preprocessed
-global GLA_trial_type;
-global GLA_meeg_type;
-NM_LoadSubjectData({...
-    {[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed'],1},...
-    });
-
 
 % Load the unclean data
 NM_LoadMEEGData();
 
 % Default if no input
+global GLA_meeg_type;
 if ~exist('cfg','var')
     cfg = [];
 end
