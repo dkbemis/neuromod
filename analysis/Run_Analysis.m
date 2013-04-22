@@ -117,6 +117,8 @@ NM_CheckData();
 %           - For the meg and eeg data, the 'data' fields are always
 %               fieldtrip data structures that can be given directly to the
 %               ft_ functions.
+%           - The conditions for each trial are contained in the
+%               GLA_meeg_data.data.trialinfo array 
 %       - The data types are 'behavioral', 'et', 'meeg', and 'subject'
 %           - The GLA_subject_data holds a condensed description of the
 %               expeirment stimuli (as constructed during NM_CheckData).

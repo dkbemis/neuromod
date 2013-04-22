@@ -15,10 +15,14 @@
 
 function NM_PreprocessETData()
 
+global GLA_subject_data;
 global GLA_subject;
 global GLA_epoch_type;
 if isempty(GLA_epoch_type)
     error('GLA_epoch_type not set.');
+end
+if ~GLA_subject_data.settings.eye_tracker
+    return;
 end
 disp(['Preprocessing ' GLA_epoch_type ' eye tracking data for ' GLA_subject '...']);
 

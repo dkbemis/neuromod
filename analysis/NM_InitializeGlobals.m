@@ -40,7 +40,7 @@ global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
 % global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % This is the NIP of the subject we're analyzing
-global GLA_subject; GLA_subject = 'rg110386';
+global GLA_subject; GLA_subject = 'cg120234';
 
 
 % This is the type of data we're analyzing. 

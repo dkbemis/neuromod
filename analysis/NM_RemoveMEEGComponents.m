@@ -48,21 +48,27 @@ global GLA_meeg_type;
 global GLA_epoch_type;
 if ~strcmp(GLA_epoch_type,'blinks')
     NM_LoadSubjectData({...
-        {['et_' GLA_epoch_type '_data_preprocessed'],1},...
         {[GLA_meeg_type '_blinks_data_preprocessed'],1},...
         });
 else
-    NM_LoadSubjectData({...
-        {['et_' GLA_epoch_type '_data_preprocessed'],1},...
-        });
+    NM_LoadSubjectData({});
 end
+
+% Make sure the eye tracker data is preprocessed, if possible
+global GLA_subject_data;
+if GLA_subject_data.settings.eye_tracker
+    if ~isfield(GLA_subject_data.settings,['et_' GLA_epoch_type '_data_preprocessed']) ||...
+            ~GLA_subject_data.settings.(['et_' GLA_epoch_type '_data_preprocessed'])
+        error(['Need to preprocess ' GLA_epoch_type ' eye tracker data.']);
+    end
+end
+
 
 % Get the clean data
 global GLA_meeg_data;
 NM_CreateCleanMEEGData();
 
 % Set the options
-global GLA_subject_data;
 GLA_meeg_data.settings.decomp_method = GLA_subject_data.settings.meeg_decomp_method;
 GLA_meeg_data.settings.decomp_type = GLA_subject_data.settings.meeg_decomp_type;  
 GLA_meeg_data.settings.decomp_comp_num = GLA_subject_data.settings.meeg_decomp_comp_num;  
@@ -195,6 +201,15 @@ end
 
 
 function displayBlinkInfo(type)
+
+% Make sure we actually have it.
+% TODO: Implement a backup if the eye tracker goes down.
+%   E.g. from the EOG data
+global GLA_subject_data;
+if ~GLA_subject_data.settings.eye_tracker
+    disp('No eye tracker data.');
+    return;
+end
 
 % Match the data
 global GLA_clean_meeg_data;

@@ -45,8 +45,17 @@ end
 disp(['Preprocessing ' GLA_meeg_type ' ' GLA_epoch_type ' data for ' GLA_subject '...']);
 NM_LoadSubjectData({...
     {[GLA_meeg_type '_data_checked'],1}...
-    {['et_' GLA_epoch_type '_data_preprocessed'],1}...      % For removing components
     });
+
+% Make sure we've processed the et data, if we have it
+%   to help remove components
+if GLA_subject_data.settings.eye_tracker
+    if ~isfield(GLA_subject_data.settings,['et_' GLA_epoch_type '_data_preprocessed']) ||...
+            ~GLA_subject_data.settings.(['et_' GLA_epoch_type '_data_preprocessed'])
+        error(['Need to preprocess ' GLA_epoch_type ' eye tracker data.']);
+    end
+end
+
 
 % Initialize
 NM_InitializeMEEGData();
