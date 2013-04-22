@@ -16,8 +16,8 @@
 %       - Value can be either a number or a string
 %   
 % Outputs:
-%
-% Usage: NM_LoadSubjectData({{'log_parsed',1}})
+% Usage: 
+%   * NM_LoadSubjectData({{'log_parsed',1}})
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

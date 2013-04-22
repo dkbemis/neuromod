@@ -3,7 +3,7 @@
 %
 % Notes:
 %   * A quick helper to grab the trigger time for a given trial and trigger type.
-%   * The trigger in the trial is determined by the current trial type (GLA_trial_type)
+%   * The trigger in the trial is determined by the current trial type (GLA_epoch_type)
 %
 % Inputs:
 %   * trial: The trial to get the trigger from
@@ -21,8 +21,8 @@
 
 function t_time = NM_GetTrialTriggerTime(trial, type)
 
-global GLA_trial_type;
-switch GLA_trial_type
+global GLA_epoch_type;
+switch GLA_epoch_type
     case 'blinks'
         t_time = trial.([type '_triggers'])(1).([type '_time']);
         

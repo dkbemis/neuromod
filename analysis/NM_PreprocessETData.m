@@ -16,8 +16,11 @@
 function NM_PreprocessETData()
 
 global GLA_subject;
-global GLA_trial_type;
-disp(['Preprocessing ' GLA_trial_type ' eye tracking data for ' GLA_subject '...']);
+global GLA_epoch_type;
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set.');
+end
+disp(['Preprocessing ' GLA_epoch_type ' eye tracking data for ' GLA_subject '...']);
 
 % Make sure we're ready
 NM_LoadSubjectData({{'et_data_checked',1}});
@@ -29,7 +32,7 @@ NM_InitializeETData()
 NM_SetETRejections();
 
 % Resave...
-disp(['Eye tracking ' GLA_trial_type ' data preprocessed for ' GLA_subject '.']);
-NM_SaveSubjectData({{['et_' GLA_trial_type '_data_preprocessed'],1}});
+disp(['Eye tracking ' GLA_epoch_type ' data preprocessed for ' GLA_subject '.']);
+NM_SaveSubjectData({{['et_' GLA_epoch_type '_data_preprocessed'],1}});
 
 

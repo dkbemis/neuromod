@@ -22,9 +22,9 @@
 function NM_CreateCleanETData(cfg)
 
 % Should be preprocessed
-global GLA_trial_type;
+global GLA_epoch_type;
 NM_LoadSubjectData({...
-    {['et_' GLA_trial_type '_data_preprocessed'],1},...
+    {['et_' GLA_epoch_type '_data_preprocessed'],1},...
     });
 
 % Load the data

@@ -26,15 +26,21 @@ if ~strcmp(GLA_rec_type,'meeg')
 end
 
 global GLA_subject;
-global GLA_trial_type;
+global GLA_epoch_type;
 global GLA_meeg_type;
 global GLA_subject_data;
-disp(['Preprocessing ' GLA_meeg_type ' ' GLA_trial_type ' data for ' GLA_subject '...']);
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set.');
+end
+if isempty(GLA_meeg_type)
+    error('GLA_meeg_type not set.');
+end
+disp(['Preprocessing ' GLA_meeg_type ' ' GLA_epoch_type ' data for ' GLA_subject '...']);
 
 % Make sure we're ready and have something to do
 NM_LoadSubjectData({...
     {[GLA_meeg_type '_data_checked'],1}...
-    {['et_' GLA_trial_type '_data_preprocessed'],1}...      % For removing components
+    {['et_' GLA_epoch_type '_data_preprocessed'],1}...      % For removing components
     });
 
 % Initialize
@@ -55,6 +61,6 @@ NM_SetMEEGRejections();
 NM_RemoveMEEGComponents();
 
 % Save...
-disp([GLA_meeg_type ' ' GLA_trial_type ' data preprocessed for ' GLA_subject '.']);
-NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_trial_type '_data_preprocessed'],1}});
+disp([GLA_meeg_type ' ' GLA_epoch_type ' data preprocessed for ' GLA_subject '.']);
+NM_SaveSubjectData({{[GLA_meeg_type '_' GLA_epoch_type '_data_preprocessed'],1}});
 

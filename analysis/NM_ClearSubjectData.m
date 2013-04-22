@@ -6,8 +6,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_ClearSubjectData()
+% Usage: 
+%   * NM_ClearSubjectData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

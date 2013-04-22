@@ -21,8 +21,11 @@ function NM_SetMEEGRejections()
 % Load the data
 global GLA_meeg_type;
 global GLA_subject;
-global GLA_trial_type;
-disp(['Setting ' GLA_meeg_type ' rejections for ' GLA_trial_type ' for ' GLA_subject]);
+global GLA_epoch_type;
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set.');
+end
+disp(['Setting ' GLA_meeg_type ' rejections for ' GLA_epoch_type ' for ' GLA_subject]);
 NM_LoadMEEGData();
 
 % Use whichever type we set

@@ -7,8 +7,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_CheckFileStructure()
+% Usage: 
+%   * NM_CheckFileStructure()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -46,7 +46,6 @@ global GLA_subject_data;
 if ~GLA_subject_data.settings.fmri
     return;
 end
-
 
 global GLA_subject;
 fmri_folder = [NM_GetRootDirectory() '/fmri_data/' GLA_subject];

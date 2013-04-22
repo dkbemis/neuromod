@@ -21,8 +21,8 @@
 
 function cond = NM_GetTrialCondition(trial)
 
-global GLA_trial_type;
-switch GLA_trial_type
+global GLA_epoch_type;
+switch GLA_epoch_type
     case 'blinks'
         cond = 2;
             

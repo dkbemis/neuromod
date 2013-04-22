@@ -17,12 +17,12 @@ function f_name = NM_GetMEEGDataFilename()
 
 global GLA_subject;
 global GLA_meeg_type;
-global GLA_trial_type;
+global GLA_epoch_type;
 if isempty(GLA_meeg_type)
     error('GLA_meeg_type not set yet.');
 end
-if isempty(GLA_trial_type)
-    error('GLA_trial_type not set yet.');
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set yet.');
 end
 f_name = [NM_GetRootDirectory() '/analysis/' GLA_subject ...
-    '/' GLA_subject '_' GLA_meeg_type '_' GLA_trial_type '_data.mat']; 
+    '/' GLA_subject '_' GLA_meeg_type '_' GLA_epoch_type '_data.mat']; 

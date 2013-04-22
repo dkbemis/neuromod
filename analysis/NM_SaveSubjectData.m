@@ -9,8 +9,8 @@
 %       - Each cell should be {param_name, param_value}
 %
 % Outputs:
-%
-% Usage: NM_SaveSubjectData({'data_preprocessed',1}}
+% Usage: 
+%   * NM_SaveSubjectData({'data_preprocessed',1}}
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

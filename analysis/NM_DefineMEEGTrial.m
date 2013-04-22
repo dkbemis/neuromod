@@ -32,19 +32,21 @@
 
 function trl = NM_DefineMEEGTrial(cfg)
 
-
 % Set the trials
 trl = [];
 trials = NM_GetTrials(str2double(cfg.run_id(end)));
 global GLA_subject_data;
-global GLA_trial_type;
+global GLA_epoch_type;
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set.');
+end
 global GLA_meeg_type;
 for t = 1:length(trials)
     cond = NM_GetTrialCondition(trials(t));
     trigger_time = NM_GetTrialTriggerTime(trials(t),GLA_meeg_type);
-    trl(end+1,:) = [trigger_time + GLA_subject_data.settings.([GLA_trial_type '_epoch'])(1)...
-        trigger_time + GLA_subject_data.settings.([GLA_trial_type '_epoch'])(2)-1 ...
-        GLA_subject_data.settings.([GLA_trial_type '_epoch'])(1) cond]; %#ok<AGROW>
+    trl(end+1,:) = [trigger_time + GLA_subject_data.settings.([GLA_epoch_type '_epoch'])(1)...
+        trigger_time + GLA_subject_data.settings.([GLA_epoch_type '_epoch'])(2)-1 ...
+        GLA_subject_data.settings.([GLA_epoch_type '_epoch'])(1) cond]; %#ok<AGROW>
 end
 
 

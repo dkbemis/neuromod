@@ -26,11 +26,9 @@ cfg.data_type = 'behavioral';
 
 % Get the rejections once
 % Use the critical trials for now
-global GLA_trial_type;
-curr_tt = GLA_trial_type;
-GLA_trial_type = 'word_5'; %#ok<NASGU>
+global GLA_epoch_type;
+GLA_epoch_type = 'word_5';
 cfg.rejections = NM_SuggestRejections();
-GLA_trial_type = curr_tt;
 
 % Analyze the measures
 measures =  {'rt'};     % Acc

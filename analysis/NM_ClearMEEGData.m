@@ -21,14 +21,14 @@ NM_LoadSubjectData();
 global GLA_meeg_data; %#ok<NUSED>
 global GLA_subject;
 global GLA_meeg_type;
-global GLA_trial_type;
+global GLA_epoch_type;
 
 % Check that we're right
 if isempty(GLA_meeg_type)
     error('GLA_meeg_type not set yet.');
 end
-if isempty(GLA_trial_type)
-    error('GLA_trial_type not set yet.');
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set yet.');
 end
 
 % Then delete
@@ -36,5 +36,5 @@ clear global GLA_meeg_data;
 if exist(NM_GetMEEGDataFilename(),'file')
     delete(NM_GetMEEGDataFilename());
 end
-disp(['Cleared ' GLA_meeg_type ' ' GLA_trial_type ' data for ' GLA_subject '.']);
+disp(['Cleared ' GLA_meeg_type ' ' GLA_epoch_type ' data for ' GLA_subject '.']);
 

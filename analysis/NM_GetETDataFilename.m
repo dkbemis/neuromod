@@ -16,11 +16,11 @@
 
 function f_name = NM_GetETDataFilename()
 
-global GLA_trial_type;
+global GLA_epoch_type;
 global GLA_subject;
-if isempty(GLA_trial_type)
-    error('Need to set a GLA_trial_type first.');
+if isempty(GLA_epoch_type)
+    error('Need to set a GLA_epoch_type first.');
 end
 
 f_name = [NM_GetRootDirectory() '/analysis/' GLA_subject ...
-    '/' GLA_subject '_' GLA_trial_type '_et_data.mat']; 
+    '/' GLA_subject '_' GLA_epoch_type '_et_data.mat']; 

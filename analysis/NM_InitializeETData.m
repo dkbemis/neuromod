@@ -45,9 +45,9 @@
 function NM_InitializeETData()
 
 % Initialize the data
-global GLA_trial_type;
+global GLA_epoch_type;
 global GLA_subject;
-disp(['Initializing ' GLA_trial_type ' eye tracking data for ' GLA_subject '...']);
+disp(['Initializing ' GLA_epoch_type ' eye tracking data for ' GLA_subject '...']);
 NM_LoadSubjectData({{'et_data_checked',1},...
     {'log_checked',1},...
     {'timing_adjusted',1},...   % Make sure the triggers are in the right place
@@ -60,9 +60,9 @@ NM_ClearETData();
 global GLA_et_data;
 global GLA_subject_data;
 GLA_et_data.settings.subject = GLA_subject;
-GLA_et_data.settings.trial_type = GLA_trial_type;
+GLA_et_data.settings.epoch_type = GLA_epoch_type;
 GLA_et_data.data.epoch = ...
-    GLA_subject_data.settings.([GLA_trial_type '_epoch']);
+    GLA_subject_data.settings.([GLA_epoch_type '_epoch']);
 GLA_et_data.data.x_pos = {};
 GLA_et_data.data.y_pos = {};
 GLA_et_data.data.pupil = {};
@@ -73,7 +73,7 @@ GLA_et_data.data.saccade_ends = {};
 GLA_et_data.data.cond = [];
 
 % Grab data for each trial
-switch GLA_trial_type
+switch GLA_epoch_type
     case 'blinks'
         setRunData('baseline');
         
@@ -84,7 +84,9 @@ switch GLA_trial_type
         setRunData('baseline');
         
     case 'word_5'
-        for r = 1:length(GLA_subject_data.data.runs)
+        % TTest
+%         for r = 1:length(GLA_subject_data.data.runs)
+        for r = 1:2
             setRunData(['run_' num2str(r)]);
         end
         
@@ -132,9 +134,9 @@ t_time = NM_GetTrialTriggerTime(trial,'et');
 
 % Find the start of the trial in the data
 global GLA_subject_data;
-global GLA_trial_type;
+global GLA_epoch_type;
 global GL_et_run_data;
-t_epoch = GLA_subject_data.settings.([GLA_trial_type '_epoch']);
+t_epoch = GLA_subject_data.settings.([GLA_epoch_type '_epoch']);
 ind = find(strcmp(GL_et_run_data{1},num2str(t_time+t_epoch(1))));
 
 % Grab the values

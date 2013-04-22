@@ -23,7 +23,7 @@
 %   * cfg: The settings for the analysis, with the following fields:
 %       - data_type: The type of data to analyze
 %           - E.g. 'behavioral','et','meg','eeg'
-%       - trial_type: The trial to analyze
+%       - epoch_type: The trial to analyze
 %       - measure: The values to analyze. Specific to the data_type:
 %           - for 'et':
 %               - x_pos: The horizontal position of the eye
@@ -58,7 +58,7 @@
 % Usage: 
 %   * cfg = [];
 %   * cfg.data_type = 'meg';
-%   * cfg.trial_type = 'word_5';
+%   * cfg.epoch_type = 'word_5';
 %   * cfg.measure = 'rms';
 %   * cfg.tc_name = 'meg_word_5_rms';
 %   * cfg.time_windows = {[200 300] [300 500]};
@@ -73,13 +73,13 @@ function NM_AnalyzeTimeCourse(cfg)
 % Check the cfg structure
 if ~isfield(cfg,'measure') || ...
         ~isfield(cfg,'data_type') ||...
-        ~isfield(cfg,'trial_type') ||...
+        ~isfield(cfg,'epoch_type') ||...
         ~isfield(cfg,'tc_name')
     error('Badly formed cfg. See help.'); 
 end
 
 global GLA_subject;
-disp(['Analyzing ' cfg.measure ' ' cfg.trial_type ' ' ...
+disp(['Analyzing ' cfg.measure ' ' cfg.epoch_type ' ' ...
     cfg.data_type ' data for ' GLA_subject '...']);
 
 % Make sure we're loaded
@@ -278,8 +278,8 @@ end
 function setETData(cfg)
         
 % Load the cleaned data for the requested trial type
-global GLA_trial_type;
-GLA_trial_type = cfg.trial_type;
+global GLA_epoch_type;
+GLA_epoch_type = cfg.epoch_type;
 NM_CreateCleanETData(cfg);
 
 % Get each trial
@@ -318,8 +318,8 @@ clear global GLA_clean_et_data;
 function setMEEGData(cfg)
         
 % Load the cleaned data
-global GLA_trial_type;
-GLA_trial_type = cfg.trial_type;
+global GLA_epoch_type;
+GLA_epoch_type = cfg.epoch_type;
 NM_CreateCleanMEEGData(cfg);
 
 % Get each trial

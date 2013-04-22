@@ -1,10 +1,3 @@
-% Helper to parse and check the triggers from the eye tracker file
-%
-% NOTE: Already confirmed that the log accurately reflects what was
-%   displayed during the experiment. 
-%
-% This will then add the triggers to the trial structures
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % File: NM_CheckETData.m
 %
@@ -23,7 +16,6 @@
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 function NM_CheckETData()
 
@@ -77,7 +69,7 @@ disp('WARNING: Not checking localizer triggers yet...');
 return;
 
 % Might not have it
-global GLA_subject_data;
+global GLA_subject_data; %#ok<UNRCH>
 if GLA_subject_data.settings.num_localizer_blocks == 0
     return;
 end

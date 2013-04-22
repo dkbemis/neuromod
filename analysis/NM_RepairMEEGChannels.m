@@ -27,8 +27,8 @@ end
 % Load the data
 global GLA_meeg_data;
 global GLA_subject;
-global GLA_trial_type;
-disp(['Repairing eeg channels for ' GLA_trial_type ' for ' GLA_subject '...']);
+global GLA_epoch_type;
+disp(['Repairing eeg channels for ' GLA_epoch_type ' for ' GLA_subject '...']);
 NM_LoadMEEGData();
 
 % Find which channels to repair

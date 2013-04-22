@@ -3,7 +3,7 @@
 %
 % Notes:
 %   * A useful helper to get the trials from the subject data that
-%       correspond to the current trial type (GLA_trial_type).
+%       correspond to the current trial type (GLA_epoch_type).
 %       - Need to specify the run number for non-baseline trials.
 %
 % Inputs:
@@ -25,8 +25,8 @@ function trials = NM_GetTrials(run_num)
 NM_LoadSubjectData();
 
 global GLA_subject_data;
-global GLA_trial_type;
-switch GLA_trial_type
+global GLA_epoch_type;
+switch GLA_epoch_type
     case 'blinks'
         trials = GLA_subject_data.data.baseline.blinks;
         

@@ -4,7 +4,7 @@
 % Notes:
 %   * This function sets the GLA_et_data variable
 %       - It will use the current data if it matches the current
-%           GLA_subject and GLA_trial_type variables.
+%           GLA_subject and GLA_epoch_type variables.
 %       - Otherwise it will load any saved data.
 %       - Finally, it will ask to create the data if none is found.
 %
@@ -19,14 +19,14 @@
 function NM_LoadETData()
 
 global GLA_subject;
-global GLA_trial_type;
-disp(['Loading ' GLA_trial_type ' eye tracking data for ' GLA_subject '...']);
+global GLA_epoch_type;
+disp(['Loading ' GLA_epoch_type ' eye tracking data for ' GLA_subject '...']);
 NM_LoadSubjectData();
 
 % Default to use matching data in memory
 global GLA_et_data;
 if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) ||...
-        ~strcmp(GLA_trial_type,GLA_et_data.settings.trial_type)
+        ~strcmp(GLA_epoch_type,GLA_et_data.settings.epoch_type)
 
     % Load if we've made one
     f_name = NM_GetETDataFilename();
@@ -36,7 +36,7 @@ if isempty(GLA_et_data) || ~strcmp(GLA_subject,GLA_et_data.settings.subject) ||.
     % Otherwise, make sure we want to create it
     else
         while 1
-            ch = input([GLA_trial_type ' et data for '...
+            ch = input([GLA_epoch_type ' et data for '...
                 GLA_subject ' not found. Create (y/n)? '],'s');
             if strcmp(ch,'y')
                 break;

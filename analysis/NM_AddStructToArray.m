@@ -13,8 +13,8 @@
 % Outputs:
 %   * a: The array with the struct added
 %   
-%
-% Usage: trials = NM_AddStructToArray(trial, trials)
+% Usage: 
+%   * trial_triggers = NM_AddStructToArray(triggers(t_ind),trial_triggers)
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

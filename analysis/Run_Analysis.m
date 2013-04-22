@@ -55,7 +55,7 @@ function Run_Analysis()
 %   - GLA_meeg_type: Either 'meg' or 'eeg'.
 %       - The meg and eeg data are handled with the mostly the same functions
 %           and so this is needed to specify which type to analyze.
-%   - GLA_trial_type: For timecourse data (meg, eeg, eye tracking), we need
+%   - GLA_epoch_type: For timecourse data (meg, eeg, eye tracking), we need
 %       to know what epochs to load (e.g. 'blinks','word_5','delay', etc.
 %   - GLA_fmri_type: For now, the 'localizer' and 'experiment' are
 %       processed differently but with the same functions, so this should
@@ -187,6 +187,10 @@ NM_PreprocessData();
 % * For m/eeg data, the most useful function for this is
 %   NM_DisplayMEEGAverages, which will display various visualizations of
 %   the average of the current GLA_meeg_data. 
+% * The eye tracking sanity check will plot the average position for the
+%   left and right eye movements, so these epoch types must be preprocessed
+%   as well as the blinks for this to run.
+%   - I.e. set GLA_epoch_type to 'left_eye_movements' and run NM_PreprocessETData
 
 NM_SanityCheckData();
 
@@ -231,7 +235,7 @@ NM_SanityCheckData();
 % Run the basis analysis functions
 NM_AnalyzeData();
 
-% Extra notes / todo:
+% Extra notes / todo (sorry there are so many...):
 %   * As mentioned above, the fmri analysis follows a different flow and is
 %       basically a wrapper of Christophe Pallier's existing analysis. The
 %       only difference is the folder structure, which separates out the
@@ -276,5 +280,14 @@ NM_AnalyzeData();
 %           to its original state). Only the new values will be changed.
 %   * It is worth looking through the timing_report.txt file in the
 %       subject analysis folder to make sure everything was ok.
+%   * If you restart an analysis, remember to clear the GLA* global
+%       variables. Otherwise, deleting files will have no effect.
+%   * If the decomposition in NM_RemoveMEEGComponent does not line up with
+%       the blinks, try changing the meeg_decomp values in NM_InitializeSubjectData
+%   * If you exit NM_RemoveMEEGComponents before it finishes, make sure to
+%       set GLA_meeg_data = [] before running again so that the data does
+%       not become wrongly normalized.
+%   * Might have to look into filtering the EEG data to get rid of the
+%       apparent oscillations that ride on top of the data.
 
 

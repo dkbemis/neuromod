@@ -31,10 +31,10 @@ NM_LoadSubjectData({...
     });
 
 % Plot the averages for the blinks and the final word
-global GLA_trial_type;
+global GLA_epoch_type;
 types = {'blinks','word_5'};
 for t = 1:length(types)
-    GLA_trial_type = types{t};
+    GLA_epoch_type = types{t};
     cfg = [];
     cfg.save_name = [types{t} '_' GLA_meeg_type '_averages'];
     NM_DisplayMEEGAverages(cfg);

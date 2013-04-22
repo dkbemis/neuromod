@@ -23,7 +23,7 @@
 %   * cfg: The settings for the analysis, with the following fields:
 %       - data_type: The type of data to analyze
 %           - E.g. 'behavioral','et'
-%       - trial_type: The trial type to analyze, if applicable
+%       - epoch_type: The trial type to analyze, if applicable
 %       - measure: The values to analyze. Specific to the data_type:
 %           - for 'et':
 %               - num_saccades: The number of saccades during each trial
@@ -46,7 +46,7 @@
 % Usage: 
 %   * cfg = [];
 %   * cfg.data_type = 'et';
-%   * cfg.trial_type = 'word_5';
+%   * cfg.epoch_type = 'word_5';
 %   * cfg.measure = 'num_saccades';
 %   * cfg.sv_name = 'num_sacc';
 %   * NM_AnalyzeSingleValues(cfg)
@@ -116,8 +116,8 @@ end
 function setETValues(cfg)
 
 % Make the clean data with the right trial type
-global GLA_trial_type;
-GLA_trial_type = cfg.trial_type; 
+global GLA_epoch_type;
+GLA_epoch_type = cfg.epoch_type; 
 NM_CreateCleanETData(cfg);    
 
 % Set and arrange the right measure

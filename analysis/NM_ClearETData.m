@@ -25,7 +25,7 @@ if exist(NM_GetETDataFilename(),'file')
 end
 
 global GLA_subject;
-global GLA_trial_type;
-disp(['Cleared ' GLA_trial_type ' eye tracking data for ' GLA_subject '.']);
+global GLA_epoch_type;
+disp(['Cleared ' GLA_epoch_type ' eye tracking data for ' GLA_subject '.']);
 
 

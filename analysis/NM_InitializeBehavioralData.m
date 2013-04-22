@@ -87,7 +87,9 @@ GLA_behavioral_data.settings.max_resp_time = ...
     GLA_subject_data.settings.max_resp_time;
 
 % Set each trial
-for r = 1:GLA_subject_data.settings.num_runs
+% TTest
+% for r = 1:GLA_subject_data.settings.num_runs
+for r = 1:2
     for t = 1:length(GLA_subject_data.data.runs(r).trials)
         [GLA_behavioral_data.data.acc{end+1}...
             GLA_behavioral_data.data.rt{end+1}...

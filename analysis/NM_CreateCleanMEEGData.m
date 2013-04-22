@@ -30,7 +30,6 @@
 
 function NM_CreateCleanMEEGData(cfg)
 
-
 % Load the unclean data
 NM_LoadMEEGData();
 

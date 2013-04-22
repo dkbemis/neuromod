@@ -11,8 +11,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_ConvertETData
+% Usage: 
+%   * NM_ConvertETData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

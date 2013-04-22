@@ -14,8 +14,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_ImportfMRIData()
+% Usage: 
+%   * NM_ImportfMRIData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

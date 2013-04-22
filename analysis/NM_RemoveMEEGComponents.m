@@ -45,15 +45,15 @@ function NM_RemoveMEEGComponents(should_save)
 
 % Make sure we've preprocessed the blinks, if we're not doing them now...
 global GLA_meeg_type;
-global GLA_trial_type;
-if ~strcmp(GLA_trial_type,'blinks')
+global GLA_epoch_type;
+if ~strcmp(GLA_epoch_type,'blinks')
     NM_LoadSubjectData({...
-        {['et_' GLA_trial_type '_data_preprocessed'],1},...
+        {['et_' GLA_epoch_type '_data_preprocessed'],1},...
         {[GLA_meeg_type '_blinks_data_preprocessed'],1},...
         });
 else
     NM_LoadSubjectData({...
-        {['et_' GLA_trial_type '_data_preprocessed'],1},...
+        {['et_' GLA_epoch_type '_data_preprocessed'],1},...
         });
 end
 
@@ -112,8 +112,8 @@ normalizeData(full_norms, 'full');
 function data = computeRejections(type, channels)
 
 % See if we already computed on blinks
-global GLA_trial_type;
-if ~strcmp(GLA_trial_type,'blinks')
+global GLA_epoch_type;
+if ~strcmp(GLA_epoch_type,'blinks')
     
     % See if we want to use the blinks
     while 1
@@ -153,7 +153,7 @@ function setComponentsFromBlinks(type)
 global GLA_meeg_data;
 global GLA_subject;
 global GLA_meeg_type;
-b_data = load([NM_GetCurrentDataDirectory() '/analysis/' GLA_subject '/'...
+b_data = load([NM_GetRootDirectory() '/analysis/' GLA_subject '/'...
     GLA_subject '_' GLA_meeg_type '_blinks_data.mat']);
 GLA_meeg_data.settings.([type '_comp']) = b_data.settings.([type '_comp']);
 GLA_meeg_data.settings.([type '_comp_rej']) = b_data.settings.([type '_comp_rej']);

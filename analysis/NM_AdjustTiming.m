@@ -35,6 +35,12 @@ if ~isfield(GLA_subject_data.settings,'diodes') ||...
     return;
 end
 
+% Don't do it twice
+if isfield(GLA_subject_data.settings,'timing_adjusted') && ...
+        GLA_subject_data.settings.timing_adjusted
+    error('Cannot adjust timing twice.'); 
+end
+
 % Record the adjustments
 fid = fopen([NM_GetRootDirectory() '/analysis/'...
     GLA_subject '/' GLA_subject '_timing_report.txt'],'a');

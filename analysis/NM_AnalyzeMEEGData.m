@@ -23,14 +23,15 @@ NM_LoadSubjectData({...
 
 cfg = [];
 cfg.data_type = GLA_meeg_type;
-cfg.trial_type = 'word_5';
+cfg.epoch_type = 'word_5';
 cfg.time_windows = {[200 300] [300 500]};
 cfg.time_window_measure = 'rms';
 cfg.baseline_correct = 0;
+cfg.rereference = 1;
 
 % Get the rejections once
-global GLA_trial_type;
-GLA_trial_type = cfg.trial_type;
+global GLA_epoch_type;
+GLA_epoch_type = cfg.epoch_type;
 cfg.rejections = NM_SuggestRejections();
 
 % Analyze the time courses of sensor sets

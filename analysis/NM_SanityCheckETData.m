@@ -62,15 +62,13 @@ function [pos rt] = getEyeMovementMeasures()
 
 % Both the left and right
 global GLA_et_data;
-global GLA_trial_type;
+global GLA_epoch_type;
 directions = {'left','right'};
 for d = 1:length(directions)
 
     % Get the data
-    curr_tt = GLA_trial_type;
-    GLA_trial_type = [directions{d} '_eye_movements']; %#ok<NASGU>
+    GLA_epoch_type = [directions{d} '_eye_movements'];
     NM_LoadETData();
-    GLA_trial_type = curr_tt;
 
     pos.(directions{d}) = []; rt.(directions{d}) = []; 
     for t = 1:length(GLA_et_data.data.saccade_starts)
@@ -89,11 +87,11 @@ end
 function b_rts = getBlinkRTs()
 
 % Get the data
-global GLA_trial_type;
-curr_tt = GLA_trial_type;
-GLA_trial_type = 'blinks'; %#ok<NASGU>
+global GLA_epoch_type;
+curr_tt = GLA_epoch_type;
+GLA_epoch_type = 'blinks'; %#ok<NASGU>
 NM_LoadETData();
-GLA_trial_type = curr_tt;
+GLA_epoch_type = curr_tt;
 
 global GLA_et_data;
 b_rts = [];

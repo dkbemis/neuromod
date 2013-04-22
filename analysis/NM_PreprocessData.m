@@ -23,18 +23,20 @@ NM_PreprocessBehavioralData();
 % Adjust the timing of the triggers with the relative diode timings
 NM_AdjustTiming();
 
+% Process these for the sanity check, and then to support the meeg data
+global GLA_epoch_type;
+epoch_types = {'blinks','right_eye_movements','left_eye_movements','word_5'};
+for t = 1:length(epoch_types)
+    GLA_epoch_type = epoch_types{t};
+    NM_PreprocessETData();
+end
+
 % Process these two for now...
-trial_types = {'blinks','word_5'};
-global GLA_trial_type;
+epoch_types = {'blinks','word_5'};
 global GLA_meeg_type;
 meeg_types = {'meg','eeg'};
-for t = 1:length(trial_types)
-    GLA_trial_type = trial_types{t};
-
-    % Eye tracking data...
-    NM_PreprocessETData();
-
-    % Both meg and eeg
+for t = 1:length(epoch_types)
+    GLA_epoch_type = epoch_types{t};
     for m = 1:length(meeg_types)
         GLA_meeg_type = meeg_types{m};
         NM_PreprocessMEEGData();

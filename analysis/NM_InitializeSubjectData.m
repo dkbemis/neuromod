@@ -95,9 +95,11 @@ GLA_subject_data.settings.meeg_decomp_comp_num = 10;
 GLA_subject_data.settings.meeg_decomp_type = 'combined';  % combined, separate (wrt decomposing)
 GLA_subject_data.settings.meeg_decomp_baseline_correct = 'no';  % Should we baseline correct before decomposing
 GLA_subject_data.settings.meeg_filter_raw = 1;    % 1 - will filter the raw data
-GLA_subject_data.settings.meeg_hpf = .1;  % .1
-GLA_subject_data.settings.meeg_lpf = 120; % 120
-GLA_subject_data.settings.meeg_bsf = [50 100];    % [50 100]
+
+% TTest
+GLA_subject_data.settings.meeg_hpf = [];  % .1 / [] for none
+GLA_subject_data.settings.meeg_lpf = []; % 120 / [] for none
+GLA_subject_data.settings.meeg_bsf = [];    % [50 100]
 GLA_subject_data.settings.meeg_bsf_width = 1;
 
 

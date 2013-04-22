@@ -16,26 +16,26 @@ function NM_SaveMEEGData()
 
 global GLA_meeg_data;
 global GLA_meeg_type;
-global GLA_trial_type;
+global GLA_epoch_type;
 global GLA_subject;
 
 % Check that we're right
 if isempty(GLA_meeg_type)
     error('GLA_meeg_type not set yet.');
 end
-if isempty(GLA_trial_type)
-    error('GLA_trial_type not set yet.');
+if isempty(GLA_epoch_type)
+    error('GLA_epoch_type not set yet.');
 end
 if ~isempty(GLA_meeg_data)
     if ~strcmp(GLA_meeg_data.settings.subject,GLA_subject) ||...
-            ~strcmp(GLA_meeg_data.settings.trial_type,GLA_trial_type) ||...
+            ~strcmp(GLA_meeg_data.settings.epoch_type,GLA_epoch_type) ||...
             ~strcmp(GLA_meeg_data.settings.meeg_type,GLA_meeg_type)
         error('GLA_meeg_data does not match current settings.');
     end
 end
 
 
-disp(['Saving ' GLA_meeg_data.settings.trial_type ' ' ...
+disp(['Saving ' GLA_meeg_data.settings.epoch_type ' ' ...
     GLA_meeg_data.settings.meeg_type ' data for ' ...
     GLA_meeg_data.settings.subject '...']);
 

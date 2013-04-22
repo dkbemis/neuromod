@@ -18,15 +18,15 @@
 function NM_LoadMEEGData()
 
 global GLA_subject;
-global GLA_trial_type;
+global GLA_epoch_type;
 global GLA_meeg_type;
-disp(['Loading ' GLA_trial_type ' ' GLA_meeg_type ' data for ' GLA_subject '...']);
+disp(['Loading ' GLA_epoch_type ' ' GLA_meeg_type ' data for ' GLA_subject '...']);
 NM_LoadSubjectData();
 
 % Default to use matching data in memory
 global GLA_meeg_data;
 if isempty(GLA_meeg_data) || ~strcmp(GLA_subject,GLA_meeg_data.settings.subject) ||...
-        ~strcmp(GLA_trial_type,GLA_meeg_data.settings.trial_type) ||...
+        ~strcmp(GLA_epoch_type,GLA_meeg_data.settings.epoch_type) ||...
         ~strcmp(GLA_meeg_type,GLA_meeg_data.settings.meeg_type)
     
     % Load if we've made one
@@ -37,7 +37,7 @@ if isempty(GLA_meeg_data) || ~strcmp(GLA_subject,GLA_meeg_data.settings.subject)
     % Otherwise initialize
     else
         while 1
-            ch = input([GLA_trial_type ' ' GLA_meeg_type ' data for '...
+            ch = input([GLA_epoch_type ' ' GLA_meeg_type ' data for '...
                 GLA_subject ' not found. Create (y/n)? '],'s');
             if strcmp(ch,'y')
                 break;

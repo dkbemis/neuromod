@@ -13,8 +13,8 @@
 %
 % Inputs:
 % Outputs:
-%
-% Usage: NM_ImportMEGData()
+% Usage: 
+%   * NM_ImportMEGData()
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -23,12 +23,12 @@ function rejections = NM_SuggestRejections()
 
 % First check if we have some saved to use
 global GLA_subject;
-global GLA_trial_type;
+global GLA_epoch_type;
 rej_file_name = [NM_GetRootDirectory() '/analysis/' GLA_subject ...
-    '/' GLA_subject '_' GLA_trial_type '_rejections.mat'];
+    '/' GLA_subject '_' GLA_epoch_type '_rejections.mat'];
 if exist(rej_file_name,'file')
     while 1
-        ch = input(['Use saved rejections for ' GLA_trial_type ' (y/n)? '],'s');
+        ch = input(['Use saved rejections for ' GLA_epoch_type ' (y/n)? '],'s');
         if strcmp(ch,'y')
             load(rej_file_name);
             return;
@@ -54,12 +54,12 @@ function rej_to_use = getDataRejections(r_type, rej_to_use)
 
 % Load the rejections, if we have them
 global GLA_meeg_type;
-global GLA_trial_type;
+global GLA_epoch_type;
 switch r_type
     case 'behavioral'
         
         % Nothing to do for blinks
-        if strcmp(GLA_trial_type,'blinks')
+        if strcmp(GLA_epoch_type,'blinks')
             return;
         end
         

@@ -16,8 +16,8 @@
 %       - 'et': The eye tracker triggers 
 %
 % Outputs:
-%
-% Usage: NM_CheckTiming('log')
+% Usage: 
+%   * NM_CheckTiming('log')
 %
 % Author: Douglas K. Bemis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
