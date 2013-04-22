@@ -15,8 +15,15 @@
 
 function NM_AnalyzeMEEGData()
 
-% Make sure we're ready
+% See if we have anything
+NM_LoadSubjectData();
+global GLA_subject_data;
 global GLA_meeg_type;
+if ~GLA_subject_data.settings.(GLA_meeg_type)
+    return;
+end
+
+% Make sure we're ready
 NM_LoadSubjectData({...
     {[GLA_meeg_type '_word_5_data_preprocessed'],1},...
     });

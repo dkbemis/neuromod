@@ -40,12 +40,12 @@ global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
 % global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % This is the NIP of the subject we're analyzing
-global GLA_subject; GLA_subject = 'sa130042';
+global GLA_subject; GLA_subject = 'sg120518';
 
 
 % This is the type of data we're analyzing. 
 %   - Can be either 'fmri' or 'meeg'
-global GLA_rec_type; GLA_rec_type = 'meeg';
+global GLA_rec_type; GLA_rec_type = 'fmri';
 
 % And the optional globals
 disp(['Set analysis for subject ' GLA_subject ' and ' GLA_rec_type ' data']);

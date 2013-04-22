@@ -31,7 +31,7 @@ checkMEGFiles();
 checkEEGFiles();
 
 % fMRI files
-checkfMRIFiles();
+% checkfMRIFiles();
 
 global GLA_subject;
 global GLA_rec_type;

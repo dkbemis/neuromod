@@ -177,6 +177,10 @@ NM_CheckData();
 %       rejecting trials, but these steps are done separately. First, bad
 %       channels are rejected and repaired. Then the trial rejections can
 %       be set.
+%   - Also, this should probably allow the possibility of rejecting the
+%       same channels from all epoch types. For now, the rejection is done
+%       independently during each preprocessing. The removed channels are
+%       saved in GLA_meeg_data.settings.bad_channels.
 
 % * In summary, the preprocessing should call NM_Initialize*Data and
 %   NM_Set*Rejections, and will result in a GLA_*_data structure
