@@ -26,19 +26,17 @@ NM_LoadSubjectData();
 
 global GLA_subject_data;
 global GLA_epoch_type;
-switch GLA_epoch_type
-    case 'blinks'
-        trials = GLA_subject_data.data.baseline.blinks;
-        
-    case 'left_eye_movements'
-        trials = GLA_subject_data.data.baseline.eye_movements;
-        
-    case 'right_eye_movements'
-        trials = GLA_subject_data.data.baseline.eye_movements;
-        
-    case 'word_5'
-        trials = GLA_subject_data.data.runs(run_num).trials;
-        
-    otherwise
-        error('Unknown type');
+if strcmp(GLA_epoch_type,'blinks')
+    trials = GLA_subject_data.data.baseline.blinks;
+
+elseif strcmp(GLA_epoch_type,'left_eye_movements') ||...
+        strcmp(GLA_epoch_type,'right_eye_movements') 
+    trials = GLA_subject_data.data.baseline.eye_movements;
+
+elseif strcmp(GLA_epoch_type,'word_5') ||...
+        strcmp(GLA_epoch_type,'word_4')
+    trials = GLA_subject_data.data.runs(run_num).trials;
+
+else
+    error('Unknown type');
 end

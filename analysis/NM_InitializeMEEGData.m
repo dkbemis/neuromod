@@ -53,25 +53,20 @@ GLA_meeg_data.settings.meeg_type = GLA_meeg_type;
 GLA_meeg_data.settings.channel = upper(GLA_meeg_type);
 GLA_meeg_data.data = {};
 
-switch GLA_epoch_type
-    case 'blinks'
-        setRunData('baseline');
-
-    case 'left_eye_movements'
-        setRunData('baseline');
-
-    case 'right_eye_movements'
-        setRunData('baseline');
-
-    case 'word_5'        
-        % TTest
-%         for r = 1:GLA_subject_data.settings.num_runs
-        for r = 1:2
-            setRunData(['run_' num2str(r)]);
-        end
-        
-    otherwise
-        error('Unknown type');
+% And set
+if strcmp(GLA_epoch_type,'blinks') ||...
+        strcmp(GLA_epoch_type,'left_eye_movements') ||...
+        strcmp(GLA_epoch_type,'right_eye_movements')
+    setRunData('baseline');
+elseif strcmp(GLA_epoch_type,'word_5') ||...
+        strcmp(GLA_epoch_type,'word_4')
+    % TTest
+%     for r = 1:GLA_subject_data.settings.num_runs
+    for r = 1:2
+        setRunData(['run_' num2str(r)]);
+    end
+else
+    error('Unknown type');
 end
 
 % And save

@@ -73,25 +73,19 @@ GLA_et_data.data.saccade_ends = {};
 GLA_et_data.data.cond = [];
 
 % Grab data for each trial
-switch GLA_epoch_type
-    case 'blinks'
-        setRunData('baseline');
-        
-    case 'left_eye_movements'
-        setRunData('baseline');
-        
-    case 'right_eye_movements'
-        setRunData('baseline');
-        
-    case 'word_5'
-        % TTest
-%         for r = 1:length(GLA_subject_data.data.runs)
-        for r = 1:2
-            setRunData(['run_' num2str(r)]);
-        end
-        
-    otherwise
-        error('Unknown type');
+if strcmp(GLA_epoch_type,'blinks') ||...
+        strcmp(GLA_epoch_type,'left_eye_movements') ||...
+        strcmp(GLA_epoch_type,'right_eye_movements')
+    setRunData('baseline');
+elseif strcmp(GLA_epoch_type,'word_5') ||... 
+        strcmp(GLA_epoch_type,'word_4')
+    % TTest
+%     for r = 1:length(GLA_subject_data.data.runs)
+    for r = 1:2
+        setRunData(['run_' num2str(r)]);
+    end
+else
+    error('Unknown type');
 end
 
 % And save

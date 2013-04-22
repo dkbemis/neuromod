@@ -229,8 +229,13 @@ NM_SanityCheckData();
 %   NM_CreateClean*Data and perform the analysis over the resulting
 %   GLA_clean*data variable.
 
-% How to analyze
-%   New trials, etc.
+% To add a new epoch type, the following needs to be added:
+%   * NM_InitializeSubjectData: Add the appropriate GLA_subject_data.settings.*_epoch 
+%   * NM_InitializeETData: Additional strcmp 
+%   * NM_InitializeMEEGData: Additional strcmp
+%   * NM_GetTrials: Additional strcmp 
+%   * NM_GetTrialTriggerTime: Additional case
+%   * NM_GetTrialCondition: Additional strcmp
 
 % Run the basis analysis functions
 NM_AnalyzeData();

@@ -22,22 +22,19 @@
 function cond = NM_GetTrialCondition(trial)
 
 global GLA_epoch_type;
-switch GLA_epoch_type
-    case 'blinks'
-        cond = 2;
-            
-    case 'right_eye_movements'
-        cond = 3;
-
-    case 'left_eye_movements'
-        cond = 4;
-        
-    case 'word_5';
-        cond = trial.log_stims(1).cond;
-        if strcmp(trial.log_stims(1).p_l,'list')
-            cond = cond + 5;
-        end
-        
-    otherwise
-        error('Unknown type');
+if strcmp(GLA_epoch_type,'blinks')
+    cond = 2;
+elseif strcmp(GLA_epoch_type,'right_eye_movements')
+    cond = 3;
+elseif strcmp(GLA_epoch_type,'left_eye_movements')
+    cond = 4;
+    
+elseif strcmp(GLA_epoch_type,'word_5') ||...
+        strcmp(GLA_epoch_type,'word_4')
+    cond = trial.log_stims(1).cond;
+    if strcmp(trial.log_stims(1).p_l,'list')
+        cond = cond + 5;
+    end
+else
+    error('Unknown type');
 end

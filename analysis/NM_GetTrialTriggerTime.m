@@ -43,6 +43,9 @@ switch GLA_epoch_type
     case 'word_5'
         t_time = trial.([type '_triggers'])(5).([type '_time']);
         
+    case 'word_4'
+        t_time = trial.([type '_triggers'])(4).([type '_time']);
+        
     otherwise
         error('Unknown type.');
 end
