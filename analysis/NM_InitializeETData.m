@@ -79,9 +79,7 @@ if strcmp(GLA_epoch_type,'blinks') ||...
     setRunData('baseline');
 elseif strcmp(GLA_epoch_type,'word_5') ||... 
         strcmp(GLA_epoch_type,'word_4')
-    % TTest
-%     for r = 1:length(GLA_subject_data.data.runs)
-    for r = 1:2
+    for r = 1:length(GLA_subject_data.data.runs)
         setRunData(['run_' num2str(r)]);
     end
 else
