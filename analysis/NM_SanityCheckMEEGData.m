@@ -24,6 +24,10 @@ end
 % Make sure our data is ready
 global GLA_subject;
 global GLA_meeg_type;
+global GLA_subject_data;
+if ~GLA_subject_data.settings.(GLA_meeg_type)
+    return;
+end
 disp(['Sanity checking ' GLA_meeg_type ' data for ' GLA_subject '...']);
 NM_LoadSubjectData({...
     {[GLA_meeg_type '_blinks_data_preprocessed'],1},...

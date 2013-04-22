@@ -35,10 +35,10 @@ end
 epoch_types = {'blinks','word_5'};
 global GLA_meeg_type;
 meeg_types = {'meg','eeg'};
-for t = 1:length(epoch_types)
-    GLA_epoch_type = epoch_types{t};
-    for m = 1:length(meeg_types)
-        GLA_meeg_type = meeg_types{m};
+for m = 1:length(meeg_types)
+    GLA_meeg_type = meeg_types{m};
+    for t = 1:length(epoch_types)
+        GLA_epoch_type = epoch_types{t};
         NM_PreprocessMEEGData();
     end
 end

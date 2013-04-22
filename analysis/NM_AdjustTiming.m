@@ -24,8 +24,6 @@ global GLA_subject;
 disp(['Adjusting timing for ' GLA_subject '...']);
 NM_LoadSubjectData({{'log_checked',1},... % Need to have checked the log
     {'meg_data_checked',1},...      % And all the triggers...
-    {'eeg_data_checked',1},...
-    {'et_data_checked',1},...
     });
 
 % Nothing to do, if no diodes
@@ -34,6 +32,26 @@ if ~isfield(GLA_subject_data.settings,'diodes') ||...
         GLA_subject_data.settings.diodes == 0
     return;
 end
+
+% These are always there if the diodes are...
+trigger_types = {'meg'};
+
+% These are sometimes missing...
+if GLA_subject_data.settings.eeg
+    if ~isfield(GLA_subject_data.settings,'eeg_data_checked') ||...
+            ~GLA_subject_data.settings.eeg_data_checked
+        error('Need to check eeg data first.');
+    end
+    trigger_types{end+1} = 'eeg';
+end
+if GLA_subject_data.settings.eye_tracker
+    if ~isfield(GLA_subject_data.settings,'et_data_checked') ||...
+            ~GLA_subject_data.settings.et_data_checked
+        error('Need to check eye tracker data first.');
+    end
+    trigger_types{end+1} = 'et';
+end
+
 
 % Don't do it twice
 if isfield(GLA_subject_data.settings,'timing_adjusted') && ...
@@ -51,7 +69,7 @@ for r = 1:GLA_subject_data.settings.num_runs
     for t = 1:length(GLA_subject_data.data.runs(r).trials)
         [GLA_subject_data.data.runs(r).trials(t) ...
             all_adjusts(end+1:end+length(GLA_subject_data.data.runs(r).trials(t).meg_triggers))] = ...
-                readjustTrialTriggers(GLA_subject_data.data.runs(r).trials(t));
+                readjustTrialTriggers(GLA_subject_data.data.runs(r).trials(t), trigger_types);
     end
 end
 
@@ -68,7 +86,7 @@ for b = 1:length(b_types)
     for t = 1:length(GLA_subject_data.data.baseline.(b_types{b}))
         [GLA_subject_data.data.baseline.(b_types{b})(t) ...
             all_adjusts(end+1:end+length(GLA_subject_data.data.baseline.(b_types{b})(t).meg_triggers))] = ...
-            readjustTrialTriggers(GLA_subject_data.data.baseline.(b_types{b})(t));
+            readjustTrialTriggers(GLA_subject_data.data.baseline.(b_types{b})(t), trigger_types);
     end
 end
 adj_str = ['Adjusted baseline triggers by ' num2str(mean(all_adjusts)) ' ms avg. [' ...
@@ -84,10 +102,7 @@ disp('Done.');
 
 
 
-function [trial adjusts] = readjustTrialTriggers(trial)
-
-% These are the possibilities to adjust
-trigger_types = {'et','meg','eeg'};
+function [trial adjusts] = readjustTrialTriggers(trial, trigger_types)
 
 adjusts = zeros(length(trial.meg_triggers),1);
 max_adjust = 150;

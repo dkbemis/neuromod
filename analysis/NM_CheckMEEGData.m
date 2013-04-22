@@ -39,6 +39,7 @@ NM_LoadSubjectData({{'log_checked',1}});
 global GLA_subject_data;
 global GLA_meeg_type;
 global GLA_subject;
+
 if ~GLA_subject_data.settings.(GLA_meeg_type)
     return;
 end

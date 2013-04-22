@@ -35,9 +35,14 @@ end
 if isempty(GLA_meeg_type)
     error('GLA_meeg_type not set.');
 end
-disp(['Preprocessing ' GLA_meeg_type ' ' GLA_epoch_type ' data for ' GLA_subject '...']);
 
 % Make sure we're ready and have something to do
+if ~GLA_subject_data.settings.(GLA_meeg_type)
+    return;
+end
+
+% And go
+disp(['Preprocessing ' GLA_meeg_type ' ' GLA_epoch_type ' data for ' GLA_subject '...']);
 NM_LoadSubjectData({...
     {[GLA_meeg_type '_data_checked'],1}...
     {['et_' GLA_epoch_type '_data_preprocessed'],1}...      % For removing components
