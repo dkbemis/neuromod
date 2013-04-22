@@ -25,6 +25,12 @@
 
 function NM_AnalyzefMRIData(cfg)
 
+% Might not be doing this
+global GLA_rec_type;
+if ~strcmp(GLA_rec_type,'fmri')
+    return;
+end
+
 % Default
 if ~exist('cfg','var')
     cfg = [];

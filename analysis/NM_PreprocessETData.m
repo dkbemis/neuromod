@@ -21,6 +21,7 @@ global GLA_epoch_type;
 if isempty(GLA_epoch_type)
     error('GLA_epoch_type not set.');
 end
+NM_LoadSubjectData();
 if ~GLA_subject_data.settings.eye_tracker
     return;
 end

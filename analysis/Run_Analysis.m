@@ -49,6 +49,8 @@ function Run_Analysis()
 %   - GLA_fmri_dir / GLA_meeg_dir: These specify the root directory for
 %       either the fmri or meeg analysis. All of the other folders are
 %       stored relative to the root (see NM_InitializeGlobals for details)
+%       * NOTE: The full path to this directory is always returned by
+%           NM_GetRootDirectory().
 
 % * The following globals are not necessary if you use the wrappers, but
 %   are integral to the analysis and useful to set beforehand:
@@ -164,7 +166,17 @@ NM_CheckData();
 %           * NOTE: If the eye tracker fails often, it would be worth
 %               implementing an alternative method of marking blinks (i.e.
 %               using the EEG electrodes close to the eyes) 
+%       - Finally, for now the decomposition is applied to the cleaned
+%           data. This can be "undone" effectively, however, by simply not
+%           choosing to apply any rejections, etc. when asked at the
+%           beginning of the function.
 % * Also, filtering is applied at some point to the data.
+% * Finally, as of now, we repair eeg channels at the beginning of the
+%   preprocessing.
+%   - Be aware, because the selection screen looks the same as for
+%       rejecting trials, but these steps are done separately. First, bad
+%       channels are rejected and repaired. Then the trial rejections can
+%       be set.
 
 % * In summary, the preprocessing should call NM_Initialize*Data and
 %   NM_Set*Rejections, and will result in a GLA_*_data structure
@@ -230,6 +242,8 @@ NM_SanityCheckData();
 % In summary, to begin analysis, after preprocessing, call
 %   NM_CreateClean*Data and perform the analysis over the resulting
 %   GLA_clean*data variable.
+% * NOTE: In order to analyze any eye tracking data, you must reject all
+%   trials with blinks (the data is NaN).
 
 % To add a new epoch type, the following needs to be added:
 %   * NM_InitializeSubjectData: Add the appropriate GLA_subject_data.settings.*_epoch 
@@ -261,6 +275,8 @@ NM_AnalyzeData();
 %           - Probably this length should be dependent on the cutoff.
 %           - Also, ft_preprocessing provides a padding option, which
 %               should be explored.
+%       * NOTE: PCA decomposition does not seem to work very well for the
+%           eeg data on the blinks, if the data is not filtered first.
 %   * Another small tweak to the filtering might be to allow different
 %       widths for multiple band stop (i.e. notch) filters. For now, they
 %       all share a common width.
@@ -296,5 +312,6 @@ NM_AnalyzeData();
 %       not become wrongly normalized.
 %   * Might have to look into filtering the EEG data to get rid of the
 %       apparent oscillations that ride on top of the data.
+%   * When you change subjects, it's best to clear the GLA_subject_data
 
 

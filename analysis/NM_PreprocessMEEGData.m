@@ -37,6 +37,7 @@ if isempty(GLA_meeg_type)
 end
 
 % Make sure we're ready and have something to do
+NM_LoadSubjectData();
 if ~GLA_subject_data.settings.(GLA_meeg_type)
     return;
 end

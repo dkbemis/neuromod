@@ -15,6 +15,13 @@
 
 function NM_AnalyzeETData()
 
+% Make sure we have something to do
+NM_LoadSubjectData();
+global GLA_subject_data;
+if ~GLA_subject_data.settings.eye_tracker
+    return;
+end
+
 % Make sure we're ready
 NM_LoadSubjectData({...
     {'et_word_5_data_preprocessed',1},...

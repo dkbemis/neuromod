@@ -20,10 +20,16 @@
 
 function NM_SanityCheckETData()
 
-global GLA_subject;
-disp(['Sanity checking eye tracking data for ' GLA_subject '...']);
+% See if there's something to do
+NM_LoadSubjectData();
+global GLA_subject_data;
+if ~GLA_subject_data.settings.eye_tracker
+    return;
+end
 
 % Make sure we're processed 
+global GLA_subject;
+disp(['Sanity checking eye tracking data for ' GLA_subject '...']);
 NM_LoadSubjectData({...
     {'et_right_eye_movements_data_preprocessed',1},...
     {'et_left_eye_movements_data_preprocessed',1},...
@@ -45,7 +51,6 @@ title(['Eye tracker Sanity Check (' GLA_subject ')']);
 xlabel('x pos'); ylabel('y pos'); 
 a = axis(); axis([0 a(2)+a(1) a(3)+a(4) 0]); a = axis();
 legend('left','right');
-global GLA_subject_data;
 num_move = GLA_subject_data.settings.num_eye_movements;
 text(mean(e_pos.left(:,1))-90, -(mean(e_pos.left(:,2))+50), ...
     [num2str(mean(e_rts.left)) 'ms (' num2str(100*length(e_pos.left)/num_move) '%)']);
@@ -79,7 +84,7 @@ for d = 1:length(directions)
         end
 
         % And just get the average position
-        pos.(directions{d})(end+1,:) = [mean(GLA_et_data.data.x_pos{t}) mean(GLA_et_data.data.y_pos{t})];
+        pos.(directions{d})(end+1,:) = [nanmean(GLA_et_data.data.x_pos{t}) nanmean(GLA_et_data.data.y_pos{t})];
     end
 end
 
