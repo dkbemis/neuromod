@@ -57,6 +57,9 @@ importScan(acq_dir, GLA_subject_data.settings.loc_scan, 'loc', 'localizer', fid)
 fclose('all');
 
 % Now, wait for confirmation of running
+disp('You must now run the dcm2nii_script');
+disp(['Go to ' NM_GetRootDirectory() '/fmri_data/' GLA_subject ' in the terminal, and ' ...
+    'run: ./dcm2nii_script.sh']);
 while 1
     ch = input('Did the script run correctly (y/n)? ','s');
     if strcmp(ch,'y')
@@ -142,7 +145,7 @@ fmri_acq_dir = '/neurospin/acquisition/database/TrioTim';
 
 % Get the date from the parameters
 global GLA_subject_data;
-acq_dir = [fmri_acq_dir '/' GLA_subject_data.parameters.rec_date];
+acq_dir = [fmri_acq_dir '/' GLA_subject_data.settings.rec_date];
 
 % Fr now, assume there's only one
 % Also, assume the directory is always named with the underscore between

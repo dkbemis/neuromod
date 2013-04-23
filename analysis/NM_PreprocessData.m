@@ -18,7 +18,12 @@
 function NM_PreprocessData()
 
 % The easy stuff
-NM_PreprocessBehavioralData();
+global GLA_fmri_type;
+f_types = {'localizer','experiment'};
+for t = 1:length(f_types)
+    GLA_fmri_type = f_types{t};
+    NM_PreprocessBehavioralData();
+end
 
 % Adjust the timing of the triggers with the relative diode timings
 NM_AdjustTiming();
@@ -44,8 +49,6 @@ for m = 1:length(meeg_types)
 end
 
 % And both fmri datas
-global GLA_fmri_type;
-f_types = {'localizer','experiment'};
 for t = 1:length(f_types)
     GLA_fmri_type = f_types{t};
     NM_PreprocessfMRIData();

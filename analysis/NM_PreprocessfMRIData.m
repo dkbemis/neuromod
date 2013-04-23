@@ -25,6 +25,10 @@ global GLA_rec_type;
 if ~strcmp(GLA_rec_type,'fmri')
     return;
 end
+global GLA_fmri_type;
+if isempty(GLA_fmri_type)
+    error('GLA_fmri_type not set.');
+end
 
 % Check the processing 
 disp('Loading data...');
@@ -63,7 +67,6 @@ matlabbatch{normalization_stage}.spm = createNormalizationBatch(segmentation_sta
 matlabbatch{smoothing_stage}.spm = createSmoothingBatch(normalization_stage);
 
 % Then save the batch
-global GLA_fmri_type;
 global GLA_subject;
 mat_file = [NM_GetRootDirectory() '/fmri_data/' GLA_subject ...
     '/' GLA_fmri_type '/' GLA_subject '_preprocess_batch.mat'];
@@ -293,8 +296,8 @@ function batch = createSmoothingBatch(normalization_stage)
 smoothing_kernel = [4 4 4];
 
 % TODO: This needs to be fixed.
-% for r = 1:getNumRuns()
-for r = 1
+for r = 1:getNumRuns()
+% for r = 1
     batch.spatial.smooth.data(r) = cfg_dep;
     batch.spatial.smooth.data(r).tname = 'Images to Smooth';
     batch.spatial.smooth.data(r).tgt_spec{1}(1).name = 'filter';
@@ -357,7 +360,7 @@ switch GLA_fmri_type
         num_runs = 1;
 
     case 'experiment'
-        num_runs = length(GLA_subject_data.runs);    
+        num_runs = length(GLA_subject_data.data.runs);    
 
     otherwise
         error('Unknown type');

@@ -32,15 +32,15 @@ function NM_InitializeGlobals()
 %       - Named: NIP_run_#.raw (1-5); NIP_baseline.raw
 
 % Home
-global GLA_meeg_dir; GLA_meeg_dir = '/Users/Doug/Documents/neurospin/meeg';
-global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
+% global GLA_meeg_dir; GLA_meeg_dir = '/Users/Doug/Documents/neurospin/meeg';
+% global GLA_fmri_dir; GLA_fmri_dir = '/Users/Doug/Documents/neurospin/fmri';
 
 % Work
-% global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
-% global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
+global GLA_meeg_dir; GLA_meeg_dir = '/neurospin/meg/meg_tmp/SimpComp_Doug_2013';
+global GLA_fmri_dir; GLA_fmri_dir = '/neurospin/unicog/protocols/IRMf/SimpComp_Bemis_2013';
 
 % This is the NIP of the subject we're analyzing
-global GLA_subject; GLA_subject = 'sg120518';
+global GLA_subject; GLA_subject = 'ap100009';
 
 
 % This is the type of data we're analyzing. 

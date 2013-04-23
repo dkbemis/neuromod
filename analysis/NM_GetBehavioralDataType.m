@@ -19,6 +19,10 @@ function type = NM_GetBehavioralDataType()
 
 global GLA_rec_type;
 global GLA_fmri_type;
+if isempty(GLA_fmri_type)
+    error('GLA_fmri_type not set.');
+end    
+
 if strcmp(GLA_rec_type,'meeg')
     type = 'experiment';
 else

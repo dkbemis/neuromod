@@ -27,10 +27,8 @@ disp('Done.');
 
 % Load the experiment data
 global GLA_fmri_type;
-curr_ft = GLA_fmri_type;
-GLA_fmri_type = 'experiment'; %#ok<NASGU>
+GLA_fmri_type = 'experiment';
 NM_LoadBehavioralData();
-GLA_fmri_type = curr_ft;
 
 % Check the number of outliers and timeouts
 global GLA_behavioral_data;
@@ -86,7 +84,7 @@ global GLA_subject_data;
 global GLA_behavioral_data;
 r_ctr = 1;
 for b = 1:GLA_subject_data.settings.num_localizer_blocks
-    if ~isempty(GLA_subject_data.localizer.blocks(b).params.catch_trial)
+    if ~isempty(GLA_subject_data.data.localizer.blocks(b).params.catch_trial)
         rt = GLA_behavioral_data.data.rt{r_ctr}; 
         if isempty(rt)
             error('No localizer response found.');

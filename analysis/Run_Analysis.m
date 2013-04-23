@@ -84,6 +84,10 @@ NM_InitializeGlobals();
 %       analysis. As detailed within NM_InitializeSubjectData, any changes 
 %       to the standard analysis are read from this file.
 
+% * For now, max-filter is automatically applied to imported .fif files,
+%   with pretty basic parameters. It would be worth fine-tuning these
+%   parameters to make sure the data is optimal.
+
 NM_ImportData()
 
 
@@ -99,6 +103,10 @@ NM_ImportData()
 % * This step must be run in its entirety for any subsequent analysis to
 %   proceed smoothly, because many relationships between stimuli and
 %   support data structures are assumed for the rest of the analysis.
+
+% * NOTE: The experiment folder must be in the path as well as the analysis
+%   folder, as we use experiment functions to check the data in order to
+%   make sure that we're checking what should have happened.
 
 NM_CheckData();
 
@@ -196,6 +204,11 @@ NM_CheckData();
 %   - This will adjust all of the triggers based upon the difference
 %       between the meg triggers and the diode. It is important as no
 %       adjustment is applied during the run itself.
+
+% * If filtering crashes because 'fir1' is undefined, it probably means
+%   that the signal processing toolbox is not installed. For now, ft needs
+%   this function to HPF below 1Hz, so the only option is to not filter or
+%   set the cutoff to at least 1Hz.
 
 NM_PreprocessData();
 

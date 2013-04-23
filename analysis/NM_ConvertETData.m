@@ -6,6 +6,7 @@
 %       converter.
 %   * For some reason, the converter doesn't work on Linux, so have to run
 %       elsewhere...
+%       - I.e. we get an error loading a shared library (libstdc++.so.5).
 %   * Will produce .asc files for the NIP_run_#.edf and NIP_baseline.edf 
 %       files in the eye_tracking_data folder.
 %
@@ -25,28 +26,35 @@ disp(['Converting eyetracker data for ' GLA_subject '...']);
 % Load the data
 NM_LoadSubjectData();
 
+% See if we have anything to do
+global GLA_subject_data;
+if ~GLA_subject_data.settings.eye_tracker
+    return;
+end
+
 % Make sure it's not already there
 checkForData()
 
 % Get the edf2asc.exe file path
-if ~exist('edf2asc','file')
+% NOTE: Expecting it here. Not sure how to automatically grab it
+conv_file = [NM_GetRootDirectory() '/eye_tracking_data/edf2asc'];
+if ~exist(conv_file,'file')
     error('No converter found.');
 end
 
 % Just run the edf2asc program on the files
-global GLA_subject_data;
 for r = 1:GLA_subject_data.settings.num_runs
-    convertFile(['run_' num2str(r)']);
+    convertFile(['run_' num2str(r)'], conv_file);
 end
 if GLA_subject_data.settings.num_blinks > 0
-    convertFile('baseline');
+    convertFile('baseline', conv_file);
 end
 
 % Resave...
 NM_SaveSubjectData({{'et_data_converted',1}});
 disp(['Eyetracker data for ' GLA_subject ' converted.']);
 
-function convertFile(run_id)
+function convertFile(run_id, conv_file)
 
 global GLA_subject;
 
@@ -56,10 +64,6 @@ f_name = [NM_GetRootDirectory() '/eye_tracking_data/' GLA_subject '/'...
 if ~exist(f_name,'file')
     error(['File ' f_name ' does not exist.']);
 end
-
-% Get the converter
-% NOTE: Expecting it here. Not sure how to automatically grab it
-conv_file = [NM_GetRootDirectory() '/eye_tracking_data/edf2asc'];
 
 % And run
 c_cmd = [conv_file ' ' f_name];
