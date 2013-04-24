@@ -10,10 +10,11 @@ Before the experiment:
 		- Attach camera to screen
 		- Ensure fiber optic plugged into ET computer
 		- Turn on ET computer
+			- Select ‘Eyelink’ after the computer boots up
 		- Make sure camera is found
 		- Check settings
-			- Long range mount
-			- Right eye
+			- Under ‘Set Options’ make sure ‘Long range mount’ is selected
+			- Under ‘Camera Setup’ make sure ‘Right’ eye is selected
 	* Set diode on screen
 		- [NOTE: Will adjust to correct position below]
 		- Put fiber optic through MSR to electronics cabinet
@@ -30,6 +31,8 @@ Before the experiment:
 		- Two switches
 
 * Start matlab
+	- Use version R2010b
+	- Change the matlab folder to: C:\Documents and Settings\Inserm U562\My Documents\Doug\Scripts\NeuroMod
 	- NOTE: The experiment depends on psychtoolbox (PTB) and the PTBWrapper functions
 		- This setup appears to be somewhat fragile, so it's best to use the version of PTB and PTBWrapper included in the experiment folder. Also, the version of matlab must be 32-bit (PTB cannot currently handle 64-bit).
 	- Open Run_MEG_NeuroMod.m
@@ -62,6 +65,8 @@ Before the experiment:
 	- Turn on the Mac
 	- Make sure there is enough space on the harddrive to record (~2GB)
 	- Open Netstation program
+		- This is tricky because you need to load the right template. It’s easiest to just double-click the template
+		- It is located in inserm/Utilisateurs/inserm/Documents/Net Station User Data/Templates, and is called ‘2011_MEG_EGI_1k’
 	- Wait for the program to settle and display EEG data
 	- NOTE: If there is an error and 'no EEG amp found'
 		- Quit the program and restart
@@ -87,7 +92,7 @@ Before the experiment:
 	- Look for:
 		- EEG trigger (if net plugged in)
 		- MEG trigger
-		- Diode 
+		- Diode
 	- Stop the program by hitting 'v' at a response
 	- NOTE: The eyetracker setup appears broken such that retrieving the ET data will crash the first couple of times
 		- Test that the workaround works by running: NeuroMod_GetETFile([et_subject_id '_1']) until the answer is a large number
@@ -114,9 +119,11 @@ Before the experiment:
 
 * Prepare the scripts / recording
 	- Remove EGI cap
-matching trials with 
+matching trials with
 	* Check / fix MEG sensors
 		- Check acquisition settings
+			- In Project, select ‘simp_comp’
+			- Then, ‘File’ -> ‘Load Settings’ -> ‘simp_comp’
 		- Go!
 		- Reset all
 		- Restart beforehand
@@ -184,7 +191,7 @@ To prepare the subject:
 	- EGI connector by door
 		- Put on table to hold weight
 	- Connect electrodes on right
-	* Check EGI impedance 
+	* Check EGI impedance
 		- Open EGI program on mac
 		- Open session ‘2011_MEG_EGI_1k’
 		- Hit ‘Measure net impedance’
@@ -210,7 +217,7 @@ To prepare the subject:
 	- Set all is_debugging to 0
 	- In the 1st cell, set the first argument to be the subject ID number
 		- Alternate the second argument between 'right' and 'left': This is the hand the subject should respond to * NOTE: Remember, if the eyetracker breaks or does not calibrate, set the use_eyetracker variables to 0
-	- Otherwise, make sure they are set to 1 
+	- Otherwise, make sure they are set to 1
 	 - Make sure the environment variables are set to 'MEG'
 	- Evaluate the 1st cell to set the subject variable
 	- Evaluate the 2nd cell to create the practice lists
@@ -246,10 +253,12 @@ To prepare the subject:
 		- Save the data appropriately
 	- Stop the EGI acquisition
 		- Quit the program entirely, using Command-Q
-		
+
 * After the fifth run, run the baseline
 	- In the 7th cell, make sure 'tasks' is set to {'Blinks','EyeMove','Noise'};
 	- Evaluate the cell and follow the same recording procedure as with a run
+	* NOTE: Always run the baseline, even if the eyetracker did not work
+		- It is useful for characterizing blinks
 
 --------------------------
 After the experiment
@@ -258,15 +267,22 @@ After the experiment
 	- See the wiki for a complete checklist, but basically, undo everything that you did
 
 * Get the ET files
-	- For each run, 
+	- For each run,
 		- Run: NeuroMod_GetETFile([et_subject_id '_#']) (#: 1-5) until the answer is a large number
 		- Test the conversion of edf files as before
 	- Do this for the baseline as well: NeuroMod_GetETFile([et_subject_id '_B'])
 
 * Now, run the last cell
-	
-* On the Mac
-	- Convert the six data files
+
+* On the Mac, convert the six data files
+	- It appears as though a harddisk was renamed on the Mac, and now the Net Station settings are not correct.
+	- For now, the files are saved in /Applications/Net Station/Net Station.app/Contents/MacOS/Net Station User Data/Sessions
+	- It’s probably easiest to navigate there with the terminal, type ‘open .’ and copy the files to somewhere it’s easy to find
+	- Then, open Net Station
+	- Select ‘Tools’ and then ‘Waveform Tools’
+	- Click ‘Add’ and find the copied files
+	- Select ‘matlab_export’ and hit run
+	- Then, copy the *.raw files to your analysis computer
 
 - Transfer / rename all of the files
 	- Record the name of the MEG data files
@@ -275,4 +291,5 @@ After the experiment
 	- Transfer all .asc ET files
 		- Rename to SubjID_run_#.asc (_baseline.asc)
 	- Transfer the _log.txt and _data.txt files from the stim computer
+
 
